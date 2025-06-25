@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -8,12 +8,16 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   title: "Alex Electric - Professional Electrician Services | Residential, Commercial & Industrial",
   description: "Professional electrician Alex offers expert electrical services with 15+ years experience. Residential, commercial, industrial wiring, EV chargers, solar panels, emergency repairs. Licensed & insured.",
   keywords: "electrician, electrical services, residential electrical, commercial electrical, industrial electrical, EV charger installation, solar panels, emergency electrical repair, licensed electrician",
   authors: [{ name: "Alex Electric" }],
-  viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
   openGraph: {
     title: "Alex Electric - Professional Electrician Services",

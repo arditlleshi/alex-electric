@@ -6,7 +6,9 @@ const services = [
       </svg>
     ),
     title: "Residential Electrical",
-    description: "Complete home electrical services including wiring, outlets, lighting, and panel upgrades for safe and efficient power."
+    description: "Complete home electrical services including wiring, outlets, lighting, and panel upgrades for safe and efficient power.",
+    gradient: "gradient-electric",
+    color: "blue"
   },
   {
     icon: (
@@ -15,7 +17,9 @@ const services = [
       </svg>
     ),
     title: "Commercial & Industrial",
-    description: "Professional electrical solutions for offices, restaurants, bars, factories, and industrial facilities with reliable, code-compliant installations."
+    description: "Professional electrical solutions for offices, restaurants, bars, factories, and industrial facilities with reliable, code-compliant installations.",
+    gradient: "gradient-sunset",
+    color: "orange"
   },
   {
     icon: (
@@ -24,7 +28,9 @@ const services = [
       </svg>
     ),
     title: "EV Charger Installation",
-    description: "Future-ready electric vehicle charging station installation for homes and businesses, supporting sustainable transportation."
+    description: "Future-ready electric vehicle charging station installation for homes and businesses, supporting sustainable transportation.",
+    gradient: "gradient-aurora",
+    color: "green"
   },
   {
     icon: (
@@ -33,7 +39,9 @@ const services = [
       </svg>
     ),
     title: "Solar Panel Systems",
-    description: "Complete solar panel installation and maintenance services to help you harness clean, renewable energy and reduce electricity costs."
+    description: "Complete solar panel installation and maintenance services to help you harness clean, renewable energy and reduce electricity costs.",
+    gradient: "gradient-primary",
+    color: "purple"
   },
   {
     icon: (
@@ -42,7 +50,9 @@ const services = [
       </svg>
     ),
     title: "Emergency Repairs",
-    description: "24/7 emergency electrical repair services for urgent electrical issues, power outages, and safety concerns that can't wait."
+    description: "24/7 emergency electrical repair services for urgent electrical issues, power outages, and safety concerns that can't wait.",
+    gradient: "gradient-sunset",
+    color: "red"
   },
   {
     icon: (
@@ -52,33 +62,95 @@ const services = [
       </svg>
     ),
     title: "Maintenance & Troubleshooting",
-    description: "Regular electrical maintenance and diagnostic services to keep your systems running safely and prevent costly breakdowns."
+    description: "Regular electrical maintenance and diagnostic services to keep your systems running safely and prevent costly breakdowns.",
+    gradient: "gradient-electric",
+    color: "indigo"
   }
 ];
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Expert Electrical Services
+    <section id="services" className="py-24 bg-gradient-to-br from-white to-gray-50 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 right-20 w-64 h-64 gradient-aurora rounded-full opacity-5 animate-float"></div>
+        <div className="absolute bottom-20 left-20 w-48 h-48 gradient-electric rounded-full opacity-5 animate-float" style={{ animationDelay: '3s' }}></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-20 animate-fade-in-up">
+          <span className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-4">
+            Our Expertise
+          </span>
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            Comprehensive
+            <span className="block text-gradient mt-2">Electrical Solutions</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From residential repairs to industrial installations, Alex provides comprehensive electrical solutions for all your needs.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            From residential repairs to industrial installations, we provide cutting-edge electrical solutions tailored to your specific needs.
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="group p-8 rounded-2xl bg-gray-50 hover:bg-blue-50 transition-all hover:shadow-lg">
-              <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-700 transition-colors">
-                {service.icon}
+            <div 
+              key={index} 
+              className="group relative card-modern p-8 hover-lift hover-glow transition-all duration-500 cursor-pointer"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              {/* Gradient background on hover */}
+              <div className={`absolute inset-0 ${service.gradient} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-500`}></div>
+              
+              {/* Icon container */}
+              <div className="relative">
+                <div className={`w-16 h-16 ${service.gradient} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
+                  {service.icon}
+                </div>
+                
+                {/* Floating particles effect */}
+                <div className="absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity duration-300"></div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
+              
+              <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                {service.title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                {service.description}
+              </p>
+              
+              {/* Hover effect arrow */}
+              <div className="absolute bottom-6 right-6 transform translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300">
+                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </div>
+              
+              {/* Shimmer effect */}
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
+              </div>
             </div>
           ))}
+        </div>
+        
+        {/* CTA Section */}
+        <div className="text-center mt-16 animate-fade-in-up">
+          <div className="glass p-8 rounded-3xl max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Ready to Get Started?
+            </h3>
+            <p className="text-gray-600 mb-6">
+              Contact us today for a free consultation and personalized quote for your electrical project.
+            </p>
+            <button className="btn-modern gradient-electric text-white px-8 py-4 rounded-full font-semibold hover-lift hover-glow shadow-electric-lg group">
+              <span className="flex items-center space-x-2">
+                <span>Get Free Quote</span>
+                <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </section>

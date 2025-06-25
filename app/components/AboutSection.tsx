@@ -1,36 +1,119 @@
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-              Meet Alex - Your Trusted Electrician
-            </h2>
-            <div className="space-y-4 text-gray-700 text-lg">
-              <p>
-                With over 15 years of hands-on experience in the electrical industry, Alex has built a reputation for delivering exceptional electrical services across residential, commercial, and industrial sectors. His commitment to safety, quality workmanship, and customer satisfaction has made him the go-to electrician for countless satisfied clients.
-              </p>
-              <p>
-                Alex stays current with the latest electrical codes, technologies, and sustainable energy solutions. Whether it&apos;s a simple repair, complex installation, or cutting-edge solar panel system, he brings the same level of professionalism and expertise to every project.
-              </p>
-              <p>
-                Fully licensed, insured, and certified, Alex combines technical excellence with honest, reliable service. He believes in doing the job right the first time and building lasting relationships with his clients through trust and exceptional results.
-              </p>
+    <section id="about" className="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+        <div className="absolute top-20 left-20 w-32 h-32 gradient-aurora rounded-full opacity-10 animate-float"></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 gradient-electric rounded-full opacity-10 animate-float" style={{ animationDelay: '2s' }}></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Content */}
+          <div className="animate-slide-in-left">
+            <div className="mb-8">
+              <span className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-4">
+                Meet Your Expert
+              </span>
+              <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                Alex - Your Trusted
+                <span className="block text-gradient mt-2">Electrical Partner</span>
+              </h2>
             </div>
-          </div>
-          <div className="flex justify-center">
-            <div className="relative">
-              <div className="w-80 h-80 bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl flex items-center justify-center">
-                {/* Placeholder for Alex's photo */}
-                <div className="text-center text-white">
-                  <div className="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-                    <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+            
+            <div className="space-y-6">
+              <div className="card-modern p-6 hover-lift">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 gradient-electric rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <p className="font-semibold text-xl">Alex</p>
-                  <p className="text-blue-200">Professional Electrician</p>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-2">15+ Years of Excellence</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Over a decade and a half of hands-on experience delivering exceptional electrical services across residential, commercial, and industrial sectors.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="card-modern p-6 hover-lift" style={{ animationDelay: '0.2s' }}>
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 gradient-sunset rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-2">Cutting-Edge Technology</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Always up-to-date with the latest electrical codes, smart home technologies, and sustainable energy solutions including solar and EV charging.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="card-modern p-6 hover-lift" style={{ animationDelay: '0.4s' }}>
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 gradient-aurora rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-2">Licensed & Insured</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Fully licensed, insured, and certified professional who combines technical excellence with honest, reliable service you can trust.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Professional Image */}
+          <div className="relative animate-slide-in-right">
+            <div className="relative">
+              {/* Main image container with modern effects */}
+              <div className="relative w-full h-96 lg:h-[500px] rounded-3xl overflow-hidden shadow-electric-lg hover-glow group">
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 gradient-electric opacity-80 z-10"></div>
+                
+                {/* Professional placeholder with modern styling */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center z-20">
+                  <div className="text-center text-white">
+                    <div className="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center mb-6 mx-auto backdrop-blur-sm border border-white/30 shadow-2xl">
+                      <svg className="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <h3 className="font-bold text-2xl mb-2">Alex Rodriguez</h3>
+                    <p className="text-blue-200 text-lg font-medium">Master Electrician</p>
+                    <p className="text-blue-300 text-sm mt-2">Licensed Professional #EL-2024-001</p>
+                  </div>
+                </div>
+                
+                {/* Animated border */}
+                <div className="absolute inset-0 rounded-3xl border-2 border-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30" style={{ 
+                  background: 'linear-gradient(45deg, #3b82f6, #8b5cf6, #3b82f6)', 
+                  backgroundSize: '200% 200%',
+                  animation: 'gradient-shift 3s ease infinite'
+                }}></div>
+              </div>
+              
+              {/* Floating badges */}
+              <div className="absolute -top-4 -right-4 glass p-4 rounded-2xl shadow-xl animate-float">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-600">15+</div>
+                  <div className="text-xs text-gray-600 font-medium">Years</div>
+                </div>
+              </div>
+              
+              <div className="absolute -bottom-4 -left-4 glass p-4 rounded-2xl shadow-xl animate-float" style={{ animationDelay: '2s' }}>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-600">24/7</div>
+                  <div className="text-xs text-gray-600 font-medium">Available</div>
                 </div>
               </div>
             </div>
