@@ -65,9 +65,9 @@ export default function Footer() {
                   </svg>
                 </div>
                 <Link
-                  href="mailto:alex@alexelectric.com"
+                  href="mailto:aleksander.gjoni85@gmail.com"
                   className="text-gray-400 hover:text-white transition-colors">
-                  alex@alexelectric.com
+                  aleksander.gjoni85@gmail.com
                 </Link>
               </div>
 
@@ -91,7 +91,7 @@ export default function Footer() {
                 <Link
                   href="tel:1234567890"
                   className="text-gray-400 hover:text-white transition-colors">
-                  +1 (234) 567-890
+                  +355 69 328 9443
                 </Link>
               </div>
 

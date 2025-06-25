@@ -42,7 +42,7 @@ export default function WhyChooseSection() {
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
             Why Choose
-            <span className="block text-gradient-aurora mt-2">Alex Electric?</span>
+            <span className="block text-gradient-sunset mt-2">Alex Electric?</span>
           </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
             Experience the difference of working with a true professional who puts your safety and satisfaction first.

@@ -25,8 +25,8 @@ export default function Navigation() {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center group cursor-pointer">
-            <div className="relative w-32 h-16 p-3 flex items-center justify-center rounded-xl transition-all duration-300 group-hover:bg-blue-50">
+          <ScrollButton sectionId="hero" className="flex items-center group cursor-pointer">
+            <div className="relative w-36 h-16 p-3 flex items-center justify-center rounded-xl transition-all duration-300 group-hover:bg-blue-50">
               <Image
                 src={logo}
                 priority
@@ -34,7 +34,7 @@ export default function Navigation() {
                 className="object-contain transform group-hover:scale-105 transition-transform duration-300"
               />
             </div>
-          </div>
+          </ScrollButton>
           
           <div className="hidden md:flex space-x-2">
             <ScrollButton 
@@ -60,25 +60,7 @@ export default function Navigation() {
             </ScrollButton>
           </div>
           
-          <ScrollButton 
-            sectionId="contact" 
-            className="relative btn-modern gradient-electric text-white px-6 py-3 rounded-full font-medium group overflow-hidden transform hover:scale-105 hover:shadow-electric-lg transition-all duration-300"
-          >
-            {/* Shimmer effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-            
-            <span className="relative z-10 flex items-center space-x-2">
-              <span>Get Quote</span>
-              <svg 
-                className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </span>
-          </ScrollButton>
+
         </div>
       </div>
     </nav>

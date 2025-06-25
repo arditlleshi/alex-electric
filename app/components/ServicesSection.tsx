@@ -46,11 +46,11 @@ const services = [
   {
     icon: (
       <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m13 0h-6m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a1 1 0 001-1v-1a2 2 0 012-2h2m13-6a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    title: "Emergency Repairs",
-    description: "24/7 emergency electrical repair services for urgent electrical issues, power outages, and safety concerns that can't wait.",
+    title: "Smart Home Solutions",
+    description: "Transform your home with intelligent automation systems, smart lighting, security integration, and IoT device installations for modern living.",
     gradient: "gradient-sunset",
     color: "red"
   },
@@ -95,7 +95,7 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <div 
               key={index} 
-              className="group relative card-modern p-8 hover-lift hover-glow transition-all duration-500 cursor-pointer"
+              className="group relative card-modern p-8 hover-lift hover-glow transition-all duration-500"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Gradient background on hover */}
@@ -118,13 +118,6 @@ export default function ServicesSection() {
                 {service.description}
               </p>
               
-              {/* Hover effect arrow */}
-              <div className="absolute bottom-6 right-6 transform translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300">
-                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </div>
-              
               {/* Shimmer effect */}
               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
@@ -139,17 +132,9 @@ export default function ServicesSection() {
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Ready to Get Started?
             </h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600">
               Contact us today for a free consultation and personalized quote for your electrical project.
             </p>
-            <button className="btn-modern gradient-electric text-white px-8 py-4 rounded-full font-semibold hover-lift hover-glow shadow-electric-lg group">
-              <span className="flex items-center space-x-2">
-                <span>Get Free Quote</span>
-                <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </span>
-            </button>
           </div>
         </div>
       </div>

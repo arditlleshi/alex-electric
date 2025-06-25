@@ -2,7 +2,7 @@ import ScrollButton from "./ScrollButton";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Dynamic gradient background */}
       <div className="absolute inset-0 gradient-mesh animate-gradient"></div>
       
@@ -47,20 +47,8 @@ export default function HeroSection() {
             </p>
           </div>
           
-          {/* CTA buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <ScrollButton 
-              sectionId="contact"
-              className="btn-modern gradient-electric text-white px-8 py-4 rounded-full text-lg font-semibold hover-lift hover-glow shadow-electric-lg group relative overflow-hidden"
-            >
-              <span className="relative z-10 flex items-center space-x-3">
-                <span>Get Free Quote</span>
-                <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </span>
-            </ScrollButton>
-            
+          {/* CTA button */}
+          <div className="flex justify-center">
             <ScrollButton 
               sectionId="services"
               className="glass text-white px-8 py-4 rounded-full text-lg font-medium hover-scale border border-white/30 hover:border-white/50 transition-all duration-300 group"

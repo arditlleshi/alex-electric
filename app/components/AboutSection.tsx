@@ -1,3 +1,6 @@
+import avatar from '@/public/avatar.jpg'
+import Image from "next/image";
+
 export default function AboutSection() {
   return (
     <section id="about" className="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
@@ -76,44 +79,43 @@ export default function AboutSection() {
           <div className="relative animate-slide-in-right">
             <div className="relative">
               {/* Main image container with modern effects */}
-              <div className="relative w-full h-96 lg:h-[500px] rounded-3xl overflow-hidden shadow-electric-lg hover-glow group">
+              <div className="relative w-full h-96 lg:h-[500px] rounded-3xl overflow-hidden shadow-electric-lg hover-glow hover-lift transition-all duration-300 group">
                 {/* Gradient overlay */}
-                <div className="absolute inset-0 gradient-electric opacity-80 z-10"></div>
+                <div className="absolute inset-0 gradient-electric opacity-80"></div>
                 
                 {/* Professional placeholder with modern styling */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center z-20">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center">
                   <div className="text-center text-white">
-                    <div className="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center mb-6 mx-auto backdrop-blur-sm border border-white/30 shadow-2xl">
-                      <svg className="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                      </svg>
+                    <div className="w-32 h-32 relative bg-white/20 rounded-full flex items-center justify-center mb-6 mx-auto backdrop-blur-sm border border-white/30 shadow-2xl group-hover:scale-110 transition-transform duration-300">
+                      <Image src={avatar} alt="Aleksander Gjoni" fill className="rounded-full object-cover" />
                     </div>
-                    <h3 className="font-bold text-2xl mb-2">Alex Rodriguez</h3>
+                    <h3 className="font-bold text-2xl mb-2">Aleksander Gjoni</h3>
                     <p className="text-blue-200 text-lg font-medium">Master Electrician</p>
                     <p className="text-blue-300 text-sm mt-2">Licensed Professional #EL-2024-001</p>
                   </div>
                 </div>
-                
-                {/* Animated border */}
-                <div className="absolute inset-0 rounded-3xl border-2 border-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30" style={{ 
-                  background: 'linear-gradient(45deg, #3b82f6, #8b5cf6, #3b82f6)', 
-                  backgroundSize: '200% 200%',
-                  animation: 'gradient-shift 3s ease infinite'
-                }}></div>
               </div>
               
               {/* Floating badges */}
-              <div className="absolute -top-4 -right-4 glass p-4 rounded-2xl shadow-xl animate-float">
+              <div className="absolute -top-6 -right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-2xl animate-float hover-lift z-50 border border-blue-200/50">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">15+</div>
-                  <div className="text-xs text-gray-600 font-medium">Years</div>
+                  <div className="text-2xl font-bold text-blue-700">15+</div>
+                  <div className="text-xs text-blue-600 font-medium">Years</div>
                 </div>
               </div>
               
-              <div className="absolute -bottom-4 -left-4 glass p-4 rounded-2xl shadow-xl animate-float" style={{ animationDelay: '2s' }}>
+              <div className="absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-2xl animate-float hover-lift z-10 border border-emerald-200/50" style={{ animationDelay: '2s' }}>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">24/7</div>
-                  <div className="text-xs text-gray-600 font-medium">Available</div>
+                  <div className="text-2xl font-bold text-emerald-700">24/7</div>
+                  <div className="text-xs text-emerald-600 font-medium">Available</div>
+                </div>
+              </div>
+              
+              {/* Additional badge */}
+              <div className="absolute -top-6 -left-6 bg-white/95 backdrop-blur-md p-3 rounded-xl shadow-2xl animate-float hover-lift z-10 border border-green-200/50" style={{ animationDelay: '1s' }}>
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  <div className="text-xs text-green-700 font-medium">Licensed</div>
                 </div>
               </div>
             </div>
