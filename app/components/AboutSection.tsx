@@ -87,7 +87,7 @@ export default function AboutSection() {
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center">
                   <div className="text-center text-white">
                     <div className="w-32 h-32 relative bg-white/20 rounded-full flex items-center justify-center mb-6 mx-auto backdrop-blur-sm border border-white/30 shadow-2xl group-hover:scale-110 transition-transform duration-300">
-                      <Image src={avatar} alt="Aleksander Gjoni" fill className="rounded-full object-cover" />
+                      <Image src={avatar} alt="Aleksander Gjoni" fill sizes="128px" className="rounded-full object-cover" />
                     </div>
                     <h3 className="font-bold text-2xl mb-2">Aleksander Gjoni</h3>
                     <p className="text-blue-200 text-lg font-medium">Master Electrician</p>
@@ -97,14 +97,14 @@ export default function AboutSection() {
               </div>
               
               {/* Floating badges */}
-              <div className="absolute -top-6 -right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-2xl animate-float hover-lift z-50 border border-blue-200/50">
+              <div className="absolute -top-1 -right-1 md:-top-6 md:-right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-2xl animate-float hover-lift z-50 border border-blue-200/50">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-blue-700">15+</div>
                   <div className="text-xs text-blue-600 font-medium">Years</div>
                 </div>
               </div>
               
-              <div className="absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-2xl animate-float hover-lift z-10 border border-emerald-200/50" style={{ animationDelay: '2s' }}>
+              <div className="absolute -bottom-1 -left-1 md:-bottom-6 md:-left-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-2xl animate-float hover-lift z-10 border border-emerald-200/50" style={{ animationDelay: '2s' }}>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-emerald-700">24/7</div>
                   <div className="text-xs text-emerald-600 font-medium">Available</div>
@@ -112,7 +112,7 @@ export default function AboutSection() {
               </div>
               
               {/* Additional badge */}
-              <div className="absolute -top-6 -left-6 bg-white/95 backdrop-blur-md p-3 rounded-xl shadow-2xl animate-float hover-lift z-10 border border-green-200/50" style={{ animationDelay: '1s' }}>
+              <div className="absolute -top-1 -left-1 md:-top-6 md:-left-6 bg-white/95 backdrop-blur-md p-3 rounded-xl shadow-2xl animate-float hover-lift z-10 border border-green-200/50" style={{ animationDelay: '1s' }}>
                 <div className="flex items-center space-x-2">
                   <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                   <div className="text-xs text-green-700 font-medium">Licensed</div>

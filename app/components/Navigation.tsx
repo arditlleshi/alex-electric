@@ -24,7 +24,7 @@ export default function Navigation() {
         : 'bg-white/85 py-4 shadow-sm'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-center md:justify-between items-center h-16">
           <ScrollButton sectionId="hero" className="flex items-center group cursor-pointer">
             <div className="relative w-36 h-16 p-3 flex items-center justify-center rounded-xl transition-all duration-300 group-hover:bg-blue-50">
               <Image

@@ -24,6 +24,17 @@ const services = [
   {
     icon: (
       <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m13 0h-6m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a1 1 0 001-1v-1a2 2 0 012-2h2m13-6a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    title: "Smart Home Solutions",
+    description: "Transform your home with intelligent automation systems, smart lighting, security integration, and IoT device installations for modern living.",
+    gradient: "gradient-mesh",
+    color: "teal"
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
@@ -42,17 +53,6 @@ const services = [
     description: "Complete solar panel installation and maintenance services to help you harness clean, renewable energy and reduce electricity costs.",
     gradient: "gradient-primary",
     color: "purple"
-  },
-  {
-    icon: (
-      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m13 0h-6m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a1 1 0 001-1v-1a2 2 0 012-2h2m13-6a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-    title: "Smart Home Solutions",
-    description: "Transform your home with intelligent automation systems, smart lighting, security integration, and IoT device installations for modern living.",
-    gradient: "gradient-sunset",
-    color: "red"
   },
   {
     icon: (

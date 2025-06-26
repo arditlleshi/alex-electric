@@ -48,7 +48,7 @@ export default function ContactSection() {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Phone Card */}
-          <div className="card-glass p-8 hover-lift group cursor-pointer animate-slide-in-left">
+          <div className="card-glass p-6 hover-lift group cursor-pointer animate-slide-in-left">
             <div className="text-center">
               <div className="w-16 h-16 gradient-electric rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl mx-auto mb-6">
                 <svg
@@ -78,7 +78,7 @@ export default function ContactSection() {
 
           {/* Email Card */}
           <div
-            className="card-glass p-8 hover-lift group cursor-pointer animate-fade-in-up flex flex-col"
+            className="card-glass p-6 hover-lift group cursor-pointer animate-fade-in-up flex flex-col"
             style={{ animationDelay: "0.2s" }}>
             <div className="text-center flex-grow">
               <div className="w-16 h-16 gradient-sunset rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl mx-auto mb-6">
@@ -96,23 +96,24 @@ export default function ContactSection() {
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">Email Us</h3>
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-300 mb-4">
                 Send us your project details for a detailed quote
               </p>
             </div>
-                          <div className="text-center">
-                <Link
-                  href="mailto:aleksander.gjoni85@gmail.com"
-                  className="text-sm font-bold text-orange-400 hover:text-orange-300 transition-colors block leading-relaxed">
-                  <span className="block">aleksander.gjoni85</span>
-                  <span className="block">@gmail.com</span>
-                </Link>
-              </div>
+            <div className="text-center">
+              <Link
+                href="mailto:aleksander.gjoni85@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xl font-bold text-orange-400 hover:text-orange-300 transition-colors block leading-relaxed">
+                <span className="block break-all hyphens-auto text-center lg:text-left">aleksander.gjoni85@gmail.com</span>
+              </Link>
+            </div>
           </div>
 
           {/* WhatsApp Card */}
           <div
-            className="card-glass p-8 hover-lift group cursor-pointer animate-slide-in-right"
+            className="card-glass p-6 hover-lift group cursor-pointer animate-slide-in-right"
             style={{ animationDelay: "0.4s" }}>
             <div className="text-center">
               <div className="w-16 h-16 gradient-aurora rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl mx-auto mb-6">
@@ -127,11 +128,13 @@ export default function ContactSection() {
               <p className="text-gray-300 mb-4">
                 Quick chat for instant responses and project updates
               </p>
-              <a
-                href="https://wa.me/1234567890"
+              <Link
+                href="https://wa.me/355693289443"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-xl font-bold text-green-400 hover:text-green-300 transition-colors">
                 Start Chat
-              </a>
+              </Link>
             </div>
           </div>
         </div>

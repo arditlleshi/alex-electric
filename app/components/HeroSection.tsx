@@ -1,4 +1,3 @@
-import ScrollButton from "./ScrollButton";
 
 export default function HeroSection() {
   return (
@@ -47,20 +46,6 @@ export default function HeroSection() {
             </p>
           </div>
           
-          {/* CTA button */}
-          <div className="flex justify-center">
-            <ScrollButton 
-              sectionId="services"
-              className="glass text-white px-8 py-4 rounded-full text-lg font-medium hover-scale border border-white/30 hover:border-white/50 transition-all duration-300 group"
-            >
-              <span className="flex items-center space-x-3">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h1m4 0h1m-3-16v6m0 0l2-2m-2 2l-2-2" />
-                </svg>
-                <span>Our Services</span>
-              </span>
-            </ScrollButton>
-          </div>
         </div>
       </div>
 

@@ -66,6 +66,8 @@ export default function Footer() {
                 </div>
                 <Link
                   href="mailto:aleksander.gjoni85@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors">
                   aleksander.gjoni85@gmail.com
                 </Link>
@@ -106,14 +108,16 @@ export default function Footer() {
                   </svg>
                 </div>
                 <Link
-                  href="https://wa.me/1234567890"
+                  href="https://wa.me/355693289443"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors">
                   WhatsApp Chat
                 </Link>
               </div>
             </div>
             <p className="text-gray-400 text-sm">
-              © 2025 AlexElectric. All rights reserved.
+              © {new Date().getFullYear()} Alex Electric. All rights reserved.
             </p>
           </div>
         </div>
