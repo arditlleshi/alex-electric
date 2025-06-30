@@ -32,17 +32,15 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20 animate-fade-in-up">
           <span className="inline-block px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-medium mb-4 backdrop-blur-sm border border-blue-400/30">
-            Get In Touch
+            Na Kontaktoni
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
-            Ready to Power Your
-            <span className="block text-gradient-sunset mt-2">
-              Next Project?
-            </span>
+            Gati për Projektin
+            <span className="block text-gradient-sunset mt-2">Tuaj të Ri?</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Get a free consultation and personalized quote. We&apos;re available
-            24/7 for emergency services.
+            Merrni një konsultë falas dhe një ofertë të personalizuar. Shërbime
+            emergjente 24/7.
           </p>
         </div>
 
@@ -64,15 +62,19 @@ export default function ContactSection() {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">Call Now</h3>
+              <h3 className="text-2xl font-bold text-white mb-2">
+                Telefononi Tani
+              </h3>
               <p className="text-gray-300 mb-4">
-                Available 24/7 for emergency services and consultations
+                Disponibël 24/7 për shërbime emergjente dhe konsultime
               </p>
-              <a
-                href="tel:1234567890"
+              <Link
+                href="tel:+355693289443"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-xl font-bold text-blue-400 hover:text-blue-300 transition-colors">
                 +355 69 328 9443
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -95,9 +97,11 @@ export default function ContactSection() {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">Email Us</h3>
+              <h3 className="text-2xl font-bold text-white mb-2">
+                Dërgoni Email
+              </h3>
               <p className="text-gray-300 mb-4">
-                Send us your project details for a detailed quote
+                Na dërgoni detajet e projektit tuaj për një ofertë të detajuar
               </p>
             </div>
             <div className="text-center">
@@ -106,7 +110,9 @@ export default function ContactSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xl font-bold text-orange-400 hover:text-orange-300 transition-colors block leading-relaxed">
-                <span className="block break-all hyphens-auto text-center lg:text-left">aleksander.gjoni85@gmail.com</span>
+                <span className="block break-all hyphens-auto text-center lg:text-left">
+                  aleksander.gjoni85@gmail.com
+                </span>
               </Link>
             </div>
           </div>
@@ -126,14 +132,15 @@ export default function ContactSection() {
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">WhatsApp</h3>
               <p className="text-gray-300 mb-4">
-                Quick chat for instant responses and project updates
+                Bisedë e shpejtë për përgjigje të menjëhershme dhe përditësime
+                të projektit
               </p>
               <Link
                 href="https://wa.me/355693289443"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xl font-bold text-green-400 hover:text-green-300 transition-colors">
-                Start Chat
+                Na shkruani
               </Link>
             </div>
           </div>

@@ -41,21 +41,21 @@ export default function Navigation() {
               sectionId="about" 
               className="relative text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium group px-4 py-2 rounded-lg"
             >
-              <span className="relative z-10">About</span>
+              <span className="relative z-10">Rreth Nesh</span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-95 group-hover:scale-100"></div>
             </ScrollButton>
             <ScrollButton 
               sectionId="services" 
               className="relative text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium group px-4 py-2 rounded-lg"
             >
-              <span className="relative z-10">Services</span>
+              <span className="relative z-10">Shërbimet</span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-95 group-hover:scale-100"></div>
             </ScrollButton>
             <ScrollButton 
               sectionId="contact" 
               className="relative text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium group px-4 py-2 rounded-lg"
             >
-              <span className="relative z-10">Contact</span>
+              <span className="relative z-10">Kontakti</span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-95 group-hover:scale-100"></div>
             </ScrollButton>
           </div>

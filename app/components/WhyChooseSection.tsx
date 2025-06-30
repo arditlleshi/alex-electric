@@ -1,27 +1,27 @@
 const benefits = [
   {
-    title: "Over 15 Years Experience",
-    description: "Extensive hands-on experience across all types of electrical projects and installations."
+    title: "Mbi 15 Vjet Eksperiencë",
+    description: "Eksperiencë e gjerë praktike në të gjitha llojet e projekteve dhe instalimeve elektrike."
   },
   {
-    title: "Fully Licensed & Insured",
-    description: "Complete professional credentials and comprehensive insurance coverage for your peace of mind."
+    title: "Plotësisht të Licensuar & të Siguruar",
+    description: "Licenca profesionale dhe mbulim i plotë sigurimi për qetësinë tuaj."
   },
   {
-    title: "Timely & Reliable",
-    description: "Punctual service delivery and reliable communication throughout every project."
+    title: "Në Kohë & të Besueshëm",
+    description: "Shërbim i përpiktë dhe komunikim i besueshëm në çdo fazë të projektit."
   },
   {
-    title: "Modern & Sustainable Solutions",
-    description: "Latest technology and eco-friendly electrical solutions for future-ready installations."
+    title: "Zgjidhje Moderne & të Qëndrueshme",
+    description: "Teknologjia më e fundit dhe zgjidhje elektrike miqësore me mjedisin për instalime të së ardhmes."
   },
   {
-    title: "Competitive Pricing",
-    description: "Fair, transparent pricing with detailed estimates and no hidden fees or surprises."
+    title: "Çmime Konkurruese",
+    description: "Çmime transparente, të drejta dhe pa kosto të fshehura apo surpriza të padëshiruara."
   },
   {
-    title: "Safety First Approach",
-    description: "Strict adherence to electrical codes and safety standards for every installation and repair."
+    title: "Siguria në Plan të Parë",
+    description: "Respektim rigoroz i standardeve dhe kodeve të sigurisë për çdo instalim dhe riparim elektrik."
   }
 ];
 
@@ -38,14 +38,14 @@ export default function WhyChooseSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20 animate-fade-in-up">
           <span className="inline-block px-4 py-2 bg-white/20 text-white/90 rounded-full text-sm font-medium mb-4 backdrop-blur-sm border border-white/30">
-            Why Choose Us
+          Pse të Na Zgjidhni Ne
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
-            Why Choose
+          Pse të Zgjidhni
             <span className="block text-gradient-sunset mt-2">Alex Electric?</span>
           </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-            Experience the difference of working with a true professional who puts your safety and satisfaction first.
+          Provoni ndryshimin që sjell bashkëpunimi me një profesionist të vërtetë, i cili vë në plan të parë sigurinë dhe kënaqësinë tuaj.
           </p>
         </div>
         

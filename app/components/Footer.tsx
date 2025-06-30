@@ -16,35 +16,35 @@ export default function Footer() {
               className="h-10 w-auto mb-4 filter brightness-0 invert"
             />
             <p className="text-gray-400 mb-4">
-              Professional electrical services you can trust. Over 15 years of
-              experience serving residential, commercial, and industrial
-              clients.
+              Shërbime elektrike profesionale që mund t&apos;u besoni. Mbi 15
+              vite eksperiencë në shërbim të klientëve rezidencialë, komercialë
+              dhe industrialë.
             </p>
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4">Linqe të Shpejta</h4>
             <div className="space-y-2">
               <ScrollButton
                 sectionId="about"
                 className="block text-gray-400 hover:text-white transition-colors text-left">
-                About Alex
+                Rreth Alex Electric
               </ScrollButton>
               <ScrollButton
                 sectionId="services"
                 className="block text-gray-400 hover:text-white transition-colors text-left">
-                Services
+                Shërbimet
               </ScrollButton>
               <ScrollButton
                 sectionId="contact"
                 className="block text-gray-400 hover:text-white transition-colors text-left">
-                Contact
+                Kontakti
               </ScrollButton>
             </div>
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
+            <h4 className="text-lg font-semibold mb-4">Na Kontaktoni</h4>
             <div className="space-y-4 mb-4">
               {/* Email */}
               <div className="flex items-center space-x-3">
@@ -112,12 +112,13 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors">
-                  WhatsApp Chat
+                  Bisedoni në WhatsApp
                 </Link>
               </div>
             </div>
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Alex Electric. All rights reserved.
+              © {new Date().getFullYear()} Alex Electric. Të gjitha të drejtat e
+              rezervuara.
             </p>
           </div>
         </div>
