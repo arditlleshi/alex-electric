@@ -16,7 +16,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Alex Electric – Shërbime Profesionale Elektrike | Rezidenciale, Komerciale & Industriale",
   description: "Elektriçisti profesionist qe ofron shërbime elektrike me përvojë mbi 15 vjet. Instalime elekrike për shtëpi, dyqane, lokale zyra etj, karikues për makina elektrike, panele diellore dhe riparime urgjente.",
-  keywords: "elektriçist, shërbime elektrike, instalime elektrike, karikues për makina elektrike, panele diellore, riparime urgjente, elektriçist i autorizuar",
+  keywords: "elektricist, elektricist ne Tirane, shërbime elektrike, instalime elektrike, riparime elektrike, elektriçist i autorizuar",
   authors: [{ name: "Alex Electric" }],
   robots: "index, follow",
   openGraph: {
