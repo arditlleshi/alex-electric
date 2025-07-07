@@ -14,16 +14,16 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Alex Electric - Professional Electrician Services | Residential, Commercial & Industrial",
-  description: "Professional electrician Alex offers expert electrical services with 15+ years experience. Residential, commercial, industrial wiring, EV chargers, solar panels, emergency repairs. Licensed & insured.",
-  keywords: "electrician, electrical services, residential electrical, commercial electrical, industrial electrical, EV charger installation, solar panels, emergency electrical repair, licensed electrician",
+  title: "Alex Electric – Shërbime Profesionale Elektrike | Rezidenciale, Komerciale & Industriale",
+  description: "Elektriçisti profesionist qe ofron shërbime elektrike me përvojë mbi 15 vjet. Instalime elekrike për shtëpi, dyqane, lokale zyra etj, karikues për makina elektrike, panele diellore dhe riparime urgjente.",
+  keywords: "elektriçist, shërbime elektrike, instalime elektrike, karikues për makina elektrike, panele diellore, riparime urgjente, elektriçist i autorizuar",
   authors: [{ name: "Alex Electric" }],
   robots: "index, follow",
   openGraph: {
-    title: "Alex Electric - Professional Electrician Services",
-    description: "Expert electrical services for homes, businesses & industry. 15+ years experience, licensed & insured. EV chargers, solar panels, emergency repairs.",
+    title: "Alex Electric – Shërbime Profesionale Elektrike | Rezidenciale, Komerciale & Industriale",
+    description: "Elektriçisti profesionist qe ofron shërbime elektrike me përvojë mbi 15 vjet. Instalime elekrike per shtepi, dyqane, lokalem zyra etj, karikues për makina elektrike, panele diellore dhe riparime urgjente.",
     type: "website",
-    locale: "en_US",
+    locale: "sq_AL",
   },
 };
 
