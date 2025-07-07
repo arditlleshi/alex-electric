@@ -4,8 +4,8 @@ const benefits = [
     description: "Eksperiencë e gjerë praktike në të gjitha llojet e projekteve dhe instalimeve elektrike."
   },
   {
-    title: "Plotësisht të Licensuar & të Siguruar",
-    description: "Licenca profesionale dhe mbulim i plotë sigurimi për qetësinë tuaj."
+    title: "Plotësisht të Siguruar & të Besueshëm",
+    description: "Mbulim i plotë sigurimi dhe shërbim i besueshëm për qetësinë tuaj."
   },
   {
     title: "Në Kohë & të Besueshëm",
@@ -17,7 +17,7 @@ const benefits = [
   },
   {
     title: "Çmime Konkurruese",
-    description: "Çmime transparente, të drejta dhe pa kosto të fshehura apo surpriza të padëshiruara."
+    description: "Çmime transparente, të drejta dhe konkuruese."
   },
   {
     title: "Siguria në Plan të Parë",
