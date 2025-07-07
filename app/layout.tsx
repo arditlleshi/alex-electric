@@ -25,6 +25,12 @@ export const metadata: Metadata = {
     type: "website",
     locale: "sq_AL",
   },
+  alternates: {
+    canonical: "https://www.alex-electric.com",
+  },
+  verification: {
+    google: "x1JQVuYMIxvh0xQT2X1dw0E6bxcy2k-ajjAHaogtbvk",
+  },
 };
 
 export default function RootLayout({
