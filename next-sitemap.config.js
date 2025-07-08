@@ -13,6 +13,5 @@ module.exports = {
         allow: "/",
       },
     ],
-    additionalSitemaps: ["https://www.alex-electric.com/sitemap-0.xml"],
   },
 };
