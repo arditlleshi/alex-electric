@@ -7,3 +7,4 @@ Host: https://www.alex-electric.com
 
 # Sitemaps
 Sitemap: https://www.alex-electric.com/sitemap.xml
+Sitemap: https://www.alex-electric.com/sitemap-0.xml
