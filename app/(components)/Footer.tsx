@@ -27,7 +27,7 @@ export default function Footer() {
               <Link
                 href="/#about"
                 className="block text-gray-400 hover:text-white transition-colors text-left">
-                Rreth Alex Electric
+                Rreth Alex Elektrik
               </Link>
               <Link
                 href="/#services"
@@ -72,7 +72,7 @@ export default function Footer() {
                   href="mailto:aleksander.gjoni85@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors break-all">
+                  className="text-gray-400 hover:text-white transition-colors break-all leading-tight">
                   aleksander.gjoni85@gmail.com
                 </Link>
               </div>
@@ -96,7 +96,7 @@ export default function Footer() {
                 </div>
                 <Link
                   href="tel:355693289443"
-                  className="text-gray-400 hover:text-white transition-colors">
+                  className="text-gray-400 hover:text-white transition-colors leading-tight">
                   +355 69 328 9443
                 </Link>
               </div>
@@ -115,7 +115,7 @@ export default function Footer() {
                   href="https://wa.me/355693289443"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors">
+                  className="text-gray-400 hover:text-white transition-colors leading-tight">
                   Bisedoni në WhatsApp
                 </Link>
               </div>
@@ -146,7 +146,7 @@ export default function Footer() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Alex Electric Office"
+                title="Alex Elektrik Office"
               />
             </div>
           </div>
@@ -154,7 +154,7 @@ export default function Footer() {
 
         <div className="mt-8 border-t border-gray-700 pt-6 text-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Alex Electric. Të gjitha të drejtat e
+            © {new Date().getFullYear()} Alex Elektrik. Të gjitha të drejtat e
             rezervuara.
           </p>
         </div>

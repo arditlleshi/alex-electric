@@ -148,7 +148,7 @@ export default function AboutSection() {
                 Njihuni me Ekspertin
               </span>
               <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                Alex Electric - Elektricisti Juaj
+                Alex Elektrik - Elektriçisti Juaj
                 <span className="block text-gradient mt-2">i Besuar</span>
               </h2>
             </div>
@@ -265,10 +265,7 @@ export default function AboutSection() {
                       Aleksander Gjoni
                     </h3>
                     <p className="text-blue-200 text-lg font-medium">
-                      Elektricist Profesionist
-                    </p>
-                    <p className="text-blue-300 text-sm mt-2">
-                      Profesionist i Eksperiencës
+                      Elektriçist Profesionist
                     </p>
                   </div>
                 </div>
