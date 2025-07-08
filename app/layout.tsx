@@ -4,27 +4,55 @@ import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
-  display: 'swap',
-  variable: '--font-inter',
+  display: "swap",
+  variable: "--font-inter",
 });
 
 export const viewport: Viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
 };
 
 export const metadata: Metadata = {
-  title: "Alex Electric – Shërbime Profesionale Elektrike | Rezidenciale, Komerciale & Industriale",
-  description: "Elektriçisti profesionist qe ofron shërbime elektrike me përvojë mbi 15 vjet. Instalime elekrike për shtëpi, dyqane, lokale zyra etj, karikues për makina elektrike, panele diellore dhe riparime urgjente.",
-  keywords: "elektricist, elektricist ne Tirane, shërbime elektrike, instalime elektrike, riparime elektrike, elektriçist i autorizuar",
-  authors: [{ name: "Alex Electric" }],
+  title:
+    "Elektriçist në Tiranë – Instalime & Riparime Elektrike | Alex Elektrik",
+  description:
+    "Elektriçist profesionist me mbi 15 vite përvojë në instalime, riparime dhe mirëmbajtje elektrike. Ofrojmë shërbime për shtëpi, biznese, panele diellore dhe karikues EV. Kontaktoni sot për një ofertë të shpejtë!",
+  keywords:
+    "elektriçist Tiranë, elektriçist urgjent, shërbime elektrike, instalime elektrike, panele diellore, karikues për makina elektrike, elektriçist për biznese, mirëmbajtje elektrike, riparime elektrike, elektriçist shtëpie",
+    authors: [
+      {
+        name: "Alex Elektrik",
+        url: "https://www.alex-electric.com",
+      },
+    ],
   robots: "index, follow",
   openGraph: {
-    title: "Alex Electric – Shërbime Profesionale Elektrike | Rezidenciale, Komerciale & Industriale",
-    description: "Elektriçisti profesionist qe ofron shërbime elektrike me përvojë mbi 15 vjet. Instalime elekrike per shtepi, dyqane, lokalem zyra etj, karikues për makina elektrike, panele diellore dhe riparime urgjente.",
+    title:
+      "Elektriçist në Tiranë – Instalime & Riparime Elektrike | Alex Elektrik",
+    description:
+      "Shërbime elektrike profesionale për shtëpi, biznese dhe panele diellore. Elektriçist me përvojë në Tiranë.",
     type: "website",
     locale: "sq_AL",
+    url: "https://www.alex-electric.com",
+    siteName: "Alex Elektrik",
+    images: [
+      {
+        url: "/main-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Alex Elektrik – Elektriçist në Tiranë",
+      },
+    ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Alex Electric | Elektriçist në Tiranë",
+    description: "Shërbime elektrike të besueshme për shtëpi dhe biznese në Tiranë.",
+    // creator: "@alex_electric",
+    images: ["/main-logo.png"],
+  },
+  
   alternates: {
     canonical: "https://www.alex-electric.com",
   },
@@ -39,8 +67,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} font-sans antialiased`} suppressHydrationWarning={true}>
+    <html lang="sq" className="scroll-smooth">
+      <body
+        className={`${inter.variable} font-sans antialiased`}
+        suppressHydrationWarning={true}>
         {children}
       </body>
     </html>
