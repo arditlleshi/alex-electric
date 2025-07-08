@@ -1,10 +1,11 @@
-import Navigation from "./components/Navigation";
-import HeroSection from "./components/HeroSection";
-import AboutSection from "./components/AboutSection";
-import ServicesSection from "./components/ServicesSection";
-import WhyChooseSection from "./components/WhyChooseSection";
-import ContactSection from "./components/ContactSection";
-import Footer from "./components/Footer";
+import Navigation from "./(components)/Navigation";
+import HeroSection from "./(components)/HeroSection";
+import AboutSection from "./(components)/AboutSection";
+import ServicesSection from "./(components)/ServicesSection";
+import WhyChooseSection from "./(components)/WhyChooseSection";
+import ContactSection from "./(components)/ContactSection";
+import Footer from "./(components)/Footer";
+import ArticlesSection from "./(components)/ArticlesSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
       <WhyChooseSection />
+      <ArticlesSection />
       <ContactSection />
       <Footer />
     </div>

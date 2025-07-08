@@ -1,5 +1,4 @@
 import Image from "next/image";
-import ScrollButton from "./ScrollButton";
 import Link from "next/link";
 import logo from "@/public/main-logo.png";
 
@@ -7,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-5 gap-8">
           <div>
             <Image
               src={logo}
@@ -25,21 +24,26 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Linqe të Shpejta</h4>
             <div className="space-y-2">
-              <ScrollButton
-                sectionId="about"
+              <Link
+                href="/#about"
                 className="block text-gray-400 hover:text-white transition-colors text-left">
                 Rreth Alex Electric
-              </ScrollButton>
-              <ScrollButton
-                sectionId="services"
+              </Link>
+              <Link
+                href="/#services"
                 className="block text-gray-400 hover:text-white transition-colors text-left">
                 Shërbimet
-              </ScrollButton>
-              <ScrollButton
-                sectionId="contact"
+              </Link>
+              <Link
+                href="/blog"
+                className="block text-gray-400 hover:text-white transition-colors text-left">
+                Artikuj
+              </Link>
+              <Link
+                href="/#contact"
                 className="block text-gray-400 hover:text-white transition-colors text-left">
                 Kontakti
-              </ScrollButton>
+              </Link>
             </div>
           </div>
 
@@ -47,7 +51,7 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Na Kontaktoni</h4>
             <div className="space-y-4 mb-4">
               {/* Email */}
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +72,7 @@ export default function Footer() {
                   href="mailto:aleksander.gjoni85@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors">
+                  className="text-gray-400 hover:text-white transition-colors break-all">
                   aleksander.gjoni85@gmail.com
                 </Link>
               </div>
@@ -91,7 +95,7 @@ export default function Footer() {
                   </svg>
                 </div>
                 <Link
-                  href="tel:1234567890"
+                  href="tel:355693289443"
                   className="text-gray-400 hover:text-white transition-colors">
                   +355 69 328 9443
                 </Link>
@@ -115,6 +119,19 @@ export default function Footer() {
                   Bisedoni në WhatsApp
                 </Link>
               </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-6">
+              Shërbimet Kryesore
+            </h3>
+            <div className="space-y-3">
+              <p className="text-gray-400">Instalime & Riparime</p>
+              <p className="text-gray-400">Mirëmbajtje Elektrike</p>
+              <p className="text-gray-400">Panele Diellore</p>
+              <p className="text-gray-400">Karikues EV</p>
+              <p className="text-gray-400">Shtëpi Inteligjente</p>
             </div>
           </div>
 

@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     siteName: "Alex Elektrik",
     images: [
       {
-        url: "/favicon.ico",
+        url: "/logo.png",
         width: 1200,
         height: 630,
         alt: "Alex Elektrik – Elektriçist në Tiranë",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: "Alex Electric | Elektriçist në Tiranë",
     description: "Shërbime elektrike të besueshme për shtëpi dhe biznese në Tiranë.",
     // creator: "@alex_electric",
-    images: ["/favicon.ico"],
+    images: ["/logo.png"],
   },
   
   alternates: {

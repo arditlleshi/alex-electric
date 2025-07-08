@@ -1,31 +1,18 @@
-"use client";
-
 import Image from "next/image";
-import ScrollButton from "./ScrollButton";
+import Link from "next/link";
 import logo from "@/public/main-logo.png";
-import { useState, useEffect } from "react";
 
 export default function Navigation() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-[9999] nav-backdrop transition-all duration-500 ${
-      scrolled 
-        ? 'bg-white/95 py-2 shadow-lg border-b border-gray-200/20' 
-        : 'bg-white/85 py-4 shadow-sm'
-    }`}>
+    <nav className="fixed top-0 left-0 right-0 z-[9999] nav-backdrop bg-white/90 py-2 shadow-lg border-b border-gray-200/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center md:justify-between items-center h-16">
-          <ScrollButton sectionId="hero" className="flex items-center group cursor-pointer">
+          <Link href={
+            {
+              pathname: '/',
+              hash: '#hero'
+            }
+          } className="flex items-center group cursor-pointer">
             <div className="relative w-36 h-16 p-3 flex items-center justify-center rounded-xl transition-all duration-300 group-hover:bg-blue-50">
               <Image
                 src={logo}
@@ -34,35 +21,42 @@ export default function Navigation() {
                 className="object-contain transform group-hover:scale-105 transition-transform duration-300"
               />
             </div>
-          </ScrollButton>
+          </Link>
           
           <div className="hidden md:flex space-x-2">
-            <ScrollButton 
-              sectionId="about" 
+            <Link 
+              href="/#about" 
               className="relative text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium group px-4 py-2 rounded-lg"
             >
               <span className="relative z-10">Rreth Nesh</span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-95 group-hover:scale-100"></div>
-            </ScrollButton>
-            <ScrollButton 
-              sectionId="services" 
+            </Link>
+            <Link 
+              href="/#services" 
               className="relative text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium group px-4 py-2 rounded-lg"
             >
               <span className="relative z-10">Shërbimet</span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-95 group-hover:scale-100"></div>
-            </ScrollButton>
-            <ScrollButton 
-              sectionId="contact" 
+            </Link>
+            
+            <Link 
+              href="/blog" 
+              className="relative text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium group px-4 py-2 rounded-lg"
+            >
+              <span className="relative z-10">Blog</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-95 group-hover:scale-100"></div>
+            </Link>
+
+            <Link 
+              href="/#contact" 
               className="relative text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium group px-4 py-2 rounded-lg"
             >
               <span className="relative z-10">Kontakti</span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-95 group-hover:scale-100"></div>
-            </ScrollButton>
+            </Link>
           </div>
-          
-
         </div>
       </div>
     </nav>
   );
-}
+} 
