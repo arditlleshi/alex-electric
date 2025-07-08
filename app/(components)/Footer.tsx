@@ -123,7 +123,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold text-white mb-6">
+            <h3 className="text-lg font-semibold text-white mb-4">
               Shërbimet Kryesore
             </h3>
             <div className="space-y-3">
