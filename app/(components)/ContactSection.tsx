@@ -139,12 +139,11 @@ export default function ContactSection() {
             Na Kontaktoni
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
-            Gati për Projektin
-            <span className="block text-gradient-sunset mt-2">Tuaj të Ri?</span>
+          Kontaktoni
+            <span className="block text-gradient-sunset mt-2">Alex Elektrik</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Merrni një konsultë falas dhe një ofertë të personalizuar. Shërbime
-            emergjente 24/7.
+          Keni një projekt elektrik apo emergjencë? Kontaktoni tani për një konsultim falas dhe një ofertë të personalizuar. Alex Elektrik është gjithmonë i gatshëm t&apos;ju ndihmojë, 24 orë në ditë, 7 ditë në javë.
           </p>
         </div>
 

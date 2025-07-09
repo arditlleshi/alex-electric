@@ -51,8 +51,7 @@ export default function ArticlesSection() {
             Artikuj & Këshilla
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Informohu Më Shumë
-            <span className="block text-gradient mt-2">nga Eksperti</span>
+          Artikuj të Dobishëm nga Blogu Ynë
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Lexoni artikujt tanë për këshilla praktike, udhëzime dhe informacion të vlefshëm rreth botës së shërbimeve elektrike.

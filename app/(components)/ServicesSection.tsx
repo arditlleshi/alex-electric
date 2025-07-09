@@ -11,47 +11,47 @@ const services = [
     image: ResidentialElectric,
     title: "Instalime Elektrike Rezidenciale",
     description:
-      "Instalime të plota elektrike për shtëpi, duke përfshirë kabllime, prizat, ndriçimin dhe panelet elektrike.",
+      "Kryejmë instalime të plota elektrike për apartamente, vila dhe ambiente banimi. Siguri dhe efikasitet maksimal në çdo punim elektrik.",
     gradient: "gradient-electric",
     color: "blue",
   },
   {
     image: CommercialElectric,
-    title: "Elektrik Komercial & Industrial",
+    title: "Shërbime për Biznese dhe Industri",
     description:
-      "Shërbime elektrike profesionale për zyra, restorante, bare dhe fabrika me instalime të sigurta dhe standarde.",
+      "Instalime dhe riparime elektrike të specializuara për zyra, lokale, restorante dhe fabrika, duke siguruar vazhdimësi të aktivitetit tuaj.",
     gradient: "gradient-sunset",
     color: "orange",
   },
   {
     image: SmartHome,
-    title: "Shtëpi Inteligjente",
+    title: "Sisteme Smart Home",
     description:
-      "Automatizime moderne, ndriçim inteligjent, sisteme sigurie dhe pajisje IoT për një jetë më të lehtë dhe komode.",
+      "Automatizoni shtëpinë tuaj me sisteme inteligjente për ndriçim, siguri, dhe kontroll të pajisjeve në distancë.",
     gradient: "gradient-mesh",
     color: "teal",
   },
   {
     image: ElectricCar,
-    title: "Instalim Karikuesi për Automjete Elektrike",
+    title: "Karikues për Makina Elektrike (EV)",
     description:
-      "Instalime moderne të stacioneve të karikimit për automjete elektrike, për përdorim shtëpiak dhe komercial.",
+      "Instalim karikuesish për automjete elektrike, duke garantuar karikim të shpejtë, të sigurt dhe efikas në shtëpi ose biznes.",
     gradient: "gradient-aurora",
     color: "green",
   },
   {
     image: SolarPanel,
-    title: "Sisteme me Panele Diellore",
+    title: "Instalime dhe Mirëmbajtje Panele Diellore",
     description:
-      "Instalime dhe mirëmbajtje e paneleve diellore për energji të pastër dhe kursim të faturave të energjisë.",
+      "Projektim, instalim dhe mirëmbajtje të sistemeve solare për energji të pastër dhe kursim maksimal të energjisë elektrike.",
     gradient: "gradient-primary",
     color: "purple",
   },
   {
     image: Maintenance,
-    title: "Mirëmbajtje & Diagnostikim",
+    title: "Mirëmbajtje & Diagnostikim Elektrik",
     description:
-      "Shërbime mirëmbajtjeje dhe diagnostikimi për parandalimin e problemeve elektrike dhe garantimin e sigurisë.",
+      "Shërbim emergjent dhe mirëmbajtje periodike për të garantuar siguri maksimale dhe parandalim të avarive elektrike.",
     gradient: "gradient-electric",
     color: "indigo",
   },
@@ -75,8 +75,7 @@ export default function ServicesSection() {
             Ekspertiza Jonë
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Zgjidhje Elektrike
-            <span className="block text-gradient mt-2">Gjithëpërfshirëse</span>
+            Shërbimet Elektrike që Ofrojmë
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Nga riparimet shtëpiake deri te instalimet industriale, ne ofrojmë

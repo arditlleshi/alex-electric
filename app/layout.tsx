@@ -17,11 +17,11 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title:
-    "Elektriçist në Tiranë – Instalime & Riparime Elektrike | Alex Elektrik",
+    "Elektriçist Profesional në Tiranë - Instalime & Riparime | Alex Elektrik",
   description:
-    "Elektriçist profesionist me mbi 15 vite përvojë në instalime, riparime dhe mirëmbajtje elektrike. Ofrojmë shërbime për shtëpi, biznese, panele diellore dhe karikues EV.",
+    "Alex Elektrik, elektriçist profesionist në Tiranë për instalime elektrike, riparime emergjente, sisteme smart home, karikues EV dhe panele diellore. Kontakto tani!",
   keywords:
-    "elektricist tirane, punime elektrike, elektricist astir, instalime elektrike, riparime elektrike, elektricist shtëpie",
+    "elektricist tirane, punime elektrike, instalime elektrike ne shtepi, instalime elektrike, riparime elektrike, elektricist shtëpie",
   authors: [
     {
       name: "Alex Elektrik",

@@ -1,33 +1,32 @@
 const benefits = [
   {
-    title: "Mbi 15 Vjet Eksperiencë",
+    title: "Eksperiencë & Cilësi",
     description:
-      "Eksperiencë e gjerë praktike në të gjitha llojet e projekteve dhe instalimeve elektrike.",
+      "Me një dekadë e gjysmë përvojë pune në terren, kemi hasur dhe zgjidhur me sukses një gamë të gjerë problemesh elektrike. Kjo na jep besimin dhe aftësinë për të trajtuar çdo situatë me kompetencë.",
   },
   {
-    title: "Plotësisht të Siguruar & të Besueshëm",
+    title: "Disponibilitet 24/7",
     description:
-      "Mbulim i plotë sigurimi dhe shërbim i besueshëm për qetësinë tuaj.",
+      "Problemet elektrike nuk presin! Prandaj, jemi gjithmonë të gatshëm t’ju ndihmojmë, qoftë ditë apo natë. Ofrojmë shërbim emergjence 24 orë në ditë, 7 ditë të javës, që do të thotë se mund të mbështeteni tek ne edhe jashtë orarit standard.",
   },
   {
-    title: "Në Kohë & të Besueshëm",
+    title: "Teknologji Moderne",
     description:
-      "Shërbim i përpiktë dhe komunikim i besueshëm në çdo fazë të projektit.",
+      "Industria elektrike përparon me shpejtësi, ndaj ne investojmë vazhdimisht në teknologji moderne. Nga pajisjet inteligjente për shtëpi tek sistemet efikase energjetikisht, ne ofrojmë zgjidhje bashkëkohore që kursejnë energji dhe janë miqësore me mjedisin.",
   },
   {
-    title: "Zgjidhje Moderne & të Qëndrueshme",
+    title: "Siguria në radhë të parë",
     description:
-      "Teknologjia më e fundit dhe zgjidhje elektrike miqësore me mjedisin për instalime të së ardhmes.",
+      "Tek ne siguria elektrike nuk është thjesht standard – është kulturë. Çdo instalim apo riparim realizohet duke respektuar me rigorozitet kodet dhe rregulloret e sigurisë",
   },
   {
-    title: "Çmime Konkurruese",
-    description: "Çmime transparente, të drejta dhe konkuruese.",
+    title: "Çmime konkurruese & transparencë",
+    description: "Marrëdhënia me klientin fillon me besim. Ne sigurojmë çmime konkurruese dhe transparente për çdo projekt. Para se të fillojmë punën, ju ofrojmë një preventiv të detajuar, pa tarifa të fshehura, në mënyrë që të dini saktësisht çfarë po paguani dhe çfarë vlere do të merrni.",
   },
   {
-    title: "Siguria në Plan të Parë",
-    description:
-      "Respektim rigoroz i standardeve dhe kodeve të sigurisë për çdo instalim dhe riparim elektrik.",
-  },
+    title: "Shërbim i Personalizuar",
+    description: "Vëmendje individuale për çdo projekt elektrik, duke ju dhënë zgjidhjen më të mirë sipas nevojave tuaja.",
+  }
 ];
 
 export default function WhyChooseSection() {
