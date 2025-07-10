@@ -295,7 +295,7 @@ export default function HeroSection() {
           {/* Main heading with gradient text */}
           <h1 className="mb-6 lg:mb-12 leading-tight">
             <span className="block font-bold text-4xl sm:text-6xl lg:text-7xl mb-2">
-              Elektriçist Profesionist në Tiranë
+              Elektricist Profesionist në Tiranë
             </span>
             <br />
             <span className="font-bold text-2xl sm:text-4xl lg:text-5xl">

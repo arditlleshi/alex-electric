@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const articles = [
   {
-    title: "Si të zgjedhësh një elektriçist të besueshëm në Tiranë",
+    title: "Si të zgjedhësh një elektricist të besueshëm në Tiranë",
     description:
       "Mësoni hapat kryesorë dhe këshillat praktike për të identifikuar dhe zgjedhur një profesionist të kualifikuar dhe të besueshëm për nevojat tuaja elektrike.",
     slug: "/blog/si-te-zgjedhesh-elektricist",
@@ -14,9 +14,9 @@ const articles = [
     ),
   },
   {
-    title: "5 shenja që ke nevojë për një elektriçist urgjent",
+    title: "5 shenja që ke nevojë për një elektricist urgjent",
     description:
-      "Identifikoni sinjalet e rrezikshme në sistemin tuaj elektrik që kërkojnë ndërhyrje të menjëhershme nga një elektriçist urgjent për të garantuar sigurinë.",
+      "Identifikoni sinjalet e rrezikshme në sistemin tuaj elektrik që kërkojnë ndërhyrje të menjëhershme nga një elektricist urgjent për të garantuar sigurinë.",
     slug: "/blog/shenja-per-elektricist-urgjent",
     icon: (
       <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

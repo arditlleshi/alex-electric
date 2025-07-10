@@ -264,7 +264,7 @@ export default function AboutSection() {
                       Aleksander Gjoni
                     </h3>
                     <p className="text-blue-200 text-lg font-medium">
-                      Elektriçist Profesionist
+                      Elektricist Profesionist
                     </p>
                   </div>
                 </div>

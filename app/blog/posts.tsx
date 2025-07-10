@@ -11,28 +11,28 @@ export interface Post {
 
 export const allPosts: Post[] = [
   {
-    title: "Si të zgjedhësh një elektriçist të besueshëm në Tiranë",
+    title: "Si të zgjedhësh një elektricist të besueshëm në Tiranë",
     description:
       "Këshillat kryesore për të identifikuar një profesionist të kualifikuar dhe të besueshëm për nevojat tuaja elektrike.",
     slug: "si-te-zgjedhesh-elektricist",
     date: "2025-07-08",
-    tags: ["elektriçist", "këshilla"],
+    tags: ["elektricist", "këshilla"],
     content: (
       <>
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
-          Zgjedhja e një elektriçisti të besueshëm është thelbësore për sigurinë e
+          Zgjedhja e një elektricisti të besueshëm është thelbësore për sigurinë e
           shtëpisë dhe biznesit tuaj. Në këtë artikull do të shqyrtojmë hapat
           kryesorë për të siguruar që punësoni personin e duhur.
         </p>
         <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">1. Verifikoni licencat dhe certifikimet</h2>
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
-          Sigurohuni që elektriçisti të ketë licencat e nevojshme nga autoritetet
+          Sigurohuni që elektricisti të ketë licencat e nevojshme nga autoritetet
           përkatëse. Kjo garanton se ai ka kaluar trajnimin dhe testet e duhura.
         </p>
         <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">2. Kërkoni referenca dhe recensime</h2>
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
           Recensimet online dhe rekomandimet nga klientët e mëparshëm janë një
-          mënyrë e shkëlqyer për të vlerësuar cilësinë e punës së elektriçistit.
+          mënyrë e shkëlqyer për të vlerësuar cilësinë e punës së elektricistit.
         </p>
         <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">3. Krahasoni ofertat</h2>
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
@@ -41,7 +41,7 @@ export const allPosts: Post[] = [
         </p>
         <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">4. Komunikimi dhe profesionalizmi</h2>
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
-          Një profesionist i mirë është i gatshëm t 1 shpjegojë procesin,
+          Një profesionist i mirë është i gatshëm të shpjegojë procesin,
           afatet kohore dhe kostot. Shënoni nëse ai përgjigjet shpejt dhe në
           mënyrë të qartë.
         </p>
@@ -54,17 +54,17 @@ export const allPosts: Post[] = [
     ),
   },
   {
-    title: "5 shenja që ke nevojë për një elektriçist urgjent",
+    title: "5 shenja që ke nevojë për një elektricist urgjent",
     description:
-      "Sinjalet kryesore që tregojnë se duhet të thërrisni menjëherë një elektriçist profesionist.",
+      "Sinjalet kryesore që tregojnë se duhet të thërrisni menjëherë një elektricist profesionist.",
     slug: "shenja-per-elektricist-urgjent",
     date: "2025-07-09",
-    tags: ["elektriçist", "urgjent"],
+    tags: ["elektricist", "urgjent"],
     content: (
       <>
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
           Disa probleme elektrike nuk mund të presin. Këtu janë pesë shenja që
-          tregojnë se duhet të kontaktoni menjëherë një elektriçist urgjent.
+          tregojnë se duhet të kontaktoni menjëherë një elektricist urgjent.
         </p>
         <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">1. Erë djegieje ose tym</h2>
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
