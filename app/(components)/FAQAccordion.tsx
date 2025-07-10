@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function FAQAccordion({
   faqs,
 }: {
-  faqs: { question: string; answer: string }[];
+  faqs: { question: string; answer: React.ReactNode }[];
 }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -18,8 +18,7 @@ export default function FAQAccordion({
       {faqs.map((faq, index) => (
         <div
           key={index}
-          className="relative card-modern overflow-hidden hover-lift animate-scale-in group"
-          style={{ animationDelay: `${index * 0.1}s` }}>
+          className="relative card-modern overflow-hidden group">
           {/* Main Button */}
           <button
             onClick={() => toggleFAQ(index)}
@@ -61,10 +60,8 @@ export default function FAQAccordion({
                 : "max-h-0 opacity-0"
             }`}>
             <div className="px-8 pb-6">
-              <div className="pt-2 border-t border-gray-100">
-                <p className="text-gray-600 leading-relaxed mt-4">
-                  {faq.answer}
-                </p>
+              <div className="pt-2 border-t border-gray-100 text-gray-600 leading-relaxed mt-4">
+                {faq.answer}
               </div>
             </div>
           </div>

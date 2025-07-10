@@ -153,7 +153,7 @@ export default function AboutSection() {
             </div>
 
             <div className="space-y-6">
-              <div className="card-modern p-6 hover-lift">
+              <div className="card-modern p-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 gradient-electric rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg
@@ -183,7 +183,7 @@ export default function AboutSection() {
               </div>
 
               <div
-                className="card-modern p-6 hover-lift"
+                className="card-modern p-6"
                 style={{ animationDelay: "0.2s" }}>
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 gradient-sunset rounded-lg flex items-center justify-center flex-shrink-0">
@@ -215,7 +215,7 @@ export default function AboutSection() {
               </div>
 
               <div
-                className="card-modern p-6 hover-lift"
+                className="card-modern p-6"
                 style={{ animationDelay: "0.4s" }}>
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 gradient-aurora rounded-lg flex items-center justify-center flex-shrink-0">
@@ -249,7 +249,7 @@ export default function AboutSection() {
 
           <div className="relative animate-slide-in-right">
             <div className="relative">
-              <div className="relative w-full h-96 lg:h-[500px] rounded-3xl overflow-hidden shadow-electric-lg hover-glow hover-lift transition-all duration-300 group">
+              <div className="relative w-full h-96 lg:h-[500px] rounded-3xl overflow-hidden shadow-electric-lg hover-glow transition-all duration-300 group">
                 <div className="absolute inset-0 gradient-electric opacity-80"></div>
 
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -270,7 +270,7 @@ export default function AboutSection() {
                 </div>
               </div>
 
-              <div className="absolute -top-1 -right-1 md:-top-6 md:-right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-2xl animate-float hover-lift z-50 border border-blue-200/50">
+              <div className="absolute -top-1 -right-1 md:-top-6 md:-right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-2xl animate-float z-50 border border-blue-200/50">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-blue-700">15+</div>
                   <div className="text-xs text-blue-600 font-medium">Vjet</div>
@@ -278,7 +278,7 @@ export default function AboutSection() {
               </div>
 
               <div
-                className="absolute -bottom-20 -left-1 md:-bottom-6 md:-left-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-2xl animate-float hover-lift z-10 border border-emerald-200/50"
+                className="absolute -bottom-20 -left-1 md:-bottom-6 md:-left-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-2xl animate-float z-10 border border-emerald-200/50"
                 style={{ animationDelay: "2s" }}>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-emerald-700">
@@ -291,7 +291,7 @@ export default function AboutSection() {
               </div>
 
               <div
-                className="absolute -top-1 -left-1 md:-top-6 md:-left-6 bg-white/95 backdrop-blur-md p-3 rounded-xl shadow-2xl animate-float hover-lift z-10 border border-green-200/50"
+                className="absolute -top-1 -left-1 md:-top-6 md:-left-6 bg-white/95 backdrop-blur-md p-3 rounded-xl shadow-2xl animate-float z-10 border border-green-200/50"
                 style={{ animationDelay: "1s" }}>
                 <div className="flex items-center space-x-2">
                   <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>

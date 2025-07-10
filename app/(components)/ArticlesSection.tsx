@@ -62,8 +62,7 @@ export default function ArticlesSection() {
           {articles.map((article, index) => (
             <div
               key={index}
-              className="group relative card-modern p-8 hover-lift hover-glow transition-all duration-500 flex flex-col"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="group relative card-modern p-8 hover-glow transition-all duration-500 flex flex-col"
             >
               <div className="absolute inset-0 gradient-electric opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-500"></div>
 

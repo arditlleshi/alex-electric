@@ -33,7 +33,7 @@ const BlogPage = () => {
               <Link 
                 href={`/blog/${post.slug}`}
                 key={post.slug} 
-                className="group block card-modern p-8 rounded-2xl hover-lift hover-glow transition-all duration-300"
+                className="group block card-modern p-8 rounded-2xl hover-glow transition-all duration-300"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="flex-grow">

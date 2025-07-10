@@ -149,7 +149,7 @@ export default function ContactSection() {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Phone Card */}
-          <div className="card-glass p-6 hover-lift group cursor-pointer animate-slide-in-left">
+          <div className="card-glass p-6  group cursor-pointer animate-slide-in-left">
             <div className="text-center">
               <div className="w-16 h-16 gradient-electric rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl mx-auto mb-6">
                 <svg
@@ -183,7 +183,7 @@ export default function ContactSection() {
 
           {/* Email Card */}
           <div
-            className="card-glass p-6 hover-lift group cursor-pointer animate-fade-in-up flex flex-col"
+            className="card-glass p-6 group cursor-pointer animate-fade-in-up flex flex-col"
             style={{ animationDelay: "0.2s" }}>
             <div className="text-center flex-grow">
               <div className="w-16 h-16 gradient-sunset rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl mx-auto mb-6">
@@ -222,7 +222,7 @@ export default function ContactSection() {
 
           {/* WhatsApp Card */}
           <div
-            className="card-glass p-6 hover-lift group cursor-pointer animate-slide-in-right"
+            className="card-glass p-6 group cursor-pointer animate-slide-in-right"
             style={{ animationDelay: "0.4s" }}>
             <div className="text-center">
               <div className="w-16 h-16 gradient-aurora rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl mx-auto mb-6">

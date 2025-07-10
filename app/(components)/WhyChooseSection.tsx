@@ -64,7 +64,7 @@ export default function WhyChooseSection() {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="card-glass p-6 hover-lift group cursor-pointer animate-scale-in"
+              className="card-glass p-6 group cursor-pointer animate-scale-in"
               style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0">

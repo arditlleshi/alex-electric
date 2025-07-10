@@ -1,32 +1,66 @@
+import Link from "next/link";
 import FAQAccordion from "./FAQAccordion";
 
-const faqData = [
+const faqData: { question: string; answer: React.ReactNode }[] = [
   {
     question: "Sa kohë merr instalimi i një sistemi elektrik të plotë?",
-    answer:
-      "Koha e instalimit varet nga kompleksiteti i projektit. Një apartament mesatar kërkon 2-3 ditë, ndërsa një vilë e madhe mund të kërkojë 5-7 ditë. Ne ofrojmë vlerësim falas dhe kohor preciz pas inspektimit fillestar.",
+    answer: (
+      <>
+        <p>
+          Koha e instalimit varet nga kompleksiteti i projektit. Një apartament
+          mesatar kërkon 2-3 ditë, ndërsa një vilë e madhe mund të kërkojë 5-7
+          ditë. Ne ofrojmë vlerësim falas dhe kohor preciz pas inspektimit
+          fillestar.
+        </p>
+      </>
+    ),
   },
   {
     question: "A ofroni garanci për punimet elektrike që kryeni?",
-    answer:
-      "Po, çdo instalim apo riparim elektrik që realizojmë mbulohet me garanci, sepse besojmë tek cilësia dhe siguria e punës sonë.",
+    answer: (
+      <>
+        <p>
+          Po, çdo <strong>instalim apo riparim elektrik</strong> që realizojmë
+          mbulohet me garanci, sepse besojmë tek cilësia dhe siguria e punës
+          sonë.
+        </p>
+      </>
+    ),
   },
   {
     question:
       "A mund të instaloj një karikues makine elektrike në banesën time private?",
-    answer:
-      "Sigurisht. Ne kryejmë instalime profesionale të karikuesve EV në shtëpi dhe biznese, duke ofruar zgjidhje të përshtatshme sipas ambientit tuaj.",
+    answer: (
+      <>
+        <p>
+          Sigurisht. Ne kryejmë{" "}
+          <strong>instalime profesionale të karikuesve EV</strong> në shtëpi dhe
+          biznese, duke ofruar zgjidhje të përshtatshme sipas ambientit tuaj.
+        </p>
+      </>
+    ),
   },
   {
     question:
       "A më ndihmoni në zgjedhjen e sistemit më të mirë solar për shtëpinë time?",
-    answer:
-      "Patjetër! Ne ju ndihmojmë në çdo hap, nga projektimi deri tek instalimi i paneleve diellore, duke u bazuar në konsumin tuaj dhe buxhetin e disponueshëm.",
+    answer: (
+      <>
+        <p>
+          Patjetër! Ne ju ndihmojmë në çdo hap, nga projektimi deri tek <strong>instalimi i paneleve diellore</strong>, duke u bazuar në
+          konsumin tuaj dhe buxhetin e disponueshëm.
+        </p>
+      </>
+    ),
   },
   {
     question: "Sa shpejt mund të vjen elektricisti në rast urgjence?",
-    answer:
-      "Ne ofrojmë shërbim 24 orë në ditë, 7 ditë në javë. Në rast urgjence, zakonisht mbërrijmë në vendin tuaj brenda 1 ore nga telefonata juaj.",
+    answer: (
+      <>
+        <p>
+          Ne ofrojmë <strong>shërbim 24 orë në ditë, 7 ditë në javë</strong>. Në rast urgjence, zakonisht mbërrijmë në vendin tuaj brenda 1 ore nga telefonata juaj.
+        </p>
+      </>
+    ),
   },
 ];
 
@@ -66,9 +100,11 @@ export default function FAQSection() {
               pyetje specifike rreth projektit tuaj.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pb-8">
-              <a
-                href="tel:+355123456789"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-medium rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 hover-lift">
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                href="tel:+355693289443"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-medium rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300">
                 <svg
                   className="w-5 h-5 mr-2"
                   fill="none"
@@ -82,10 +118,12 @@ export default function FAQSection() {
                   />
                 </svg>
                 Telefono
-              </a>
-              <a
+              </Link>
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
                 href="#contact"
-                className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-medium rounded-xl border-2 border-blue-600 hover:bg-blue-50 transition-all duration-300 hover-lift">
+                className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-medium rounded-xl border-2 border-blue-600 hover:bg-blue-50 transition-all duration-300">
                 <svg
                   className="w-5 h-5 mr-2"
                   fill="none"
@@ -99,7 +137,7 @@ export default function FAQSection() {
                   />
                 </svg>
                 Kontakt
-              </a>
+              </Link>
             </div>
           </div>
         </div>

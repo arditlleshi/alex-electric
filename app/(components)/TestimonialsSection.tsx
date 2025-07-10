@@ -68,8 +68,7 @@ export default function TestimonialsSection() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="card-glass p-8 hover-lift group cursor-pointer animate-scale-in"
-              style={{ animationDelay: `${index * 0.1}s` }}>
+              className="card-glass p-8 group cursor-pointer">
               {/* Quote Icon */}
               <div className="flex items-start mb-6">
                 <div className="w-12 h-12 gradient-electric rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
@@ -156,7 +155,7 @@ export default function TestimonialsSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center pb-8">
               <a
                 href="#contact"
-                className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-medium rounded-xl hover:bg-blue-50 transition-all duration-300 hover-lift shadow-lg">
+                className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-medium rounded-xl hover:bg-blue-50 transition-all duration-300 shadow-lg">
                 <svg
                   className="w-5 h-5 mr-2"
                   fill="none"
@@ -173,7 +172,7 @@ export default function TestimonialsSection() {
               </a>
               <a
                 href="tel:+355123456789"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-medium rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 hover-lift shadow-lg">
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-medium rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg">
                 <svg
                   className="w-5 h-5 mr-2"
                   fill="none"
