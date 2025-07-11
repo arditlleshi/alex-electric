@@ -88,7 +88,7 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative card-modern p-8 hover-glow transition-all duration-500">
+              className="group relative card-modern p-8 hover-glow hover:scale-105 transition-all duration-500">
               <div
                 className={`absolute inset-0 ${service.gradient} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-500`}></div>
 

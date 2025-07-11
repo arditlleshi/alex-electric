@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 // Hero Section Electrical Illustrations
 const HeroElectricalIllustration = () => (
   <svg viewBox="0 0 200 200" className="w-full h-full">
@@ -240,14 +242,14 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-900 text-white">
       {/* Dynamic gradient background */}
       <div className="absolute inset-0 gradient-mesh animate-gradient"></div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/30"></div>
+      <div className="absolute inset-0 bg-black/50"></div>
 
-      {/* Floating geometric shapes */}
+      {/* Electrical work illustrations - more subtle */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-20 w-32 h-32 gradient-electric rounded-full opacity-20 animate-float"></div>
         <div
@@ -277,88 +279,81 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Animated grid pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `
-            linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)
-          `,
-            backgroundSize: "50px 50px",
-          }}></div>
-      </div>
-
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="animate-fade-in-up">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="animate-fade-in-up space-y-8">
           {/* Main heading with gradient text */}
-          <h1 className="mb-6 lg:mb-12 leading-tight">
-            <span className="block font-bold text-4xl sm:text-6xl lg:text-7xl mb-2">
-              Elektricist Profesionist në Tiranë
+          <h1 className="leading-tight font-extrabold">
+            <span className="block text-4xl sm:text-6xl lg:text-7xl text-gradient-aurora tracking-tight">
+              Elektricist Profesionist
             </span>
-            <br />
-            <span className="font-bold text-2xl sm:text-4xl lg:text-5xl">
+            <span className="mt-4 block font-semibold text-2xl sm:text-4xl lg:text-5xl text-gray-300">
               Instalime dhe Riparime Elektrike
             </span>
           </h1>
 
-          {/* Subtitle with glassmorphism */}
-          <div className="glass rounded-2xl p-6 mb-8 mx-auto max-w-3xl">
-            <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
+          {/* Subtitle with improved glassmorphism */}
+          <div className="glass-dark rounded-2xl p-6 mx-auto max-w-4xl backdrop-blur-md">
+            <p className="text-lg sm:text-xl text-gray-200/90 leading-relaxed">
               Alex Elektrik ofron shërbime elektrike profesionale në Tiranë,
-              duke përfshirë{" "}
-              <span className="font-bold">instalime elektrike</span>,{" "}
-              <span className="font-bold">riparime emergjente</span>,{" "}
-              <span className="font-bold">sisteme smart home</span>,{" "}
-              <span className="font-bold">karikues për makina elektrike</span>{" "}
-              dhe <span className="font-bold">panele diellore</span>. Zgjidhje
-              të sigurta, moderne dhe me çmime transparente.
+              duke përfshirë <strong>instalime elektrike</strong>,{" "}
+              <strong>riparime emergjente</strong>,{" "}
+              <strong>sisteme smart home</strong>,{" "}
+              <strong>karikues për makina elektrike</strong> dhe{" "}
+              <strong>panele diellore</strong>. Zgjidhje të sigurta, moderne dhe
+              me çmime transparente.
             </p>
+          </div>
+
+          {/* Call-to-action Buttons */}
+          <div className="flex justify-center items-center flex-wrap gap-4 pt-4">
+            <Link
+              href="#contact"
+              className="group btn-modern inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-300 ease-in-out rounded-lg shadow-electric-lg hover:shadow-glow focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:ring-offset-gray-900">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-phone-icon lucide-phone w-5 h-5 mr-3 transition-transform duration-300 group-hover:-translate-x-1">
+                <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+              </svg>
+              Kontakto Tani
+            </Link>
+            <Link
+              href="#services"
+              className="group inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-gray-700/50 border border-gray-600 rounded-lg transition-all duration-300 ease-in-out hover:bg-gray-700/80 hover:border-gray-500 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 focus:ring-offset-gray-900">
+              Shiko Shërbimet
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-arrow-right-icon lucide-arrow-right w-5 h-5 ml-3 transition-transform duration-300 group-hover:translate-x-1">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </Link>
           </div>
         </div>
       </div>
 
-      {/* Animated electrical elements */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="flex space-x-2">
-          <div className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
-          <div
-            className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"
-            style={{ animationDelay: "0.5s" }}></div>
-          <div
-            className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"
-            style={{ animationDelay: "1s" }}></div>
-        </div>
-      </div>
-
-      {/* Lightning bolt animations */}
-      <div className="absolute top-1/4 left-1/4 animate-float">
-        <svg
-          className="w-8 h-8 text-yellow-400 animate-pulse"
-          fill="currentColor"
-          viewBox="0 0 20 20">
-          <path
-            fillRule="evenodd"
-            d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
-            clipRule="evenodd"
-          />
-        </svg>
-      </div>
-
-      <div
-        className="absolute top-1/3 right-1/4 animate-float"
-        style={{ animationDelay: "3s" }}>
-        <svg
-          className="w-6 h-6 text-yellow-400 animate-pulse"
-          fill="currentColor"
-          viewBox="0 0 20 20">
-          <path
-            fillRule="evenodd"
-            d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
-            clipRule="evenodd"
-          />
-        </svg>
+      {/* Animated Scroll Down Indicator */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+        <a href="#about" aria-label="Scroll to next section">
+          <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center items-start p-1">
+            <div className="w-1.5 h-3 bg-gray-400 rounded-full animate-bounce"></div>
+          </div>
+        </a>
       </div>
     </section>
   );

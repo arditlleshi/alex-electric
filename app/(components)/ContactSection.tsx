@@ -99,6 +99,79 @@ const ElectricalConsultationIllustration = () => (
   </svg>
 );
 
+const items: {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  link: string;
+  label: string;
+  color: string;
+  textColor: string;
+}[] = [
+  {
+    title: "Telefononi Tani",
+    description: "Disponibël 24/7 për shërbime emergjente dhe konsultime",
+    icon: (
+      <svg
+        className="w-8 h-8 text-white"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24">
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+        />
+      </svg>
+    ),
+    link: "tel:355693289443",
+    label: "355693289443",
+    color: "gradient-electric",
+    textColor: "text-blue-400 hover:text-blue-300",
+  },
+  {
+    title: "Dërgoni Email",
+    description:
+      "Na dërgoni detajet e projektit tuaj për një ofertë të detajuar",
+    icon: (
+      <svg
+        className="w-8 h-8 text-white"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24">
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+        />
+      </svg>
+    ),
+    link: "mailto:aleksander.gjoni85@gmail.com",
+    label: "aleksander.gjoni85@gmail.com",
+    color: "gradient-sunset",
+    textColor: "text-orange-400 hover:text-orange-300",
+  },
+  {
+    title: "WhatsApp",
+    description:
+      "Bisedë e shpejtë për përgjigje të menjëhershme dërgoni detajet e projektit tuaj për një ofertë të detajuar",
+    icon: (
+      <svg
+        className="w-8 h-8 text-white"
+        fill="currentColor"
+        viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.085" />
+      </svg>
+    ),
+    link: "https://wa.me/355693289443",
+    label: "Na shkruani",
+    color: "gradient-aurora",
+    textColor: "text-green-400 hover:text-green-300",
+  },
+];
+
 export default function ContactSection() {
   return (
     <section
@@ -139,114 +212,44 @@ export default function ContactSection() {
             Na Kontaktoni
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
-          Kontaktoni
-            <span className="block text-gradient-sunset mt-2">Alex Elektrik</span>
+            Kontaktoni
+            <span className="block text-gradient-sunset mt-2">
+              Alex Elektrik
+            </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          Keni një projekt elektrik apo emergjencë? Kontaktoni tani për një konsultim falas dhe një ofertë të personalizuar. Alex Elektrik është gjithmonë i gatshëm t&apos;ju ndihmojë, 24 orë në ditë, 7 ditë në javë.
+            Keni një projekt elektrik apo emergjencë? Kontaktoni tani për një
+            konsultim falas dhe një ofertë të personalizuar. Alex Elektrik është
+            gjithmonë i gatshëm t&apos;ju ndihmojë, 24 orë në ditë, 7 ditë në
+            javë.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Phone Card */}
-          <div className="card-glass p-6  group cursor-pointer animate-slide-in-left">
-            <div className="text-center">
-              <div className="w-16 h-16 gradient-electric rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl mx-auto mb-6">
-                <svg
-                  className="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                  />
-                </svg>
+          {items.map((item, index) => (
+            <div
+              key={index}
+              className="card-glass p-6 group cursor-pointer animate-slide-in-right hover:scale-105 transition-all duration-500 hover:shadow-lg"
+              style={{ animationDelay: "0.4s" }}>
+              <div className="text-center">
+                <div
+                  className={`w-16 h-16 ${item.color} rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl mx-auto mb-6`}>
+                  {item.icon}
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-300 mb-4">{item.description}</p>
+                <Link
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`text-xl font-bold ${item.textColor} transition-colors`}>
+                  {item.label}
+                </Link>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">
-                Telefononi Tani
-              </h3>
-              <p className="text-gray-300 mb-4">
-                Disponibël 24/7 për shërbime emergjente dhe konsultime
-              </p>
-              <Link
-                href="tel:+355693289443"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xl font-bold text-blue-400 hover:text-blue-300 transition-colors">
-                +355 69 328 9443
-              </Link>
             </div>
-          </div>
-
-          {/* Email Card */}
-          <div
-            className="card-glass p-6 group cursor-pointer animate-fade-in-up flex flex-col"
-            style={{ animationDelay: "0.2s" }}>
-            <div className="text-center flex-grow">
-              <div className="w-16 h-16 gradient-sunset rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl mx-auto mb-6">
-                <svg
-                  className="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-2">
-                Dërgoni Email
-              </h3>
-              <p className="text-gray-300 mb-4">
-                Na dërgoni detajet e projektit tuaj për një ofertë të detajuar
-              </p>
-            </div>
-            <div className="text-center">
-              <Link
-                href="mailto:aleksander.gjoni85@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xl font-bold text-orange-400 hover:text-orange-300 transition-colors block leading-relaxed">
-                <span className="block break-all hyphens-auto text-center lg:text-left">
-                  aleksander.gjoni85@gmail.com
-                </span>
-              </Link>
-            </div>
-          </div>
-
-          {/* WhatsApp Card */}
-          <div
-            className="card-glass p-6 group cursor-pointer animate-slide-in-right"
-            style={{ animationDelay: "0.4s" }}>
-            <div className="text-center">
-              <div className="w-16 h-16 gradient-aurora rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-xl mx-auto mb-6">
-                <svg
-                  className="w-8 h-8 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 24 24">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.085" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-2">WhatsApp</h3>
-              <p className="text-gray-300 mb-4">
-                Bisedë e shpejtë për përgjigje të menjëhershme dhe përditësime
-                të projektit
-              </p>
-              <Link
-                href="https://wa.me/355693289443"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xl font-bold text-green-400 hover:text-green-300 transition-colors">
-                Na shkruani
-              </Link>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

@@ -127,11 +127,18 @@ export default function Footer() {
               Shërbimet Kryesore
             </h3>
             <div className="space-y-3">
-              <p className="text-gray-400">Instalime & Riparime</p>
-              <p className="text-gray-400">Mirëmbajtje Elektrike</p>
-              <p className="text-gray-400">Panele Diellore</p>
-              <p className="text-gray-400">Karikues EV</p>
-              <p className="text-gray-400">Shtëpi Inteligjente</p>
+              <p className="text-gray-400 hover:text-white transition-colors">
+                Instalime & Riparime
+              </p>
+              <p className="text-gray-400 hover:text-white transition-colors">
+                Mirëmbajtje Elektrike
+              </p>
+              <p className="text-gray-400 hover:text-white transition-colors">
+                Panele Diellore
+              </p>
+              <p className="text-gray-400 hover:text-white transition-colors">
+                Karikues EV
+              </p>
             </div>
           </div>
 

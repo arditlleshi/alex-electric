@@ -18,11 +18,13 @@ export default function FAQAccordion({
       {faqs.map((faq, index) => (
         <div
           key={index}
-          className="relative card-modern overflow-hidden group">
+          className="relative card-modern overflow-hidden group hover:scale-105 transition-all duration-500">
           {/* Main Button */}
           <button
             onClick={() => toggleFAQ(index)}
-            className="relative w-full px-8 py-6 text-left focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all duration-300 z-10"
+            className={`relative w-full px-8 py-6 text-left focus:outline-none focus:ring-2 transition-all duration-300 z-10 ${
+              openIndex === index ? "border-b border-blue-600" : ""
+            }`}
             aria-expanded={openIndex === index}
             aria-controls={`faq-content-${index}`}>
             <div className="flex items-center justify-between">
@@ -59,7 +61,10 @@ export default function FAQAccordion({
                 ? "max-h-[500px] opacity-100"
                 : "max-h-0 opacity-0"
             }`}>
-            <div className="px-8 pb-6">
+            <div
+              className={`px-8 pb-6 ${
+                openIndex === index ? "border-t border-blue-600" : ""
+              }`}>
               <div className="pt-2 border-t border-gray-100 text-gray-600 leading-relaxed mt-4">
                 {faq.answer}
               </div>
