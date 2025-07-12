@@ -151,7 +151,8 @@ const items: {
     link: "mailto:aleksander.gjoni85@gmail.com",
     label: "aleksander.gjoni85@gmail.com",
     color: "gradient-sunset",
-    textColor: "text-orange-400 hover:text-orange-300",
+    textColor:
+      "text-orange-400 hover:text-orange-300 block break-all hyphens-auto text-center lg:text-left",
   },
   {
     title: "WhatsApp",

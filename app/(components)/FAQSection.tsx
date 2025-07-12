@@ -104,7 +104,7 @@ export default function FAQSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 href="tel:+355693289443"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-medium rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 hover:scale-105">
+                className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-medium rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 hover:scale-105">
                 <svg
                   className="w-5 h-5 mr-2"
                   fill="none"
@@ -123,7 +123,7 @@ export default function FAQSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 href="#contact"
-                className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-medium rounded-xl border-2 border-blue-600 hover:bg-blue-50 transition-all duration-300 hover:scale-105">
+                className="inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 font-medium rounded-xl border-2 border-blue-600 hover:bg-blue-50 transition-all duration-300 hover:scale-105">
                 <svg
                   className="w-5 h-5 mr-2"
                   fill="none"

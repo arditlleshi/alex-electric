@@ -146,7 +146,7 @@ export default function TestimonialsSection() {
 
         {/* Call to Action */}
         <div className="text-center mt-16 animate-fade-in-up">
-          <div className="card-glass pt-8 rounded-3xl max-w-2xl mx-auto">
+          <div className="card-glass p-8 rounded-3xl max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
               Bëhuni pjesë e familjes sonë të klientëve të kënaqur!
             </h3>
@@ -157,7 +157,7 @@ export default function TestimonialsSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center pb-8">
               <Link
                 href="#contact"
-                className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-medium rounded-xl hover:bg-blue-50 transition-all duration-300 shadow-lg hover:scale-105">
+                className="inline-flex items-center justify-center px-8 py-3 bg-white text-blue-600 font-medium rounded-xl hover:bg-blue-50 transition-all duration-300 shadow-lg hover:scale-105">
                 <svg
                   className="w-5 h-5 mr-2"
                   fill="none"
@@ -174,7 +174,7 @@ export default function TestimonialsSection() {
               </Link>
               <Link
                 href="tel:+355693289443"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-medium rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg hover:scale-105">
+                className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-medium rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg hover:scale-105">
                 <svg
                   className="w-5 h-5 mr-2"
                   fill="none"
