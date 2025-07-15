@@ -286,7 +286,7 @@ export default function HeroSection() {
         </h1>
 
         <p className="mx-auto mb-8 max-w-2xl text-pretty text-base leading-relaxed text-gray-300 sm:text-lg md:text-xl">
-          Alex&nbsp;Elektrik ofron shërbime elektrike profesionale në Tiranë,
+          Alex&nbsp;Elektrik ofron shërbime elektrike profesionale në Tiranë dhe më gjerë,
           duke përfshirë{" "}
           <strong className="font-semibold text-white">
             instalime elektrike

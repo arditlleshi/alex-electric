@@ -126,7 +126,7 @@ const items: {
       </svg>
     ),
     link: "tel:355693289443",
-    label: "355693289443",
+    label: "355 69 328 9443",
     color: "gradient-electric",
     textColor: "text-blue-400 hover:text-blue-300",
   },
