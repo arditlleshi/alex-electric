@@ -3,11 +3,11 @@ import Link from "next/link";
 import logo from "@/public/main-logo.png";
 
 const navigation = [
-  { name: "Kreu", href: "#hero" },
-  { name: "Rreth Nesh", href: "#about" },
-  { name: "Shërbimet", href: "#services" },
-  { name: "Blog", href: "#articles" },
-  { name: "Kontakti", href: "#contact" },
+  { name: "Kreu", href: "/#hero" },
+  { name: "Rreth Nesh", href: "/#about" },
+  { name: "Shërbimet", href: "/#services" },
+  { name: "Blog", href: "/#articles" },
+  { name: "Kontakt", href: "/#contact" },
 ];
 
 export default function Navigation() {

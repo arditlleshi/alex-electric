@@ -8,7 +8,7 @@ export const metadata = {
     "Lexoni artikujt tanë për të mësuar si të mbani sistemin tuaj elektrik të sigurt dhe eficient.",
 };
 
-const BlogPage = () => {
+export default function BlogPage() {
   return (
     <>
       <section className="relative bg-gray-50 py-24 sm:py-32">
@@ -72,5 +72,3 @@ const BlogPage = () => {
     </>
   );
 };
-
-export default BlogPage;
