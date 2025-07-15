@@ -7,13 +7,16 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-5 gap-8">
-          <div>
-            <Image
-              src={logo}
-              priority
-              alt="Alex Electric Logo"
-              className="h-10 w-auto mb-4 filter brightness-0 invert"
-            />
+          <div className="">
+            <div className="relative w-28 h-12 mb-4 flex-shrink-0">
+              <Image
+                src={logo}
+                alt="Alex Electric Logo"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="filter brightness-0 invert object-contain"
+              />
+            </div>
             <p className="text-gray-400 mb-4">
               Shërbime elektrike profesionale që mund t&apos;u besoni. Mbi 15
               vite eksperiencë në shërbim të klientëve rezidencialë, komercialë

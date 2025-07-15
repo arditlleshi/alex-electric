@@ -80,7 +80,7 @@ export default function FAQSection() {
             Pyetje të Shpeshta
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Frequently Asked Questions
+            Pyetjet më të shpeshta
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Gjeni përgjigje të shpejta për pyetjet më të shpeshta rreth

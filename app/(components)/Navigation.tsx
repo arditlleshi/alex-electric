@@ -21,11 +21,12 @@ export default function Navigation() {
               hash: "#hero",
             }}
             className="flex items-center group cursor-pointer">
-            <div className="relative w-36 h-16 p-3 flex items-center justify-center rounded-xl transition-all duration-300 group-hover:bg-blue-50">
+            <div className="relative w-36 h-14 p-3 flex items-center justify-center rounded-xl transition-all duration-300 group-hover:bg-blue-50">
               <Image
                 src={logo}
-                priority
                 alt="Alex Electric Logo"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-contain transform group-hover:scale-105 transition-transform duration-300"
               />
             </div>
@@ -46,4 +47,4 @@ export default function Navigation() {
       </div>
     </nav>
   );
-} 
+}
