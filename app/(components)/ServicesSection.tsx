@@ -84,10 +84,13 @@ export default function ServicesSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <ul
+          aria-label="Shërbimet Elektrike që Ofrojmë"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div
+            <li
               key={index}
+              aria-label={service.title}
               className="group relative card-modern p-8 hover-glow hover:scale-105 transition-all duration-500">
               <div
                 className={`absolute inset-0 ${service.gradient} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-500`}></div>
@@ -114,9 +117,9 @@ export default function ServicesSection() {
               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
               </div>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
 
         <div className="text-center mt-16 animate-fade-in-up">
           <div className="glass pt-8 rounded-3xl max-w-2xl mx-auto">

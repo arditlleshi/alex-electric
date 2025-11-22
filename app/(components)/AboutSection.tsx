@@ -13,7 +13,9 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   iconBgClass,
   animationDelay,
 }) => (
-  <div className="card-modern p-6 hover:scale-105 transition-all duration-300" style={{ animationDelay }}>
+  <div
+    className="card-modern p-6 hover:scale-105 transition-all duration-300"
+    style={{ animationDelay }}>
     <div className="flex items-start space-x-4">
       <div
         className={`w-12 h-12 ${iconBgClass} rounded-lg flex items-center justify-center flex-shrink-0`}>
@@ -158,69 +160,69 @@ const ElectricalWorkIllustration = () => (
 );
 
 const features = [
-    {
-      iconBgClass: "gradient-electric",
-      icon: (
-        <svg
-          className="w-6 h-6 text-white"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      ),
-      title: "Mbi 15 Vjet Eksperiencë",
-      description:
-        "Mbi një dekadë e gjysmë eksperiencë praktike duke ofruar shërbime elektrike profesionale në sektorët rezidencialë, komercialë dhe industrialë.",
-    },
-    {
-      animationDelay: "0.2s",
-      iconBgClass: "gradient-sunset",
-      icon: (
-        <svg
-          className="w-6 h-6 text-white"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M13 10V3L4 14h7v7l9-11h-7z"
-          />
-        </svg>
-      ),
-      title: "Teknologji Moderne",
-      description:
-        "Gjithmonë të përditësuar me standardet më të fundit elektrike, teknologjitë e shtëpive inteligjente dhe zgjidhjet energjetike të qëndrueshme si panelet diellore dhe karikimi i automjeteve elektrike.",
-    },
-    {
-      animationDelay: "0.4s",
-      iconBgClass: "gradient-aurora",
-      icon: (
-        <svg
-          className="w-6 h-6 text-white"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-          />
-        </svg>
-      ),
-      title: "Siguruar & I Besueshëm",
-      description:
-        "Profesionist plotësisht i siguruar dhe i çertifikuar që kombinon përsosmërinë teknike me shërbimin e ndershëm dhe të besueshëm që ju kërkoni.",
-    },
-  ];
+  {
+    iconBgClass: "gradient-electric",
+    icon: (
+      <svg
+        className="w-6 h-6 text-white"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24">
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+    ),
+    title: "Mbi 15 Vjet Eksperiencë",
+    description:
+      "Mbi një dekadë e gjysmë eksperiencë praktike duke ofruar shërbime elektrike profesionale në sektorët rezidencialë, komercialë dhe industrialë.",
+  },
+  {
+    animationDelay: "0.2s",
+    iconBgClass: "gradient-sunset",
+    icon: (
+      <svg
+        className="w-6 h-6 text-white"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24">
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M13 10V3L4 14h7v7l9-11h-7z"
+        />
+      </svg>
+    ),
+    title: "Teknologji Moderne",
+    description:
+      "Gjithmonë të përditësuar me standardet më të fundit elektrike, teknologjitë e shtëpive inteligjente dhe zgjidhjet energjetike të qëndrueshme si panelet diellore dhe karikimi i automjeteve elektrike.",
+  },
+  {
+    animationDelay: "0.4s",
+    iconBgClass: "gradient-aurora",
+    icon: (
+      <svg
+        className="w-6 h-6 text-white"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24">
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+        />
+      </svg>
+    ),
+    title: "Siguruar & I Besueshëm",
+    description:
+      "Profesionist plotësisht i siguruar dhe i çertifikuar që kombinon përsosmërinë teknike me shërbimin e ndershëm dhe të besueshëm që ju kërkoni.",
+  },
+];
 
 export default function AboutSection() {
   return (
@@ -246,18 +248,20 @@ export default function AboutSection() {
               </h2>
             </div>
 
-            <div className="space-y-6">
+            <ul className="space-y-6">
               {features.map((feature, index) => (
-                <FeatureCard
-                  key={index}
-                  iconBgClass={feature.iconBgClass}
-                  icon={feature.icon}
-                  title={feature.title}
-                  description={feature.description}
-                  animationDelay={feature.animationDelay}
-                />
+                <li key={index}>
+                  <FeatureCard
+                    key={index}
+                    iconBgClass={feature.iconBgClass}
+                    icon={feature.icon}
+                    title={feature.title}
+                    description={feature.description}
+                    animationDelay={feature.animationDelay}
+                  />
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
           <div className="relative animate-slide-in-right">

@@ -34,7 +34,8 @@ export default async function BlogPost({
 }: {
   params: Promise<{ slug: string }>
 }) {
-  "use cache"; // Cache blog post pages (static post data with generateStaticParams)
+  "use cache";
+  
   const { slug } = await params;
   const post = allPosts.find((p: Post) => p.slug === slug);
   if (!post) return notFound();

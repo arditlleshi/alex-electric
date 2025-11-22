@@ -21,12 +21,14 @@ const benefits = [
   },
   {
     title: "Çmime konkurruese & transparencë",
-    description: "Marrëdhënia me klientin fillon me besim. Ne sigurojmë çmime konkurruese dhe transparente për çdo projekt. Para se të fillojmë punën, ju ofrojmë një preventiv të detajuar, pa tarifa të fshehura, në mënyrë që të dini saktësisht çfarë po paguani dhe çfarë vlere do të merrni.",
+    description:
+      "Marrëdhënia me klientin fillon me besim. Ne sigurojmë çmime konkurruese dhe transparente për çdo projekt. Para se të fillojmë punën, ju ofrojmë një preventiv të detajuar, pa tarifa të fshehura, në mënyrë që të dini saktësisht çfarë po paguani dhe çfarë vlere do të merrni.",
   },
   {
     title: "Shërbim i Personalizuar",
-    description: "Vëmendje individuale për çdo projekt elektrik, duke ju dhënë zgjidhjen më të mirë sipas nevojave tuaja.",
-  }
+    description:
+      "Vëmendje individuale për çdo projekt elektrik, duke ju dhënë zgjidhjen më të mirë sipas nevojave tuaja.",
+  },
 ];
 
 export default function WhyChooseSection() {
@@ -60,10 +62,13 @@ export default function WhyChooseSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <ul
+          aria-label="Pse të Na Zgjidhni Ne"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (
-            <div
+            <li
               key={index}
+              aria-label={benefit.title}
               className="card-glass p-6 group cursor-pointer animate-scale-in hover:scale-105 transition-all duration-500"
               style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="flex items-start space-x-4">
@@ -97,9 +102,9 @@ export default function WhyChooseSection() {
               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer"></div>
               </div>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

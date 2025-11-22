@@ -66,10 +66,11 @@ export default function TestimonialsSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <ul aria-label="testimonials" className="grid md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div
+            <li
               key={index}
+              aria-label={testimonial.name}
               className="card-glass p-8 group cursor-pointer hover:scale-105 transition-all duration-500">
               {/* Quote Icon */}
               <div className="flex items-start mb-6">
@@ -140,9 +141,9 @@ export default function TestimonialsSection() {
               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer"></div>
               </div>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
 
         {/* Call to Action */}
         <div className="text-center mt-16 animate-fade-in-up">

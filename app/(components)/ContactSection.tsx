@@ -13,88 +13,218 @@ const ElectricalConsultationIllustration = () => (
         <stop offset="100%" stopColor="#FF6B35" />
       </linearGradient>
     </defs>
-    
+
     {/* Background buildings */}
-    <rect x="50" y="80" width="200" height="100" fill="url(#consultGradient)" fillOpacity="0.1" stroke="#3B82F6" strokeWidth="2" rx="5"/>
-    
+    <rect
+      x="50"
+      y="80"
+      width="200"
+      height="100"
+      fill="url(#consultGradient)"
+      fillOpacity="0.1"
+      stroke="#3B82F6"
+      strokeWidth="2"
+      rx="5"
+    />
+
     {/* Office building windows */}
-    <rect x="70" y="100" width="15" height="15" fill="#60A5FA" fillOpacity="0.3"/>
-    <rect x="90" y="100" width="15" height="15" fill="#60A5FA" fillOpacity="0.3"/>
-    <rect x="110" y="100" width="15" height="15" fill="#60A5FA" fillOpacity="0.3"/>
-    <rect x="130" y="100" width="15" height="15" fill="#60A5FA" fillOpacity="0.3"/>
-    
-    <rect x="70" y="130" width="15" height="15" fill="#60A5FA" fillOpacity="0.3"/>
-    <rect x="90" y="130" width="15" height="15" fill="#60A5FA" fillOpacity="0.3"/>
-    <rect x="110" y="130" width="15" height="15" fill="#60A5FA" fillOpacity="0.3"/>
-    <rect x="130" y="130" width="15" height="15" fill="#60A5FA" fillOpacity="0.3"/>
-    
+    <rect
+      x="70"
+      y="100"
+      width="15"
+      height="15"
+      fill="#60A5FA"
+      fillOpacity="0.3"
+    />
+    <rect
+      x="90"
+      y="100"
+      width="15"
+      height="15"
+      fill="#60A5FA"
+      fillOpacity="0.3"
+    />
+    <rect
+      x="110"
+      y="100"
+      width="15"
+      height="15"
+      fill="#60A5FA"
+      fillOpacity="0.3"
+    />
+    <rect
+      x="130"
+      y="100"
+      width="15"
+      height="15"
+      fill="#60A5FA"
+      fillOpacity="0.3"
+    />
+
+    <rect
+      x="70"
+      y="130"
+      width="15"
+      height="15"
+      fill="#60A5FA"
+      fillOpacity="0.3"
+    />
+    <rect
+      x="90"
+      y="130"
+      width="15"
+      height="15"
+      fill="#60A5FA"
+      fillOpacity="0.3"
+    />
+    <rect
+      x="110"
+      y="130"
+      width="15"
+      height="15"
+      fill="#60A5FA"
+      fillOpacity="0.3"
+    />
+    <rect
+      x="130"
+      y="130"
+      width="15"
+      height="15"
+      fill="#60A5FA"
+      fillOpacity="0.3"
+    />
+
     {/* Electrician figure */}
     <g>
       {/* Head */}
-      <circle cx="200" cy="50" r="15" fill="#FDB462"/>
+      <circle cx="200" cy="50" r="15" fill="#FDB462" />
       {/* Hard hat */}
-      <path d="M185 38 Q200 30 215 38 Q215 45 200 45 Q185 45 185 38" fill="#FFD700"/>
+      <path
+        d="M185 38 Q200 30 215 38 Q215 45 200 45 Q185 45 185 38"
+        fill="#FFD700"
+      />
       {/* Body */}
-      <rect x="190" y="65" width="20" height="35" fill="#1E40AF" rx="3"/>
+      <rect x="190" y="65" width="20" height="35" fill="#1E40AF" rx="3" />
       {/* Arms */}
-      <rect x="175" y="75" width="15" height="6" fill="#FDB462" rx="3"/>
-      <rect x="210" y="75" width="15" height="6" fill="#FDB462" rx="3"/>
+      <rect x="175" y="75" width="15" height="6" fill="#FDB462" rx="3" />
+      <rect x="210" y="75" width="15" height="6" fill="#FDB462" rx="3" />
       {/* Legs */}
-      <rect x="195" y="100" width="6" height="25" fill="#1E40AF"/>
-      <rect x="202" y="100" width="6" height="25" fill="#1E40AF"/>
+      <rect x="195" y="100" width="6" height="25" fill="#1E40AF" />
+      <rect x="202" y="100" width="6" height="25" fill="#1E40AF" />
       {/* Feet */}
-      <ellipse cx="198" cy="130" rx="6" ry="4" fill="#374151"/>
-      <ellipse cx="205" cy="130" rx="6" ry="4" fill="#374151"/>
+      <ellipse cx="198" cy="130" rx="6" ry="4" fill="#374151" />
+      <ellipse cx="205" cy="130" rx="6" ry="4" fill="#374151" />
     </g>
-    
+
     {/* Electrical equipment */}
-    <rect x="170" y="110" width="25" height="40" fill="#374151" rx="3"/>
-    <rect x="173" y="113" width="19" height="34" fill="#6B7280" rx="2"/>
-    
+    <rect x="170" y="110" width="25" height="40" fill="#374151" rx="3" />
+    <rect x="173" y="113" width="19" height="34" fill="#6B7280" rx="2" />
+
     {/* Panel switches */}
-    <rect x="176" y="118" width="3" height="6" fill="#10B981" rx="1"/>
-    <rect x="182" y="118" width="3" height="6" fill="#EF4444" rx="1"/>
-    <rect x="188" y="118" width="3" height="6" fill="#10B981" rx="1"/>
-    <rect x="176" y="128" width="3" height="6" fill="#10B981" rx="1"/>
-    <rect x="182" y="128" width="3" height="6" fill="#10B981" rx="1"/>
-    <rect x="188" y="128" width="3" height="6" fill="#EF4444" rx="1"/>
-    
+    <rect x="176" y="118" width="3" height="6" fill="#10B981" rx="1" />
+    <rect x="182" y="118" width="3" height="6" fill="#EF4444" rx="1" />
+    <rect x="188" y="118" width="3" height="6" fill="#10B981" rx="1" />
+    <rect x="176" y="128" width="3" height="6" fill="#10B981" rx="1" />
+    <rect x="182" y="128" width="3" height="6" fill="#10B981" rx="1" />
+    <rect x="188" y="128" width="3" height="6" fill="#EF4444" rx="1" />
+
     {/* Tools */}
-    <rect x="230" y="115" width="15" height="3" fill="url(#electricGradient)" rx="1"/>
-    <rect x="230" y="125" width="12" height="3" fill="url(#electricGradient)" rx="1"/>
-    <rect x="230" y="135" width="10" height="3" fill="url(#electricGradient)" rx="1"/>
-    
+    <rect
+      x="230"
+      y="115"
+      width="15"
+      height="3"
+      fill="url(#electricGradient)"
+      rx="1"
+    />
+    <rect
+      x="230"
+      y="125"
+      width="12"
+      height="3"
+      fill="url(#electricGradient)"
+      rx="1"
+    />
+    <rect
+      x="230"
+      y="135"
+      width="10"
+      height="3"
+      fill="url(#electricGradient)"
+      rx="1"
+    />
+
     {/* Electrical wires */}
-    <path d="M195 110 Q185 105 175 110" stroke="#FFA500" strokeWidth="2" fill="none"/>
-    <path d="M195 120 Q185 115 175 120" stroke="#FF6B35" strokeWidth="2" fill="none"/>
-    
+    <path
+      d="M195 110 Q185 105 175 110"
+      stroke="#FFA500"
+      strokeWidth="2"
+      fill="none"
+    />
+    <path
+      d="M195 120 Q185 115 175 120"
+      stroke="#FF6B35"
+      strokeWidth="2"
+      fill="none"
+    />
+
     {/* Phone/communication device */}
-    <rect x="20" y="60" width="20" height="30" fill="#374151" rx="5"/>
-    <rect x="23" y="63" width="14" height="24" fill="#1F2937" rx="2"/>
-    <circle cx="30" cy="85" r="2" fill="#10B981"/>
-    
+    <rect x="20" y="60" width="20" height="30" fill="#374151" rx="5" />
+    <rect x="23" y="63" width="14" height="24" fill="#1F2937" rx="2" />
+    <circle cx="30" cy="85" r="2" fill="#10B981" />
+
     {/* Communication waves */}
     <g stroke="#10B981" strokeWidth="2" fill="none">
       <path d="M45 70 Q55 65 65 70">
-        <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite"/>
+        <animate
+          attributeName="opacity"
+          values="0;1;0"
+          dur="2s"
+          repeatCount="indefinite"
+        />
       </path>
       <path d="M45 75 Q55 70 65 75">
-        <animate attributeName="opacity" values="0;1;0" dur="2.2s" repeatCount="indefinite"/>
+        <animate
+          attributeName="opacity"
+          values="0;1;0"
+          dur="2.2s"
+          repeatCount="indefinite"
+        />
       </path>
       <path d="M45 80 Q55 75 65 80">
-        <animate attributeName="opacity" values="0;1;0" dur="1.8s" repeatCount="indefinite"/>
+        <animate
+          attributeName="opacity"
+          values="0;1;0"
+          dur="1.8s"
+          repeatCount="indefinite"
+        />
       </path>
     </g>
-    
+
     {/* Electric sparks */}
     <circle cx="210" cy="95" r="1.5" fill="#FFA500">
-      <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"/>
+      <animate
+        attributeName="opacity"
+        values="0;1;0"
+        dur="1s"
+        repeatCount="indefinite"
+      />
     </circle>
     <circle cx="215" cy="100" r="1" fill="#FFD700">
-      <animate attributeName="opacity" values="0;1;0" dur="1.3s" repeatCount="indefinite"/>
+      <animate
+        attributeName="opacity"
+        values="0;1;0"
+        dur="1.3s"
+        repeatCount="indefinite"
+      />
     </circle>
     <circle cx="205" cy="100" r="1" fill="#FF6B35">
-      <animate attributeName="opacity" values="0;1;0" dur="0.9s" repeatCount="indefinite"/>
+      <animate
+        attributeName="opacity"
+        values="0;1;0"
+        dur="0.9s"
+        repeatCount="indefinite"
+      />
     </circle>
   </svg>
 );
@@ -226,9 +356,12 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <ul
+          aria-label="contact items"
+          className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {items.map((item, index) => (
-            <div
+            <li
+              aria-label={item.title}
               key={index}
               className="card-glass p-6 group cursor-pointer animate-slide-in-right hover:scale-105 transition-all duration-500 hover:shadow-lg"
               style={{ animationDelay: "0.4s" }}>
@@ -249,9 +382,9 @@ export default function ContactSection() {
                   {item.label}
                 </Link>
               </div>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

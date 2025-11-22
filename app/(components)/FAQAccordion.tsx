@@ -14,10 +14,11 @@ export default function FAQAccordion({
   };
 
   return (
-    <div className="space-y-4">
+    <ul aria-label="Pyetjet e Shpeshta" className="space-y-4">
       {faqs.map((faq, index) => (
-        <div
+        <li
           key={index}
+          aria-label={faq.question}
           className="relative card-modern overflow-hidden group hover:scale-105 transition-all duration-500">
           {/* Main Button */}
           <button
@@ -75,8 +76,8 @@ export default function FAQAccordion({
           <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-blue-500/5 to-transparent animate-shimmer"></div>
           </div>
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }

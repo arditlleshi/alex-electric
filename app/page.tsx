@@ -7,7 +7,9 @@ import ServicesSection from "./(components)/ServicesSection";
 import TestimonialsSection from "./(components)/TestimonialsSection";
 import WhyChooseSection from "./(components)/WhyChooseSection";
 
-export default function Home() {
+export default async function Home() {
+  'use cache';
+  
   return (
     <>
       <HeroSection />

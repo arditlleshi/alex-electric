@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 
 const articles = [
@@ -8,8 +7,17 @@ const articles = [
       "Mësoni hapat kryesorë dhe këshillat praktike për të identifikuar dhe zgjedhur një profesionist të kualifikuar dhe të besueshëm për nevojat tuaja elektrike.",
     slug: "/blog/si-te-zgjedhesh-elektricist",
     icon: (
-      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 20.944a11.955 11.955 0 018.618-3.04 11.955 11.955 0 018.618 3.04 12.02 12.02 0 00-1.01-5.016z" />
+      <svg
+        className="w-8 h-8 text-white"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24">
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 20.944a11.955 11.955 0 018.618-3.04 11.955 11.955 0 018.618 3.04 12.02 12.02 0 00-1.01-5.016z"
+        />
       </svg>
     ),
   },
@@ -19,8 +27,17 @@ const articles = [
       "Identifikoni sinjalet e rrezikshme në sistemin tuaj elektrik që kërkojnë ndërhyrje të menjëhershme nga një elektricist urgjent për të garantuar sigurinë.",
     slug: "/blog/shenja-per-elektricist-urgjent",
     icon: (
-      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+      <svg
+        className="w-8 h-8 text-white"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24">
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M13 10V3L4 14h7v7l9-11h-7z"
+        />
       </svg>
     ),
   },
@@ -30,8 +47,17 @@ const articles = [
       "Një udhëzues i plotë mbi procesin e instalimit të paneleve diellore, nga vlerësimi fillestar deri te mirëmbajtja, për një investim në energji të pastër.",
     slug: "/blog/instalimi-i-panelit-diellor",
     icon: (
-      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+      <svg
+        className="w-8 h-8 text-white"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24">
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+        />
       </svg>
     ),
   },
@@ -63,9 +89,12 @@ export default function ArticlesSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <ul
+          aria-label="articles"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {articles.map((article, index) => (
-            <div
+            <li
+              aria-label={article.title}
               key={index}
               className="group relative card-modern p-8 hover-glow transition-all duration-500 flex flex-col hover:scale-105">
               <div className="absolute inset-0 gradient-electric opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-500"></div>
@@ -107,9 +136,9 @@ export default function ArticlesSection() {
               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer"></div>
               </div>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
 
         <div className="text-center mt-16 animate-fade-in-up">
           <Link
@@ -121,4 +150,4 @@ export default function ArticlesSection() {
       </div>
     </section>
   );
-} 
+}

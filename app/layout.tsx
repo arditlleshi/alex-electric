@@ -52,7 +52,6 @@ export const metadata: Metadata = {
     title: "Alex Elektrik | Elektricist në Tiranë",
     description:
       "Shërbime elektrike profesionale për shtëpi, lokale, zyra dhe biznese.",
-    // creator: "@alex_electric",
     images: ["/logo.png"],
   },
 

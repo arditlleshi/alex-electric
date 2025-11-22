@@ -1,6 +1,6 @@
+import logo from "@/public/main-logo.png";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/public/main-logo.png";
 
 export default async function Footer() {
   "use cache"; // Cache footer component (copyright year captured at build time)
@@ -27,35 +27,43 @@ export default async function Footer() {
 
           <div>
             <h4 className="text-lg font-semibold mb-4">Linqe të Shpejta</h4>
-            <div className="space-y-2">
-              <Link
-                href="/#about"
-                className="block text-gray-400 hover:text-white transition-colors text-left">
-                Rreth Alex Elektrik
-              </Link>
-              <Link
-                href="/#services"
-                className="block text-gray-400 hover:text-white transition-colors text-left">
-                Shërbimet
-              </Link>
-              <Link
-                href="/blog"
-                className="block text-gray-400 hover:text-white transition-colors text-left">
-                Artikuj
-              </Link>
-              <Link
-                href="/#contact"
-                className="block text-gray-400 hover:text-white transition-colors text-left">
-                Kontakti
-              </Link>
-            </div>
+            <ul aria-label="quick links" className="space-y-2">
+              <li aria-label="Rreth Alex Elektrik">
+                <Link
+                  href="/#about"
+                  className="block text-gray-400 hover:text-white transition-colors text-left">
+                  Rreth Alex Elektrik
+                </Link>
+              </li>
+              <li aria-label="Shërbimet">
+                <Link
+                  href="/#services"
+                  className="block text-gray-400 hover:text-white transition-colors text-left">
+                  Shërbimet
+                </Link>
+              </li>
+              <li aria-label="Artikuj">
+                <Link
+                  href="/blog"
+                  className="block text-gray-400 hover:text-white transition-colors text-left">
+                  Artikuj
+                </Link>
+              </li>
+              <li aria-label="Kontakti">
+                <Link
+                  href="/#contact"
+                  className="block text-gray-400 hover:text-white transition-colors text-left">
+                  Kontakti
+                </Link>
+              </li>
+            </ul>
           </div>
 
           <div>
             <h4 className="text-lg font-semibold mb-4">Na Kontaktoni</h4>
-            <div className="space-y-4 mb-4">
+            <ul aria-label="contact items" className="space-y-4 mb-4">
               {/* Email */}
-              <div className="flex items-center gap-3 group">
+              <li aria-label="Email" className="flex items-center gap-3 group">
                 <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -79,10 +87,12 @@ export default async function Footer() {
                   className="text-gray-400 group-hover:text-white transition-colors break-all leading-tight">
                   aleksander.gjoni85@gmail.com
                 </Link>
-              </div>
+              </li>
 
               {/* Phone */}
-              <div className="flex items-center space-x-3 group">
+              <li
+                aria-label="Phone"
+                className="flex items-center space-x-3 group">
                 <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -103,10 +113,12 @@ export default async function Footer() {
                   className="text-gray-400 group-hover:text-white transition-colors leading-tight">
                   355 69 328 9443
                 </Link>
-              </div>
+              </li>
 
               {/* WhatsApp */}
-              <div className="flex items-center space-x-3 group">
+              <li
+                aria-label="WhatsApp"
+                className="flex items-center space-x-3 group">
                 <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0">
                   <svg
                     className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors"
@@ -122,28 +134,36 @@ export default async function Footer() {
                   className="text-gray-400 group-hover:text-white transition-colors leading-tight">
                   Bisedoni në WhatsApp
                 </Link>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">
               Shërbimet Kryesore
             </h3>
-            <div className="space-y-3">
-              <p className="text-gray-400 hover:text-white transition-colors">
-                Instalime & Riparime
-              </p>
-              <p className="text-gray-400 hover:text-white transition-colors">
-                Mirëmbajtje Elektrike
-              </p>
-              <p className="text-gray-400 hover:text-white transition-colors">
-                Panele Diellore
-              </p>
-              <p className="text-gray-400 hover:text-white transition-colors">
-                Karikues EV
-              </p>
-            </div>
+            <ul aria-label="core services" className="space-y-3">
+              <li aria-label="Instalime & Riparime">
+                <p className="text-gray-400 hover:text-white transition-colors">
+                  Instalime & Riparime
+                </p>
+              </li>
+              <li aria-label="Mirëmbajtje Elektrike">
+                <p className="text-gray-400 hover:text-white transition-colors">
+                  Mirëmbajtje Elektrike
+                </p>
+              </li>
+              <li aria-label="Panele Diellore">
+                <p className="text-gray-400 hover:text-white transition-colors">
+                  Panele Diellore
+                </p>
+              </li>
+              <li aria-label="Karikues EV">
+                <p className="text-gray-400 hover:text-white transition-colors">
+                  Karikues EV
+                </p>
+              </li>
+            </ul>
           </div>
 
           <div>
@@ -165,8 +185,7 @@ export default async function Footer() {
 
         <div className="mt-8 border-t border-gray-700 pt-6 text-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Alex Elektrik. Të gjitha të drejtat e
-            rezervuara.
+            © 2025 Alex Elektrik. Të gjitha të drejtat e rezervuara.
           </p>
         </div>
       </div>

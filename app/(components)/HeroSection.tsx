@@ -340,7 +340,7 @@ export default function HeroSection() {
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 md:bottom-10">
         <a
           href="#about"
-          aria-label="Shkruaj poshtë"
+          aria-label="Scroll down"
           className="flex h-11 w-6 items-start justify-center rounded-full border-2 border-gray-500/70 p-1">
           <span className="block h-3 w-1.5 animate-bounce rounded-full bg-gray-400/80" />
         </a>
