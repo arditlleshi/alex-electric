@@ -10,7 +10,8 @@ const navigation = [
   { name: "Kontakt", href: "/#contact" },
 ];
 
-export default function Navigation() {
+export default async function Navigation() {
+  "use cache"; // Cache navigation component for consistent server/client rendering
   return (
     <nav className="fixed top-0 left-0 right-0 z-[9999] nav-backdrop bg-white/90 py-2 shadow-lg border-b border-gray-200/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

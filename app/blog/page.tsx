@@ -8,7 +8,8 @@ export const metadata = {
     "Lexoni artikujt tanë për të mësuar si të mbani sistemin tuaj elektrik të sigurt dhe eficient.",
 };
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  "use cache"; // Cache blog list page (static post data)
   return (
     <>
       <section className="relative bg-gray-50 py-24 sm:py-32">
