@@ -1,66 +1,33 @@
 import Link from "next/link";
 import FAQAccordion from "./FAQAccordion";
 
-const faqData: { question: string; answer: React.ReactNode }[] = [
+export const faqData: { question: string; answer: string }[] = [
   {
     question: "Sa kohë merr instalimi i një sistemi elektrik të plotë?",
-    answer: (
-      <>
-        <p>
-          Koha e instalimit varet nga kompleksiteti i projektit. Një apartament
-          mesatar kërkon 2-3 ditë, ndërsa një vilë e madhe mund të kërkojë 5-7
-          ditë. Ne ofrojmë vlerësim falas dhe kohor preciz pas inspektimit
-          fillestar.
-        </p>
-      </>
-    ),
+    answer:
+      "<p>Koha e instalimit varet nga kompleksiteti i projektit. Një apartament mesatar kërkon 2-3 ditë, ndërsa një vilë e madhe mund të kërkojë 5-7 ditë. Ne ofrojmë vlerësim falas dhe kohor preciz pas inspektimit fillestar.</p>",
   },
   {
     question: "A ofroni garanci për punimet elektrike që kryeni?",
-    answer: (
-      <>
-        <p>
-          Po, çdo <strong>instalim apo riparim elektrik</strong> që realizojmë
-          mbulohet me garanci, sepse besojmë tek cilësia dhe siguria e punës
-          sonë.
-        </p>
-      </>
-    ),
+    answer:
+      "<p>Po, çdo <strong>instalim apo riparim elektrik</strong> që realizojmë mbulohet me garanci, sepse besojmë tek cilësia dhe siguria e punës sonë.</p>",
   },
   {
     question:
       "A mund të instaloj një karikues makine elektrike në banesën time private?",
-    answer: (
-      <>
-        <p>
-          Sigurisht. Ne kryejmë{" "}
-          <strong>instalime profesionale të karikuesve EV</strong> në shtëpi dhe
-          biznese, duke ofruar zgjidhje të përshtatshme sipas ambientit tuaj.
-        </p>
-      </>
-    ),
+    answer:
+      "<p>Sigurisht. Ne kryejmë <strong>instalime profesionale të karikuesve EV</strong> në shtëpi dhe biznese, duke ofruar zgjidhje të përshtatshme sipas ambientit tuaj.</p>",
   },
   {
     question:
-      "A më ndihmoni në zgjedhjen e sistemit më të mirë fotovoltaik për shtëpinë time?",
-    answer: (
-      <>
-        <p>
-          Patjetër! Ne ju ndihmojmë në çdo hap, nga projektimi deri tek <strong>instalimi i paneleve diellore</strong>, duke u bazuar në
-          konsumin tuaj dhe buxhetin e disponueshëm.
-        </p>
-      </>
-    ),
+      "A më ndihmoni në zgjedhjen e sistemit më të mirë fotovoltaik për shtëpi?",
+    answer:
+      "<p>Patjetër! Ne ju ndihmojmë në çdo hap, nga projektimi deri tek <strong>instalimi i paneleve diellore</strong>, duke u bazuar në konsumin tuaj dhe buxhetin e disponueshëm.</p>",
   },
   {
     question: "Sa shpejt mund të vijë elektricisti në rast urgjence?",
-    answer: (
-      <>
-        <p>
-          Ne ofrojmë <strong>shërbim 24 orë në ditë, 7 ditë në javë</strong>. Në rast urgjence, zakonisht mbërrijmë në vendin tuaj brenda 1 ore nga telefonata juaj.
-        </p>
-      </>
-    ),
+    answer:
+      "<p>Ne ofrojmë <strong>shërbim 24 orë në ditë, 7 ditë në javë</strong>. Në rast urgjence, zakonisht mbërrijmë në vendin tuaj brenda 1 ore nga telefonata juaj.</p>",
   },
 ];
 

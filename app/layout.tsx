@@ -70,8 +70,9 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
+import { faqData } from "./(components)/FAQSection";
+
+const localBusinessSchema = {
   "@type": "LocalBusiness",
   name: "Alex Elektrik",
   image: "https://www.alex-electric.com/logo.png",
@@ -111,11 +112,41 @@ const jsonLd = {
   priceRange: "$$",
 };
 
+const faqSchema = {
+  "@type": "FAQPage",
+  mainEntity: faqData.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer.replace(/<[^>]+>/g, ""),
+    },
+  })),
+};
+
+const breadcrumbSchema = {
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Kreu",
+      item: "https://www.alex-electric.com",
+    },
+  ],
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [localBusinessSchema, faqSchema, breadcrumbSchema],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  console.log(jsonLd);
   return (
     <html lang="sq" className="scroll-smooth">
       <body

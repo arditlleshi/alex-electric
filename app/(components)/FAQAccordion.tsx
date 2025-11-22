@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function FAQAccordion({
   faqs,
 }: {
-  faqs: { question: string; answer: React.ReactNode }[];
+  faqs: { question: string; answer: string }[];
 }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -66,9 +66,10 @@ export default function FAQAccordion({
               className={`px-8 pb-6 ${
                 openIndex === index ? "border-t border-blue-600" : ""
               }`}>
-              <div className="pt-2 border-t border-gray-100 text-gray-600 leading-relaxed mt-4">
-                {faq.answer}
-              </div>
+              <div
+                className="pt-2 border-t border-gray-100 text-gray-600 leading-relaxed mt-4"
+                dangerouslySetInnerHTML={{ __html: faq.answer }}
+              />
             </div>
           </div>
 
