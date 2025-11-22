@@ -77,7 +77,7 @@ const jsonLd = {
   image: "https://www.alex-electric.com/logo.png",
   "@id": "https://www.alex-electric.com",
   url: "https://www.alex-electric.com",
-  telephone: "+355691234567", // Replace with actual number if known, or keep placeholder
+  telephone: "+355693289443",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Tiranë",
@@ -99,9 +99,10 @@ const jsonLd = {
       "Thursday",
       "Friday",
       "Saturday",
+      "Sunday",
     ],
-    opens: "08:00",
-    closes: "20:00",
+    opens: "00:00",
+    closes: "23:59",
   },
   sameAs: [
     "https://www.facebook.com/alexelectric",
