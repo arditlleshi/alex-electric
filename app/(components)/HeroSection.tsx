@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Phone, ArrowRight } from "lucide-react";
 
 const HeroElectricalIllustration = () => (
   <svg viewBox="0 0 200 200" className="w-full h-full">
@@ -286,8 +287,8 @@ export default function HeroSection() {
         </h1>
 
         <p className="mx-auto mb-8 max-w-2xl text-pretty text-base leading-relaxed text-gray-300 sm:text-lg md:text-xl">
-          Alex&nbsp;Elektrik ofron shërbime elektrike profesionale në Tiranë dhe më gjerë,
-          duke përfshirë{" "}
+          Alex&nbsp;Elektrik ofron shërbime elektrike profesionale në Tiranë dhe
+          më gjerë, duke përfshirë{" "}
           <strong className="font-semibold text-white">
             instalime elektrike
           </strong>
@@ -307,31 +308,14 @@ export default function HeroSection() {
           <Link
             href="#contact"
             className="relative inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 px-7 py-3 text-sm font-semibold text-white shadow-lg transition-transform duration-300 hover:scale-105 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-indigo-400/70 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="size-5 shrink-0"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}>
-              <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384Z" />
-            </svg>
+            <Phone className="size-5 shrink-0" />
             Kontakto&nbsp;Tani
           </Link>
           <Link
             href="#services"
             className="inline-flex items-center gap-2 rounded-lg border border-gray-600/70 bg-gray-700/40 px-7 py-3 text-sm font-semibold text-gray-100 backdrop-blur transition-all duration-300 hover:bg-gray-700/70 hover:backdrop-blur-sm focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-gray-500/60 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">
             Shiko&nbsp;Shërbimet
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="size-5 shrink-0"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}>
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" />
-            </svg>
+            <ArrowRight className="size-5 shrink-0" />
           </Link>
         </div>
       </div>

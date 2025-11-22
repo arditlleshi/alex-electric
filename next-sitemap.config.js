@@ -3,6 +3,7 @@
 module.exports = {
   siteUrl: "https://www.alex-electric.com",
   generateRobotsTxt: true,
+  generateIndexSitemap: false,
   sitemapSize: 5000,
   changefreq: "weekly",
   priority: 0.7,

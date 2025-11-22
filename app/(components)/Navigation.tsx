@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/public/main-logo.png";
+import { Home, Info, Zap, FileText, Phone } from "lucide-react";
 
 const navigation = [
-  { name: "Kreu", href: "/#hero" },
-  { name: "Rreth Nesh", href: "/#about" },
-  { name: "Shërbimet", href: "/#services" },
-  { name: "Blog", href: "/#articles" },
-  { name: "Kontakt", href: "/#contact" },
+  { name: "Kreu", href: "/#hero", icon: Home },
+  { name: "Rreth Nesh", href: "/#about", icon: Info },
+  { name: "Shërbimet", href: "/#services", icon: Zap },
+  { name: "Blog", href: "/#articles", icon: FileText },
+  { name: "Kontakt", href: "/#contact", icon: Phone },
 ];
 
 export default async function Navigation() {
@@ -33,12 +34,13 @@ export default async function Navigation() {
             </div>
           </Link>
 
-          <div className="hidden md:flex space-x-2">
+          <div className="hidden md:flex space-x-1">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="relative text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium group px-4 py-2 rounded-lg">
+                className="relative flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium group px-4 py-2 rounded-lg">
+                <item.icon className="w-4 h-4" />
                 <span className="relative z-10">{item.name}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-95 group-hover:scale-100" />
               </Link>

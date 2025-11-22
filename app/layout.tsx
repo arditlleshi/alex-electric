@@ -13,6 +13,7 @@ const inter = Inter({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  themeColor: "#2563eb",
 };
 
 export const metadata: Metadata = {
@@ -21,13 +22,14 @@ export const metadata: Metadata = {
   description:
     "Ofrojmë shërbime të ndryshme si instalime elektrike, riparime emergjente, sisteme smart home, karikues EV dhe panele diellore. Kontakto tani!",
   keywords:
-    "elektricist ne tirane, elektricist tirane, punime elektrike, instalime elektrike ne shtepi, instalime elektrike, riparime elektrike, elektricist ne shtepi",
+    "elektricist ne tirane, elektricist tirane, punime elektrike, instalime elektrike ne shtepi, instalime elektrike, riparime elektrike, elektricist ne shtepi, smart home tirane, panele diellore tirane",
   authors: [
     {
       name: "Alex Elektrik",
       url: "https://www.alex-electric.com",
     },
   ],
+  category: "Home Services",
   robots: "index, follow",
   openGraph: {
     title:
@@ -54,13 +56,58 @@ export const metadata: Metadata = {
       "Shërbime elektrike profesionale për shtëpi, lokale, zyra dhe biznese.",
     images: ["/logo.png"],
   },
-
   alternates: {
     canonical: "https://www.alex-electric.com",
   },
   verification: {
     google: "x1JQVuYMIxvh0xQT2X1dw0E6bxcy2k-ajjAHaogtbvk",
   },
+  other: {
+    "geo.region": "AL-11",
+    "geo.placename": "Tirana",
+    "geo.position": "41.3275;19.8187",
+    ICBM: "41.3275, 19.8187",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Alex Elektrik",
+  image: "https://www.alex-electric.com/logo.png",
+  "@id": "https://www.alex-electric.com",
+  url: "https://www.alex-electric.com",
+  telephone: "+355691234567", // Replace with actual number if known, or keep placeholder
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Tiranë",
+    addressLocality: "Tiranë",
+    postalCode: "1001",
+    addressCountry: "AL",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 41.3275,
+    longitude: 19.8187,
+  },
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ],
+    opens: "08:00",
+    closes: "20:00",
+  },
+  sameAs: [
+    "https://www.facebook.com/alexelectric",
+    "https://www.instagram.com/alexelectric",
+  ],
+  priceRange: "$$",
 };
 
 export default function RootLayout({
@@ -73,6 +120,10 @@ export default function RootLayout({
       <body
         className={`${inter.variable} font-sans antialiased`}
         suppressHydrationWarning={true}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <div className="min-h-screen bg-white">
           <Navigation />
           {children}

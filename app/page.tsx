@@ -6,20 +6,44 @@ import HeroSection from "./(components)/HeroSection";
 import ServicesSection from "./(components)/ServicesSection";
 import TestimonialsSection from "./(components)/TestimonialsSection";
 import WhyChooseSection from "./(components)/WhyChooseSection";
+import ScrollReveal from "./(components)/ScrollReveal";
 
 export default async function Home() {
-  'use cache';
-  
+  "use cache";
+
   return (
     <>
-      <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <WhyChooseSection />
-      <FAQSection />
-      <TestimonialsSection />
-      <ArticlesSection />
-      <ContactSection />
+      <ScrollReveal width="100%" animation="fade-in">
+        <HeroSection />
+      </ScrollReveal>
+
+      <ScrollReveal width="100%" animation="fade-up" delay={0.2}>
+        <AboutSection />
+      </ScrollReveal>
+
+      <ScrollReveal width="100%" animation="fade-up" delay={0.2}>
+        <ServicesSection />
+      </ScrollReveal>
+
+      <ScrollReveal width="100%" animation="slide-right" delay={0.2}>
+        <WhyChooseSection />
+      </ScrollReveal>
+
+      <ScrollReveal width="100%" animation="fade-up" delay={0.2}>
+        <FAQSection />
+      </ScrollReveal>
+
+      <ScrollReveal width="100%" animation="scale-up" delay={0.2}>
+        <TestimonialsSection />
+      </ScrollReveal>
+
+      <ScrollReveal width="100%" animation="fade-up" delay={0.2}>
+        <ArticlesSection />
+      </ScrollReveal>
+
+      <ScrollReveal width="100%" animation="fade-up" delay={0.2}>
+        <ContactSection />
+      </ScrollReveal>
     </>
   );
 }
