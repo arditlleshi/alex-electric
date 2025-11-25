@@ -3,10 +3,9 @@ import ArticlesSection from "./(components)/ArticlesSection";
 import ContactSection from "./(components)/ContactSection";
 import FAQSection from "./(components)/FAQSection";
 import HeroSection from "./(components)/HeroSection";
-import ServicesSection from "./(components)/ServicesSection";
-import TestimonialsSection from "./(components)/TestimonialsSection";
-import WhyChooseSection from "./(components)/WhyChooseSection";
 import ScrollReveal from "./(components)/ScrollReveal";
+import ServicesSection from "./(components)/ServicesSection";
+import WhyChooseSection from "./(components)/WhyChooseSection";
 
 export default async function Home() {
   "use cache";
@@ -31,10 +30,6 @@ export default async function Home() {
 
       <ScrollReveal width="100%" animation="fade-up" delay={0.2}>
         <FAQSection />
-      </ScrollReveal>
-
-      <ScrollReveal width="100%" animation="scale-up" delay={0.2}>
-        <TestimonialsSection />
       </ScrollReveal>
 
       <ScrollReveal width="100%" animation="fade-up" delay={0.2}>

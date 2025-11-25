@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { allPosts, Post } from "../posts";
 import Link from "next/link";
+import { Metadata } from "next";
 
 export function generateStaticParams() {
   return allPosts.map((p: Post) => ({ slug: p.slug }));
@@ -10,21 +11,81 @@ export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>
-}) {
+}): Promise<Metadata> {
   const { slug } = await params;
   const post = allPosts.find((p: Post) => p.slug === slug);
   if (!post) return {};
+  
+  const postUrl = `https://www.alex-electric.com/blog/${post.slug}`;
+  const publishedTime = new Date(post.date).toISOString();
+  
+  // Combine post tags with relevant keywords
+  const keywords = [
+    ...post.tags,
+    "elektricist tirane",
+    "instalime elektrike",
+    "riparime elektrike",
+    "këshilla elektrike",
+    "blog elektrik",
+  ];
+
   return {
-    title: post.title + " | Alex Electric",
+    title: `${post.title} | Alex Electric`,
     description: post.description,
-    alternates: {
-      canonical: `https://www.alex-electric.com/blog/${post.slug}`,
+    keywords: keywords,
+    authors: [
+      {
+        name: "Alex Elektrik",
+        url: "https://www.alex-electric.com",
+      },
+    ],
+    category: "Home Services",
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
     },
     openGraph: {
       title: post.title,
       description: post.description,
       type: "article",
-      url: `https://www.alex-electric.com/blog/${post.slug}`,
+      url: postUrl,
+      locale: "sq_AL",
+      siteName: "Alex Elektrik",
+      publishedTime: publishedTime,
+      modifiedTime: publishedTime,
+      authors: ["Alex Elektrik"],
+      tags: post.tags,
+      images: [
+        {
+          url: "https://www.alex-electric.com/logo.png",
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      images: ["https://www.alex-electric.com/logo.png"],
+    },
+    alternates: {
+      canonical: postUrl,
+    },
+    other: {
+      "article:author": "Alex Elektrik",
+      "article:published_time": publishedTime,
+      "article:modified_time": publishedTime,
+      "article:section": "Electrical Services",
+      "article:tag": post.tags.join(", "),
     },
   };
 }
@@ -40,8 +101,111 @@ export default async function BlogPost({
   const post = allPosts.find((p: Post) => p.slug === slug);
   if (!post) return notFound();
 
+  const postUrl = `https://www.alex-electric.com/blog/${post.slug}`;
+  const publishedTime = new Date(post.date).toISOString();
+
+  // Organization Schema Reference
+  const organizationSchema = {
+    "@type": "Organization",
+    "@id": "https://www.alex-electric.com/#organization",
+    name: "Alex Elektrik",
+    url: "https://www.alex-electric.com",
+    logo: "https://www.alex-electric.com/logo.png",
+    sameAs: [
+      "https://www.facebook.com/alexelectric",
+      "https://www.instagram.com/alexelectric",
+    ],
+  };
+
+  // Article/BlogPosting Schema (Primary)
+  const articleSchema = {
+    "@type": "BlogPosting",
+    "@id": `${postUrl}#article`,
+    headline: post.title,
+    description: post.description,
+    url: postUrl,
+    datePublished: publishedTime,
+    dateModified: publishedTime,
+    author: {
+      "@id": "https://www.alex-electric.com/#organization",
+    },
+    publisher: {
+      "@id": "https://www.alex-electric.com/#organization",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${postUrl}#webpage`,
+    },
+    keywords: post.tags.join(", "),
+    articleSection: "Electrical Services",
+    inLanguage: "sq-AL",
+  };
+
+  // WebPage Schema
+  const webpageSchema = {
+    "@type": "WebPage",
+    "@id": `${postUrl}#webpage`,
+    url: postUrl,
+    name: post.title,
+    description: post.description,
+    isPartOf: {
+      "@id": "https://www.alex-electric.com/blog#webpage",
+    },
+    about: {
+      "@id": `${postUrl}#article`,
+    },
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: "https://www.alex-electric.com/logo.png",
+    },
+    datePublished: publishedTime,
+    dateModified: publishedTime,
+    inLanguage: "sq-AL",
+  };
+
+  // BreadcrumbList Schema
+  const breadcrumbSchema = {
+    "@type": "BreadcrumbList",
+    "@id": `${postUrl}#breadcrumb`,
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Kreu",
+        item: "https://www.alex-electric.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: "https://www.alex-electric.com/blog",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: postUrl,
+      },
+    ],
+  };
+
+  // Combine all schemas using @graph
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationSchema,
+      articleSchema,
+      webpageSchema,
+      breadcrumbSchema,
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section className="relative bg-gray-50 pt-28 pb-20 sm:pt-32 sm:pb-24">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,123,255,0.1),_transparent_40%)]"></div>

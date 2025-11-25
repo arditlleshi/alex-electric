@@ -11,6 +11,82 @@ export interface Post {
 
 export const allPosts: Post[] = [
   {
+    title: "Udhëzues për instalime moderne elektrike në shtëpi, zyra dhe biznese",
+    description:
+      "Një përmbledhje profesionale e shërbimeve elektrike: instalime, riparime, panele diellore dhe stacione karikimi për automjete elektrike.",
+    slug: "instalime-elektrike-shtepi-zyra-biznese",
+    date: "2025-11-25",
+    tags: ["instalime", "riparime", "solare", "ev-charging"],
+    content: (
+      <>
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          Rrjeti elektrik i një ndërtese është si “sistemi nervor”: nëse projektohet dhe mirëmbahen siç duhet,
+          çdo pajisje funksionon sigurt dhe pa ndërprerje. Një elektricist profesionist siguron që instalimet
+          në shtëpi, zyra dhe biznese të jenë efikase, të besueshme dhe në përputhje me standardet.
+        </p>
+  
+        <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">
+          1. Planifikimi i instalimeve elektrike
+        </h2>
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          Çdo projekt nis me vlerësimin e nevojave: sa qarqe duhen, ku pozicionohen prizat, pikat e ndriçimit
+          dhe panelet elektrike. Për shtëpitë, fokusi është komoditeti dhe siguria familjare, ndërsa për zyrat
+          dhe dyqanet rëndësi kanë ngarkesat e pajisjeve, ndriçimi i mirë dhe mundësia për zgjerim në të ardhmen.
+        </p>
+  
+        <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">
+          2. Siguria dhe standardet elektrike
+        </h2>
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          Instalimet profesionale kryhen gjithmonë me kabllo, siguresa dhe pajisje të certifikuara. Përdoren
+          diferencjale dhe mbrojtje nga mbingarkesa për të ulur rrezikun e zjarrit apo goditjeve elektrike.
+          Kontrolli periodik i panelit dhe lidhjeve ndihmon që defektet të zbulohen herët dhe të shmangen
+          ndërprerjet e panevojshme.
+        </p>
+  
+        <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">
+          3. Riparime dhe mirëmbajtje profesionale
+        </h2>
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          Prizat që ngrohen, çelësat që shkëndijojnë ose siguresat që bien shpesh janë sinjale alarmi.
+          Elektricisti diagnostikon shkurtoret, lidhjet e dobëta dhe kabllot e dëmtuara, i zëvendëson ato
+          dhe rregullon panelin elektrik. Mirëmbajtja e rregullt zvogëlon rrezikun e defekteve të mëdha dhe
+          ul kostot afatgjata.
+        </p>
+  
+        <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">
+          4. Integrimi i paneleve diellore në rrjetin ekzistues
+        </h2>
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          Panelet diellore projektohen që të përshtaten me konsumin e objektit. Elektricisti vlerëson panelin
+          aktual elektrik, kapacitetin e invertorit dhe linjat e furnizimit, duke siguruar që energjia e
+          prodhuar të shpërndahet sigurt. Instalimi i saktë lejon kursime reale në faturë dhe rrit pavarësinë
+          nga rrjeti.
+        </p>
+  
+        <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">
+          5. Stacione karikimi për automjete elektrike (EV)
+        </h2>
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          Për stacionet e karikimit, nevojiten linja të dedikuara, mbrojtje e posaçme dhe dimensionim i saktë
+          i siguresave. Elektricisti kontrollon nëse paneli mund të përballojë ngarkesën shtesë, propozon
+          fuqinë e duhur të karikuesit dhe kujdeset që instalimi të jetë i sigurt si për automjetin, ashtu
+          edhe për rrjetin elektrik të objektit.
+        </p>
+  
+        <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">
+          6. Kur duhet të kontaktoni një elektricist?
+        </h2>
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          Nëse po rinovoni një hapësirë, po shtoni pajisje të reja të fuqishme, planifikoni panele diellore
+          ose stacion karikimi për EV, apo thjesht vini re sjellje të çuditshme në rrjetin elektrik, është
+          koha të thërrisni një profesionist. Një kontroll i bërë sot shmang probleme të rënda nesër dhe ju
+          siguron një sistem elektrik të sigurt dhe afatgjatë.
+        </p>
+      </>
+    ),
+  },  
+  {
     title: "Si të zgjedhësh një elektricist të besueshëm në Tiranë",
     description:
       "Këshillat kryesore për të identifikuar një profesionist të kualifikuar dhe të besueshëm për nevojat tuaja elektrike.",
