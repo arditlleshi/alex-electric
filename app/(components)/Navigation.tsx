@@ -40,7 +40,7 @@ export default async function Navigation() {
                 key={item.name}
                 href={item.href}
                 className="relative flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium group px-4 py-2 rounded-lg">
-                <item.icon className="w-4 h-4" />
+                <item.icon className="w-4 h-4 z-10" />
                 <span className="relative z-10">{item.name}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-95 group-hover:scale-100" />
               </Link>

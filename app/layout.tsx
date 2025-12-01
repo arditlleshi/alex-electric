@@ -146,7 +146,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  console.log(jsonLd);
   return (
     <html lang="sq" className="scroll-smooth">
       <body
