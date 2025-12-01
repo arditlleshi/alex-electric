@@ -85,7 +85,7 @@ const articles = [
 
 export default function ArticlesSection() {
   return (
-    <section id="articles" className="py-24 bg-white relative overflow-hidden">
+    <section id="articles" className="pb-24 bg-white relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
         <div
           className="absolute top-1/4 left-1/4 w-96 h-96 gradient-aurora rounded-full opacity-10 animate-float"
@@ -105,7 +105,7 @@ export default function ArticlesSection() {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Lexoni artikujt tanë për këshilla praktike, udhëzime dhe informacion
-            të vlefshëm rreth botës së shërbimeve elektrike.
+            të vlefshëm rreth botës së shërbimeve <strong>elektrike</strong>.
           </p>
         </div>
 

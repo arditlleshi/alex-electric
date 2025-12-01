@@ -50,8 +50,8 @@ export default function FAQSection() {
             Pyetjet më të shpeshta
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Gjeni përgjigje të shpejta për pyetjet më të shpeshta rreth
-            shërbimeve tona elektrike profesionale.
+            Gjeni përgjigje për pyetjet më të shpeshta rreth
+            shërbimeve tona për <strong>instalime/riparime elektrike, fotovoltaikë, smart home etj.</strong>
           </p>
         </div>
 

@@ -11,7 +11,7 @@ const services = [
     image: ResidentialElectric,
     title: "Instalime Elektrike Rezidenciale",
     description:
-      "Kryejmë instalime të plota elektrike për apartamente, vila dhe ambiente banimi. Siguri dhe efikasitet maksimal në çdo punim elektrik.",
+      "<p>Kryejm&euml; <strong>instalime elektrike</strong> p&euml;r apartamente, vila dhe ambiente banimi. Siguri dhe efikasitet maksimal n&euml; &ccedil;do <strong>punim elektrik</strong>.</p>",
     gradient: "gradient-electric",
     color: "blue",
   },
@@ -19,7 +19,7 @@ const services = [
     image: CommercialElectric,
     title: "Shërbime për Biznese dhe Industri",
     description:
-      "Instalime dhe riparime elektrike të specializuara për zyra, lokale, restorante dhe fabrika, duke siguruar vazhdimësi të aktivitetit tuaj.",
+      "<p><strong>Instalime</strong> dhe <strong>riparime elektrike</strong> t&euml; specializuara p&euml;r zyra, lokale, restorante dhe fabrika, duke siguruar vazhdim&euml;si t&euml; aktivitetit tuaj.</p>",
     gradient: "gradient-sunset",
     color: "orange",
   },
@@ -27,7 +27,7 @@ const services = [
     image: SmartHome,
     title: "Sisteme Smart Home",
     description:
-      "Automatizoni shtëpinë tuaj me sisteme inteligjente për ndriçim, siguri, dhe kontroll të pajisjeve në distancë.",
+      "<p>Automatizoni sht&euml;pin&euml; tuaj me sisteme inteligjente <strong>(smart home)</strong> p&euml;r ndri&ccedil;im, siguri, dhe kontroll t&euml; pajisjeve n&euml; distanc&euml;.</p>",
     gradient: "gradient-mesh",
     color: "teal",
   },
@@ -35,7 +35,7 @@ const services = [
     image: ElectricCar,
     title: "Karikues për Makina Elektrike (EV)",
     description:
-      "Instalim karikuesish për automjete elektrike, duke garantuar karikim të shpejtë, të sigurt dhe efikas në shtëpi ose biznes.",
+      "<p><strong>Instalim karikuesish</strong> p&euml;r automjete elektrike, duke garantuar karikim t&euml; shpejt&euml;, t&euml; sigurt dhe efikas n&euml; sht&euml;pi ose biznes.</p>",
     gradient: "gradient-aurora",
     color: "green",
   },
@@ -43,7 +43,7 @@ const services = [
     image: SolarPanel,
     title: "Instalime dhe Mirëmbajtje Panele Diellore",
     description:
-      "Projektim, instalim dhe mirëmbajtje të sistemeve solare për energji të pastër dhe kursim maksimal të energjisë elektrike.",
+      "<p><strong>Projektim</strong>, <strong>instalim</strong> dhe mir&euml;mbajtje t&euml; sistemeve solare p&euml;r energji t&euml; past&euml;r dhe kursim maksimal t&euml; <strong>energjis&euml; elektrike</strong>.</p>",
     gradient: "gradient-primary",
     color: "purple",
   },
@@ -51,7 +51,7 @@ const services = [
     image: Maintenance,
     title: "Mirëmbajtje & Diagnostikim Elektrik",
     description:
-      "Shërbim emergjent dhe mirëmbajtje periodike për të garantuar siguri maksimale dhe parandalim të avarive elektrike.",
+      "<p>Shërbim emergjent dhe mirëmbajtje periodike për të garantuar siguri maksimale dhe parandalim të avarive <strong>elektrike</strong>.</p>",
     gradient: "gradient-electric",
     color: "indigo",
   },
@@ -110,10 +110,7 @@ export default function ServicesSection() {
               <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
                 {service.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
-                {service.description}
-              </p>
-
+              <div dangerouslySetInnerHTML={{ __html: service.description }} className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300" />
               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
               </div>
@@ -128,7 +125,7 @@ export default function ServicesSection() {
             </h3>
             <p className="text-gray-600">
               Na kontaktoni sot për një konsultë falas dhe ofertë të
-              personalizuar për projektin tuaj elektrik.
+              personalizuar për projektin tuaj <strong>elektrik</strong>.
             </p>
           </div>
         </div>

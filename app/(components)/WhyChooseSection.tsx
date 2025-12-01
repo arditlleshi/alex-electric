@@ -2,32 +2,32 @@ const benefits = [
   {
     title: "Eksperiencë & Cilësi",
     description:
-      "Me një dekadë e gjysmë përvojë pune në terren, kemi hasur dhe zgjidhur me sukses një gamë të gjerë problemesh elektrike. Kjo na jep besimin dhe aftësinë për të trajtuar çdo situatë me kompetencë.",
+      "<p>Me nj&euml; dekad&euml; e gjysm&euml; p&euml;rvoj&euml; pune n&euml; terren, kemi hasur dhe zgjidhur me sukses nj&euml; gam&euml; t&euml; gjer&euml; problemesh <strong>elektrike</strong>. Kjo na jep besimin dhe aft&euml;sin&euml; p&euml;r t&euml; trajtuar &ccedil;do situat&euml; me kompetenc&euml;.</p>",
   },
   {
     title: "Disponibilitet 24/7",
     description:
-      "Problemet elektrike nuk presin! Prandaj, jemi gjithmonë të gatshëm t’ju ndihmojmë, qoftë ditë apo natë. Ofrojmë shërbim emergjence 24 orë në ditë, 7 ditë të javës, që do të thotë se mund të mbështeteni tek ne edhe jashtë orarit standard.",
+      "<p>Problemet <strong>elektrike</strong> nuk presin! Prandaj, jemi gjithmon&euml; t&euml; gatsh&euml;m t&rsquo;ju ndihmojm&euml;, qoft&euml; dit&euml; apo nat&euml;. Ofrojm&euml; sh&euml;rbim emergjence <strong>24 or&euml;</strong> n&euml; dit&euml;, <strong>7 dit&euml; t&euml; jav&euml;s</strong>, q&euml; do t&euml; thot&euml; se mund t&euml; mb&euml;shteteni tek ne edhe jasht&euml; orarit standard.</p>",
   },
   {
     title: "Teknologji Moderne",
     description:
-      "Industria elektrike përparon me shpejtësi, ndaj ne investojmë vazhdimisht në teknologji moderne. Nga pajisjet inteligjente për shtëpi tek sistemet efikase energjetikisht, ne ofrojmë zgjidhje bashkëkohore që kursejnë energji dhe janë miqësore me mjedisin.",
+      "<p>Industria elektrike p&euml;rparon me shpejt&euml;si, ndaj ne investojm&euml; vazhdimisht n&euml; teknologji moderne. Nga pajisjet inteligjente p&euml;r sht&euml;pi <strong>(smart home)</strong> tek sistemet efikase <strong>energjetikisht</strong>, ne ofrojm&euml; zgjidhje bashk&euml;kohore q&euml; kursejn&euml; <strong>energji</strong> dhe jan&euml; miq&euml;sore me mjedisin.</p>",
   },
   {
     title: "Siguria në radhë të parë",
     description:
-      "Tek ne siguria elektrike nuk është thjesht standard – është kulturë. Çdo instalim apo riparim realizohet duke respektuar me rigorozitet kodet dhe rregulloret e sigurisë",
+      "<p>Tek ne <strong>siguria elektrike</strong> nuk &euml;sht&euml; thjesht standard &ndash; &euml;sht&euml; kultur&euml;. &Ccedil;do instalim apo <strong>riparim elektrik</strong> realizohet duke respektuar me rigorozitet kodet dhe rregulloret e siguris&euml;</p>",
   },
   {
     title: "Çmime konkurruese & transparencë",
     description:
-      "Marrëdhënia me klientin fillon me besim. Ne sigurojmë çmime konkurruese dhe transparente për çdo projekt. Para se të fillojmë punën, ju ofrojmë një preventiv të detajuar, pa tarifa të fshehura, në mënyrë që të dini saktësisht çfarë po paguani dhe çfarë vlere do të merrni.",
+      "<p>Marr&euml;dh&euml;nia me klientin fillon me besim. Ne sigurojm&euml; &ccedil;mime konkurruese dhe transparente p&euml;r &ccedil;do projekt. Para se t&euml; fillojm&euml; pun&euml;n, ju ofrojm&euml; nj&euml; preventiv t&euml; detajuar, pa tarifa t&euml; fshehura, n&euml; m&euml;nyr&euml; q&euml; t&euml; dini sakt&euml;sisht &ccedil;far&euml; po paguani dhe &ccedil;far&euml; vlere do t&euml; merrni.</p>",
   },
   {
     title: "Shërbim i Personalizuar",
     description:
-      "Vëmendje individuale për çdo projekt elektrik, duke ju dhënë zgjidhjen më të mirë sipas nevojave tuaja.",
+      "<p>V&euml;mendje individuale p&euml;r &ccedil;do <strong>projekt elektrik</strong>, duke ju dh&euml;n&euml; zgjidhjen m&euml; t&euml; mir&euml; sipas nevojave tuaja.</p>",
   },
 ];
 
@@ -92,9 +92,7 @@ export default function WhyChooseSection() {
                   <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-300 transition-colors duration-300">
                     {benefit.title}
                   </h3>
-                  <p className="text-white/80 leading-relaxed">
-                    {benefit.description}
-                  </p>
+                  <div dangerouslySetInnerHTML={{ __html: benefit.description }} className="text-white/80 leading-relaxed" />
                 </div>
               </div>
 
