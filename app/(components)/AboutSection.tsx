@@ -23,7 +23,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       </div>
       <div>
         <h3 className="font-semibold text-gray-900 mb-2">{title}</h3>
-        <p className="text-gray-600 leading-relaxed">{description}</p>
+        <div dangerouslySetInnerHTML={{ __html: description }} className="text-gray-600 leading-relaxed"></div>
       </div>
     </div>
   </div>
@@ -178,7 +178,7 @@ const features = [
     ),
     title: "Mbi 15 Vjet Eksperiencë",
     description:
-      "Mbi një dekadë e gjysmë eksperiencë praktike duke ofruar shërbime elektrike profesionale në sektorët rezidencialë, komercialë dhe industrialë.",
+      "<p>Mbi nj&euml; dekad&euml; e gjysm&euml; eksperienc&euml; praktike duke ofruar <strong>sh&euml;rbime elektrike profesionale</strong> n&euml; sektor&euml;t rezidencial&euml;, komercial&euml; dhe industrial&euml;.</p>",
   },
   {
     animationDelay: "0.2s",
@@ -199,7 +199,7 @@ const features = [
     ),
     title: "Teknologji Moderne",
     description:
-      "Gjithmonë të përditësuar me standardet më të fundit elektrike, teknologjitë e shtëpive inteligjente dhe zgjidhjet energjetike të qëndrueshme si panelet diellore dhe karikimi i automjeteve elektrike.",
+      "<p>Gjithmon&euml; t&euml; p&euml;rdit&euml;suar me standardet m&euml; t&euml; fundit <strong>elektrike</strong>, teknologjit&euml; e sht&euml;pive inteligjente (<strong>smart home</strong>) dhe zgjidhjet energjetike t&euml; q&euml;ndrueshme si <strong>panelet diellore</strong> dhe karikimi i <strong>automjeteve elektrike</strong>.</p>",
   },
   {
     animationDelay: "0.4s",
@@ -220,7 +220,7 @@ const features = [
     ),
     title: "Siguruar & I Besueshëm",
     description:
-      "Profesionist plotësisht i siguruar dhe i çertifikuar që kombinon përsosmërinë teknike me shërbimin e ndershëm dhe të besueshëm që ju kërkoni.",
+      "<p><strong>Profesionist</strong> plot&euml;sisht i siguruar dhe i &ccedil;ertifikuar q&euml; kombinon p&euml;rsosm&euml;rin&euml; teknike me sh&euml;rbimin e ndersh&euml;m dhe t&euml; besuesh&euml;m q&euml; ju k&euml;rkoni.</p>",
   },
 ];
 

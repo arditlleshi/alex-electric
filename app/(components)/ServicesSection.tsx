@@ -61,7 +61,7 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="py-24 bg-gradient-to-br from-white to-gray-50 relative overflow-hidden">
+      className="pb-24 bg-gradient-to-br from-white to-gray-50 relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 right-20 w-64 h-64 gradient-aurora rounded-full opacity-5 animate-float"></div>
         <div
@@ -78,9 +78,9 @@ export default function ServicesSection() {
             Shërbimet Elektrike që Ofrojmë
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Nga riparimet shtëpiake deri te instalimet industriale, ne ofrojmë
-            zgjidhje elektrike moderne të përshtatura sipas nevojave tuaja
-            specifike.
+            Nga <strong>riparimet elektrike</strong> shtëpiake deri te
+            instalimet industriale, ne ofrojmë zgjidhje <strong>elektrike</strong> moderne të
+            përshtatura sipas nevojave tuaja specifike.
           </p>
         </div>
 
