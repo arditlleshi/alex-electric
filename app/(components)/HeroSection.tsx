@@ -287,19 +287,24 @@ export default function HeroSection() {
         </h1>
 
         <p className="mx-auto mb-8 max-w-2xl text-pretty text-base leading-relaxed text-gray-300 sm:text-lg md:text-xl">
-          Alex&nbsp;Elektrik ofron shërbime elektrike profesionale në Tiranë dhe
-          më gjerë, duke përfshirë{" "}
+          Alex&nbsp;Elektrik ofron shërbime elektrike profesionale në{" "}
           <strong className="font-semibold text-white">
-            instalime elektrike
+            Tiranë, Durrës
+          </strong>{" "}
+          dhe <strong className="font-semibold text-white">zonat përreth</strong>, me{" "}
+          <strong className="font-semibold text-white">shërbim 24/7</strong> për
+          emergjenca. Punojmë me fokus tek{" "}
+          <strong className="font-semibold text-white">
+            Instalime Elektrike
           </strong>
           ,{" "}
           <strong className="font-semibold text-white">
-            riparime emergjente
+            Riparime Emergjente
           </strong>
           ,{" "}
-          <strong className="font-semibold text-white">smart&nbsp;home</strong>,{" "}
-          <strong className="font-semibold text-white">karikues EV</strong> dhe{" "}
-          <strong className="font-semibold text-white">panele diellore</strong>.
+          <strong className="font-semibold text-white">Smart&nbsp;Home</strong>,{" "}
+          <strong className="font-semibold text-white">Karikues EV</strong> dhe{" "}
+          <strong className="font-semibold text-white">Panele Diellore</strong>.
           Zgjidhje të sigurta, moderne dhe me çmime transparente.
         </p>
 

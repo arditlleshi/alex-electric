@@ -11,7 +11,7 @@ export default async function Home() {
   "use cache";
 
   return (
-    <>
+    <main>
       <ScrollReveal width="100%" animation="fade-in">
         <HeroSection />
       </ScrollReveal>
@@ -39,6 +39,6 @@ export default async function Home() {
       <ScrollReveal width="100%" animation="fade-up" delay={0.2}>
         <ContactSection />
       </ScrollReveal>
-    </>
+    </main>
   );
 }
