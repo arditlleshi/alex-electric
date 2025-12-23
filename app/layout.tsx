@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "./(components)/Navigation";
 import Footer from "./(components)/Footer";
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -158,6 +159,7 @@ export default function RootLayout({
         <div className="min-h-screen bg-white">
           <Navigation />
           {children}
+          <Analytics />
           <Footer />
         </div>
       </body>
