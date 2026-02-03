@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     "Elektricist në Tiranë - Instalime, Riparime & Smart Home | Alex Elektrik",
   description:
     "Ofrojmë shërbime të ndryshme si instalime elektrike, riparime emergjente, sisteme smart home, karikues EV dhe panele diellore. Kontakto tani!",
+  metadataBase: new URL("https://www.alex-electric.com"),
   keywords:
     "elektricist ne tirane, elektricist tirane, punime elektrike, instalime elektrike ne shtepi, instalime elektrike, riparime elektrike, elektricist ne shtepi, smart home tirane, panele diellore tirane",
   authors: [
@@ -41,21 +42,12 @@ export const metadata: Metadata = {
     locale: "sq_AL",
     url: "https://www.alex-electric.com",
     siteName: "Alex Elektrik",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Alex Elektrik – Elektricist në Tiranë",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Alex Elektrik | Elektricist në Tiranë",
     description:
       "Shërbime elektrike profesionale për shtëpi, lokale, zyra dhe biznese.",
-    images: ["/logo.png"],
   },
   alternates: {
     canonical: "https://www.alex-electric.com",
@@ -80,6 +72,7 @@ const localBusinessSchema = {
   "@id": "https://www.alex-electric.com",
   url: "https://www.alex-electric.com",
   telephone: "+355693289443",
+  areaServed: ["Tiranë", "Durrës", "Zonat përreth"],
   address: {
     "@type": "PostalAddress",
     streetAddress: "Tiranë",

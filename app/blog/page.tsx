@@ -10,7 +10,7 @@ const latestPostDate = allPosts.reduce((latest, post) => {
 }, new Date(allPosts[0]?.date || new Date().toISOString()));
 
 export const metadata: Metadata = {
-  title: "Blog Elektrik – Këshilla & Udhëzime Profesionale | Alex Electric",
+  title: "Blog Elektrik – Këshilla & Udhëzime Profesionale | Alex Elektrik",
   description:
     "Lexoni artikujt profesionale për instalime elektrike, riparime, panele diellore dhe smart home në Tiranë. Këshilla nga ekspertët elektricistë.",
   keywords: [
@@ -51,21 +51,12 @@ export const metadata: Metadata = {
     locale: "sq_AL",
     url: "https://www.alex-electric.com/blog",
     siteName: "Alex Elektrik",
-    images: [
-      {
-        url: "https://www.alex-electric.com/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Alex Elektrik – Blog Këshilla Elektrike",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Blog Elektrik – Këshilla & Udhëzime Profesionale | Alex Electric",
     description:
       "Lexoni artikujt profesionale për instalime elektrike, riparime, panele diellore dhe smart home në Tiranë.",
-    images: ["https://www.alex-electric.com/logo.png"],
   },
   alternates: {
     canonical: "https://www.alex-electric.com/blog",

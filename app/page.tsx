@@ -5,6 +5,7 @@ import FAQSection from "./(components)/FAQSection";
 import HeroSection from "./(components)/HeroSection";
 import ScrollReveal from "./(components)/ScrollReveal";
 import ServicesSection from "./(components)/ServicesSection";
+import TestimonialsSection from "./(components)/TestimonialsSection";
 import WhyChooseSection from "./(components)/WhyChooseSection";
 
 export default async function Home() {
@@ -12,9 +13,7 @@ export default async function Home() {
 
   return (
     <main>
-      <ScrollReveal width="100%" animation="fade-in">
-        <HeroSection />
-      </ScrollReveal>
+      <HeroSection />
 
       <ScrollReveal width="100%" animation="fade-up" delay={0.2}>
         <AboutSection />
@@ -26,6 +25,10 @@ export default async function Home() {
 
       <ScrollReveal width="100%" animation="slide-right" delay={0.2}>
         <WhyChooseSection />
+      </ScrollReveal>
+
+      <ScrollReveal width="100%" animation="fade-up" delay={0.2}>
+        <TestimonialsSection />
       </ScrollReveal>
 
       <ScrollReveal width="100%" animation="fade-up" delay={0.2}>

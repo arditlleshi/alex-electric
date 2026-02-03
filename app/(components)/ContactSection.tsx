@@ -243,7 +243,7 @@ const items: {
     title: "Telefononi Tani",
     description: "Disponibël 24/7 për shërbime emergjente dhe konsultime",
     icon: <Phone className="w-8 h-8 text-white" />,
-    link: "tel:355693289443",
+    link: "tel:+355693289443",
     label: "355 69 328 9443",
     color: "gradient-electric",
     textColor: "text-blue-400 hover:text-blue-300",
@@ -322,6 +322,19 @@ export default function ContactSection() {
             gjithmonë i gatshëm t&apos;ju ndihmojë, 24 orë në ditë, 7 ditë në
             javë.
           </p>
+          <address className="mt-6 text-sm sm:text-base text-gray-300 not-italic">
+            <p>
+              <strong className="text-white">Vendndodhja:</strong> Tiranë,
+              Shqipëri
+            </p>
+            <p>
+              <strong className="text-white">Zona kryesore:</strong> Tiranë
+            </p>
+            <p>
+              <strong className="text-white">Zonat e mbuluara:</strong> Durrës
+              dhe zonat përreth (sipas kërkesës edhe më gjerë)
+            </p>
+          </address>
         </div>
 
         <ul

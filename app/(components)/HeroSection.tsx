@@ -279,7 +279,7 @@ export default function HeroSection() {
       <div className="mx-auto w-full max-w-3xl px-4 text-center sm:px-6 lg:px-8">
         <h1 className="mx-auto mb-6 max-w-4xl text-balance font-extrabold leading-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
           <span className="block text-gradient-sunset bg-clip-text drop-shadow-md">
-            Elektricist Profesionist
+            Elektricist në Tiranë
           </span>
           <span className="mt-3 block text-gray-200/90 text-2xl font-semibold sm:mt-4 sm:text-3xl lg:text-4xl">
             Instalime&nbsp;dhe&nbsp;Riparime&nbsp;Elektrike
