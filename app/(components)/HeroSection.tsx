@@ -240,9 +240,8 @@ const SmallElectricalIcon = ({
 
 export default function HeroSection() {
   return (
-    <section
+    <header
       id="hero"
-      role="banner"
       className="relative isolate flex min-h-[100dvh] flex-col items-center justify-center overflow-hidden bg-gray-900 text-white">
       {/* Background gradient mesh */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#172554] via-gray-900 to-[#0f172a]" />
@@ -334,6 +333,6 @@ export default function HeroSection() {
           <span className="block h-3 w-1.5 animate-bounce rounded-full bg-gray-400/80" />
         </a>
       </div>
-    </section>
+    </header>
   );
 }

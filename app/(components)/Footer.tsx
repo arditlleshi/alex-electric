@@ -1,14 +1,7 @@
 import logo from "@/public/main-logo.png";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Facebook,
-  Instagram,
-  Mail,
-  Phone,
-  MapPin,
-  MessageCircle,
-} from "lucide-react";
+import { Mail, Phone, MessageCircle } from "lucide-react";
 
 export default async function Footer() {
   "use cache"; // Cache footer component (copyright year captured at build time)
