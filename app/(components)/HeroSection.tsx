@@ -284,7 +284,7 @@ export default function HeroSection() {
       {/* Content */}
       <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-7 rounded-[2rem] border border-white/15 bg-white/[0.045] p-6 shadow-[0_30px_90px_rgba(2,6,23,0.55)] backdrop-blur-sm sm:p-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-8 lg:p-10">
-          <div className="text-center lg:text-left">
+          <div className="min-w-0 text-center lg:text-left">
             <div className="mb-5 flex flex-wrap justify-center gap-2 lg:justify-start">
               <span className="inline-flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold text-blue-100">
                 <Clock3 className="h-3.5 w-3.5" />
@@ -300,17 +300,17 @@ export default function HeroSection() {
               </span>
             </div>
 
-            <h1 className="mx-auto max-w-4xl text-balance font-extrabold leading-[1.04] text-4xl sm:text-5xl md:text-6xl lg:mx-0 lg:text-[4.1rem]">
+            <h1 className="mx-auto max-w-4xl break-words text-balance font-extrabold leading-[1.04] text-4xl sm:text-5xl md:text-6xl lg:mx-0 lg:text-[4.1rem]">
               <span className="block text-gradient-sunset bg-clip-text drop-shadow-md">
                 Elektricist në Tiranë
               </span>
               <span className="mt-3 block text-gray-200/90 text-2xl font-semibold sm:mt-4 sm:text-3xl lg:text-[2.35rem]">
-                Instalime&nbsp;dhe&nbsp;Riparime&nbsp;Elektrike
+                Instalime dhe Riparime Elektrike
               </span>
             </h1>
 
             <p className="mx-auto mt-6 max-w-2xl text-pretty text-base leading-relaxed text-gray-300 sm:text-lg lg:mx-0">
-              Alex&nbsp;Elektrik ofron shërbime elektrike profesionale në{" "}
+              Alex Elektrik ofron shërbime elektrike profesionale në{" "}
               <strong className="font-semibold text-white">Tiranë, Durrës</strong>{" "}
               dhe <strong className="font-semibold text-white">zonat përreth</strong>, me{" "}
               <strong className="font-semibold text-white">shërbim 24/7</strong> për
@@ -329,12 +329,12 @@ export default function HeroSection() {
                 href="#contact"
                 className="relative inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-7 py-3 text-sm font-semibold text-white shadow-lg transition-transform duration-300 hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-indigo-400/70 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">
                 <Phone className="size-5 shrink-0" />
-                Kontakto&nbsp;Tani
+                Kontakto Tani
               </Link>
               <Link
                 href="#services"
                 className="inline-flex items-center justify-center gap-2 rounded-xl border border-gray-500/70 bg-gray-700/45 px-7 py-3 text-sm font-semibold text-gray-100 backdrop-blur transition-all duration-300 hover:bg-gray-700/75 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-gray-500/60 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">
-                Shiko&nbsp;Shërbimet
+                Shiko Shërbimet
                 <ArrowRight className="size-5 shrink-0" />
               </Link>
               <Link
@@ -346,7 +346,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <aside className="relative overflow-hidden rounded-2xl border border-white/15 bg-[#0b1732]/55 p-5 text-left shadow-[0_18px_44px_rgba(15,23,42,0.45)] sm:p-6">
+          <aside className="relative min-w-0 overflow-hidden rounded-2xl border border-white/15 bg-[#0b1732]/55 p-5 text-left shadow-[0_18px_44px_rgba(15,23,42,0.45)] sm:p-6">
             <div className="absolute -top-12 -right-8 h-40 w-40 rounded-full bg-orange-500/20 blur-3xl" />
             <div className="absolute -bottom-10 -left-10 h-36 w-36 rounded-full bg-blue-500/20 blur-3xl" />
             <h2 className="relative text-lg font-bold text-white">
@@ -372,18 +372,24 @@ export default function HeroSection() {
               </li>
             </ul>
 
-            <div className="relative mt-6 grid grid-cols-3 gap-3">
+            <div className="relative mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
               <div className="rounded-xl border border-white/15 bg-white/5 p-3 text-center">
                 <p className="text-xl font-bold text-white">15+</p>
-                <p className="text-[11px] text-blue-100">Vite Eksperiencë</p>
+                <p className="text-[11px] leading-snug text-blue-100 break-words">
+                  Vite Eksperiencë
+                </p>
               </div>
               <div className="rounded-xl border border-white/15 bg-white/5 p-3 text-center">
                 <p className="text-xl font-bold text-white">24/7</p>
-                <p className="text-[11px] text-blue-100">Emergjenca</p>
+                <p className="text-[11px] leading-snug text-blue-100 break-words">
+                  Emergjenca
+                </p>
               </div>
-              <div className="rounded-xl border border-white/15 bg-white/5 p-3 text-center">
+              <div className="col-span-2 rounded-xl border border-white/15 bg-white/5 p-3 text-center sm:col-span-1">
                 <p className="text-xl font-bold text-white">&lt;1h</p>
-                <p className="text-[11px] text-blue-100">Përgjigje Tiranë</p>
+                <p className="text-[11px] leading-snug text-blue-100 break-words">
+                  Përgjigje Tiranë
+                </p>
               </div>
             </div>
           </aside>
