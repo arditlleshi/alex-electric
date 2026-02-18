@@ -3,7 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "./(components)/Navigation";
 import Footer from "./(components)/Footer";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
+import { SITE_URL } from "@/lib/site";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -22,13 +23,13 @@ export const metadata: Metadata = {
     "Elektricist në Tiranë - Instalime, Riparime & Smart Home | Alex Elektrik",
   description:
     "Ofrojmë shërbime të ndryshme si instalime elektrike, riparime emergjente, sisteme smart home, karikues EV dhe panele diellore. Kontakto tani!",
-  metadataBase: new URL("https://www.alex-electric.com"),
+  metadataBase: new URL(SITE_URL),
   keywords:
     "elektricist ne tirane, elektricist tirane, punime elektrike, instalime elektrike ne shtepi, instalime elektrike, riparime elektrike, elektricist ne shtepi, smart home tirane, panele diellore tirane",
   authors: [
     {
       name: "Alex Elektrik",
-      url: "https://www.alex-electric.com",
+      url: SITE_URL,
     },
   ],
   category: "Home Services",
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
       "Ofrojmë shërbime të ndryshme si instalime elektrike, riparime emergjente, sisteme smart home, karikues EV dhe panele diellore. Kontakto tani!",
     type: "website",
     locale: "sq_AL",
-    url: "https://www.alex-electric.com",
+    url: SITE_URL,
     siteName: "Alex Elektrik",
   },
   twitter: {
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
       "Shërbime elektrike profesionale për shtëpi, lokale, zyra dhe biznese.",
   },
   alternates: {
-    canonical: "https://www.alex-electric.com",
+    canonical: SITE_URL,
   },
   verification: {
     google: "x1JQVuYMIxvh0xQT2X1dw0E6bxcy2k-ajjAHaogtbvk",
@@ -68,9 +69,9 @@ import { faqData } from "./(components)/FAQSection";
 const localBusinessSchema = {
   "@type": "LocalBusiness",
   name: "Alex Elektrik",
-  image: "https://www.alex-electric.com/logo.png",
-  "@id": "https://www.alex-electric.com",
-  url: "https://www.alex-electric.com",
+  image: `${SITE_URL}/logo.png`,
+  "@id": SITE_URL,
+  url: SITE_URL,
   telephone: "+355693289443",
   areaServed: ["Tiranë", "Durrës", "Zonat përreth"],
   address: {
@@ -125,7 +126,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Kreu",
-      item: "https://www.alex-electric.com",
+      item: SITE_URL,
     },
   ],
 };

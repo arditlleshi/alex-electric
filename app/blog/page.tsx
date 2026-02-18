@@ -2,6 +2,12 @@ import Link from "next/link";
 import { allPosts } from "./posts";
 import type { Post } from "./posts";
 import { Metadata } from "next";
+import { SITE_URL } from "@/lib/site";
+
+const BLOG_URL = `${SITE_URL}/blog`;
+const ORGANIZATION_ID = `${SITE_URL}/#organization`;
+const BLOG_WEBPAGE_ID = `${BLOG_URL}#webpage`;
+const BLOG_ITEMLIST_ID = `${BLOG_URL}#itemlist`;
 
 // Calculate latest post date for dateModified
 const latestPostDate = allPosts.reduce((latest, post) => {
@@ -28,7 +34,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Alex Elektrik",
-      url: "https://www.alex-electric.com",
+      url: SITE_URL,
     },
   ],
   category: "Home Services",
@@ -49,7 +55,7 @@ export const metadata: Metadata = {
       "Lexoni artikujt profesionale për instalime elektrike, riparime, panele diellore dhe smart home në Tiranë. Këshilla nga ekspertët elektricistë.",
     type: "website",
     locale: "sq_AL",
-    url: "https://www.alex-electric.com/blog",
+    url: BLOG_URL,
     siteName: "Alex Elektrik",
   },
   twitter: {
@@ -59,7 +65,7 @@ export const metadata: Metadata = {
       "Lexoni artikujt profesionale për instalime elektrike, riparime, panele diellore dhe smart home në Tiranë.",
   },
   alternates: {
-    canonical: "https://www.alex-electric.com/blog",
+    canonical: BLOG_URL,
   },
   other: {
     "article:author": "Alex Elektrik",
@@ -74,10 +80,10 @@ export default async function BlogPage() {
   // Organization Schema Reference
   const organizationSchema = {
     "@type": "Organization",
-    "@id": "https://www.alex-electric.com/#organization",
+    "@id": ORGANIZATION_ID,
     name: "Alex Elektrik",
-    url: "https://www.alex-electric.com",
-    logo: "https://www.alex-electric.com/logo.png",
+    url: SITE_URL,
+    logo: `${SITE_URL}/logo.png`,
     sameAs: [
       "https://www.facebook.com/alexelectric",
       "https://www.instagram.com/alexelectric",
@@ -87,18 +93,18 @@ export default async function BlogPage() {
   // CollectionPage/Blog Schema
   const blogSchema = {
     "@type": "CollectionPage",
-    "@id": "https://www.alex-electric.com/blog#webpage",
-    url: "https://www.alex-electric.com/blog",
+    "@id": BLOG_WEBPAGE_ID,
+    url: BLOG_URL,
     name: "Blog Elektrik – Këshilla & Udhëzime Profesionale",
     description:
       "Lexoni artikujt profesionale për instalime elektrike, riparime, panele diellore dhe smart home në Tiranë. Këshilla nga ekspertët elektricistë.",
     publisher: {
-      "@id": "https://www.alex-electric.com/#organization",
+      "@id": ORGANIZATION_ID,
     },
     datePublished: allPosts[0]?.date || new Date().toISOString(),
     dateModified: latestPostDate.toISOString(),
     mainEntity: {
-      "@id": "https://www.alex-electric.com/blog#itemlist",
+      "@id": BLOG_ITEMLIST_ID,
     },
     inLanguage: "sq-AL",
   };
@@ -106,27 +112,27 @@ export default async function BlogPage() {
   // ItemList Schema
   const itemListSchema = {
     "@type": "ItemList",
-    "@id": "https://www.alex-electric.com/blog#itemlist",
+    "@id": BLOG_ITEMLIST_ID,
     numberOfItems: allPosts.length,
     itemListElement: allPosts.map((post: Post, index: number) => ({
       "@type": "ListItem",
       position: index + 1,
       item: {
         "@type": "Article",
-        "@id": `https://www.alex-electric.com/blog/${post.slug}`,
+        "@id": `${BLOG_URL}/${post.slug}`,
         headline: post.title,
         description: post.description,
-        url: `https://www.alex-electric.com/blog/${post.slug}`,
+        url: `${BLOG_URL}/${post.slug}`,
         datePublished: new Date(post.date).toISOString(),
         author: {
-          "@id": "https://www.alex-electric.com/#organization",
+          "@id": ORGANIZATION_ID,
         },
         publisher: {
-          "@id": "https://www.alex-electric.com/#organization",
+          "@id": ORGANIZATION_ID,
         },
         mainEntityOfPage: {
           "@type": "WebPage",
-          "@id": `https://www.alex-electric.com/blog/${post.slug}`,
+          "@id": `${BLOG_URL}/${post.slug}`,
         },
         keywords: post.tags.join(", "),
         articleSection: "Electrical Services",
@@ -138,19 +144,19 @@ export default async function BlogPage() {
   // BreadcrumbList Schema
   const breadcrumbSchema = {
     "@type": "BreadcrumbList",
-    "@id": "https://www.alex-electric.com/blog#breadcrumb",
+    "@id": `${BLOG_URL}#breadcrumb`,
     itemListElement: [
       {
         "@type": "ListItem",
         position: 1,
         name: "Kreu",
-        item: "https://www.alex-electric.com",
+        item: SITE_URL,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Blog",
-        item: "https://www.alex-electric.com/blog",
+        item: BLOG_URL,
       },
     ],
   };
@@ -166,21 +172,21 @@ export default async function BlogPage() {
       // Individual Article schemas for each post
       ...allPosts.map((post: Post) => ({
         "@type": "Article",
-        "@id": `https://www.alex-electric.com/blog/${post.slug}#article`,
+        "@id": `${BLOG_URL}/${post.slug}#article`,
         headline: post.title,
         description: post.description,
-        url: `https://www.alex-electric.com/blog/${post.slug}`,
+        url: `${BLOG_URL}/${post.slug}`,
         datePublished: new Date(post.date).toISOString(),
         dateModified: new Date(post.date).toISOString(),
         author: {
-          "@id": "https://www.alex-electric.com/#organization",
+          "@id": ORGANIZATION_ID,
         },
         publisher: {
-          "@id": "https://www.alex-electric.com/#organization",
+          "@id": ORGANIZATION_ID,
         },
         mainEntityOfPage: {
           "@type": "WebPage",
-          "@id": `https://www.alex-electric.com/blog/${post.slug}`,
+          "@id": `${BLOG_URL}/${post.slug}`,
         },
         keywords: post.tags.join(", "),
         articleSection: "Electrical Services",

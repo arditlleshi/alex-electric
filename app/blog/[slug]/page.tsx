@@ -2,6 +2,11 @@ import { notFound } from "next/navigation";
 import { allPosts, Post } from "../posts";
 import Link from "next/link";
 import { Metadata } from "next";
+import { SITE_URL } from "@/lib/site";
+
+const BLOG_URL = `${SITE_URL}/blog`;
+const ORGANIZATION_ID = `${SITE_URL}/#organization`;
+const LOGO_URL = `${SITE_URL}/logo.png`;
 
 export function generateStaticParams() {
   return allPosts.map((p: Post) => ({ slug: p.slug }));
@@ -15,10 +20,10 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = allPosts.find((p: Post) => p.slug === slug);
   if (!post) return {};
-  
-  const postUrl = `https://www.alex-electric.com/blog/${post.slug}`;
+
+  const postUrl = `${BLOG_URL}/${post.slug}`;
   const publishedTime = new Date(post.date).toISOString();
-  
+
   // Combine post tags with relevant keywords
   const keywords = [
     ...post.tags,
@@ -36,7 +41,7 @@ export async function generateMetadata({
     authors: [
       {
         name: "Alex Elektrik",
-        url: "https://www.alex-electric.com",
+        url: SITE_URL,
       },
     ],
     category: "Home Services",
@@ -87,21 +92,21 @@ export default async function BlogPost({
   params: Promise<{ slug: string }>
 }) {
   "use cache";
-  
+
   const { slug } = await params;
   const post = allPosts.find((p: Post) => p.slug === slug);
   if (!post) return notFound();
 
-  const postUrl = `https://www.alex-electric.com/blog/${post.slug}`;
+  const postUrl = `${BLOG_URL}/${post.slug}`;
   const publishedTime = new Date(post.date).toISOString();
 
   // Organization Schema Reference
   const organizationSchema = {
     "@type": "Organization",
-    "@id": "https://www.alex-electric.com/#organization",
+    "@id": ORGANIZATION_ID,
     name: "Alex Elektrik",
-    url: "https://www.alex-electric.com",
-    logo: "https://www.alex-electric.com/logo.png",
+    url: SITE_URL,
+    logo: LOGO_URL,
     sameAs: [
       "https://www.facebook.com/alexelectric",
       "https://www.instagram.com/alexelectric",
@@ -118,10 +123,10 @@ export default async function BlogPost({
     datePublished: publishedTime,
     dateModified: publishedTime,
     author: {
-      "@id": "https://www.alex-electric.com/#organization",
+      "@id": ORGANIZATION_ID,
     },
     publisher: {
-      "@id": "https://www.alex-electric.com/#organization",
+      "@id": ORGANIZATION_ID,
     },
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -140,14 +145,14 @@ export default async function BlogPost({
     name: post.title,
     description: post.description,
     isPartOf: {
-      "@id": "https://www.alex-electric.com/blog#webpage",
+      "@id": `${BLOG_URL}#webpage`,
     },
     about: {
       "@id": `${postUrl}#article`,
     },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      url: "https://www.alex-electric.com/logo.png",
+      url: LOGO_URL,
     },
     datePublished: publishedTime,
     dateModified: publishedTime,
@@ -163,13 +168,13 @@ export default async function BlogPost({
         "@type": "ListItem",
         position: 1,
         name: "Kreu",
-        item: "https://www.alex-electric.com",
+        item: SITE_URL,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Blog",
-        item: "https://www.alex-electric.com/blog",
+        item: BLOG_URL,
       },
       {
         "@type": "ListItem",
