@@ -1,4 +1,3 @@
-import Link from "next/link";
 import FAQAccordion from "./FAQAccordion";
 
 export const faqData: { question: string; answer: string }[] = [
