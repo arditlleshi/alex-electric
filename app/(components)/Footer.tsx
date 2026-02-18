@@ -24,6 +24,9 @@ export default async function Footer() {
               vite eksperiencë në shërbim të klientëve rezidencialë, komercialë
               dhe industrialë.
             </p>
+            <p className="text-gray-400 text-sm">
+              English-speaking support for expats and international businesses.
+            </p>
           </div>
 
           <div>
@@ -50,6 +53,13 @@ export default async function Footer() {
                   Artikuj
                 </Link>
               </li>
+              <li aria-label="English">
+                <Link
+                  href="/en"
+                  className="block text-gray-400 hover:text-white transition-colors text-left">
+                  English
+                </Link>
+              </li>
               <li aria-label="Kontakti">
                 <Link
                   href="/#contact"
@@ -68,13 +78,13 @@ export default async function Footer() {
                 <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0">
                   <Mail className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
                 </div>
-                <Link
+                <a
                   href="mailto:aleksander.gjoni85@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 group-hover:text-white transition-colors break-all leading-tight">
                   aleksander.gjoni85@gmail.com
-                </Link>
+                </a>
               </li>
 
               {/* Phone */}
@@ -84,11 +94,11 @@ export default async function Footer() {
                 <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0">
                   <Phone className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
                 </div>
-                <Link
+                <a
                   href="tel:+355693289443"
                   className="text-gray-400 group-hover:text-white transition-colors leading-tight">
                   355 69 328 9443
-                </Link>
+                </a>
               </li>
 
               {/* WhatsApp */}
@@ -98,13 +108,13 @@ export default async function Footer() {
                 <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0">
                   <MessageCircle className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
                 </div>
-                <Link
+                <a
                   href="https://wa.me/355693289443"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 group-hover:text-white transition-colors leading-tight">
                   Bisedoni në WhatsApp
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

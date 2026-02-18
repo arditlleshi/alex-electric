@@ -212,6 +212,18 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id],
+header[id] {
+  scroll-margin-top: 5.75rem;
+}
+
+@media (min-width: 768px) {
+  section[id],
+  header[id] {
+    scroll-margin-top: 6.25rem;
+  }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

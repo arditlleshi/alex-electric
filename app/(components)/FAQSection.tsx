@@ -29,6 +29,11 @@ export const faqData: { question: string; answer: string }[] = [
     answer:
       "<p>Ne ofrojmë <strong>shërbim 24 orë në ditë, 7 ditë në javë</strong>. Në rast urgjence, zakonisht mbërrijmë në vendin tuaj brenda 1 ore nga telefonata juaj.</p>",
   },
+  {
+    question: "Do you offer service in English for expats and foreign clients?",
+    answer:
+      "<p>Yes. We provide <strong>English-speaking electrical support</strong> for homeowners, tenants, and businesses in Tirana and nearby areas, including urgent callouts.</p>",
+  },
 ];
 
 export default function FAQSection() {
@@ -53,6 +58,10 @@ export default function FAQSection() {
             Gjeni përgjigje për pyetjet më të shpeshta rreth
             shërbimeve tona për <strong>instalime/riparime elektrike, fotovoltaikë, smart home etj.</strong>
           </p>
+          <p className="mt-4 text-base text-gray-500">
+            Need help in English? You can contact us directly by phone or
+            WhatsApp.
+          </p>
         </div>
 
         <FAQAccordion faqs={faqData} />
@@ -67,7 +76,7 @@ export default function FAQSection() {
               pyetje specifike rreth projektit tuaj.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pb-8">
-              <Link
+              <a
                 target="_blank"
                 rel="noopener noreferrer"
                 href="tel:+355693289443"
@@ -85,8 +94,8 @@ export default function FAQSection() {
                   />
                 </svg>
                 Telefono
-              </Link>
-              <Link
+              </a>
+              <a
                 target="_blank"
                 rel="noopener noreferrer"
                 href="#contact"
@@ -104,7 +113,7 @@ export default function FAQSection() {
                   />
                 </svg>
                 Kontakt
-              </Link>
+              </a>
             </div>
           </div>
         </div>

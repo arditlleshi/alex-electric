@@ -22,10 +22,22 @@ export const metadata: Metadata = {
   title:
     "Elektricist në Tiranë - Instalime, Riparime & Smart Home | Alex Elektrik",
   description:
-    "Ofrojmë shërbime të ndryshme si instalime elektrike, riparime emergjente, sisteme smart home, karikues EV dhe panele diellore. Kontakto tani!",
+    "Ofrojmë instalime elektrike, riparime emergjente, smart home, karikues EV dhe panele diellore në Tiranë dhe Durrës. English-speaking electrician services available.",
   metadataBase: new URL(SITE_URL),
-  keywords:
-    "elektricist ne tirane, elektricist tirane, punime elektrike, instalime elektrike ne shtepi, instalime elektrike, riparime elektrike, elektricist ne shtepi, smart home tirane, panele diellore tirane",
+  keywords: [
+    "elektricist ne tirane",
+    "elektricist tirane",
+    "punime elektrike",
+    "instalime elektrike ne shtepi",
+    "riparime elektrike",
+    "smart home tirane",
+    "karikues ev tirane",
+    "panele diellore tirane",
+    "electrician in tirana",
+    "emergency electrician albania",
+    "ev charger installation albania",
+    "solar panel installation tirana",
+  ],
   authors: [
     {
       name: "Alex Elektrik",
@@ -41,17 +53,32 @@ export const metadata: Metadata = {
       "Ofrojmë shërbime të ndryshme si instalime elektrike, riparime emergjente, sisteme smart home, karikues EV dhe panele diellore. Kontakto tani!",
     type: "website",
     locale: "sq_AL",
+    alternateLocale: "en_US",
     url: SITE_URL,
     siteName: "Alex Elektrik",
+    images: [
+      {
+        url: `${SITE_URL}/opengraph-image`,
+        width: 1200,
+        height: 630,
+        alt: "Alex Elektrik - Elektricist në Tiranë",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Alex Elektrik | Elektricist në Tiranë",
     description:
       "Shërbime elektrike profesionale për shtëpi, lokale, zyra dhe biznese.",
+    images: [`${SITE_URL}/twitter-image`],
   },
   alternates: {
     canonical: SITE_URL,
+    languages: {
+      "sq-AL": SITE_URL,
+      "en-US": `${SITE_URL}/en`,
+      "x-default": SITE_URL,
+    },
   },
   verification: {
     google: "x1JQVuYMIxvh0xQT2X1dw0E6bxcy2k-ajjAHaogtbvk",
@@ -64,78 +91,6 @@ export const metadata: Metadata = {
   },
 };
 
-import { faqData } from "./(components)/FAQSection";
-
-const localBusinessSchema = {
-  "@type": "LocalBusiness",
-  name: "Alex Elektrik",
-  image: `${SITE_URL}/logo.png`,
-  "@id": SITE_URL,
-  url: SITE_URL,
-  telephone: "+355693289443",
-  areaServed: ["Tiranë", "Durrës", "Zonat përreth"],
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Tiranë",
-    addressLocality: "Tiranë",
-    postalCode: "1001",
-    addressCountry: "AL",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 41.3275,
-    longitude: 19.8187,
-  },
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday",
-    ],
-    opens: "00:00",
-    closes: "23:59",
-  },
-  sameAs: [
-    "https://www.facebook.com/alexelectric",
-    "https://www.instagram.com/alexelectric",
-  ],
-  priceRange: "$$",
-};
-
-const faqSchema = {
-  "@type": "FAQPage",
-  mainEntity: faqData.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer.replace(/<[^>]+>/g, ""),
-    },
-  })),
-};
-
-const breadcrumbSchema = {
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Kreu",
-      item: SITE_URL,
-    },
-  ],
-};
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [localBusinessSchema, faqSchema, breadcrumbSchema],
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -146,10 +101,6 @@ export default function RootLayout({
       <body
         className={`${inter.variable} font-sans antialiased`}
         suppressHydrationWarning={true}>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
         <div className="min-h-screen bg-white">
           <Navigation />
           {children}

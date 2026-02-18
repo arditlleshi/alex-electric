@@ -1,5 +1,12 @@
 import Link from "next/link";
-import { Phone, ArrowRight } from "lucide-react";
+import {
+  Phone,
+  ArrowRight,
+  ShieldCheck,
+  Clock3,
+  MapPin,
+  BadgeCheck,
+} from "lucide-react";
 
 const HeroElectricalIllustration = () => (
   <svg viewBox="0 0 200 200" className="w-full h-full">
@@ -242,7 +249,7 @@ export default function HeroSection() {
   return (
     <header
       id="hero"
-      className="relative isolate flex min-h-[100dvh] flex-col items-center justify-center overflow-hidden bg-gray-900 text-white">
+      className="relative isolate flex min-h-[calc(100svh-3.5rem)] items-center overflow-hidden bg-gray-900 pt-24 pb-12 text-white sm:pt-28 sm:pb-14 lg:pt-32 lg:pb-16">
       {/* Background gradient mesh */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#172554] via-gray-900 to-[#0f172a]" />
 
@@ -250,7 +257,7 @@ export default function HeroSection() {
       <div
         className="absolute inset-0 -z-10 hidden md:block"
         aria-hidden="true">
-        <div className="absolute -left-16 top-20 size-72 rounded-full bg-purple-700/20 blur-2xl lg:left-32 lg:size-[28rem]" />
+        <div className="absolute -left-16 top-20 size-72 rounded-full bg-blue-700/25 blur-2xl lg:left-32 lg:size-[28rem]" />
         <div
           className="absolute -right-16 top-1/3 size-96 rounded-full bg-amber-500/20 blur-2xl lg:right-32"
           style={{ animationDelay: "2s" }}
@@ -275,63 +282,121 @@ export default function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="mx-auto w-full max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-        <h1 className="mx-auto mb-6 max-w-4xl text-balance font-extrabold leading-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-          <span className="block text-gradient-sunset bg-clip-text drop-shadow-md">
-            Elektricist në Tiranë
-          </span>
-          <span className="mt-3 block text-gray-200/90 text-2xl font-semibold sm:mt-4 sm:text-3xl lg:text-4xl">
-            Instalime&nbsp;dhe&nbsp;Riparime&nbsp;Elektrike
-          </span>
-        </h1>
+      <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-7 rounded-[2rem] border border-white/15 bg-white/[0.045] p-6 shadow-[0_30px_90px_rgba(2,6,23,0.55)] backdrop-blur-sm sm:p-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-8 lg:p-10">
+          <div className="text-center lg:text-left">
+            <div className="mb-5 flex flex-wrap justify-center gap-2 lg:justify-start">
+              <span className="inline-flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold text-blue-100">
+                <Clock3 className="h-3.5 w-3.5" />
+                24/7 Emergjenca
+              </span>
+              <span className="inline-flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold text-blue-100">
+                <MapPin className="h-3.5 w-3.5" />
+                Tiranë • Durrës
+              </span>
+              <span className="inline-flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold text-blue-100">
+                <BadgeCheck className="h-3.5 w-3.5" />
+                SQ & EN Support
+              </span>
+            </div>
 
-        <p className="mx-auto mb-8 max-w-2xl text-pretty text-base leading-relaxed text-gray-300 sm:text-lg md:text-xl">
-          Alex&nbsp;Elektrik ofron shërbime elektrike profesionale në{" "}
-          <strong className="font-semibold text-white">
-            Tiranë, Durrës
-          </strong>{" "}
-          dhe <strong className="font-semibold text-white">zonat përreth</strong>, me{" "}
-          <strong className="font-semibold text-white">shërbim 24/7</strong> për
-          emergjenca. Punojmë me fokus tek{" "}
-          <strong className="font-semibold text-white">
-            Instalime Elektrike
-          </strong>
-          ,{" "}
-          <strong className="font-semibold text-white">
-            Riparime Emergjente
-          </strong>
-          ,{" "}
-          <strong className="font-semibold text-white">Smart&nbsp;Home</strong>,{" "}
-          <strong className="font-semibold text-white">Karikues EV</strong> dhe{" "}
-          <strong className="font-semibold text-white">Panele Diellore</strong>.
-          Zgjidhje të sigurta, moderne dhe me çmime transparente.
-        </p>
+            <h1 className="mx-auto max-w-4xl text-balance font-extrabold leading-[1.04] text-4xl sm:text-5xl md:text-6xl lg:mx-0 lg:text-[4.1rem]">
+              <span className="block text-gradient-sunset bg-clip-text drop-shadow-md">
+                Elektricist në Tiranë
+              </span>
+              <span className="mt-3 block text-gray-200/90 text-2xl font-semibold sm:mt-4 sm:text-3xl lg:text-[2.35rem]">
+                Instalime&nbsp;dhe&nbsp;Riparime&nbsp;Elektrike
+              </span>
+            </h1>
 
-        {/* CTA buttons */}
-        <div className="flex flex-wrap items-center justify-center gap-4">
-          <Link
-            href="#contact"
-            className="relative inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 px-7 py-3 text-sm font-semibold text-white shadow-lg transition-transform duration-300 hover:scale-105 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-indigo-400/70 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">
-            <Phone className="size-5 shrink-0" />
-            Kontakto&nbsp;Tani
-          </Link>
-          <Link
-            href="#services"
-            className="inline-flex items-center gap-2 rounded-lg border border-gray-600/70 bg-gray-700/40 px-7 py-3 text-sm font-semibold text-gray-100 backdrop-blur transition-all duration-300 hover:bg-gray-700/70 hover:backdrop-blur-sm focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-gray-500/60 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">
-            Shiko&nbsp;Shërbimet
-            <ArrowRight className="size-5 shrink-0" />
-          </Link>
+            <p className="mx-auto mt-6 max-w-2xl text-pretty text-base leading-relaxed text-gray-300 sm:text-lg lg:mx-0">
+              Alex&nbsp;Elektrik ofron shërbime elektrike profesionale në{" "}
+              <strong className="font-semibold text-white">Tiranë, Durrës</strong>{" "}
+              dhe <strong className="font-semibold text-white">zonat përreth</strong>, me{" "}
+              <strong className="font-semibold text-white">shërbim 24/7</strong> për
+              emergjenca. Fokus tek instalime, riparime, smart home, karikues EV
+              dhe panele diellore me standard të lartë sigurie.
+            </p>
+
+            <p className="mx-auto mt-5 max-w-2xl rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-pretty text-sm leading-relaxed text-blue-100 backdrop-blur-sm sm:text-base lg:mx-0">
+              Looking for an <strong className="text-white">English-speaking electrician in Tirana</strong>? We
+              support expats, Airbnb owners, and international businesses with
+              fast diagnostics, transparent pricing, and emergency visits.
+            </p>
+
+            <div className="mt-7 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:flex-wrap sm:items-center lg:justify-start">
+              <Link
+                href="#contact"
+                className="relative inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-7 py-3 text-sm font-semibold text-white shadow-lg transition-transform duration-300 hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-indigo-400/70 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">
+                <Phone className="size-5 shrink-0" />
+                Kontakto&nbsp;Tani
+              </Link>
+              <Link
+                href="#services"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-gray-500/70 bg-gray-700/45 px-7 py-3 text-sm font-semibold text-gray-100 backdrop-blur transition-all duration-300 hover:bg-gray-700/75 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-gray-500/60 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">
+                Shiko&nbsp;Shërbimet
+                <ArrowRight className="size-5 shrink-0" />
+              </Link>
+              <Link
+                href="/en"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-blue-400/70 bg-blue-500/20 px-7 py-3 text-sm font-semibold text-blue-100 transition-all duration-300 hover:bg-blue-500/35 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">
+                English Service
+                <ArrowRight className="size-5 shrink-0" />
+              </Link>
+            </div>
+          </div>
+
+          <aside className="relative overflow-hidden rounded-2xl border border-white/15 bg-[#0b1732]/55 p-5 text-left shadow-[0_18px_44px_rgba(15,23,42,0.45)] sm:p-6">
+            <div className="absolute -top-12 -right-8 h-40 w-40 rounded-full bg-orange-500/20 blur-3xl" />
+            <div className="absolute -bottom-10 -left-10 h-36 w-36 rounded-full bg-blue-500/20 blur-3xl" />
+            <h2 className="relative text-lg font-bold text-white">
+              Siguri, Shpejtësi, Profesionalizëm
+            </h2>
+            <p className="relative mt-3 text-sm leading-relaxed text-blue-100/90">
+              Zgjidhje të personalizuara për banesa, zyra dhe biznese me
+              standarde moderne elektrike dhe komunikim të qartë në çdo hap.
+            </p>
+
+            <ul className="relative mt-5 space-y-3">
+              <li className="flex items-start gap-2 text-sm text-gray-100">
+                <ShieldCheck className="mt-0.5 h-4 w-4 text-emerald-300" />
+                Inspektim i plotë i sigurisë para dorëzimit.
+              </li>
+              <li className="flex items-start gap-2 text-sm text-gray-100">
+                <Clock3 className="mt-0.5 h-4 w-4 text-amber-300" />
+                Ndërhyrje e shpejtë për raste urgjente 24/7.
+              </li>
+              <li className="flex items-start gap-2 text-sm text-gray-100">
+                <BadgeCheck className="mt-0.5 h-4 w-4 text-blue-300" />
+                Përkrahje në shqip dhe anglisht për klientë lokalë dhe të huaj.
+              </li>
+            </ul>
+
+            <div className="relative mt-6 grid grid-cols-3 gap-3">
+              <div className="rounded-xl border border-white/15 bg-white/5 p-3 text-center">
+                <p className="text-xl font-bold text-white">15+</p>
+                <p className="text-[11px] text-blue-100">Vite Eksperiencë</p>
+              </div>
+              <div className="rounded-xl border border-white/15 bg-white/5 p-3 text-center">
+                <p className="text-xl font-bold text-white">24/7</p>
+                <p className="text-[11px] text-blue-100">Emergjenca</p>
+              </div>
+              <div className="rounded-xl border border-white/15 bg-white/5 p-3 text-center">
+                <p className="text-xl font-bold text-white">&lt;1h</p>
+                <p className="text-[11px] text-blue-100">Përgjigje Tiranë</p>
+              </div>
+            </div>
+          </aside>
         </div>
-      </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 md:bottom-10">
-        <a
-          href="#about"
-          aria-label="Scroll down"
-          className="flex h-11 w-6 items-start justify-center rounded-full border-2 border-gray-500/70 p-1">
-          <span className="block h-3 w-1.5 animate-bounce rounded-full bg-gray-400/80" />
-        </a>
+        <div className="mt-8 hidden justify-center md:flex">
+          <a
+            href="#about"
+            aria-label="Scroll down"
+            className="flex h-11 w-6 items-start justify-center rounded-full border-2 border-gray-500/70 p-1">
+            <span className="block h-3 w-1.5 animate-bounce rounded-full bg-gray-400/80" />
+          </a>
+        </div>
       </div>
     </header>
   );

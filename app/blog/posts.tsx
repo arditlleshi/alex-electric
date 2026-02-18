@@ -11,6 +11,78 @@ export interface Post {
 
 export const allPosts: Post[] = [
   {
+    title: "English Guide: How to hire an electrician in Tirana (for expats and foreign businesses)",
+    description:
+      "A practical English guide to choosing a reliable electrician in Tirana, with safety checks, pricing expectations, and emergency response tips.",
+    slug: "english-speaking-electrician-tirana",
+    date: "2026-02-18",
+    tags: ["english", "electrician-tirana", "expat", "emergency"],
+    content: (
+      <>
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          If you are new in Albania, it can be hard to choose a trusted
+          electrician quickly. This guide explains what to check before hiring
+          an electrician in Tirana, especially for apartments, Airbnb
+          properties, offices, and retail businesses.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">
+          1. Ask for licensing, insurance, and clear scope
+        </h2>
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          Before work starts, request basic credentials and a written job scope.
+          A professional electrician should explain what will be replaced,
+          tested, and certified. This protects both safety and budget.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">
+          2. Prioritize safety checks, not only speed
+        </h2>
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          Fast intervention matters, but electrical safety matters more. Ask for
+          panel checks, breaker condition, cable integrity, and grounding
+          verification. These checks reduce fire risk and future outages.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">
+          3. Confirm response times for urgent issues
+        </h2>
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          For emergency calls, response time is critical. Choose an electrician
+          that can confirm expected arrival windows in Tirana and nearby zones.
+          Clear communication in English can save time during urgent situations.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">
+          4. Compare quotes based on value, not only price
+        </h2>
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          The cheapest quote is not always the safest choice. Compare material
+          quality, labor warranty, and after-service support. A transparent
+          quote should list tasks, parts, and timeline.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">
+          5. Plan for EV chargers and solar compatibility
+        </h2>
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          If you plan to install an EV charger or solar system, ask for load
+          calculation and panel capacity checks early. This prevents costly
+          rework and makes future upgrades easier.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">
+          Final tip
+        </h2>
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          Keep one trusted contact for routine maintenance and emergencies. For
+          foreign customers in Tirana, working with an English-speaking
+          electrician improves clarity, speed, and overall reliability.
+        </p>
+      </>
+    ),
+  },
+  {
     title: "Udhëzues për instalime moderne elektrike në shtëpi, zyra dhe biznese",
     description:
       "Një përmbledhje profesionale e shërbimeve elektrike: instalime, riparime, panele diellore dhe stacione karikimi për automjete elektrike.",

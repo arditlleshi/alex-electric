@@ -2,6 +2,26 @@ import Link from "next/link";
 
 const articles = [
   {
+    title: "English Guide: Hiring an Electrician in Tirana",
+    description:
+      "A practical guide for expats and foreign business owners in Albania: pricing, safety checks, emergency response, and communication tips.",
+    slug: "/blog/english-speaking-electrician-tirana",
+    icon: (
+      <svg
+        className="w-8 h-8 text-white"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24">
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M3 5h12M9 3v2m1 13-3 3h11a2 2 0 002-2v-5m-5-1l5-5m0 0l-5-5m5 5H9"
+        />
+      </svg>
+    ),
+  },
+  {
     title: "Udhëzues për instalime moderne elektrike në shtëpi, zyra dhe biznese",
     description:
       "Një përmbledhje profesionale e shërbimeve elektrike: instalime, riparime, panele diellore dhe stacione karikimi për automjete elektrike.",
@@ -106,6 +126,10 @@ export default function ArticlesSection() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Lexoni artikujt tanë për këshilla praktike, udhëzime dhe informacion
             të vlefshëm rreth botës së shërbimeve <strong>elektrike</strong>.
+          </p>
+          <p className="mt-4 text-base text-gray-500 max-w-3xl mx-auto">
+            New: dedicated English resources for foreign homeowners and
+            businesses operating in Tirana.
           </p>
         </div>
 

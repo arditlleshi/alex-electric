@@ -82,6 +82,10 @@ export default function ServicesSection() {
             instalimet industriale, ne ofrojmë zgjidhje <strong>elektrike</strong> moderne të
             përshtatura sipas nevojave tuaja specifike.
           </p>
+          <p className="mt-4 text-base text-gray-500 max-w-3xl mx-auto">
+            We also provide <strong>electrical services in English</strong> for
+            foreign residents and international companies in Albania.
+          </p>
         </div>
 
         <ul

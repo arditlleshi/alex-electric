@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { Phone, Mail, MessageCircle } from "lucide-react";
+import { Mail, MessageCircle, Phone } from "lucide-react";
 
 // Professional Electrical Consultation Illustration
 const ElectricalConsultationIllustration = () => (
@@ -241,7 +240,8 @@ const items: {
 }[] = [
   {
     title: "Telefononi Tani",
-    description: "Disponibël 24/7 për shërbime emergjente dhe konsultime",
+    description:
+      "Disponibël 24/7 për shërbime emergjente dhe konsultime (Albanian & English)",
     icon: <Phone className="w-8 h-8 text-white" />,
     link: "tel:+355693289443",
     label: "355 69 328 9443",
@@ -322,6 +322,10 @@ export default function ContactSection() {
             gjithmonë i gatshëm t&apos;ju ndihmojë, 24 orë në ditë, 7 ditë në
             javë.
           </p>
+          <p className="mt-4 text-base text-blue-100 max-w-3xl mx-auto">
+            Need support in English? We can discuss your project details and
+            provide clear estimates for foreign customers.
+          </p>
           <address className="mt-6 text-sm sm:text-base text-gray-300 not-italic">
             <p>
               <strong className="text-white">Vendndodhja:</strong> Tiranë,
@@ -333,6 +337,10 @@ export default function ContactSection() {
             <p>
               <strong className="text-white">Zonat e mbuluara:</strong> Durrës
               dhe zonat përreth (sipas kërkesës edhe më gjerë)
+            </p>
+            <p>
+              <strong className="text-white">English support:</strong> Available
+              by phone, email and WhatsApp
             </p>
           </address>
         </div>
@@ -355,13 +363,13 @@ export default function ContactSection() {
                   {item.title}
                 </h3>
                 <p className="text-gray-300 mb-4">{item.description}</p>
-                <Link
+                <a
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`text-xl font-bold ${item.textColor} transition-colors`}>
                   {item.label}
-                </Link>
+                </a>
               </div>
             </li>
           ))}

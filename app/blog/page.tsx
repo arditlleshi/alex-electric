@@ -8,6 +8,8 @@ const BLOG_URL = `${SITE_URL}/blog`;
 const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 const BLOG_WEBPAGE_ID = `${BLOG_URL}#webpage`;
 const BLOG_ITEMLIST_ID = `${BLOG_URL}#itemlist`;
+const getPostLanguage = (post: Post) =>
+  post.slug.startsWith("english-") ? "en-US" : "sq-AL";
 
 // Calculate latest post date for dateModified
 const latestPostDate = allPosts.reduce((latest, post) => {
@@ -18,7 +20,7 @@ const latestPostDate = allPosts.reduce((latest, post) => {
 export const metadata: Metadata = {
   title: "Blog Elektrik – Këshilla & Udhëzime Profesionale | Alex Elektrik",
   description:
-    "Lexoni artikujt profesionale për instalime elektrike, riparime, panele diellore dhe smart home në Tiranë. Këshilla nga ekspertët elektricistë.",
+    "Lexoni artikujt profesionale për instalime elektrike, riparime, panele diellore dhe smart home në Tiranë. Also includes English guides for foreign customers.",
   keywords: [
     "blog elektrik",
     "këshilla elektrike",
@@ -30,6 +32,10 @@ export const metadata: Metadata = {
     "elektricist tirane",
     "udhëzime elektrike",
     "këshilla profesionale",
+    "electrician tirana blog",
+    "english electrician albania",
+    "emergency electrician tirana",
+    "ev charger albania",
   ],
   authors: [
     {
@@ -50,19 +56,28 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Blog Elektrik – Këshilla & Udhëzime Profesionale | Alex Electric",
+    title: "Blog Elektrik – Këshilla & Udhëzime Profesionale | Alex Elektrik",
     description:
-      "Lexoni artikujt profesionale për instalime elektrike, riparime, panele diellore dhe smart home në Tiranë. Këshilla nga ekspertët elektricistë.",
+      "Lexoni artikujt profesionale për instalime elektrike dhe smart home në Tiranë, plus English guides for foreign clients.",
     type: "website",
     locale: "sq_AL",
     url: BLOG_URL,
     siteName: "Alex Elektrik",
+    images: [
+      {
+        url: `${SITE_URL}/opengraph-image`,
+        width: 1200,
+        height: 630,
+        alt: "Blog Elektrik - Alex Elektrik",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blog Elektrik – Këshilla & Udhëzime Profesionale | Alex Electric",
+    title: "Blog Elektrik – Këshilla & Udhëzime Profesionale | Alex Elektrik",
     description:
       "Lexoni artikujt profesionale për instalime elektrike, riparime, panele diellore dhe smart home në Tiranë.",
+    images: [`${SITE_URL}/twitter-image`],
   },
   alternates: {
     canonical: BLOG_URL,
@@ -97,7 +112,7 @@ export default async function BlogPage() {
     url: BLOG_URL,
     name: "Blog Elektrik – Këshilla & Udhëzime Profesionale",
     description:
-      "Lexoni artikujt profesionale për instalime elektrike, riparime, panele diellore dhe smart home në Tiranë. Këshilla nga ekspertët elektricistë.",
+      "Lexoni artikujt profesionale për instalime elektrike, riparime, panele diellore dhe smart home në Tiranë. Përfshin edhe udhëzime në anglisht për klientë të huaj.",
     publisher: {
       "@id": ORGANIZATION_ID,
     },
@@ -106,7 +121,7 @@ export default async function BlogPage() {
     mainEntity: {
       "@id": BLOG_ITEMLIST_ID,
     },
-    inLanguage: "sq-AL",
+    inLanguage: ["sq-AL", "en-US"],
   };
 
   // ItemList Schema
@@ -136,7 +151,7 @@ export default async function BlogPage() {
         },
         keywords: post.tags.join(", "),
         articleSection: "Electrical Services",
-        inLanguage: "sq-AL",
+        inLanguage: getPostLanguage(post),
       },
     })),
   };
@@ -190,7 +205,7 @@ export default async function BlogPage() {
         },
         keywords: post.tags.join(", "),
         articleSection: "Electrical Services",
-        inLanguage: "sq-AL",
+        inLanguage: getPostLanguage(post),
       })),
     ],
   };
@@ -215,6 +230,10 @@ export default async function BlogPage() {
           <p className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-gray-600">
             Këtu gjeni artikuj, udhëzime dhe këshilla profesionale për të gjitha
             nevojat tuaja elektrike.
+          </p>
+          <p className="mt-4 max-w-2xl mx-auto text-sm sm:text-base text-gray-500">
+            Looking for content in English? You will also find dedicated guides
+            for expats and foreign business owners.
           </p>
         </div>
       </section>

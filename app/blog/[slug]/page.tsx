@@ -7,6 +7,7 @@ import { SITE_URL } from "@/lib/site";
 const BLOG_URL = `${SITE_URL}/blog`;
 const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 const LOGO_URL = `${SITE_URL}/logo.png`;
+const isEnglishPost = (post: Post) => post.slug.startsWith("english-");
 
 export function generateStaticParams() {
   return allPosts.map((p: Post) => ({ slug: p.slug }));
@@ -23,6 +24,8 @@ export async function generateMetadata({
 
   const postUrl = `${BLOG_URL}/${post.slug}`;
   const publishedTime = new Date(post.date).toISOString();
+  const englishPost = isEnglishPost(post);
+  const locale = englishPost ? "en_US" : "sq_AL";
 
   // Combine post tags with relevant keywords
   const keywords = [
@@ -32,6 +35,13 @@ export async function generateMetadata({
     "riparime elektrike",
     "këshilla elektrike",
     "blog elektrik",
+    ...(englishPost
+      ? [
+          "electrician in tirana",
+          "english speaking electrician albania",
+          "electrical services for expats",
+        ]
+      : []),
   ];
 
   return {
@@ -61,17 +71,26 @@ export async function generateMetadata({
       description: post.description,
       type: "article",
       url: postUrl,
-      locale: "sq_AL",
+      locale,
       siteName: "Alex Elektrik",
       publishedTime: publishedTime,
       modifiedTime: publishedTime,
       authors: ["Alex Elektrik"],
       tags: post.tags,
+      images: [
+        {
+          url: `${SITE_URL}/opengraph-image`,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.description,
+      images: [`${SITE_URL}/twitter-image`],
     },
     alternates: {
       canonical: postUrl,
@@ -99,6 +118,7 @@ export default async function BlogPost({
 
   const postUrl = `${BLOG_URL}/${post.slug}`;
   const publishedTime = new Date(post.date).toISOString();
+  const englishPost = isEnglishPost(post);
 
   // Organization Schema Reference
   const organizationSchema = {
@@ -134,7 +154,7 @@ export default async function BlogPost({
     },
     keywords: post.tags.join(", "),
     articleSection: "Electrical Services",
-    inLanguage: "sq-AL",
+    inLanguage: englishPost ? "en-US" : "sq-AL",
   };
 
   // WebPage Schema
@@ -156,7 +176,7 @@ export default async function BlogPost({
     },
     datePublished: publishedTime,
     dateModified: publishedTime,
-    inLanguage: "sq-AL",
+    inLanguage: englishPost ? "en-US" : "sq-AL",
   };
 
   // BreadcrumbList Schema
@@ -220,12 +240,15 @@ export default async function BlogPost({
             {post.title}
           </h1>
           <p className="mt-6 text-base sm:text-lg text-gray-500">
-            Publikuar më{" "}
-            {new Date(post.date).toLocaleDateString("sq-AL", {
+            {englishPost ? "Published on " : "Publikuar më "}
+            {new Date(post.date).toLocaleDateString(
+              englishPost ? "en-US" : "sq-AL",
+              {
               year: "numeric",
               month: "long",
               day: "numeric",
-            })}
+              }
+            )}
           </p>
         </div>
       </section>
@@ -253,7 +276,9 @@ export default async function BlogPost({
                   strokeWidth="2"
                   d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
               </svg>
-              Kthehu te të gjithë Artikujt
+              {englishPost
+                ? "Back to all articles"
+                : "Kthehu te të gjithë Artikujt"}
             </Link>
           </div>
         </div>
