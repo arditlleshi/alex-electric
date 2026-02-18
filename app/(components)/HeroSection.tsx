@@ -179,7 +179,7 @@ const HeroElectricalIllustration = () => (
 );
 
 const SmallElectricalIcon = ({
-  className = "w-16 h-16",
+  className = "size-16",
 }: {
   className?: string;
 }) => (
@@ -287,15 +287,15 @@ export default function HeroSection() {
           <div className="min-w-0 text-center lg:text-left">
             <div className="mb-5 flex flex-wrap justify-center gap-2 lg:justify-start">
               <span className="inline-flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold text-blue-100">
-                <Clock3 className="h-3.5 w-3.5" />
+                <Clock3 className="size-3.5" />
                 24/7 Emergjenca
               </span>
               <span className="inline-flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold text-blue-100">
-                <MapPin className="h-3.5 w-3.5" />
+                <MapPin className="size-3.5" />
                 Tiranë • Durrës
               </span>
               <span className="inline-flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold text-blue-100">
-                <BadgeCheck className="h-3.5 w-3.5" />
+                <BadgeCheck className="size-3.5" />
                 SQ & EN Support
               </span>
             </div>
@@ -347,8 +347,8 @@ export default function HeroSection() {
           </div>
 
           <aside className="relative min-w-0 overflow-hidden rounded-2xl border border-white/15 bg-[#0b1732]/55 p-5 text-left shadow-[0_18px_44px_rgba(15,23,42,0.45)] sm:p-6">
-            <div className="absolute -top-12 -right-8 h-40 w-40 rounded-full bg-orange-500/20 blur-3xl" />
-            <div className="absolute -bottom-10 -left-10 h-36 w-36 rounded-full bg-blue-500/20 blur-3xl" />
+            <div className="absolute -top-12 -right-8 size-40 rounded-full bg-orange-500/20 blur-3xl" />
+            <div className="absolute -bottom-10 -left-10 size-36 rounded-full bg-blue-500/20 blur-3xl" />
             <h2 className="relative text-lg font-bold text-white">
               Siguri, Shpejtësi, Profesionalizëm
             </h2>
@@ -359,15 +359,15 @@ export default function HeroSection() {
 
             <ul className="relative mt-5 space-y-3">
               <li className="flex items-start gap-2 text-sm text-gray-100">
-                <ShieldCheck className="mt-0.5 h-4 w-4 text-emerald-300" />
+                <ShieldCheck className="mt-0.5 size-4 text-emerald-300 shrink-0" />
                 Inspektim i plotë i sigurisë para dorëzimit.
               </li>
               <li className="flex items-start gap-2 text-sm text-gray-100">
-                <Clock3 className="mt-0.5 h-4 w-4 text-amber-300" />
+                <Clock3 className="mt-0.5 size-4 text-amber-300 shrink-0" />
                 Ndërhyrje e shpejtë për raste urgjente 24/7.
               </li>
               <li className="flex items-start gap-2 text-sm text-gray-100">
-                <BadgeCheck className="mt-0.5 h-4 w-4 text-blue-300" />
+                <BadgeCheck className="mt-0.5 size-4 text-blue-300 shrink-0" />
                 Përkrahje në shqip dhe anglisht për klientë lokalë dhe të huaj.
               </li>
             </ul>
