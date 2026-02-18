@@ -30,7 +30,7 @@ export async function generateMetadata({
   ];
 
   return {
-    title: `${post.title} | Alex Electric`,
+    title: `${post.title} | Alex Elektrik`,
     description: post.description,
     keywords: keywords,
     authors: [
@@ -62,20 +62,11 @@ export async function generateMetadata({
       modifiedTime: publishedTime,
       authors: ["Alex Elektrik"],
       tags: post.tags,
-      images: [
-        {
-          url: "https://www.alex-electric.com/logo.png",
-          width: 1200,
-          height: 630,
-          alt: post.title,
-        },
-      ],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.description,
-      images: ["https://www.alex-electric.com/logo.png"],
     },
     alternates: {
       canonical: postUrl,

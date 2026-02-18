@@ -1,14 +1,7 @@
 import logo from "@/public/main-logo.png";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Facebook,
-  Instagram,
-  Mail,
-  Phone,
-  MapPin,
-  MessageCircle,
-} from "lucide-react";
+import { Mail, Phone, MessageCircle } from "lucide-react";
 
 export default async function Footer() {
   "use cache"; // Cache footer component (copyright year captured at build time)
@@ -92,7 +85,7 @@ export default async function Footer() {
                   <Phone className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
                 </div>
                 <Link
-                  href="tel:355693289443"
+                  href="tel:+355693289443"
                   className="text-gray-400 group-hover:text-white transition-colors leading-tight">
                   355 69 328 9443
                 </Link>
@@ -163,7 +156,7 @@ export default async function Footer() {
 
         <div className="mt-8 border-t border-gray-700 pt-6 text-center">
           <p className="text-gray-400 text-sm">
-            © 2025 Alex Elektrik. Të gjitha të drejtat e rezervuara.
+            © 2026 Alex Elektrik. Të gjitha të drejtat e rezervuara.
           </p>
         </div>
       </div>

@@ -118,6 +118,58 @@ export default function ServicesSection() {
           ))}
         </ul>
 
+        <section aria-labelledby="services-spotlight" className="mt-16">
+          <h3
+            id="services-spotlight"
+            className="text-2xl font-bold text-gray-900">
+            Zgjidhje të Specializuara
+          </h3>
+          <p className="mt-3 text-gray-600 max-w-3xl">
+            Disa nga shërbimet tona kryesore kërkojnë planifikim dhe instalim
+            të saktë për siguri, performancë dhe jetëgjatësi.
+          </p>
+
+          <div className="mt-8 grid gap-8 md:grid-cols-3">
+            <article className="card-modern p-6">
+              <h4 className="text-lg font-bold text-gray-900 mb-3">
+                Karikues EV për Shtëpi & Biznese
+              </h4>
+              <p className="text-gray-600 leading-relaxed">
+                Ofrojmë vlerësim të linjës elektrike, zgjedhje të karikuesit të
+                duhur dhe instalim të sigurt të{" "}
+                <strong>karikuesve për makina elektrike</strong>. Zgjidhje të
+                përshtatura për garazhe, parkingje biznesi dhe ambiente
+                rezidenciale në Tiranë, Durrës dhe zonat përreth.
+              </p>
+            </article>
+
+            <article className="card-modern p-6">
+              <h4 className="text-lg font-bold text-gray-900 mb-3">
+                Panele Diellore & Energji e Pastër
+              </h4>
+              <p className="text-gray-600 leading-relaxed">
+                Nga projektimi te{" "}
+                <strong>instalimi i paneleve diellore</strong>, fokusohemi në
+                eficiencë, kursim dhe siguri. Këshillojmë kapacitetin optimal
+                sipas konsumit dhe ofrojmë mirëmbajtje për jetëgjatësi të sistemit
+                fotovoltaik.
+              </p>
+            </article>
+
+            <article className="card-modern p-6">
+              <h4 className="text-lg font-bold text-gray-900 mb-3">
+                Sisteme Smart Home
+              </h4>
+              <p className="text-gray-600 leading-relaxed">
+                Automatizoni ndriçimin, sigurinë dhe pajisjet me{" "}
+                <strong>smart home</strong> të konfiguruar sipas nevojave tuaja.
+                Integrime praktike për kontroll në distancë dhe optimizim të
+                konsumit të energjisë në banesa dhe zyra.
+              </p>
+            </article>
+          </div>
+        </section>
+
         <div className="text-center mt-16 animate-fade-in-up">
           <div className="glass pt-8 rounded-3xl max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
