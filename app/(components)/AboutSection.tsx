@@ -1,3 +1,5 @@
+import { BadgeCheck, Clock3, ShieldCheck, Zap } from "lucide-react";
+
 interface FeatureCardProps {
   icon: React.ReactNode;
   title: string;
@@ -14,7 +16,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   animationDelay,
 }) => (
   <div
-    className="card-modern p-6 hover:scale-105 transition-all duration-300"
+    className="card-modern p-6 transition-transform duration-300 md:hover:scale-105"
     style={{ animationDelay }}>
     <div className="flex items-start space-x-4">
       <div
@@ -29,135 +31,33 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   </div>
 );
 
-const ElectricalWorkIllustration = () => (
-  <svg viewBox="0 0 400 400" className="w-full h-full">
-    {/* Background */}
-    <defs>
-      <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#3B82F6" />
-        <stop offset="100%" stopColor="#1E40AF" />
-      </linearGradient>
-      <linearGradient id="toolGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#FFA500" />
-        <stop offset="100%" stopColor="#FF6B35" />
-      </linearGradient>
-    </defs>
+const operationalMetrics = [
+  { value: "15+", label: "vite pune si elektricist" },
+  { value: "24/7", label: "sherbim emergjence" },
+  { value: "<1h", label: "pergjigje e shpejte ne Tirane" },
+  { value: "100%", label: "kontroll para dorezimit" },
+];
 
-    {/* House outline */}
-    <path
-      d="M50 200 L200 50 L350 200 L350 350 L50 350 Z"
-      fill="url(#bgGradient)"
-      fillOpacity="0.1"
-      stroke="#3B82F6"
-      strokeWidth="2"
-    />
-
-    {/* Roof */}
-    <path
-      d="M40 200 L200 40 L360 200 L340 190 L200 60 L60 190 Z"
-      fill="#374151"
-    />
-
-    {/* Electrical panel */}
-    <rect x="280" y="150" width="50" height="80" fill="#6B7280" rx="5" />
-    <rect x="285" y="155" width="40" height="70" fill="#374151" rx="3" />
-
-    {/* Panel switches */}
-    <rect x="290" y="165" width="8" height="15" fill="#10B981" rx="2" />
-    <rect x="302" y="165" width="8" height="15" fill="#EF4444" rx="2" />
-    <rect x="314" y="165" width="8" height="15" fill="#10B981" rx="2" />
-    <rect x="290" y="185" width="8" height="15" fill="#10B981" rx="2" />
-    <rect x="302" y="185" width="8" height="15" fill="#10B981" rx="2" />
-    <rect x="314" y="185" width="8" height="15" fill="#EF4444" rx="2" />
-
-    {/* Electrician figure */}
-    <g>
-      {/* Head */}
-      <circle cx="200" cy="180" r="20" fill="#FDB462" />
-      {/* Hard hat */}
-      <path
-        d="M180 165 Q200 155 220 165 Q220 175 200 175 Q180 175 180 165"
-        fill="#FFD700"
-      />
-      {/* Body */}
-      <rect x="185" y="200" width="30" height="50" fill="#1E40AF" rx="5" />
-      {/* Arms */}
-      <rect x="160" y="210" width="20" height="8" fill="#FDB462" rx="4" />
-      <rect x="220" y="210" width="20" height="8" fill="#FDB462" rx="4" />
-      {/* Tool in hand */}
-      <rect
-        x="240"
-        y="205"
-        width="15"
-        height="4"
-        fill="url(#toolGradient)"
-        rx="2"
-      />
-      {/* Legs */}
-      <rect x="190" y="250" width="8" height="30" fill="#1E40AF" />
-      <rect x="202" y="250" width="8" height="30" fill="#1E40AF" />
-      {/* Feet */}
-      <ellipse cx="194" cy="285" rx="8" ry="5" fill="#374151" />
-      <ellipse cx="206" cy="285" rx="8" ry="5" fill="#374151" />
-    </g>
-
-    {/* Electrical wires */}
-    <path
-      d="M280 180 Q250 170 220 180"
-      stroke="#FFA500"
-      strokeWidth="3"
-      fill="none"
-    />
-    <path
-      d="M280 190 Q250 200 220 190"
-      stroke="#FF6B35"
-      strokeWidth="3"
-      fill="none"
-    />
-
-    {/* Electrical symbols */}
-    <g>
-      {/* Lightning bolt */}
-      <path
-        d="M320 100 L315 110 L320 110 L315 120 L325 110 L320 110 Z"
-        fill="#FFA500"
-      />
-      {/* Outlet */}
-      <rect x="100" y="200" width="20" height="15" fill="#374151" rx="2" />
-      <circle cx="105" cy="207" r="2" fill="#1F2937" />
-      <circle cx="115" cy="207" r="2" fill="#1F2937" />
-      <rect x="108" y="210" width="4" height="3" fill="#1F2937" />
-    </g>
-
-    {/* Sparks/electricity effect */}
-    <g>
-      <circle cx="240" cy="170" r="2" fill="#FFA500">
-        <animate
-          attributeName="opacity"
-          values="0;1;0"
-          dur="1s"
-          repeatCount="indefinite"
-        />
-      </circle>
-      <circle cx="245" cy="175" r="1.5" fill="#FFD700">
-        <animate
-          attributeName="opacity"
-          values="0;1;0"
-          dur="1.2s"
-          repeatCount="indefinite"
-        />
-      </circle>
-      <circle cx="235" cy="175" r="1" fill="#FF6B35">
-        <animate
-          attributeName="opacity"
-          values="0;1;0"
-          dur="0.8s"
-          repeatCount="indefinite"
-        />
-      </circle>
-    </g>
-  </svg>
-);
+const workProtocol = [
+  {
+    Icon: ShieldCheck,
+    title: "Kontroll i Defektit",
+    description:
+      "Kontrollojme instalimin elektrik dhe gjejme problemin kryesor sa me shpejt.",
+  },
+  {
+    Icon: Zap,
+    title: "Riparim ose Instalim",
+    description:
+      "Bejme riparime elektrike dhe instalim elektrik me materiale cilesore.",
+  },
+  {
+    Icon: BadgeCheck,
+    title: "Testim Final",
+    description:
+      "Testojme cdo pike para dorezimit qe gjithcka te punoje ne menyre te sigurt.",
+  },
+];
 
 const features = [
   {
@@ -229,16 +129,16 @@ export default function AboutSection() {
     <section
       id="about"
       className="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-        <div className="absolute top-20 left-20 w-32 h-32 gradient-aurora rounded-full opacity-10 animate-float"></div>
+      <div className="absolute top-0 left-0 hidden h-full w-full overflow-hidden md:block">
+        <div className="absolute top-20 left-20 h-32 w-32 rounded-full gradient-aurora opacity-10 motion-safe:md:animate-float"></div>
         <div
-          className="absolute bottom-20 right-20 w-40 h-40 gradient-electric rounded-full opacity-10 animate-float"
+          className="absolute bottom-20 right-20 h-40 w-40 rounded-full gradient-electric opacity-10 motion-safe:md:animate-float"
           style={{ animationDelay: "2s" }}></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="animate-slide-in-left">
+          <div className="motion-safe:md:animate-slide-in-left">
             <div className="mb-8">
               <span className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-4">
                 Njihuni me Ekspertin
@@ -264,59 +164,92 @@ export default function AboutSection() {
             </ul>
           </div>
 
-          <div className="relative animate-slide-in-right">
-            <div className="relative">
-              <div className="relative w-full h-96 lg:h-[500px] rounded-3xl overflow-hidden shadow-electric-lg hover-glow transition-all duration-300 group">
-                <div className="absolute inset-0 gradient-electric opacity-80"></div>
+          <div className="relative motion-safe:md:animate-slide-in-right">
+            <div className="relative overflow-hidden rounded-[2rem] border border-slate-200/80 bg-white shadow-[0_28px_70px_-42px_rgba(15,23,42,0.45)]">
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_12%,rgba(59,130,246,0.18),transparent_50%),radial-gradient(circle_at_85%_18%,rgba(14,165,233,0.15),transparent_42%),linear-gradient(145deg,rgba(248,250,252,0.92),rgba(255,255,255,0.98))]" />
+              <div className="relative space-y-6 p-6 sm:p-7">
+                <header className="space-y-3">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-700">
+                    <Zap className="size-3.5" />
+                    Si Punojme
+                  </span>
+                  <h3 className="text-2xl font-semibold leading-tight text-slate-900 sm:text-[1.75rem]">
+                    Elektricist në Tiranë për Riparime dhe Instalime Elektrike
+                  </h3>
+                  <p className="text-sm leading-relaxed text-slate-600 sm:text-[0.95rem]">
+                    Nga kontrolli i defektit te riparimi elektrik, çdo hap bëhet
+                    i qartë dhe i thjeshtë.
+                  </p>
+                </header>
 
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-80 h-80 relative">
-                    <ElectricalWorkIllustration />
-                  </div>
+                <div className="grid grid-cols-2 gap-3">
+                  {operationalMetrics.map((metric) => (
+                    <div
+                      key={metric.label}
+                      className="rounded-xl border border-slate-200 bg-white/90 px-4 py-3 shadow-sm">
+                      <p className="text-xl font-bold text-slate-900 sm:text-2xl">
+                        {metric.value}
+                      </p>
+                      <p className="mt-1 text-[11px] font-medium leading-snug text-slate-600 sm:text-xs">
+                        {metric.label}
+                      </p>
+                    </div>
+                  ))}
                 </div>
 
-                <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <div className="text-center text-white mt-80">
-                    <h3 className="font-bold text-2xl mb-2">
-                      Aleksander Gjoni
-                    </h3>
-                    <p className="text-blue-200 text-lg font-medium">
-                      Elektricist Profesionist
+                <div className="rounded-2xl border border-slate-800/70 bg-slate-950 p-5 text-slate-100">
+                  <div className="flex items-center justify-between gap-3">
+                    <h4 className="text-sm font-semibold uppercase tracking-[0.14em] text-slate-300">
+                      Si Punojmë
+                    </h4>
+                    <span className="rounded-full border border-slate-700 bg-slate-900 px-3 py-1 text-[11px] font-semibold text-slate-300">
+                      3 hapa
+                    </span>
+                  </div>
+
+                  <ol className="mt-4 space-y-4">
+                    {workProtocol.map((step, index) => (
+                      <li key={step.title} className="flex items-start gap-3">
+                        <span className="mt-0.5 inline-flex size-8 shrink-0 items-center justify-center rounded-full border border-blue-400/30 bg-blue-500/15 text-blue-200">
+                          <step.Icon className="size-4" />
+                        </span>
+                        <div>
+                          <p className="text-sm font-semibold text-white">
+                            {index + 1}. {step.title}
+                          </p>
+                          <p className="mt-1 text-xs leading-relaxed text-slate-300">
+                            {step.description}
+                          </p>
+                        </div>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+
+                <div className="grid gap-3 sm:grid-cols-2">
+                  <div className="rounded-xl border border-emerald-200/70 bg-emerald-50/80 p-4">
+                    <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-800">
+                      <ShieldCheck className="size-4" />
+                      Punë e sigurt
+                    </p>
+                    <p className="mt-1 text-xs leading-relaxed text-emerald-700">
+                      Kontroll final para dorëzimit që instalimi të jetë i sigurt.
+                    </p>
+                  </div>
+                  <div className="rounded-xl border border-blue-200/70 bg-blue-50/80 p-4">
+                    <p className="inline-flex items-center gap-2 text-sm font-semibold text-blue-800">
+                      <Clock3 className="size-4" />
+                      Çmim i qartë
+                    </p>
+                    <p className="mt-1 text-xs leading-relaxed text-blue-700">
+                      Te tregojmë koston dhe kohën para se të fillojme punën.
                     </p>
                   </div>
                 </div>
               </div>
-
-              <div className="absolute -top-1 -right-1 md:-top-6 md:-right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-2xl animate-float z-50 border border-blue-200/50">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-700">15+</div>
-                  <div className="text-xs text-blue-600 font-medium">Vjet</div>
-                </div>
-              </div>
-
-              <div
-                className="absolute -bottom-20 -left-1 md:-bottom-6 md:-left-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-2xl animate-float z-10 border border-emerald-200/50"
-                style={{ animationDelay: "2s" }}>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-emerald-700">
-                    24/7
-                  </div>
-                  <div className="text-xs text-emerald-600 font-medium">
-                    Në dispozicion
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="absolute -top-1 -left-1 md:-top-6 md:-left-6 bg-white/95 backdrop-blur-md p-3 rounded-xl shadow-2xl animate-float z-10 border border-green-200/50"
-                style={{ animationDelay: "1s" }}>
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                  <div className="text-xs text-green-700 font-medium">
-                    I Besueshëm
-                  </div>
-                </div>
-              </div>
+            </div>
+            <div className="pointer-events-none absolute -top-4 right-4 hidden rounded-full border border-slate-200 bg-white/95 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-700 shadow-sm md:inline-flex">
+              Tirane • Durres • 24/7
             </div>
           </div>
         </div>

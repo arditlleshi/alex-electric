@@ -283,7 +283,7 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-7 rounded-[2rem] border border-white/15 bg-white/[0.045] p-6 shadow-[0_30px_90px_rgba(2,6,23,0.55)] backdrop-blur-sm sm:p-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-8 lg:p-10">
+        <div className="grid gap-7 rounded-[2rem] border border-white/15 bg-white/[0.045] p-6 shadow-[0_30px_90px_rgba(2,6,23,0.55)] md:backdrop-blur-sm sm:p-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-8 lg:p-10">
           <div className="min-w-0 text-center lg:text-left">
             <div className="mb-5 flex flex-wrap justify-center gap-2 lg:justify-start">
               <span className="inline-flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold text-blue-100">
@@ -318,7 +318,7 @@ export default function HeroSection() {
               dhe panele diellore me standard të lartë sigurie.
             </p>
 
-            <p className="mx-auto mt-5 max-w-2xl rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-pretty text-sm leading-relaxed text-blue-100 backdrop-blur-sm sm:text-base lg:mx-0">
+            <p className="mx-auto mt-5 max-w-2xl rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-pretty text-sm leading-relaxed text-blue-100 md:backdrop-blur-sm sm:text-base lg:mx-0">
               Looking for an <strong className="text-white">English-speaking electrician in Tirana</strong>? We
               support expats, Airbnb owners, and international businesses with
               fast diagnostics, transparent pricing, and emergency visits.
@@ -333,7 +333,7 @@ export default function HeroSection() {
               </Link>
               <Link
                 href="#services"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-gray-500/70 bg-gray-700/45 px-7 py-3 text-sm font-semibold text-gray-100 backdrop-blur transition-all duration-300 hover:bg-gray-700/75 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-gray-500/60 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-gray-500/70 bg-gray-700/45 px-7 py-3 text-sm font-semibold text-gray-100 md:backdrop-blur transition-all duration-300 hover:bg-gray-700/75 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-gray-500/60 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">
                 Shiko Shërbimet
                 <ArrowRight className="size-5 shrink-0" />
               </Link>

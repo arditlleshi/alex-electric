@@ -212,6 +212,12 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 section[id],
 header[id] {
   scroll-margin-top: 5.75rem;
@@ -278,6 +284,20 @@ textarea:focus-visible {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   will-change: backdrop-filter;
+}
+
+@media (max-width: 767px), (hover: none) and (pointer: coarse) {
+  .nav-backdrop {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    will-change: auto;
+  }
+
+  .animate-float,
+  .animate-shimmer,
+  .animate-glow {
+    animation: none !important;
+  }
 }
 
 .glass-dark {

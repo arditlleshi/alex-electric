@@ -19,7 +19,7 @@ export default function ScrollReveal({
   className,
   animation = "fade-up",
   delay = 0,
-  duration = 0.5,
+  duration = 0.45,
   once = true,
 }: ScrollRevealProps) {
   const ref = useRef(null);
@@ -36,7 +36,7 @@ export default function ScrollReveal({
 
   const variants: Record<string, { hidden: Variant; visible: Variant }> = {
     "fade-up": {
-      hidden: { opacity: 0, y: 75 },
+      hidden: { opacity: 0, y: 36 },
       visible: { opacity: 1, y: 0 },
     },
     "fade-in": {
@@ -44,11 +44,11 @@ export default function ScrollReveal({
       visible: { opacity: 1 },
     },
     "slide-left": {
-      hidden: { opacity: 0, x: -75 },
+      hidden: { opacity: 0, x: -36 },
       visible: { opacity: 1, x: 0 },
     },
     "slide-right": {
-      hidden: { opacity: 0, x: 75 },
+      hidden: { opacity: 0, x: 36 },
       visible: { opacity: 1, x: 0 },
     },
     "scale-up": {
@@ -60,7 +60,7 @@ export default function ScrollReveal({
   return (
     <div
       ref={ref}
-      style={{ position: "relative", width, overflow: "hidden" }}
+      style={{ position: "relative", width, overflow: "visible" }}
       className={className}>
       <motion.div
         variants={variants[animation]}

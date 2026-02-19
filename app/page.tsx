@@ -117,15 +117,15 @@ export default async function Home() {
       />
       <HeroSection />
 
-      <ScrollReveal width="100%" animation="fade-up" delay={0.2}>
+      <ScrollReveal width="100%" animation="fade-in" duration={0.35}>
         <AboutSection />
       </ScrollReveal>
 
-      <ScrollReveal width="100%" animation="fade-up" delay={0.2}>
+      <ScrollReveal width="100%" animation="fade-in" duration={0.35}>
         <ServicesSection />
       </ScrollReveal>
 
-      <ScrollReveal width="100%" animation="slide-right" delay={0.2}>
+      <ScrollReveal width="100%" animation="fade-in" duration={0.4}>
         <WhyChooseSection />
       </ScrollReveal>
 

@@ -62,15 +62,15 @@ export default function ServicesSection() {
     <section
       id="services"
       className="pb-24 bg-gradient-to-br from-white to-gray-50 relative overflow-hidden">
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 right-20 w-64 h-64 gradient-aurora rounded-full opacity-5 animate-float"></div>
+      <div className="absolute inset-0 hidden overflow-hidden md:block">
+        <div className="absolute top-20 right-20 h-64 w-64 rounded-full gradient-aurora opacity-5 motion-safe:md:animate-float"></div>
         <div
-          className="absolute bottom-20 left-20 w-48 h-48 gradient-electric rounded-full opacity-5 animate-float"
+          className="absolute bottom-20 left-20 h-48 w-48 rounded-full gradient-electric opacity-5 motion-safe:md:animate-float"
           style={{ animationDelay: "3s" }}></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-20 animate-fade-in-up">
+        <div className="text-center mb-20 motion-safe:md:animate-fade-in-up">
           <span className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-4">
             Ekspertiza Jonë
           </span>
@@ -95,7 +95,7 @@ export default function ServicesSection() {
             <li
               key={index}
               aria-label={service.title}
-              className="group relative card-modern p-8 hover-glow hover:scale-105 transition-all duration-500">
+              className="group relative card-modern p-8 transition-[transform,box-shadow] duration-500 md:hover:scale-105 hover-glow">
               <div
                 className={`absolute inset-0 ${service.gradient} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-500`}></div>
 
@@ -116,7 +116,7 @@ export default function ServicesSection() {
               </h3>
               <div dangerouslySetInnerHTML={{ __html: service.description }} className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300" />
               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/20 to-transparent md:group-hover:animate-shimmer"></div>
               </div>
             </li>
           ))}
@@ -174,7 +174,7 @@ export default function ServicesSection() {
           </div>
         </section>
 
-        <div className="text-center mt-16 animate-fade-in-up">
+        <div className="text-center mt-16 motion-safe:md:animate-fade-in-up">
           <div className="glass pt-8 rounded-3xl max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Gati për të Filluar?
