@@ -7,6 +7,7 @@ import ScrollReveal from "./(components)/ScrollReveal";
 import ServicesSection from "./(components)/ServicesSection";
 import WhyChooseSection from "./(components)/WhyChooseSection";
 import { faqData } from "./(components)/FAQSection";
+import { CONTACT_EMAIL_ADDRESS, CONTACT_PHONE_NUMBER } from "@/lib/contact";
 import { SITE_URL } from "@/lib/site";
 
 const homepageJsonLd = {
@@ -18,8 +19,8 @@ const homepageJsonLd = {
       name: "Alex Elektrik",
       url: SITE_URL,
       image: `${SITE_URL}/logo.png`,
-      telephone: "+355693289443",
-      email: "aleksander.gjoni85@gmail.com",
+      telephone: CONTACT_PHONE_NUMBER,
+      email: CONTACT_EMAIL_ADDRESS,
       priceRange: "$$",
       areaServed: ["Tiranë", "Durrës", "Albania"],
       address: {

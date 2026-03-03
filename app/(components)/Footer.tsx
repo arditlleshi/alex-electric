@@ -2,6 +2,14 @@ import logo from "@/public/main-logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone, MessageCircle } from "lucide-react";
+import TrackedContactLink from "./TrackedContactLink";
+import {
+  CONTACT_EMAIL_ADDRESS,
+  CONTACT_EMAIL_HREF,
+  CONTACT_PHONE_DISPLAY,
+  CONTACT_PHONE_HREF,
+  CONTACT_WHATSAPP_HREF,
+} from "@/lib/contact";
 
 export default async function Footer() {
   "use cache"; // Cache footer component (copyright year captured at build time)
@@ -78,13 +86,13 @@ export default async function Footer() {
                 <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0">
                   <Mail className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
                 </div>
-                <a
-                  href="mailto:aleksander.gjoni85@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <TrackedContactLink
+                  href={CONTACT_EMAIL_HREF}
+                  channel="email"
+                  source="footer"
                   className="text-gray-400 group-hover:text-white transition-colors break-all leading-tight">
-                  aleksander.gjoni85@gmail.com
-                </a>
+                  {CONTACT_EMAIL_ADDRESS}
+                </TrackedContactLink>
               </li>
 
               {/* Phone */}
@@ -94,11 +102,13 @@ export default async function Footer() {
                 <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0">
                   <Phone className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
                 </div>
-                <a
-                  href="tel:+355693289443"
+                <TrackedContactLink
+                  href={CONTACT_PHONE_HREF}
+                  channel="phone"
+                  source="footer"
                   className="text-gray-400 group-hover:text-white transition-colors leading-tight">
-                  355 69 328 9443
-                </a>
+                  {CONTACT_PHONE_DISPLAY}
+                </TrackedContactLink>
               </li>
 
               {/* WhatsApp */}
@@ -108,13 +118,15 @@ export default async function Footer() {
                 <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0">
                   <MessageCircle className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
                 </div>
-                <a
-                  href="https://wa.me/355693289443"
+                <TrackedContactLink
+                  href={CONTACT_WHATSAPP_HREF}
+                  channel="whatsapp"
+                  source="footer"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 group-hover:text-white transition-colors leading-tight">
                   Bisedoni në WhatsApp
-                </a>
+                </TrackedContactLink>
               </li>
             </ul>
           </div>

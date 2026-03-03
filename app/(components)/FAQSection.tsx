@@ -1,4 +1,6 @@
 import FAQAccordion from "./FAQAccordion";
+import TrackedContactLink from "./TrackedContactLink";
+import { CONTACT_PHONE_HREF } from "@/lib/contact";
 
 export const faqData: { question: string; answer: string }[] = [
   {
@@ -75,10 +77,10 @@ export default function FAQSection() {
               pyetje specifike rreth projektit tuaj.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pb-8">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="tel:+355693289443"
+              <TrackedContactLink
+                href={CONTACT_PHONE_HREF}
+                channel="phone"
+                source="faq-section"
                 className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-medium rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 hover:scale-105">
                 <svg
                   className="w-5 h-5 mr-2"
@@ -93,7 +95,7 @@ export default function FAQSection() {
                   />
                 </svg>
                 Telefono
-              </a>
+              </TrackedContactLink>
               <a
                 target="_blank"
                 rel="noopener noreferrer"

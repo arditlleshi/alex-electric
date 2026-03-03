@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import TrackedContactLink from "../(components)/TrackedContactLink";
+import { CONTACT_PHONE_HREF, CONTACT_WHATSAPP_HREF } from "@/lib/contact";
 import { SITE_URL } from "@/lib/site";
 
 const EN_URL = `${SITE_URL}/en`;
@@ -162,18 +164,22 @@ export default function EnglishPage() {
             </article>
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="tel:+355693289443"
+            <TrackedContactLink
+              href={CONTACT_PHONE_HREF}
+              channel="phone"
+              source="english-page"
               className="inline-flex items-center rounded-lg bg-blue-600 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-700 transition-colors">
               Call Now
-            </a>
-            <a
-              href="https://wa.me/355693289443"
+            </TrackedContactLink>
+            <TrackedContactLink
+              href={CONTACT_WHATSAPP_HREF}
+              channel="whatsapp"
+              source="english-page"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center rounded-lg border border-blue-200 bg-white px-5 py-3 text-sm font-semibold text-blue-700 hover:bg-blue-50 transition-colors">
               WhatsApp
-            </a>
+            </TrackedContactLink>
             <Link
               href="/blog/english-speaking-electrician-tirana"
               className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-5 py-3 text-sm font-semibold text-gray-700 hover:bg-gray-100 transition-colors">

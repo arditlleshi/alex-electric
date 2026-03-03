@@ -1,4 +1,13 @@
 import { Mail, MessageCircle, Phone } from "lucide-react";
+import TrackedContactLink from "./TrackedContactLink";
+import {
+  CONTACT_EMAIL_ADDRESS,
+  CONTACT_EMAIL_HREF,
+  CONTACT_PHONE_DISPLAY,
+  CONTACT_PHONE_HREF,
+  CONTACT_WHATSAPP_HREF,
+  type ContactChannel,
+} from "@/lib/contact";
 
 // Professional Electrical Consultation Illustration
 const ElectricalConsultationIllustration = () => (
@@ -230,6 +239,7 @@ const ElectricalConsultationIllustration = () => (
 );
 
 const items: {
+  channel: ContactChannel;
   title: string;
   description: string;
   icon: React.ReactNode;
@@ -237,14 +247,17 @@ const items: {
   label: string;
   color: string;
   textColor: string;
+  target?: "_blank";
+  rel?: string;
 }[] = [
   {
+    channel: "phone",
     title: "Telefononi Tani",
     description:
       "Disponibël 24/7 për shërbime emergjente dhe konsultime (Albanian & English)",
     icon: <Phone className="w-8 h-8 text-white" />,
-    link: "tel:+355693289443",
-    label: "355 69 328 9443",
+    link: CONTACT_PHONE_HREF,
+    label: CONTACT_PHONE_DISPLAY,
     color: "gradient-electric",
     textColor: "text-blue-400 hover:text-blue-300",
   },
@@ -252,9 +265,10 @@ const items: {
     title: "Dërgoni Email",
     description:
       "Na dërgoni detajet e projektit tuaj për një ofertë të detajuar",
+    channel: "email",
     icon: <Mail className="w-8 h-8 text-white" />,
-    link: "mailto:aleksander.gjoni85@gmail.com",
-    label: "aleksander.gjoni85@gmail.com",
+    link: CONTACT_EMAIL_HREF,
+    label: CONTACT_EMAIL_ADDRESS,
     color: "gradient-sunset",
     textColor:
       "text-orange-400 hover:text-orange-300 block break-all hyphens-auto text-center lg:text-left",
@@ -263,11 +277,14 @@ const items: {
     title: "WhatsApp",
     description:
       "Bisedë e shpejtë për përgjigje të menjëhershme dërgoni detajet e projektit tuaj për një ofertë të detajuar",
+    channel: "whatsapp",
     icon: <MessageCircle className="w-8 h-8 text-white" />,
-    link: "https://wa.me/355693289443",
+    link: CONTACT_WHATSAPP_HREF,
     label: "Na shkruani",
     color: "gradient-aurora",
     textColor: "text-green-400 hover:text-green-300",
+    target: "_blank",
+    rel: "noopener noreferrer",
   },
 ];
 
@@ -348,10 +365,10 @@ export default function ContactSection() {
         <ul
           aria-label="contact items"
           className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {items.map((item, index) => (
+          {items.map((item) => (
             <li
               aria-label={item.title}
-              key={index}
+              key={item.link}
               className="card-glass p-6 group cursor-pointer animate-slide-in-right hover:scale-105 transition-all duration-500 hover:shadow-lg"
               style={{ animationDelay: "0.4s" }}>
               <div className="text-center">
@@ -363,13 +380,15 @@ export default function ContactSection() {
                   {item.title}
                 </h3>
                 <p className="text-gray-300 mb-4">{item.description}</p>
-                <a
+                <TrackedContactLink
                   href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  channel={item.channel}
+                  source="contact-section"
+                  target={item.target}
+                  rel={item.rel}
                   className={`text-xl font-bold ${item.textColor} transition-colors`}>
                   {item.label}
-                </a>
+                </TrackedContactLink>
               </div>
             </li>
           ))}
