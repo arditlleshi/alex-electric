@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { cookies } from "next/headers";
 import {
-  formatTiranaTimestamp,
   getContactClickLog,
   isContactClickBlobConfigured,
 } from "@/lib/contact-click-store";
@@ -70,6 +69,11 @@ function formatDisplayTime(
   utcTime?: string | null,
 ) {
   if (tiranaTime) {
+    const match = tiranaTime.match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})/);
+    if (match) {
+      const [, year, month, day, hour, minute, second] = match;
+      return `${day}/${month}/${year} ${hour}:${minute}:${second}`;
+    }
     return tiranaTime;
   }
 
@@ -83,7 +87,25 @@ function formatDisplayTime(
     return "No clicks yet";
   }
 
-  return formatTiranaTimestamp(fallbackDate);
+  const formatter = new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Europe/Tirane",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  });
+
+  const parts = Object.fromEntries(
+    formatter
+      .formatToParts(fallbackDate)
+      .filter(({ type }) => type !== "literal")
+      .map(({ type, value }) => [type, value]),
+  );
+
+  return `${parts.day}/${parts.month}/${parts.year} ${parts.hour}:${parts.minute}:${parts.second}`;
 }
 
 function MetricCard({
@@ -335,7 +357,7 @@ async function ContactClicksContent({
               <table className="min-w-full text-left text-sm text-slate-200">
                 <thead className="bg-white/[0.03] text-[11px] uppercase tracking-[0.18em] text-slate-400">
                   <tr>
-                    <th className="px-6 py-4 font-medium">Tirana Time</th>
+                    <th className="px-6 py-4 font-medium">Albania Time</th>
                     <th className="px-6 py-4 font-medium">Channel</th>
                     <th className="px-6 py-4 font-medium">Source</th>
                     <th className="px-6 py-4 font-medium">Path</th>
