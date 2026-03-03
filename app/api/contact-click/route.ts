@@ -1,5 +1,5 @@
 import { after } from "next/server";
-import { track } from "@vercel/analytics/server";
+import { recordContactClick } from "@/lib/contact-click-store";
 import type { ContactChannel, ContactSource } from "@/lib/contact";
 
 const NO_STORE_HEADERS = {
@@ -13,19 +13,6 @@ const VALID_SOURCES = new Set<ContactSource>([
   "faq-section",
   "english-page",
 ]);
-const TIRANA_TIMEZONE = "Europe/Tirane";
-
-const TIRANA_TIMESTAMP_FORMATTER = new Intl.DateTimeFormat("en-GB", {
-  timeZone: TIRANA_TIMEZONE,
-  year: "numeric",
-  month: "2-digit",
-  day: "2-digit",
-  hour: "2-digit",
-  minute: "2-digit",
-  second: "2-digit",
-  hour12: false,
-  timeZoneName: "short",
-});
 
 type ContactClickRequest = {
   channel?: string;
@@ -49,16 +36,6 @@ function normalizePath(path: string | undefined) {
   }
 
   return path.slice(0, 200);
-}
-
-function formatTiranaTimestamp(date: Date) {
-  const parts = Object.fromEntries(
-    TIRANA_TIMESTAMP_FORMATTER.formatToParts(date)
-      .filter(({ type }) => type !== "literal")
-      .map(({ type, value }) => [type, value]),
-  );
-
-  return `${parts.year}-${parts.month}-${parts.day}T${parts.hour}:${parts.minute}:${parts.second} ${parts.timeZoneName}`;
 }
 
 export async function POST(request: Request) {
@@ -90,19 +67,14 @@ export async function POST(request: Request) {
   const path = normalizePath(body.path);
 
   after(async () => {
-    const now = new Date();
-
     try {
-      await track("contact_click", {
+      await recordContactClick({
         channel,
         source,
         path,
-        clickedAtUtc: now.toISOString(),
-        clickedAtTirana: formatTiranaTimestamp(now),
-        timeZone: TIRANA_TIMEZONE,
       });
     } catch (error) {
-      console.error("Failed to track contact click", error);
+      console.error("Failed to persist contact click", error);
     }
   });
 

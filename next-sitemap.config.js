@@ -7,12 +7,18 @@ module.exports = {
   sitemapSize: 5000,
   changefreq: "weekly",
   priority: 0.7,
-  exclude: ["/opengraph-image", "/twitter-image"],
+  exclude: [
+    "/contact-clicks",
+    "/contact-clicks/data",
+    "/opengraph-image",
+    "/twitter-image",
+  ],
   robotsTxtOptions: {
     policies: [
       {
         userAgent: "*",
         allow: "/",
+        disallow: ["/contact-clicks", "/contact-clicks/data"],
       },
     ],
   },
