@@ -1,9 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import Navigation from "./(components)/Navigation";
-import Footer from "./(components)/Footer";
 import { Analytics } from "@vercel/analytics/next";
+import "./globals.css";
 import { SITE_URL } from "@/lib/site";
 
 const inter = Inter({
@@ -19,24 +17,20 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title:
-    "Elektricist në Tiranë - Instalime, Riparime & Smart Home | Alex Elektrik",
+  title: "Alex Elektrik",
   description:
-    "Ofrojmë instalime elektrike, riparime emergjente, smart home, karikues EV dhe panele diellore në Tiranë dhe Durrës. English-speaking electrician services available.",
+    "Alex Elektrik ofron sherbime elektrike ne Tirane dhe Durres per banesa, vila, biznese, emergjenca, EV, solar dhe kliente nderkombetare.",
   metadataBase: new URL(SITE_URL),
   keywords: [
-    "elektricist ne tirane",
-    "elektricist tirane",
-    "punime elektrike",
-    "instalime elektrike ne shtepi",
-    "riparime elektrike",
+    "sherbime elektrike tirane",
+    "sherbime elektrike durres",
+    "instalime elektrike",
+    "riparime elektrike tirane",
     "smart home tirane",
     "karikues ev tirane",
     "panele diellore tirane",
     "electrician in tirana",
-    "emergency electrician albania",
-    "ev charger installation albania",
-    "solar panel installation tirana",
+    "electrician durres",
   ],
   authors: [
     {
@@ -47,10 +41,9 @@ export const metadata: Metadata = {
   category: "Home Services",
   robots: "index, follow",
   openGraph: {
-    title:
-      "Elektricist në Tiranë – Instalime, Riparime & Smart Home | Alex Elektrik",
+    title: "Alex Elektrik | Sherbime elektrike ne Tirane dhe Durres",
     description:
-      "Ofrojmë shërbime të ndryshme si instalime elektrike, riparime emergjente, sisteme smart home, karikues EV dhe panele diellore. Kontakto tani!",
+      "Sherbime elektrike per banesa, vila dhe biznese ne Tirane dhe Durres, plus faqe ne anglisht per expats dhe prona me qira.",
     type: "website",
     locale: "sq_AL",
     alternateLocale: "en_US",
@@ -61,15 +54,15 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/opengraph-image`,
         width: 1200,
         height: 630,
-        alt: "Alex Elektrik - Elektricist në Tiranë",
+        alt: "Alex Elektrik - sherbime elektrike ne Tirane dhe Durres",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alex Elektrik | Elektricist në Tiranë",
+    title: "Alex Elektrik | Sherbime elektrike ne Tirane dhe Durres",
     description:
-      "Shërbime elektrike profesionale për shtëpi, lokale, zyra dhe biznese.",
+      "Sherbime elektrike profesionale per banesa, vila, zyra dhe biznese.",
     images: [`${SITE_URL}/twitter-image`],
   },
   alternates: {
@@ -100,12 +93,10 @@ export default function RootLayout({
     <html lang="sq" className="scroll-smooth">
       <body
         className={`${inter.variable} font-sans antialiased`}
-        suppressHydrationWarning={true}>
+        suppressHydrationWarning>
         <div className="min-h-screen bg-white">
-          <Navigation />
           {children}
           <Analytics />
-          <Footer />
         </div>
       </body>
     </html>

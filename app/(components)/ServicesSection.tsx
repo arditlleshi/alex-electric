@@ -1,188 +1,228 @@
 import Image from "next/image";
-import ElectricCar from "@/public/icons/ev-charger.png";
-import SolarPanel from "@/public/icons/solar-panel.png";
-import ResidentialElectric from "@/public/icons/residential-electric.png";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import {
+  getAlbanianServicePage,
+  type AlbanianServiceSlug,
+} from "@/lib/content/albanian-services";
 import CommercialElectric from "@/public/icons/commercial-electric.png";
-import SmartHome from "@/public/icons/smart-home.png";
+import ElectricCar from "@/public/icons/ev-charger.png";
 import Maintenance from "@/public/icons/maintenance.png";
+import ResidentialElectric from "@/public/icons/residential-electric.png";
+import SmartHome from "@/public/icons/smart-home.png";
+import SolarPanel from "@/public/icons/solar-panel.png";
 
-const services = [
+const primaryServiceCards: {
+  slug: AlbanianServiceSlug;
+  image:
+    | typeof ResidentialElectric
+    | typeof CommercialElectric
+    | typeof Maintenance
+    | typeof ElectricCar
+    | typeof SolarPanel
+    | typeof SmartHome;
+  eyebrow: string;
+}[] = [
   {
+    slug: "elektricist-tirane",
     image: ResidentialElectric,
-    title: "Instalime Elektrike Rezidenciale",
-    description:
-      "<p>Kryejm&euml; <strong>instalime elektrike</strong> p&euml;r apartamente, vila dhe ambiente banimi. Siguri dhe efikasitet maksimal n&euml; &ccedil;do <strong>punim elektrik</strong>.</p>",
-    gradient: "gradient-electric",
-    color: "blue",
+    eyebrow: "Tirane",
   },
   {
+    slug: "elektricist-durres",
     image: CommercialElectric,
-    title: "Shërbime për Biznese dhe Industri",
-    description:
-      "<p><strong>Instalime</strong> dhe <strong>riparime elektrike</strong> t&euml; specializuara p&euml;r zyra, lokale, restorante dhe fabrika, duke siguruar vazhdim&euml;si t&euml; aktivitetit tuaj.</p>",
-    gradient: "gradient-sunset",
-    color: "orange",
+    eyebrow: "Durres",
   },
   {
-    image: SmartHome,
-    title: "Sisteme Smart Home",
-    description:
-      "<p>Automatizoni sht&euml;pin&euml; tuaj me sisteme inteligjente <strong>(smart home)</strong> p&euml;r ndri&ccedil;im, siguri, dhe kontroll t&euml; pajisjeve n&euml; distanc&euml;.</p>",
-    gradient: "gradient-mesh",
-    color: "teal",
-  },
-  {
-    image: ElectricCar,
-    title: "Karikues për Makina Elektrike (EV)",
-    description:
-      "<p><strong>Instalim karikuesish</strong> p&euml;r automjete elektrike, duke garantuar karikim t&euml; shpejt&euml;, t&euml; sigurt dhe efikas n&euml; sht&euml;pi ose biznes.</p>",
-    gradient: "gradient-aurora",
-    color: "green",
-  },
-  {
-    image: SolarPanel,
-    title: "Instalime dhe Mirëmbajtje Panele Diellore",
-    description:
-      "<p><strong>Projektim</strong>, <strong>instalim</strong> dhe mir&euml;mbajtje t&euml; sistemeve solare p&euml;r energji t&euml; past&euml;r dhe kursim maksimal t&euml; <strong>energjis&euml; elektrike</strong>.</p>",
-    gradient: "gradient-primary",
-    color: "purple",
-  },
-  {
+    slug: "elektricist-urgjent-tirane",
     image: Maintenance,
-    title: "Mirëmbajtje & Diagnostikim Elektrik",
+    eyebrow: "Urgjenca",
+  },
+  {
+    slug: "karikues-ev-tirane",
+    image: ElectricCar,
+    eyebrow: "EV",
+  },
+  {
+    slug: "panele-diellore-tirane",
+    image: SolarPanel,
+    eyebrow: "Solar",
+  },
+  {
+    slug: "smart-home-tirane",
+    image: SmartHome,
+    eyebrow: "Smart home",
+  },
+];
+
+const secondaryLinks: {
+  slug: AlbanianServiceSlug;
+  title: string;
+  description: string;
+}[] = [
+  {
+    slug: "elektricist-per-apartamente",
+    title: "Prona rezidenciale",
     description:
-      "<p>Shërbim emergjent dhe mirëmbajtje periodike për të garantuar siguri maksimale dhe parandalim të avarive <strong>elektrike</strong>.</p>",
-    gradient: "gradient-electric",
-    color: "indigo",
+      "Faqe per apartamente, hyrje te reja, qira dhe kontrolle para dorezimit.",
+  },
+  {
+    slug: "elektricist-per-vila",
+    title: "Vila dhe prona te medha",
+    description:
+      "Lidhje me faqet per vila, ndricim te jashtem, smart home dhe ngarkese me te larte.",
+  },
+  {
+    slug: "mirembajtje-elektrike-biznese",
+    title: "Biznese dhe mirembajtje",
+    description:
+      "Rruge hyrjeje per zyra, dyqane, restorante, hotele dhe sherbime te vazhdueshme.",
   },
 ];
 
 export default function ServicesSection() {
+  const cards = primaryServiceCards
+    .map((card) => {
+      const service = getAlbanianServicePage(card.slug);
+
+      if (!service) {
+        return null;
+      }
+
+      return {
+        ...card,
+        service,
+      };
+    })
+    .filter((card): card is NonNullable<typeof card> => Boolean(card));
+
   return (
     <section
       id="services"
-      className="pb-24 bg-gradient-to-br from-white to-gray-50 relative overflow-hidden">
+      className="relative overflow-hidden bg-gradient-to-br from-white to-gray-50 pb-24">
       <div className="absolute inset-0 hidden overflow-hidden md:block">
-        <div className="absolute top-20 right-20 h-64 w-64 rounded-full gradient-aurora opacity-5 motion-safe:md:animate-float"></div>
+        <div className="gradient-aurora absolute right-20 top-20 h-64 w-64 rounded-full opacity-5 motion-safe:md:animate-float" />
         <div
-          className="absolute bottom-20 left-20 h-48 w-48 rounded-full gradient-electric opacity-5 motion-safe:md:animate-float"
-          style={{ animationDelay: "3s" }}></div>
+          className="gradient-electric absolute bottom-20 left-20 h-48 w-48 rounded-full opacity-5 motion-safe:md:animate-float"
+          style={{ animationDelay: "3s" }}
+        />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-20 motion-safe:md:animate-fade-in-up">
-          <span className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-4">
-            Ekspertiza Jonë
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-20 text-center motion-safe:md:animate-fade-in-up">
+          <span className="mb-4 inline-block rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800">
+            Faqe sherbimesh
           </span>
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Shërbimet Elektrike që Ofrojmë
+          <h2 className="mb-6 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
+            Zgjidhni faqen qe i pershtatet kerkimit tuaj
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Nga <strong>riparimet elektrike</strong> shtëpiake deri te
-            instalimet industriale, ne ofrojmë zgjidhje <strong>elektrike</strong> moderne të
-            përshtatura sipas nevojave tuaja specifike.
+          <p className="mx-auto max-w-3xl text-xl leading-relaxed text-gray-600">
+            Tani sherbimet me intent te larte nuk rrine me te fshehura ne faqen
+            kryesore. Secili grup ka faqen e vet me problematika, zona,
+            pyetje dhe thirrje per kontakt.
           </p>
-          <p className="mt-4 text-base text-gray-500 max-w-3xl mx-auto">
-            We also provide <strong>electrical services in English</strong> for
-            foreign residents and international companies in Albania.
+          <p className="mx-auto mt-4 max-w-3xl text-base text-gray-500">
+            We also route English-speaking visitors to dedicated service and
+            audience pages instead of forcing everything into one overview page.
           </p>
         </div>
 
         <ul
-          aria-label="Shërbimet Elektrike që Ofrojmë"
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <li
-              key={index}
-              aria-label={service.title}
-              className="group relative card-modern p-8 transition-[transform,box-shadow] duration-500 md:hover:scale-105 hover-glow">
-              <div
-                className={`absolute inset-0 ${service.gradient} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-500`}></div>
-
-              <div className="relative w-24 h-24 mb-4 rounded-lg overflow-hidden">
-                <Image
-                  src={service.image}
-                  fill
-                  placeholder="blur"
-                  blurDataURL={service.image.src}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  alt={service.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
-                {service.title}
-              </h3>
-              <div dangerouslySetInnerHTML={{ __html: service.description }} className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300" />
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/20 to-transparent md:group-hover:animate-shimmer"></div>
-              </div>
+          aria-label="Sherbimet kryesore"
+          className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {cards.map(({ service, image, eyebrow }) => (
+            <li key={service.slug}>
+              <Link
+                href={`/sherbime/${service.slug}`}
+                className="group relative flex h-full flex-col rounded-3xl border border-gray-200 bg-white p-8 shadow-sm transition-[transform,box-shadow] duration-500 hover:scale-[1.02] hover:shadow-xl">
+                <span className="mb-4 inline-flex w-fit rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-blue-800">
+                  {eyebrow}
+                </span>
+                <div className="relative mb-5 h-20 w-20 overflow-hidden rounded-2xl bg-gray-50">
+                  <Image
+                    src={image}
+                    fill
+                    alt={service.title}
+                    placeholder="blur"
+                    blurDataURL={image.src}
+                    sizes="80px"
+                    className="object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 transition-colors group-hover:text-blue-700">
+                  {service.title}
+                </h3>
+                <p className="mt-4 flex-1 leading-relaxed text-gray-600">
+                  {service.metaDescription}
+                </p>
+                <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-blue-600">
+                  Hap faqen
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Link>
             </li>
           ))}
         </ul>
 
         <section aria-labelledby="services-spotlight" className="mt-16">
-          <h3
-            id="services-spotlight"
-            className="text-2xl font-bold text-gray-900">
-            Zgjidhje të Specializuara
-          </h3>
-          <p className="mt-3 text-gray-600 max-w-3xl">
-            Disa nga shërbimet tona kryesore kërkojnë planifikim dhe instalim
-            të saktë për siguri, performancë dhe jetëgjatësi.
-          </p>
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <h3
+                id="services-spotlight"
+                className="text-2xl font-bold text-gray-900">
+                Rruge te tjera hyrjeje
+              </h3>
+              <p className="mt-3 max-w-3xl text-gray-600">
+                Faqet shtese mbulojne prona rezidenciale, vila, zyra, dyqane
+                dhe mirembajtje te vazhdueshme per biznes.
+              </p>
+            </div>
+            <Link
+              href="/en/services"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600">
+              Shiko edhe faqet ne anglisht
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
 
           <div className="mt-8 grid gap-8 md:grid-cols-3">
-            <article className="card-modern p-6">
-              <h4 className="text-lg font-bold text-gray-900 mb-3">
-                Karikues EV për Shtëpi & Biznese
-              </h4>
-              <p className="text-gray-600 leading-relaxed">
-                Ofrojmë vlerësim të linjës elektrike, zgjedhje të karikuesit të
-                duhur dhe instalim të sigurt të{" "}
-                <strong>karikuesve për makina elektrike</strong>. Zgjidhje të
-                përshtatura për garazhe, parkingje biznesi dhe ambiente
-                rezidenciale në Tiranë, Durrës dhe zonat përreth.
-              </p>
-            </article>
-
-            <article className="card-modern p-6">
-              <h4 className="text-lg font-bold text-gray-900 mb-3">
-                Panele Diellore & Energji e Pastër
-              </h4>
-              <p className="text-gray-600 leading-relaxed">
-                Nga projektimi te{" "}
-                <strong>instalimi i paneleve diellore</strong>, fokusohemi në
-                eficiencë, kursim dhe siguri. Këshillojmë kapacitetin optimal
-                sipas konsumit dhe ofrojmë mirëmbajtje për jetëgjatësi të sistemit
-                fotovoltaik.
-              </p>
-            </article>
-
-            <article className="card-modern p-6">
-              <h4 className="text-lg font-bold text-gray-900 mb-3">
-                Sisteme Smart Home
-              </h4>
-              <p className="text-gray-600 leading-relaxed">
-                Automatizoni ndriçimin, sigurinë dhe pajisjet me{" "}
-                <strong>smart home</strong> të konfiguruar sipas nevojave tuaja.
-                Integrime praktike për kontroll në distancë dhe optimizim të
-                konsumit të energjisë në banesa dhe zyra.
-              </p>
-            </article>
+            {secondaryLinks.map((item) => (
+              <Link
+                key={item.slug}
+                href={`/sherbime/${item.slug}`}
+                className="card-modern group block p-6 transition-transform duration-300 hover:scale-[1.02]">
+                <h4 className="text-lg font-bold text-gray-900 transition-colors group-hover:text-blue-700">
+                  {item.title}
+                </h4>
+                <p className="mt-3 leading-relaxed text-gray-600">
+                  {item.description}
+                </p>
+              </Link>
+            ))}
           </div>
         </section>
 
-        <div className="text-center mt-16 motion-safe:md:animate-fade-in-up">
-          <div className="glass pt-8 rounded-3xl max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Gati për të Filluar?
+        <div className="mt-16 text-center motion-safe:md:animate-fade-in-up">
+          <div className="glass mx-auto max-w-2xl rounded-3xl pt-8">
+            <h3 className="mb-4 text-2xl font-bold text-gray-900">
+              Keni nevoje per pasqyre te plote?
             </h3>
             <p className="text-gray-600">
-              Na kontaktoni sot për një konsultë falas dhe ofertë të
-              personalizuar për projektin tuaj <strong>elektrik</strong>.
+              Hyrja me e mire eshte faqja e sherbimeve, sepse aty secila teme
+              ka faqen e vet dhe lidhet me udhezuesit perkates.
             </p>
+            <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Link
+                href="/sherbime"
+                className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-700">
+                Hap hub-in e sherbimeve
+              </Link>
+              <Link
+                href="/blog"
+                className="inline-flex items-center gap-2 rounded-xl border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-50">
+                Lexo blogun elektrik
+              </Link>
+            </div>
           </div>
         </div>
       </div>

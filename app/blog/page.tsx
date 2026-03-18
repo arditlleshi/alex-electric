@@ -1,308 +1,77 @@
-import Link from "next/link";
-import { allPosts } from "./posts";
-import type { Post } from "./posts";
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import { Suspense } from "react";
+import BlogFilterContent, { BlogFilterSection } from "./BlogFilterContent";
+import { guidePages } from "@/lib/content/guides";
 import { SITE_URL } from "@/lib/site";
 
 const BLOG_URL = `${SITE_URL}/blog`;
-const ORGANIZATION_ID = `${SITE_URL}/#organization`;
-const BLOG_WEBPAGE_ID = `${BLOG_URL}#webpage`;
-const BLOG_ITEMLIST_ID = `${BLOG_URL}#itemlist`;
-const getPostLanguage = (post: Post) =>
-  post.slug.startsWith("english-") ? "en-US" : "sq-AL";
-
-// Calculate latest post date for dateModified
-const latestPostDate = allPosts.reduce((latest, post) => {
-  const postDate = new Date(post.date);
-  return postDate > latest ? postDate : latest;
-}, new Date(allPosts[0]?.date || new Date().toISOString()));
 
 export const metadata: Metadata = {
-  title: "Blog Elektrik – Këshilla & Udhëzime Profesionale | Alex Elektrik",
+  title: "Blog elektrik dhe guides praktike | Alex Elektrik",
   description:
-    "Lexoni artikujt profesionale për instalime elektrike, riparime, panele diellore dhe smart home në Tiranë. Also includes English guides for foreign customers.",
-  keywords: [
-    "blog elektrik",
-    "këshilla elektrike",
-    "artikuj elektricist",
-    "instalime elektrike",
-    "panele diellore",
-    "smart home",
-    "riparime elektrike",
-    "elektricist tirane",
-    "udhëzime elektrike",
-    "këshilla profesionale",
-    "electrician tirana blog",
-    "english electrician albania",
-    "emergency electrician tirana",
-    "ev charger albania",
-  ],
-  authors: [
-    {
-      name: "Alex Elektrik",
-      url: SITE_URL,
-    },
-  ],
-  category: "Home Services",
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
-    },
-  },
-  openGraph: {
-    title: "Blog Elektrik – Këshilla & Udhëzime Profesionale | Alex Elektrik",
-    description:
-      "Lexoni artikujt profesionale për instalime elektrike dhe smart home në Tiranë, plus English guides for foreign clients.",
-    type: "website",
-    locale: "sq_AL",
-    url: BLOG_URL,
-    siteName: "Alex Elektrik",
-    images: [
-      {
-        url: `${SITE_URL}/opengraph-image`,
-        width: 1200,
-        height: 630,
-        alt: "Blog Elektrik - Alex Elektrik",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Blog Elektrik – Këshilla & Udhëzime Profesionale | Alex Elektrik",
-    description:
-      "Lexoni artikujt profesionale për instalime elektrike, riparime, panele diellore dhe smart home në Tiranë.",
-    images: [`${SITE_URL}/twitter-image`],
-  },
+    "Lexoni guides praktike ne shqip dhe anglisht per urgjenca elektrike, instalime, panele, EV, apartamente, biznese dhe prona me qira.",
   alternates: {
     canonical: BLOG_URL,
   },
-  other: {
-    "article:author": "Alex Elektrik",
-    "article:published_time": allPosts[0]?.date || new Date().toISOString(),
-    "article:modified_time": latestPostDate.toISOString(),
-  },
 };
 
-export default async function BlogPage() {
-  "use cache";
-
-  // Organization Schema Reference
-  const organizationSchema = {
-    "@type": "Organization",
-    "@id": ORGANIZATION_ID,
-    name: "Alex Elektrik",
-    url: SITE_URL,
-    logo: `${SITE_URL}/logo.png`,
-    sameAs: [
-      "https://www.facebook.com/alexelectric",
-      "https://www.instagram.com/alexelectric",
-    ],
-  };
-
-  // CollectionPage/Blog Schema
-  const blogSchema = {
-    "@type": "CollectionPage",
-    "@id": BLOG_WEBPAGE_ID,
-    url: BLOG_URL,
-    name: "Blog Elektrik – Këshilla & Udhëzime Profesionale",
-    description:
-      "Lexoni artikujt profesionale për instalime elektrike, riparime, panele diellore dhe smart home në Tiranë. Përfshin edhe udhëzime në anglisht për klientë të huaj.",
-    publisher: {
-      "@id": ORGANIZATION_ID,
-    },
-    datePublished: allPosts[0]?.date || new Date().toISOString(),
-    dateModified: latestPostDate.toISOString(),
-    mainEntity: {
-      "@id": BLOG_ITEMLIST_ID,
-    },
-    inLanguage: ["sq-AL", "en-US"],
-  };
-
-  // ItemList Schema
-  const itemListSchema = {
-    "@type": "ItemList",
-    "@id": BLOG_ITEMLIST_ID,
-    numberOfItems: allPosts.length,
-    itemListElement: allPosts.map((post: Post, index: number) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      item: {
-        "@type": "Article",
-        "@id": `${BLOG_URL}/${post.slug}`,
-        headline: post.title,
-        description: post.description,
-        url: `${BLOG_URL}/${post.slug}`,
-        datePublished: new Date(post.date).toISOString(),
-        author: {
-          "@id": ORGANIZATION_ID,
-        },
-        publisher: {
-          "@id": ORGANIZATION_ID,
-        },
-        mainEntityOfPage: {
-          "@type": "WebPage",
-          "@id": `${BLOG_URL}/${post.slug}`,
-        },
-        keywords: post.tags.join(", "),
-        articleSection: "Electrical Services",
-        inLanguage: getPostLanguage(post),
-      },
-    })),
-  };
-
-  // BreadcrumbList Schema
-  const breadcrumbSchema = {
-    "@type": "BreadcrumbList",
-    "@id": `${BLOG_URL}#breadcrumb`,
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Kreu",
-        item: SITE_URL,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Blog",
-        item: BLOG_URL,
-      },
-    ],
-  };
-
-  // Combine all schemas using @graph
+export default function BlogPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ lang?: string }>;
+}) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      organizationSchema,
-      blogSchema,
-      itemListSchema,
-      breadcrumbSchema,
-      // Individual Article schemas for each post
-      ...allPosts.map((post: Post) => ({
-        "@type": "Article",
-        "@id": `${BLOG_URL}/${post.slug}#article`,
-        headline: post.title,
-        description: post.description,
-        url: `${BLOG_URL}/${post.slug}`,
-        datePublished: new Date(post.date).toISOString(),
-        dateModified: new Date(post.date).toISOString(),
-        author: {
-          "@id": ORGANIZATION_ID,
-        },
-        publisher: {
-          "@id": ORGANIZATION_ID,
-        },
-        mainEntityOfPage: {
-          "@type": "WebPage",
-          "@id": `${BLOG_URL}/${post.slug}`,
-        },
-        keywords: post.tags.join(", "),
-        articleSection: "Electrical Services",
-        inLanguage: getPostLanguage(post),
-      })),
+      {
+        "@type": "CollectionPage",
+        "@id": `${BLOG_URL}#collection`,
+        url: BLOG_URL,
+        name: "Blog elektrik dhe guides praktike",
+        description:
+          "Blog me guides ne shqip dhe anglisht per riparime elektrike, instalime, EV, solar dhe mirembajtje pronash.",
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${BLOG_URL}#itemlist`,
+        itemListElement: guidePages.map((guide, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: guide.title,
+          item: `${SITE_URL}/blog/${guide.slug}`,
+        })),
+      },
     ],
   };
 
   return (
     <>
       <script
+        id="blog-hub-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <section className="relative bg-gray-50 py-24 sm:py-32">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,123,255,0.1),_transparent_40%)]"></div>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight">
-            Blog & Këshilla
-            <span className="block text-gradient mt-2">
-              nga Eksperti Elektricist
-            </span>
-          </h1>
-          <p className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-gray-600">
-            Këtu gjeni artikuj, udhëzime dhe këshilla profesionale për të gjitha
-            nevojat tuaja elektrike.
-          </p>
-          <p className="mt-4 max-w-2xl mx-auto text-sm sm:text-base text-gray-500">
-            Looking for content in English? You will also find dedicated guides
-            for expats and foreign business owners.
-          </p>
-        </div>
-      </section>
+      <main className="bg-gradient-to-br from-gray-50 via-white to-gray-50 pb-20 pt-28">
+        <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <header className="card-modern p-8 sm:p-10">
+            <p className="inline-flex rounded-full bg-blue-100 px-3 py-1 text-sm font-semibold text-blue-800">
+              Blog and guides
+            </p>
+            <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
+              Blog elektrik dhe guides praktike
+            </h1>
+            <p className="mt-5 max-w-3xl text-lg leading-relaxed text-gray-600">
+              Ketu gjeni guides te lidhur drejtperdrejt me faqet tona te
+              sherbimit: urgjenca, riparime, instalime, panele, EV, prona me
+              qira dhe faqet ne anglisht per kliente nderkombetare.
+            </p>
+          </header>
 
-      <section className="py-24 sm:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ul
-            aria-label="blog posts"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {allPosts.map((post: Post, index) => (
-              <li aria-label={post.title} key={post.slug}>
-                <Link
-                  href={`/blog/${post.slug}`}
-                  key={post.slug}
-                  className="group flex flex-col h-full card-modern p-8 rounded-2xl hover-glow hover:scale-[1.02] transition-all duration-300 border border-gray-100 hover:border-blue-200"
-                  style={{ animationDelay: `${index * 100}ms` }}>
-                  {/* Date */}
-                  <p className="text-sm font-medium text-blue-600 mb-1">
-                    {new Date(post.date).toLocaleDateString("sq-AL", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
-                  </p>
-
-                  {/* Title */}
-                  <h2 className="mt-3 text-xl font-bold text-gray-900 group-hover:text-blue-700 transition-colors duration-300 leading-tight">
-                    {post.title}
-                  </h2>
-
-                  {/* Description */}
-                  <p className="mt-4 text-gray-600 group-hover:text-gray-700 transition-colors duration-300 leading-relaxed flex-grow">
-                    {post.description}
-                  </p>
-
-                  {/* Tags Section */}
-                  <div className="mt-6 flex flex-wrap gap-2">
-                    {post.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="inline-flex items-center bg-gradient-to-br from-blue-50 to-indigo-50 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-blue-100 group-hover:from-blue-100 group-hover:to-indigo-100 group-hover:border-blue-200 group-hover:text-blue-800 transition-all duration-300 shadow-sm">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Read More Button */}
-                  <div className="mt-6 pt-4 border-t border-gray-100 group-hover:border-blue-200 transition-colors duration-300">
-                    <span className="text-sm font-semibold text-blue-600 group-hover:text-blue-700 transition-colors duration-300 inline-flex items-center gap-2">
-                      Lexo më shumë
-                      <svg
-                        className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24">
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M9 5l7 7-7 7"></path>
-                      </svg>
-                    </span>
-                  </div>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+          <Suspense fallback={<BlogFilterSection />}>
+            <BlogFilterContent searchParams={searchParams} />
+          </Suspense>
+        </section>
+      </main>
     </>
   );
 }

@@ -12,6 +12,10 @@ const VALID_SOURCES = new Set<ContactSource>([
   "footer",
   "faq-section",
   "english-page",
+  "service-hub",
+  "service-page",
+  "english-service-page",
+  "guide-page",
 ]);
 
 type ContactClickRequest = {

@@ -4,7 +4,11 @@ export type ContactSource =
   | "contact-section"
   | "footer"
   | "faq-section"
-  | "english-page";
+  | "english-page"
+  | "service-hub"
+  | "service-page"
+  | "english-service-page"
+  | "guide-page";
 
 export const CONTACT_PHONE_NUMBER = "+355693289443";
 export const CONTACT_PHONE_DISPLAY = "355 69 328 9443";
