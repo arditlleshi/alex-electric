@@ -64,7 +64,7 @@ export const albanianServicePages = [
     hero:
       "Sherbim elektrik profesional ne Tirane per banesa, vila, zyra dhe biznese qe duan pune te sigurt, komunikim te qarte dhe reagim te shpejte.",
     summary:
-      "Kjo eshte faqja kryesore per kerkimin elektrik te Tiranes dhe duhet te mbuloje si emergjencat, ashtu edhe instalimet e planifikuara. Perqendrohet te lagjet, zonat e reja dhe objektet qe kerkojne ndihme te shpejte pa kompromis ne siguri.",
+      "Faqja kryesore per klientet ne Tirane qe kerkojne elektricist per urgjenca, riparime, instalime dhe kontrolle sigurie. Ajo flet qarte per lagjet, objektet rezidenciale dhe ambientet e biznesit qe kane nevoje per reagim te shpejte dhe pune te sigurt.",
     primaryKeyword: "elektricist ne tirane",
     secondaryKeywords: [
       "elektricist tirane",
@@ -121,17 +121,17 @@ export const albanianServicePages = [
       {
         question: "A mund te vij per nje problem te vogel si prize apo celes?",
         answer:
-          "Po, sepse punet e vogla shpesh zbulojne probleme me te medha ne instalim. Kjo faqe duhet te marre edhe kerkesa te tilla.",
+          "Po, sepse punet e vogla shpesh zbulojne probleme me te medha ne instalim dhe duhen pare me kujdes.",
       },
       {
         question: "A ofroni sherbim ne anglisht per klientet e huaj?",
         answer:
-          "Po, faqja shqiptare duhet te mbeshtese edhe klientet e huaj qe punojne ose jetojne ne Tirane dhe kerkojne shpjegim te qarte.",
+          "Po. Ofron komunikim te qarte edhe per kliente te huaj qe jetojne, punojne ose menaxhojne prone ne Tirane.",
       },
       {
         question: "A punoni per banesa dhe biznese?",
         answer:
-          "Po. Kjo faqe duhet te drejtoje si kerkimet rezidenciale, ashtu edhe ato komerciale ne Tirane.",
+          "Po. Sherbimi mbulon si banesa, ashtu edhe zyra, dyqane dhe ambiente biznesi ne Tirane.",
       },
     ],
     relatedServiceSlugs: [
@@ -158,7 +158,7 @@ export const albanianServicePages = [
     hero:
       "Sherbim elektrik i fokusuar ne Durres per prona bregdetare, apartamente, vila dhe biznese qe kerkojne pune te qete, te rregullt dhe te sigurt.",
     summary:
-      "Durresi ka nje perzierje te qarte mes banesave sezonale, vilave dhe objekteve turistike, prandaj faqja duhet te flase per nevoja praktike dhe jo per tekst te pergjithshem. Kjo faqe duhet te kapë kerkime lokale nga qendra deri te zona e plazhit dhe Golemi.",
+      "Sherbim elektrik per Durresin, Golemin dhe zonat bregdetare ku ka vila, apartamente sezonale, hotele dhe biznese me fluks. Fokusi eshte te kontrolli praktik, reagimi i shpejte dhe puna qe e ben pronen gati per perdorim ose sezon.",
     primaryKeyword: "elektricist durres",
     secondaryKeywords: [
       "sherbime elektrike durres",
@@ -210,12 +210,12 @@ export const albanianServicePages = [
       {
         question: "A punoni edhe ne zona turistike si Golem?",
         answer:
-          "Po. Kjo faqe duhet te shenoje qarte mbulimin e Durresit, Golemit dhe zonave bregdetare perreth.",
+          "Po. Sherbimi mbulon Durresin, Golemin dhe zonat bregdetare perreth sipas kerkeses.",
       },
       {
         question: "A eshte i pershtatshem sherbimi per vila dhe hotele?",
         answer:
-          "Po. Përmbajtja duhet te flase drejtperdrejt per nevojat e vilave, apartamenteve me qira dhe hoteleve te vogla.",
+          "Po. Sherbimi eshte i pershtatshem per vila, apartamente me qira, hotele te vogla dhe prona turistike.",
       },
       {
         question: "A vini per pune te vogla dhe kontrolla?",
@@ -225,7 +225,7 @@ export const albanianServicePages = [
       {
         question: "A ofroni konsultim per sezonin e veres?",
         answer:
-          "Po. Faqja duhet te nxise edhe kontrolla para sezonit kur ngarkesa ne prona bregdetare rritet ndjeshem.",
+          "Po. Kontrollet para sezonit jane te dobishme kur ngarkesa ne prona bregdetare rritet ndjeshem.",
       },
     ],
     relatedServiceSlugs: [
@@ -250,9 +250,9 @@ export const albanianServicePages = [
       "Elektricist urgjent ne Tirane per defekte te menjehershme, siguresa qe bien, era djegieje, rryme te dobet dhe riparime 24 ore.",
     h1: "Elektricist Urgjent ne Tirane",
     hero:
-      "Kur problemi elektrik nuk pret, kjo faqe duhet te sjelle telefonata te menjehershme nga Tirana dhe zonat qe duan reagim te shpejte.",
+      "Kur problemi elektrik nuk pret, ofrohet reagim i shpejte ne Tirane per erë djegieje, siguresa qe bien, shkendija dhe nderprerje te rrezikshme.",
     summary:
-      "Faqja duhet te mbuloje urgjencat me shenja te qarta rreziku dhe me gjuhe konkrete qe e ben klientin te veprojë shpejt. Ketu perqendrimi eshte te koha e reagimit, qartesia dhe siguria ne vend te pershkrimeve te gjata.",
+      "Sherbim urgjent per rastet kur ka rrezik te menjehershem ose ambienti mbetet pa rryme. Fokusi eshte te sinjalet e rrezikut, koha e reagimit dhe zgjidhja e shpejte qe e kthen instalimin ne gjendje te sigurt.",
     primaryKeyword: "elektricist urgjent tirane",
     secondaryKeywords: [
       "elektricist 24 ore tirane",
@@ -297,17 +297,17 @@ export const albanianServicePages = [
       {
         question: "Sa shpejt duhet te kontaktoj nese ndjej erë djegieje?",
         answer:
-          "Menjehere. Kjo faqe duhet te nxisë veprim te shpejte sa here ka erë, shkendija ose ngrohje te pazakonte.",
+          "Menjehere. Era e djegiejes, shkendijat ose ngrohja e pazakonte jane shenja qe duhen trajtuar pa vonese.",
       },
       {
         question: "A eshte kjo faqe vetem per emergjenca nate?",
         answer:
-          "Jo. Ajo duhet te mbuloje edhe defekte gjate dites qe s'mund te presin deri neser.",
+          "Jo. Vlen edhe per defekte gjate dites qe nuk mund te presin deri neser.",
       },
       {
         question: "A mund te ofroni kontroll pas riparimit?",
         answer:
-          "Po, dhe kjo duhet te shfaqet si pjese e standardit te faqes, jo si shtese e paqarte.",
+          "Po. Kontrolli final dhe sqarimi i shkakut jane pjese normale e nderhyrjes.",
       },
       {
         question: "A shkon kjo edhe per biznese?",
@@ -337,9 +337,9 @@ export const albanianServicePages = [
       "Riparime elektrike ne Tirane per priza, celesa, linja, ndricim, qark te shkurter, siguresa dhe probleme te perditshme elektrike.",
     h1: "Riparime Elektrike ne Tirane",
     hero:
-      "Faqe per riparime elektrike qe targeton problemet e perditshme qe prishin rehatine dhe sigurinë ne apartamente, vila dhe biznese ne Tirane.",
+      "Riparime elektrike ne Tirane per problemet e perditshme qe prishin rehatine dhe sigurinë ne apartamente, vila dhe biznese.",
     summary:
-      "Kjo faqe duhet te zere kerkime qe zakonisht fillojne me nje problem te vogel, por mund te perfundojne me demtim me te madh nese lihen pas dore. Ajo funksionon me mire kur jep shembuj te qarte te defekteve dhe zgjidhjeve te zakonshme.",
+      "Sherbim per riparimet qe nisin me nje prize, celes, drite ose linje problematike, por mund te kthehen shpejt ne defekt me te madh. Qellimi eshte gjetja e shkakut dhe rikthimi i funksionimit normal me zgjidhje te qarta.",
     primaryKeyword: "riparime elektrike tirane",
     secondaryKeywords: [
       "riparim prize",
@@ -384,12 +384,12 @@ export const albanianServicePages = [
       {
         question: "A merreni me riparime te vogla?",
         answer:
-          "Po, dhe kjo faqe duhet t'i pranoje qarte punet qe fillojne si te vogla por kerkojne dore te sigurt.",
+          "Po. Riparimet e vogla jane pjese e rendesishme e sherbimit, sidomos kur ndikojne ne siguri dhe perdorim te perditshem.",
       },
       {
         question: "A mund te vij per riparim ne nje apartament te vjeter?",
         answer:
-          "Po. Faqja duhet te mbuloje edhe instalime te vjetra ku zakonisht ka me shume nevoje per kontroll.",
+          "Po. Apartamentet me instalime te vjetra shpesh kane me shume nevoje per kontroll dhe riparim te kujdesshem.",
       },
       {
         question: "A jepni rekomandime pas riparimit?",
@@ -399,7 +399,7 @@ export const albanianServicePages = [
       {
         question: "A punoni edhe te fundjavat?",
         answer:
-          "Faqja mund te shfaqe disponibilitet fleksibel kur problemet nuk presin dite pune normale.",
+          "Po sipas rastit, sidomos kur problemi pengon perdorimin normal te ambientit.",
       },
     ],
     relatedServiceSlugs: [
@@ -424,9 +424,9 @@ export const albanianServicePages = [
       "Instalime elektrike ne Tirane per banesa te reja, rikonstruksione, zgjerim linjash, shtim qarqesh, ndricim dhe organizim paneli.",
     h1: "Instalime Elektrike ne Tirane",
     hero:
-      "Faqe per projektet qe fillojne nga zero ose nga rinovimi dhe kane nevoje per instalime te pastra, te menduara mire dhe te sigurta.",
+      "Instalime elektrike ne Tirane per projekte qe nisin nga zero ose kalojne ne rinovim dhe kane nevoje per zbatim te paster e te sigurt.",
     summary:
-      "Kjo faqe duhet te kapë kerkime qe lidhen me ndertime te reja, ndryshim te planimetrise dhe modernizim te sistemeve ekzistuese. Ajo duhet te flase per projektim, zbatim dhe organizim te qarqeve ne menyre te kuptueshme.",
+      "Sherbim per ndertime te reja, apartamente ne rinovim dhe sisteme qe duhen modernizuar. Fokusi eshte te projektimi i qarqeve, organizimi i panelit dhe instalimi qe e mban ngarkesen e sotme pa kompromis ne siguri.",
     primaryKeyword: "instalime elektrike tirane",
     secondaryKeywords: [
       "instalim elektrik apartament",
@@ -471,12 +471,12 @@ export const albanianServicePages = [
       {
         question: "A e beni instalimin nga zero?",
         answer:
-          "Po, dhe kjo duhet te jete nje nga qellimet kryesore te faqes: projekte te reja dhe modernizime te plota.",
+          "Po. Mbulohen si projektet e reja, ashtu edhe modernizimet e plota te instalimit ekzistues.",
       },
       {
         question: "A mund te shtoni qarqe te reja ne nje banese ekzistuese?",
         answer:
-          "Po. Faqja duhet te mbuloje edhe zgjerimin e instalimit pa prishur rendin e pjeses tjeter te shtepise.",
+          "Po. Mund te shtohen qarqe te reja edhe ne nje banese ekzistuese pa prishur rendin e pjeses tjeter te shtepise.",
       },
       {
         question: "A i merrni edhe projektet e vila-ve?",
@@ -511,9 +511,9 @@ export const albanianServicePages = [
       "Diagnostikim elektrik ne Tirane per defekte te fshehura, qark te shkurter, ngarkese te tepruar, ngrohje linjash dhe kontrolle sigurie.",
     h1: "Diagnostikim Elektrik ne Tirane",
     hero:
-      "Faqe per rastet kur problemi nuk duket qarte dhe duhet gjetur burimi para se te behet demtim me i madh.",
+      "Diagnostikim elektrik ne Tirane per rastet kur problemi nuk duket qarte dhe duhet gjetur burimi para se te shkaktoje demtim me te madh.",
     summary:
-      "Kjo faqe duhet te shpjegoje pse diagnostikimi i mire kursen kohe, para dhe rrezik. Eshte e dobishme per objekte ku defekti shfaqet here pas here dhe nuk zgjidhet me zevendesim te rastesishem.",
+      "Sherbim per rastet kur defekti vjen e iken, siguresat bien pa arsye te qarte ose linja nxeh pa u kuptuar pika problematike. Diagnostikimi i mire kursen kohe, para dhe riparime te kota sepse zbulon shkakun real.",
     primaryKeyword: "diagnostikim elektrik tirane",
     secondaryKeywords: [
       "kontroll elektrik",
@@ -558,7 +558,7 @@ export const albanianServicePages = [
       {
         question: "A eshte diagnostikimi ndryshe nga riparimi?",
         answer:
-          "Po. Kjo faqe duhet te njohe qarte momentin kur duhet gjetur burimi para se te fillohet me zevendesime.",
+          "Po. Diagnostikimi perdoret kur duhet gjetur shkaku i vertete para se te nisen zevendesimet ose riparimet.",
       },
       {
         question: "A e perdorni edhe per probleme qe vijne e ikin?",
@@ -568,12 +568,12 @@ export const albanianServicePages = [
       {
         question: "A mund ta perdor kete sherbim para se te blej nje prone?",
         answer:
-          "Po. Kjo faqe eshte e pershtatshme per blerje apartamenti ose kontroll para marrjes ne dorezim.",
+          "Po. Eshte zgjedhje e mire edhe per blerje apartamenti ose kontroll para marrjes ne dorezim.",
       },
       {
         question: "A jepni raport te qarte te gjetjeve?",
         answer:
-          "Po, dhe kjo duhet te jete pjese e vleres qe percjell faqja: qartesi dhe jo hamendje.",
+          "Po. Pas kontrollit jepen gjetje te qarta dhe rekomandime konkrete, jo hamendje.",
       },
     ],
     relatedServiceSlugs: [
@@ -593,14 +593,14 @@ export const albanianServicePages = [
     slug: "panele-diellore-tirane",
     locale: "sq-AL",
     title: "Panele Diellore ne Tirane",
-    metaTitle: "Panele Diellore ne Tirane | Instalime, Projektim & Mirembajtje",
+    metaTitle: "Panele Diellore ne Tirane | Projektim dhe Mirembajtje",
     metaDescription:
       "Panele diellore ne Tirane per shtepi, vila dhe biznese me projektim, instalim, lidhje te sigurte dhe mirembajtje afatgjate.",
     h1: "Panele Diellore ne Tirane",
     hero:
-      "Faqe per instalime fotovoltaike qe duan te nxjerrin lead-a nga pronaret qe po kerkojne kursim, pavaresi dhe nje zgjidhje te menduar mire.",
+      "Panele diellore ne Tirane per shtepi, vila dhe biznese qe kerkojne kursim, planifikim te sakte dhe lidhje te sigurt me instalimin ekzistues.",
     summary:
-      "Kjo faqe duhet te shpjegoje jo vetem instalimin, por edhe pse nje sistem diellor duhet planifikuar sipas konsumit, kulmit dhe perdorimit real. Ajo eshte me e forte kur flitet per vila, godina te vogla dhe biznese me konsum te qendrueshem.",
+      "Sherbim qe mbulon vleresimin, dimensionimin dhe integrimin e sistemit sipas konsumit real, kulmit dhe objektit. Eshte veçanerisht i pershtatshem per vila, godina te vogla dhe biznese qe duan sistem te planifikuar me kujdes.",
     primaryKeyword: "panele diellore tirane",
     secondaryKeywords: [
       "instalim panele diellore",
@@ -645,17 +645,17 @@ export const albanianServicePages = [
       {
         question: "A e beni edhe vleresimin para instalimit?",
         answer:
-          "Po. Kjo faqe duhet te shese edhe kontrollin e parapergatitjes, jo vetem montimin.",
+          "Po. Vleresimi paraprak eshte pjese e sherbimit dhe vendos bazen per nje sistem qe funksionon mire.",
       },
       {
         question: "A eshte kjo faqe per vila dhe biznese?",
         answer:
-          "Po, dhe duhet te permende qarte skenarë me konsum te ndryshem qe kerkojne projektim te kujdesshem.",
+          "Po. Sherbimi eshte i pershtatshem si per vila, ashtu edhe per biznese me konsum te ndryshem.",
       },
       {
         question: "A e lidhni sistemin me panelin ekzistues?",
         answer:
-          "Po, sepse integrimi i sigurt eshte pjese kyçe e faqes dhe jo detaj anesor.",
+          "Po. Integrimi i sigurt me panelin ekzistues eshte pjese kyçe e projektit.",
       },
       {
         question: "A ofroni mirembajtje pas instalimit?",
@@ -685,9 +685,9 @@ export const albanianServicePages = [
       "Karikues EV ne Tirane per instalime ne shtepi dhe biznese me kontroll ngarkese, mbrojtje, lidhje te sigurt dhe planifikim te qarte.",
     h1: "Karikues EV ne Tirane",
     hero:
-      "Faqe per instalim karikuesi EV qe duhet te kapë kerkime nga pronare shtepie, garazhesh dhe biznese qe po kalojne ne levizje elektrike.",
+      "Karikues EV ne Tirane per shtepi, garazhe dhe biznese qe po kalojne ne levizje elektrike dhe duan instalim te sigurt.",
     summary:
-      "Kjo faqe duhet te shese jo vetem montimin, por edhe qartesine: a e mban instalimi, cfare fuqie duhet dhe ku vendoset paisja. Ajo funksionon me mire kur flet per banesa, parkingje private dhe biznese me fluks te qendrueshem.",
+      "Sherbim qe mbulon jo vetem montimin, por edhe kontrollin e panelit, zgjedhjen e fuqise dhe vendosjen me praktike te pajisjes. Eshte i pershtatshem per banesa, parkingje private dhe biznese me fluks te qendrueshem.",
     primaryKeyword: "karikues ev tirane",
     secondaryKeywords: [
       "instalim karikues ev",
@@ -772,9 +772,9 @@ export const albanianServicePages = [
       "Panel elektrik ne Tirane per zevendesim kuadri, riorganizim siguresash, mbrojtje me te mire dhe permiresim te instalimit ekzistues.",
     h1: "Panel Elektrik ne Tirane",
     hero:
-      "Faqe per targetimin e kerkesave qe lidhen me panelin, siguresat dhe kuadrin elektrik kur instalimi ka nevoje per rregull dhe mbrojtje.",
+      "Panel elektrik ne Tirane per raste kur kuadri, siguresat dhe ndarja e qarqeve kerkojne me shume rregull, qartesi dhe mbrojtje.",
     summary:
-      "Kjo faqe duhet te drejtoje kerkime qe zakonisht lindin kur instalimi po mbingarkohet ose paneli eshte bere i veshtire per t'u kuptuar. Ajo duhet te flase per qartesi, ndarje qarqesh dhe modernizim te siguresave.",
+      "Sherbim per instalime qe po mbingarkohen ose panele qe jane bere te veshtira per t'u kuptuar dhe mirembajtur. Fokusi eshte te qartesia, ndarja e qarqeve dhe modernizimi i siguresave sipas ngarkeses reale.",
     primaryKeyword: "panel elektrik tirane",
     secondaryKeywords: [
       "kuader elektrik",
@@ -819,12 +819,12 @@ export const albanianServicePages = [
       {
         question: "A eshte paneli elektrik i njejte me kuadrin elektrik?",
         answer:
-          "Ne kete faqe mund t'i trajtosh si kerkime te aferta dhe te shpjegosh qarte se po flitet per qendren e kontrollit te instalimit.",
+          "Po, zakonisht perdoren si kerkime te aferta per qendren e kontrollit te instalimit elektrik.",
       },
       {
         question: "A mund te zevendesohet paneli i vjeter me nje me te qarte?",
         answer:
-          "Po, dhe kjo duhet te jete nje nga qellimet kryesore te faqes.",
+          "Po. Paneli i vjeter mund te zevendesohet ose riorganizohet per me shume qartesi dhe sigurim.",
       },
       {
         question: "A e beni edhe etiketimin e qarqeve?",
@@ -834,7 +834,7 @@ export const albanianServicePages = [
       {
         question: "A lidhet kjo me instalime apo vetem me riparim?",
         answer:
-          "Me te dyja, por faqja duhet te theksoje sidomos modernizimin dhe mbrojtjen.",
+          "Me te dyja. Sherbimi lidhet si me riparimin, ashtu edhe me modernizimin dhe mbrojtjen e instalimit.",
       },
     ],
     relatedServiceSlugs: [
@@ -859,9 +859,9 @@ export const albanianServicePages = [
       "Ndricim LED ne Tirane per banesa, zyra, shkalle, oborre dhe biznese me instalim spotesh, ndricim dekorativ dhe zgjidhje praktike.",
     h1: "Ndricim LED ne Tirane",
     hero:
-      "Faqe qe duhet te kape kerkime per ndricim modern, eficient dhe estetik ne apartamente, biznese dhe hapesira te perbashketa ne Tirane.",
+      "Ndricim LED ne Tirane per apartamente, biznese dhe hapesira te perbashketa qe kerkojne zgjidhje moderne, efikase dhe estetike.",
     summary:
-      "Kjo faqe duhet te perfshije si performancen ashtu edhe pamjen, sepse ndricimi shpesh zgjidhet per funksion dhe atmosfere. Eshte nje vend i mire per te folur per spotet, rripat LED dhe ndricimin e perhershem ose dekorativ.",
+      "Sherbim qe kombinon performancen me pamjen, sepse ndricimi zgjidhet si per funksion, ashtu edhe per atmosfere. Mbulon spote, rripa LED, ndricim te perhershem dhe zgjidhje dekorative per ambiente te ndryshme.",
     primaryKeyword: "ndricim led tirane",
     secondaryKeywords: [
       "instalim spotesh",
@@ -906,7 +906,7 @@ export const albanianServicePages = [
       {
         question: "A instaloni spotesh dhe rripa LED?",
         answer:
-          "Po, dhe kjo duhet te jete e qarte ne faqen e ndricimit sepse jane kerkime shume te zakonshme.",
+          "Po. Instalimi i spotesh dhe rripave LED eshte nje nga kerkesat me te zakonshme ne kete sherbim.",
       },
       {
         question: "A e beni ndricimin edhe per shkalle ose oborr?",
@@ -916,7 +916,7 @@ export const albanianServicePages = [
       {
         question: "A mund te kombinohet ndricim funksional dhe dekorativ?",
         answer:
-          "Po. Faqja duhet te tregoje se zgjidhjet mund te jene edhe praktike edhe estetike.",
+          "Po. Zgjidhjet mund te jene njekohesisht praktike, kursimtare dhe estetike.",
       },
       {
         question: "A eshte i pershtatshem per zyra dhe dyqane?",
@@ -946,9 +946,9 @@ export const albanianServicePages = [
       "Priza dhe celesa ne Tirane per nderrim, shtim, riparim, perkthim te linjave dhe zgjidhje te sigurta per banesa dhe biznese.",
     h1: "Priza dhe Celesa ne Tirane",
     hero:
-      "Faqe e vogel ne dukje, por me shume volum kerkimesh, sepse shumica e problemeve elektrike fillojne pikerisht te priza ose celesi.",
+      "Priza dhe celesa ne Tirane per rastet kur problemi nis te pika e perdorimit dhe duhet zgjidhje e shpejte e e sigurt.",
     summary:
-      "Kjo faqe duhet te perfshije punet e shpeshta te shtepise qe duken te vogla, por jane te rendesishme per siguri dhe perdorim normal. Ajo eshte e vlefshme per apartamente, zyra dhe objekte me perdorim te larte.",
+      "Sherbim per punet e shpeshta qe duken te vogla, por ndikojne drejtperdrejt ne siguri dhe perdorim normal. Eshte i vlefshem per apartamente, zyra dhe objekte me perdorim te larte ku pikat elektrike punojne cdo dite.",
     primaryKeyword: "priza dhe celesa tirane",
     secondaryKeywords: [
       "nderrim prizash",
@@ -993,7 +993,7 @@ export const albanianServicePages = [
       {
         question: "A e mbuloni vetem zevendesimin apo edhe shtimin e pikave?",
         answer:
-          "Te dyja. Kjo faqe duhet te kapë si punet e vogla ashtu edhe shtimet praktike.",
+          "Te dyja. Sherbimi mbulon si zevendesimin, ashtu edhe shtimin praktik te pikave te reja.",
       },
       {
         question: "A eshte kjo faqe e pershtatshme per kuzhina dhe banjo?",
@@ -1033,9 +1033,9 @@ export const albanianServicePages = [
       "Mirembajtje elektrike per biznese ne Tirane dhe Durres per zyra, dyqane, restorante, lokale dhe objekte qe kerkojne stabilitet.",
     h1: "Mirembajtje Elektrike per Biznese",
     hero:
-      "Faqe qe duhet te flase per pergjegjesine, vazhdimesine e punes dhe parandalimin e nderprerjeve qe kushtojne para ne biznes.",
+      "Mirembajtje elektrike per biznese qe duan vazhdimesi pune dhe parandalim te nderprerjeve qe kushtojne kohe e para.",
     summary:
-      "Kjo faqe duhet te synoje pronare dhe menaxhere qe duan te shmangin ndaljet e papritura dhe te kene kontroll me te mire mbi instalimin. Ajo eshte e forte kur flet per kontrata periodike, kontrolle dhe planifikim.",
+      "Sherbim per pronare dhe menaxhere qe duan te shmangin ndaljet e papritura dhe te kene kontroll me te mire mbi instalimin. Eshte i pershtatshem per kontrolle periodike, riparime parandaluese dhe planifikim te rregullt te mirembajtjes.",
     primaryKeyword: "mirembajtje elektrike biznesi",
     secondaryKeywords: [
       "mirembajtje elektrike",
@@ -1080,12 +1080,12 @@ export const albanianServicePages = [
       {
         question: "A mund te planifikohet mirembajtje e rregullt?",
         answer:
-          "Po, dhe kjo duhet te jete pjese e qendres se faqes sepse bizneset kerkojne vazhdimesi.",
+          "Po. Mirembajtja e rregullt eshte nje nga arsyet kryesore pse bizneset e perdorin kete sherbim.",
       },
       {
         question: "A punoni edhe ne Durres?",
         answer:
-          "Po, dhe faqja duhet ta permende qarte sepse bizneset bregdetare kane nevoje per stabilitet te larte.",
+          "Po. Sherbimi mbulon edhe Durresin, sidomos per biznese qe kane nevoje per stabilitet te larte.",
       },
       {
         question: "A eshte kjo e vlefshme per zyra dhe dyqane?",
@@ -1095,7 +1095,7 @@ export const albanianServicePages = [
       {
         question: "A mund te behet pas puneve te orarit normal?",
         answer:
-          "Po, nese duhet, faqja mund te shfaqe fleksibilitet per te mos prishur operimin e biznesit.",
+          "Po, sipas rastit, per te mos prishur operimin normal te biznesit.",
       },
     ],
     relatedServiceSlugs: [
@@ -1120,9 +1120,9 @@ export const albanianServicePages = [
       "Smart home ne Tirane per ndricim inteligjent, kontroll ne distance, sensorë dhe automatizim te banesave, vilave dhe zyrave.",
     h1: "Smart Home ne Tirane",
     hero:
-      "Faqe per klientet qe duan automatizim modern, komoditet dhe kontroll me te mire te ndricimit dhe pajisjeve ne shtepi ose zyre.",
+      "Smart home ne Tirane per kliente qe duan automatizim modern, komoditet dhe kontroll me te mire te ndricimit dhe pajisjeve ne shtepi ose zyre.",
     summary:
-      "Kjo faqe duhet te flase per zgjidhje praktike dhe jo per teknologji te komplikuar. Ajo eshte me e forte kur shpjegon si smart home e ben jetën me te thjeshte dhe me te rregullt.",
+      "Sherbim per zgjidhje praktike smart home qe e bejne jeten me te thjeshte, me te rregullt dhe me te kontrollueshme. Fokusi eshte te automatizimi i dobishem, jo te teknologjia e komplikuar pa vlere ne perdorim te perditshem.",
     primaryKeyword: "smart home tirane",
     secondaryKeywords: [
       "automatizim shtepie",
@@ -1167,7 +1167,7 @@ export const albanianServicePages = [
       {
         question: "A duhet instalim i ri per smart home?",
         answer:
-          "Jo gjithmone. Kjo faqe duhet te shpjegoje se nje pjese e zgjidhjeve mund te shtohen edhe mbi instalimin ekzistues.",
+          "Jo gjithmone. Nje pjese e zgjidhjeve mund te shtohen edhe mbi instalimin ekzistues.",
       },
       {
         question: "A eshte smart home vetem per vila?",
@@ -1177,7 +1177,7 @@ export const albanianServicePages = [
       {
         question: "A e beni edhe ndricimin inteligjent?",
         answer:
-          "Po, dhe kjo eshte nje nga hyrjet me te qarta per kete faqe.",
+          "Po. Ndricimi inteligjent eshte nje nga hyrjet me te zakonshme per kete sherbim.",
       },
       {
         question: "A eshte zgjidhje e pershtatshme per zyra?",
@@ -1208,9 +1208,9 @@ export const albanianServicePages = [
       "Elektricist per apartamente ne Tirane dhe Durres per kontroll, riparime, instalime, shtim pikash dhe permiresim te instalimit.",
     h1: "Elektricist per Apartamente",
     hero:
-      "Faqe qe duhet te flase direkt me pronaret dhe qiramarresit e apartamenteve qe kerkojne zgjidhje te shpejta dhe praktike.",
+      "Elektricist per apartamente ne Tirane dhe Durres per pronare dhe qiramarres qe kerkojne zgjidhje te shpejta dhe praktike.",
     summary:
-      "Kjo faqe duhet te mbuloje problemet e zakonshme te apartamenteve te vjetra dhe te reja, nga mbingarkesa deri te pika te pakta. Ajo eshte shume e vlefshme per banesa, qira dhe apartamente te reja ne Tirane e Durres.",
+      "Sherbim per problemet e zakonshme te apartamenteve te vjetra dhe te reja, nga mbingarkesa dhe pikat e pakta te energjise deri te kontrollet para hyrjes ne prone. Eshte i vlefshem per banesa, qira dhe apartamente te reja ne Tirane e Durres.",
     primaryKeyword: "elektricist per apartamente",
     secondaryKeywords: [
       "instalime apartament",
@@ -1255,12 +1255,12 @@ export const albanianServicePages = [
       {
         question: "A eshte kjo faqe per apartamente te vjetra dhe te reja?",
         answer:
-          "Po, dhe duhet ta thote qarte sepse te dy llojet e pronave kerkojne qasje te ndryshme.",
+          "Po. Si apartamentet e vjetra, ashtu edhe ato te reja kerkojne qasje te ndryshme dhe kontrolle te pershtatura.",
       },
       {
         question: "A mund te behen shtime para se te hyje qiramarresi?",
         answer:
-          "Po, kjo eshte nje nga rastet me te zakonshme qe duhet te mbuloje faqja.",
+          "Po. Ky eshte nje nga rastet me te zakonshme para hyrjes se qiramarresit ose dorëzimit te apartamentit.",
       },
       {
         question: "A shkon edhe per blerje apartamenti?",
@@ -1292,12 +1292,12 @@ export const albanianServicePages = [
     title: "Elektricist per Vila",
     metaTitle: "Elektricist per Vila | Instalime, Ndricim & Kontroll",
     metaDescription:
-      "Elektricist per vila ne Tirane, Durres dhe zonat perreth per instalime, ndricim, panele, smart home dhe mirembajtje.",
+      "Elektricist per vila ne Tirane, Durres dhe zonat perreth per instalime, ndricim, panele, smart home dhe mirembajtje sezonale.",
     h1: "Elektricist per Vila",
     hero:
-      "Faqe per vila qe zakonisht kane me shume zona, me shume ngarkese dhe me shume nevoje per planifikim te paster e te kujdesshem.",
+      "Elektricist per vila qe kane me shume zona, me shume ngarkese dhe me shume nevoje per planifikim te paster e te kujdesshem.",
     summary:
-      "Kjo faqe duhet te flase per ambientet me te medha, oborret, ndricimin e jashtem dhe panelin qe duhet ta mbaje ngarkesen pa probleme. Eshte veçanerisht e vlefshme per zona si Tirana e zgjeruar dhe vilat ne Durres apo perreth.",
+      "Sherbim per vila me ambiente te medha, oborre, ndricim te jashtem dhe panele qe duhet ta mbajne ngarkesen pa probleme. Eshte veçanerisht i dobishem per zonat rezidenciale ne Tirane, Durres dhe pronat sezonale perreth.",
     primaryKeyword: "elektricist per vila",
     secondaryKeywords: [
       "instalime vile",
@@ -1342,7 +1342,7 @@ export const albanianServicePages = [
       {
         question: "A e mbuloni edhe ndricimin e jashtem?",
         answer:
-          "Po, dhe kjo duhet te jete nje pjese e fortë e faqes sepse vilat e kerkojne shpesh.",
+          "Po. Ndricimi i jashtem dhe i oborrit eshte nje nga kerkesat me te zakonshme per vila.",
       },
       {
         question: "A punoni ne Durres dhe zonat bregdetare?",
@@ -1352,12 +1352,12 @@ export const albanianServicePages = [
       {
         question: "A mund te shtohet smart home ne vile?",
         answer:
-          "Po, dhe kjo e ben faqen te fortë edhe per klientet qe duan modernizim.",
+          "Po. Smart home mund te shtohet ne vile kur kerkohet me shume komoditet dhe kontroll.",
       },
       {
         question: "A jepni ndihme edhe per panele diellore ose EV?",
         answer:
-          "Po, faqja duhet t'i lidhë keto sherbime me rastet kur vila ka konsum dhe hapësirë te pershtatshme.",
+          "Po. Vila eshte shpesh prone e pershtatshme edhe per panele diellore ose karikues EV.",
       },
     ],
     relatedServiceSlugs: [
@@ -1382,9 +1382,9 @@ export const albanianServicePages = [
       "Elektricist per restorante dhe hotele ne Tirane, Durres dhe zonat turistike per ndricim, kuzhine, panele dhe mirembajtje.",
     h1: "Elektricist per Restorante dhe Hotele",
     hero:
-      "Faqe qe duhet te flase per bizneset me fluks te larte ku nje defekt i vogel mund te prishë sherbimin, rezervimet ose eksperiencen e klientit.",
+      "Elektricist per restorante dhe hotele ku nje defekt i vogel mund te prishë sherbimin, rezervimet ose eksperiencen e klientit.",
     summary:
-      "Kjo faqe duhet te targetoje restorante, hotele dhe struktura mikpritjeje qe kane nevoje per stabilitet, siguri dhe reagim te shpejte. Eshte veçanerisht e forte ne Tirane dhe Durres, ku fluksi i klienteve rritet shpejt ne sezona te caktuara.",
+      "Sherbim per restorante, hotele dhe struktura mikpritjeje qe kane nevoje per stabilitet, siguri dhe reagim te shpejte. Eshte veçanerisht i vlefshem ne Tirane dhe Durres, ku fluksi i klienteve rritet shpejt ne sezona te caktuara.",
     primaryKeyword: "elektricist per restorante dhe hotele",
     secondaryKeywords: [
       "elektricist per restorante",
@@ -1429,12 +1429,12 @@ export const albanianServicePages = [
       {
         question: "A punoni para sezonit te larte?",
         answer:
-          "Po, dhe kjo duhet te jete nje nga ofertat kryesore te faqes per hotele dhe restorante.",
+          "Po. Kontrollet para sezonit te larte jane nje nga rastet me te zakonshme per hotele dhe restorante.",
       },
       {
         question: "A e mbuloni edhe Durresin dhe zonat turistike?",
         answer:
-          "Po, kjo eshte shume e rendesishme per kete page sepse bizneset aty jane te lidhura me sezonin.",
+          "Po. Sherbimi mbulon edhe Durresin dhe zonat turistike ku bizneset varen nga sezoni.",
       },
       {
         question: "A mund te behet plan mirembajtjeje periodike?",
@@ -1469,9 +1469,9 @@ export const albanianServicePages = [
       "Elektricist per zyra dhe dyqane ne Tirane dhe Durres per instalime, riparime, ndricim, panel dhe mirembajtje te vazhdueshme.",
     h1: "Elektricist per Zyra dhe Dyqane",
     hero:
-      "Faqe per biznese te vogla dhe te mesme qe duan ndricim, stabilitet dhe riparime pa e ndalur punen e perditshme.",
+      "Sherbim per biznese te vogla dhe te mesme qe duan ndricim, stabilitet dhe riparime pa e ndalur punen e perditshme.",
     summary:
-      "Kjo faqe duhet te flase per hapësira ku rryma, ndricimi dhe pikat e punes ndikojne drejtperdrejt ne operim dhe shitje. Eshte e forte per Tirane dhe Durres sepse aty kerkohet vazhdimesi dhe jo thjesht rregullim teknik.",
+      "Sherbim per hapësira ku rryma, ndricimi dhe pikat e punes ndikojne drejtperdrejt ne operim dhe shitje. Eshte i forte per Tirane dhe Durres sepse aty kerkohet vazhdimesi dhe jo thjesht rregullim teknik.",
     primaryKeyword: "elektricist per zyra dhe dyqane",
     secondaryKeywords: [
       "elektricist per zyra",
@@ -1516,7 +1516,7 @@ export const albanianServicePages = [
       {
         question: "A punoni pa e ndalur totalisht aktivitetin?",
         answer:
-          "Po, dhe kjo duhet te jete nje avantazh i qarte per kete page.",
+          "Po. Puna planifikohet me sa me pak nderprerje per aktivitetin e perditshëm.",
       },
       {
         question: "A mbuloni edhe dyqanet ne Durres?",
@@ -1526,7 +1526,7 @@ export const albanianServicePages = [
       {
         question: "A mund te shtoni pika te reja pune?",
         answer:
-          "Po, dhe kjo duhet te jete pjese e forte e faqes sepse eshte kerkese e shpeshtë.",
+          "Po. Shtimi i pikave te reja te punes eshte nje nga kerkesat me te shpeshta per zyra dhe dyqane.",
       },
       {
         question: "A e beni edhe ndricimin e vitrinave ose ekspozimit?",

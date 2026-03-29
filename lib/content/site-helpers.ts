@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/site";
 import {
+  getOpenGraphImageUrl,
+  getTwitterImageUrl,
+} from "@/lib/seo";
+import {
   getAlbanianServicePage,
   type AlbanianServicePageEntry,
 } from "./albanian-services";
@@ -109,9 +113,14 @@ export function buildServiceMetadata(
     alternates?: Record<string, string>;
   },
 ): Metadata {
+  const canonicalPath = options?.canonical
+    ? new URL(options.canonical).pathname
+    : undefined;
+
   return {
     title: service.metaTitle,
     description: service.metaDescription,
+    metadataBase: new URL(SITE_URL),
     keywords: [service.primaryKeyword, ...service.secondaryKeywords],
     alternates: {
       canonical: options?.canonical,
@@ -125,7 +134,7 @@ export function buildServiceMetadata(
       locale: service.locale.replace("-", "_"),
       images: [
         {
-          url: `${SITE_URL}/opengraph-image`,
+          url: getOpenGraphImageUrl(canonicalPath),
           width: 1200,
           height: 630,
           alt: service.title,
@@ -136,7 +145,7 @@ export function buildServiceMetadata(
       card: "summary_large_image",
       title: service.metaTitle,
       description: service.metaDescription,
-      images: [`${SITE_URL}/twitter-image`],
+      images: [getTwitterImageUrl(canonicalPath)],
     },
   };
 }

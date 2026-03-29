@@ -123,9 +123,9 @@ const rawGuidePages = [
     path: blogPath(englishGuideSlugs.englishTiranaGuide),
     locale: "en-US",
     guideType: "existing",
-    title: "English Guide: How to hire an electrician in Tirana (for expats and foreign businesses)",
+    title: "English-speaking electrician in Tirana: what expats should check",
     description:
-      "A practical English guide to choosing a reliable electrician in Tirana, with safety checks, pricing expectations, and emergency response tips.",
+      "A practical English guide to finding an English-speaking electrician in Tirana, with safety checks, pricing expectations, and emergency-response tips.",
     excerpt:
       "A simple buying guide for foreign residents, landlords, and business owners who need electrical help in Tirana without language friction.",
     eyebrow: "English guide",
@@ -211,7 +211,7 @@ const rawGuidePages = [
     path: blogPath("instalime-elektrike-shtepi-zyra-biznese"),
     locale: "sq-AL",
     guideType: "existing",
-    title: "Udhëzues për instalime moderne elektrike në shtëpi, zyra dhe biznese",
+    title: "Instalime elektrike moderne per shtepi, zyra dhe biznese",
     description:
       "Një përmbledhje profesionale e shërbimeve elektrike: instalime, riparime, panele diellore dhe stacione karikimi për automjete elektrike.",
     excerpt:
@@ -305,7 +305,7 @@ const rawGuidePages = [
     guideType: "existing",
     title: "Si të zgjedhësh një elektricist të besueshëm në Tiranë",
     description:
-      "Këshillat kryesore për të identifikuar një profesionist të kualifikuar dhe të besueshëm për nevojat tuaja elektrike.",
+      "Keshillat kryesore per te identifikuar nje profesionist te kualifikuar, te besueshem dhe te qarte ne komunikim per nevojat tuaja elektrike.",
     excerpt:
       "Një guidë e thjeshtë për të krahasuar ofruesit e shërbimit pa u fokusuar vetëm te çmimi më i ulët.",
     eyebrow: "Si të zgjedhësh",
@@ -361,9 +361,9 @@ const rawGuidePages = [
     path: blogPath("shenja-per-elektricist-urgjent"),
     locale: "sq-AL",
     guideType: "existing",
-    title: "5 shenja që ke nevojë për një elektricist urgjent",
+    title: "5 shenja kur duhet nje elektricist urgjent ne Tirane",
     description:
-      "Sinjalet kryesore që tregojnë se duhet të thërrisni menjëherë një elektricist profesionist.",
+      "Shenjat kryesore qe tregojne kur duhet te telefononi menjehere nje elektricist urgjent dhe cfare duhet te kontrolloni pa humbur kohe.",
     excerpt:
       "Një listë e qartë e shenjave që tregojnë se problemi elektrik nuk duhet lënë për më vonë.",
     eyebrow: "Urgjencë",
@@ -414,9 +414,9 @@ const rawGuidePages = [
     path: blogPath("instalimi-i-panelit-diellor"),
     locale: "sq-AL",
     guideType: "existing",
-    title: "Si funksionon instalimi i panelit diellor në shtëpi",
+    title: "Si funksionon instalimi i panelit diellor ne shtepi",
     description:
-      "Një udhëzues hap-pas-hapi për të kuptuar procesin e instalimit të paneleve diellore.",
+      "Nje udhezues hap pas hapi per te kuptuar procesin e instalimit te paneleve diellore, kostot kryesore dhe lidhjen me panelin elektrik.",
     excerpt:
       "Një guidë bazike për pronarët që duan të kuptojnë si planifikohet, montohet dhe testohet një sistem solar.",
     eyebrow: "Energji diellore",
@@ -472,9 +472,9 @@ const rawGuidePages = [
     path: blogPath(albanianGuideSlugs.installCost),
     locale: "sq-AL",
     guideType: "planned",
-    title: "Sa kushton instalimi elektrik ne apartament",
+    title: "Sa kushton instalimi elektrik ne apartament ne Tirane",
     description:
-      "Një udhëzues praktik për të kuptuar çfarë ndikon në koston e instalimit elektrik në apartament.",
+      "Nje udhezues praktik per te kuptuar cfare ndikon ne koston e instalimit elektrik ne apartament, nga qarqet dhe paneli te puna ne terren.",
     excerpt:
       "Një guidë që ndihmon pronarët dhe qiramarrësit të kuptojnë pse çmimi ndryshon nga një apartament te tjetri.",
     eyebrow: "Kosto dhe planifikim",
@@ -526,9 +526,9 @@ const rawGuidePages = [
     path: blogPath(albanianGuideSlugs.panelGuide),
     locale: "sq-AL",
     guideType: "planned",
-    title: "Si zgjidhet paneli elektrik",
+    title: "Si zgjidhet paneli elektrik per apartament ose vile",
     description:
-      "Një guidë për të kuptuar si zgjidhet paneli elektrik sipas ngarkesës, sigurisë dhe zgjerimit të ardhshëm.",
+      "Nje guide per te kuptuar si zgjidhet paneli elektrik sipas ngarkeses, sigurise, mbrojtjes dhe zgjerimit te ardhshem te prones.",
     excerpt:
       "Paneli elektrik është zemra e instalimit dhe duhet zgjedhur me kujdes, jo vetëm sipas çmimit.",
     eyebrow: "Panel dhe siguri",
@@ -578,9 +578,9 @@ const rawGuidePages = [
     path: blogPath(albanianGuideSlugs.evChargerGuide),
     locale: "sq-AL",
     guideType: "planned",
-    title: "Si zgjidhet karikuesi EV per shtepi",
+    title: "Si zgjidhet karikuesi EV per shtepi dhe panel ne Shqiperi",
     description:
-      "Një guidë për të kuptuar si zgjedhet një karikues EV për shtëpi sipas panelit, parkimit dhe përdorimit të përditshëm.",
+      "Nje guide per te kuptuar si zgjidhet karikuesi EV per shtepi sipas panelit, parkimit, sigurise dhe perdorimit te perditshem.",
     excerpt:
       "Shpjegon çfarë duhet parë para se të montohet një karikues për makinë elektrike në shtëpi.",
     eyebrow: "EV dhe karikim",
@@ -631,9 +631,9 @@ const rawGuidePages = [
     path: blogPath(albanianGuideSlugs.solarGuide),
     locale: "sq-AL",
     guideType: "planned",
-    title: "Sa panele diellore duhen per shtepi",
+    title: "Sa panele diellore duhen per nje shtepi ne Shqiperi",
     description:
-      "Një guidë për të kuptuar si llogaritet numri i paneleve diellore sipas konsumit dhe hapësirës së disponueshme.",
+      "Nje guide per te kuptuar si llogaritet numri i paneleve diellore sipas konsumit, orientimit te çatise dhe hapesires se disponueshme.",
     excerpt:
       "Nuk ka një numër magjik paneleve; sistemi duhet llogaritur sipas konsumit të shtëpisë dhe hapësirës së çatisë.",
     eyebrow: "Planifikim solar",
@@ -686,7 +686,7 @@ const rawGuidePages = [
     guideType: "planned",
     title: "How to hire an electrician in Tirana as a foreign resident",
     description:
-      "A practical English guide to choosing a reliable electrician in Tirana when you want clear communication and fast help.",
+      "A practical English guide to choosing a reliable electrician in Tirana when you want clear communication, fast help, and less language stress.",
     excerpt:
       "A guide for foreign residents who want to compare electricians by scope, response time, and safety rather than just price.",
     eyebrow: "English guide",
@@ -746,7 +746,7 @@ const rawGuidePages = [
     guideType: "planned",
     title: "Electrical safety checklist for Airbnb hosts in Tirana",
     description:
-      "A practical checklist for short-term rental hosts who need a safe property between guest turnovers.",
+      "A practical checklist for short-term rental hosts who need a safe property between guest turnovers, repairs, and guest-ready inspections.",
     excerpt:
       "A host-focused checklist that covers sockets, lighting, panel checks, and fast turnaround repairs.",
     eyebrow: "Host checklist",
@@ -797,9 +797,9 @@ const rawGuidePages = [
     path: blogPath("what-to-check-before-buying-an-apartment-in-tirana-electrical-system-edition"),
     locale: "en-US",
     guideType: "planned",
-    title: "What to check before buying an apartment in Tirana: electrical system edition",
+    title: "Electrical checks before buying an apartment in Tirana",
     description:
-      "An English checklist for buyers who want to avoid hidden electrical problems before closing on an apartment.",
+      "An English checklist for buyers who want to avoid hidden electrical problems, unsafe panels, and surprise repair costs before closing on an apartment.",
     excerpt:
       "A buyer's checklist that focuses on panel condition, grounding, socket layout, and signs of hidden load problems.",
     eyebrow: "Buyer checklist",
@@ -846,7 +846,7 @@ const rawGuidePages = [
     path: blogPath("can-you-install-an-ev-charger-in-an-apartment-building-in-albania"),
     locale: "en-US",
     guideType: "planned",
-    title: "Can you install an EV charger in an apartment building in Albania?",
+    title: "EV chargers in Albanian apartment buildings: what to check",
     description:
       "An English guide to the practical questions behind apartment EV charging in Albania, from panel capacity to parking layout.",
     excerpt:
@@ -897,7 +897,7 @@ const rawGuidePages = [
     guideType: "planned",
     title: "Solar vs grid power for villas and small businesses in Albania",
     description:
-      "A practical English comparison of solar and grid power for property owners who want to lower costs and plan smarter.",
+      "A practical English comparison of solar and grid power for property owners who want to lower costs, plan smarter, and size upgrades realistically.",
     excerpt:
       "A decision guide for villas and small businesses that are comparing solar with a more traditional grid-only setup.",
     eyebrow: "Solar guide",
