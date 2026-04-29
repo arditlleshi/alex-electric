@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { guidePages } from "@/lib/content/guides";
 
 const featuredGuides = [...guidePages]
@@ -17,47 +18,57 @@ export default function ArticlesSection() {
   return (
     <section
       id="articles"
-      className="relative overflow-hidden bg-white pb-24">
-      <div className="absolute inset-0 overflow-hidden">
-        <div
-          className="gradient-aurora absolute left-1/4 top-1/4 h-96 w-96 rounded-full opacity-10 animate-float"
-          style={{ animationDelay: "1s" }}
-        />
-        <div
-          className="gradient-electric absolute bottom-1/4 right-1/4 h-80 w-80 rounded-full opacity-10 animate-float"
-          style={{ animationDelay: "3s" }}
-        />
-      </div>
+      className="border-t border-border bg-surface-raised">
+      <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <header className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
+          <div className="min-w-0">
+            <span className="inline-flex min-h-9 items-center rounded-lg border border-electric-100 bg-electric-50 px-3 text-sm font-semibold text-electric-700">
+              Blog & Guides
+            </span>
+            <h2 className="mt-5 max-w-3xl text-balance text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
+              Artikuj qe lidhen direkt me faqet e sherbimit
+            </h2>
+            <p className="mt-5 max-w-3xl text-pretty text-base leading-7 text-muted sm:text-lg">
+              Cdo guide i ri i shton faqes se sherbimit me shume hyrje organike
+              dhe me shume mbulim per pyetjet qe dalin ne pune reale.
+            </p>
+            <p className="mt-3 max-w-3xl text-sm leading-6 text-muted">
+              English-language guides jane pjese e te njejtit sistem dhe lidhen
+              me filtrin perkates ne blog.
+            </p>
+          </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-20 animate-fade-in-up text-center">
-          <span className="mb-4 inline-block rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800">
-            Blog dhe guides
-          </span>
-          <h2 className="mb-6 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
-            Artikuj qe lidhen direkt me faqet e sherbimit
-          </h2>
-          <p className="mx-auto max-w-3xl text-xl leading-relaxed text-gray-600">
-            Cdo guide i ri ushqen nje faqe sherbimi me intent te larte. Kjo
-            krijon me shume hyrje organike pa u mbeshtetur vetem te homepage.
-          </p>
-          <p className="mx-auto mt-4 max-w-3xl text-base text-gray-500">
-            English-language guides are mixed in here too, and visitors can
-            filter the full blog hub by language.
-          </p>
-        </div>
+          <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
+            <Link
+              href="/blog"
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-surface-inverse px-4 text-sm font-semibold text-white transition-[background-color,box-shadow] duration-200 hover:bg-electric-900 hover:shadow-electric">
+              Shiko te gjithe artikujt
+              <ArrowRight aria-hidden="true" className="h-4 w-4" />
+            </Link>
+            <Link
+              href="/blog?lang=en"
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-border bg-surface px-4 text-sm font-semibold text-muted-strong transition-[background-color,border-color,color] duration-200 hover:border-teal-500 hover:bg-surface-muted hover:text-teal-700">
+              Open English guides
+            </Link>
+          </div>
+        </header>
 
-        <ul className="grid gap-8 md:grid-cols-2 lg:grid-cols-3" aria-label="featured guides">
+        <ul className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3" aria-label="featured guides">
           {fallbackGuides.map((guide) => (
             <li key={guide.slug}>
               <Link
                 href={`/blog/${guide.slug}`}
-                className="group relative flex h-full flex-col rounded-3xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-500 hover:scale-[1.02] hover:shadow-xl">
+                className="group flex h-full flex-col rounded-lg border border-border bg-surface p-5 shadow-sm transition-[transform,background-color,border-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-border-strong hover:bg-background hover:shadow-soft">
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-800">
+                  <span
+                    className={`inline-flex min-h-8 items-center rounded-lg px-3 text-xs font-semibold ${
+                      guide.locale === "en-US"
+                        ? "bg-teal-500/10 text-teal-700"
+                        : "bg-electric-50 text-electric-700"
+                    }`}>
                     {guide.locale === "en-US" ? "English" : "Shqip"}
                   </span>
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-muted">
                     {new Date(guide.date).toLocaleDateString(
                       guide.locale === "en-US" ? "en-US" : "sq-AL",
                       {
@@ -69,11 +80,11 @@ export default function ArticlesSection() {
                   </span>
                 </div>
 
-                <h3 className="mt-5 text-2xl font-bold text-gray-900 transition-colors duration-300 group-hover:text-blue-700">
+                <h3 className="mt-5 text-xl font-semibold text-foreground transition-colors duration-200 group-hover:text-electric-700">
                   {guide.title}
                 </h3>
 
-                <p className="mt-4 flex-1 leading-relaxed text-gray-600">
+                <p className="mt-3 flex-1 text-sm leading-6 text-muted">
                   {guide.excerpt}
                 </p>
 
@@ -81,32 +92,23 @@ export default function ArticlesSection() {
                   {guide.secondaryKeywords.slice(0, 3).map((keyword) => (
                     <span
                       key={keyword}
-                      className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600">
+                      className="rounded-lg border border-border bg-surface-raised px-3 py-1 text-xs font-medium text-muted-strong">
                       {keyword}
                     </span>
                   ))}
                 </div>
 
-                <span className="mt-6 inline-flex items-center text-sm font-semibold text-blue-600">
+                <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-electric-700">
                   Lexo artikullin
+                  <ArrowRight
+                    aria-hidden="true"
+                    className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5"
+                  />
                 </span>
               </Link>
             </li>
           ))}
         </ul>
-
-        <div className="mt-16 flex flex-col items-center justify-center gap-3 text-center animate-fade-in-up sm:flex-row">
-          <Link
-            href="/blog"
-            className="inline-block rounded-lg bg-blue-600 px-8 py-4 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:scale-[1.02] hover:bg-blue-700">
-            Shiko te gjithe artikujt
-          </Link>
-          <Link
-            href="/blog?lang=en"
-            className="inline-block rounded-lg border border-gray-300 bg-white px-8 py-4 text-lg font-bold text-gray-700 transition-all duration-300 hover:scale-[1.02] hover:bg-gray-50">
-            Open English guides
-          </Link>
-        </div>
       </div>
     </section>
   );

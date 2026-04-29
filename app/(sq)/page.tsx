@@ -148,7 +148,7 @@ export default async function Home() {
 
   return (
     <SiteShell activeSection="home">
-      <main>
+      <main id="main-content" className="bg-background">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: sanitizeJsonLd(homepageJsonLd) }}

@@ -99,46 +99,59 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="relative overflow-hidden bg-gradient-to-br from-white to-gray-50 pb-24">
-      <div className="absolute inset-0 hidden overflow-hidden md:block">
-        <div className="gradient-aurora absolute right-20 top-20 h-64 w-64 rounded-full opacity-5 motion-safe:md:animate-float" />
-        <div
-          className="gradient-electric absolute bottom-20 left-20 h-48 w-48 rounded-full opacity-5 motion-safe:md:animate-float"
-          style={{ animationDelay: "3s" }}
-        />
-      </div>
+      className="relative border-t border-border bg-background">
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-[linear-gradient(90deg,rgba(216,223,221,0.18)_1px,transparent_1px),linear-gradient(rgba(216,223,221,0.14)_1px,transparent_1px)] bg-[size:64px_64px]"
+      />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-20 text-center motion-safe:md:animate-fade-in-up">
-          <span className="mb-4 inline-block rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800">
-            Faqe sherbimesh
-          </span>
-          <h2 className="mb-6 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
-            Zgjidhni faqen qe i pershtatet kerkimit tuaj
-          </h2>
-          <p className="mx-auto max-w-3xl text-xl leading-relaxed text-gray-600">
-            Tani sherbimet me intent te larte nuk rrine me te fshehura ne faqen
-            kryesore. Secili grup ka faqen e vet me problematika, zona,
-            pyetje dhe thirrje per kontakt.
-          </p>
-          <p className="mx-auto mt-4 max-w-3xl text-base text-gray-500">
-            We also route English-speaking visitors to dedicated service and
-            audience pages instead of forcing everything into one overview page.
-          </p>
-        </div>
+      <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <header className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
+          <div className="min-w-0">
+            <span className="inline-flex min-h-9 items-center rounded-lg border border-electric-100 bg-electric-50 px-3 text-sm font-semibold text-electric-700">
+              Faqe Sherbimesh
+            </span>
+            <h2 className="mt-5 max-w-3xl text-balance text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
+              Zgjidhni faqen qe i pershtatet kerkimit tuaj
+            </h2>
+            <p className="mt-5 max-w-3xl text-pretty text-base leading-7 text-muted sm:text-lg">
+              Hero-ja orienton vizitorin. Ketu vazhdohet me rruget kryesore:
+              zona, urgjenca dhe sherbime me intent te larte qe meritojne faqen
+              e tyre.
+            </p>
+            <p className="mt-3 max-w-3xl text-sm leading-6 text-muted">
+              Vizitoret qe kerkojne sherbim ne anglisht kalojne drejt faqeve te
+              dedikuara, jo ne nje overview te ngarkuar.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
+            <Link
+              href="/sherbime"
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-surface-inverse px-4 text-sm font-semibold text-white transition-[background-color,box-shadow] duration-200 hover:bg-electric-900 hover:shadow-electric">
+              Hap hub-in e sherbimeve
+              <ArrowRight aria-hidden="true" className="h-4 w-4" />
+            </Link>
+            <Link
+              href="/en/services"
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-border bg-surface px-4 text-sm font-semibold text-muted-strong transition-[background-color,border-color,color] duration-200 hover:border-teal-500 hover:bg-surface-muted hover:text-teal-700">
+              Open English service pages
+            </Link>
+          </div>
+        </header>
 
         <ul
           aria-label="Sherbimet kryesore"
-          className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {cards.map(({ service, image, eyebrow }) => (
             <li key={service.slug}>
               <Link
                 href={`/sherbime/${service.slug}`}
-                className="group relative flex h-full flex-col rounded-3xl border border-gray-200 bg-white p-8 shadow-sm transition-[transform,box-shadow] duration-500 hover:scale-[1.02] hover:shadow-xl">
-                <span className="mb-4 inline-flex w-fit rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-blue-800">
+                className="group flex h-full flex-col rounded-lg border border-border bg-surface p-5 shadow-sm transition-[transform,background-color,border-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-border-strong hover:bg-surface-raised hover:shadow-soft">
+                <span className="mb-4 inline-flex min-h-8 w-fit items-center rounded-lg border border-electric-100 bg-electric-50 px-3 text-xs font-semibold text-electric-700">
                   {eyebrow}
                 </span>
-                <div className="relative mb-5 h-20 w-20 overflow-hidden rounded-2xl bg-gray-50">
+                <div className="relative mb-5 h-16 w-16 overflow-hidden rounded-lg border border-border bg-surface-raised">
                   <Image
                     src={image}
                     fill
@@ -149,81 +162,81 @@ export default function ServicesSection() {
                     className="object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 transition-colors group-hover:text-blue-700">
+                <h3 className="text-xl font-semibold text-foreground transition-colors duration-200 group-hover:text-electric-700">
                   {service.title}
                 </h3>
-                <p className="mt-4 flex-1 leading-relaxed text-gray-600">
+                <p className="mt-3 flex-1 text-sm leading-6 text-muted">
                   {service.metaDescription}
                 </p>
-                <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-blue-600">
+                <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-electric-700">
                   Hap faqen
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight
+                    aria-hidden="true"
+                    className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5"
+                  />
                 </span>
               </Link>
             </li>
           ))}
         </ul>
 
-        <section aria-labelledby="services-spotlight" className="mt-16">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-            <div>
+        <div className="mt-12 grid gap-6 lg:grid-cols-[minmax(0,1fr)_22rem]">
+          <section
+            aria-labelledby="services-spotlight"
+            className="overflow-hidden rounded-lg border border-border bg-surface shadow-soft">
+            <div className="border-b border-border px-5 py-4 sm:px-6">
               <h3
                 id="services-spotlight"
-                className="text-2xl font-bold text-gray-900">
+                className="text-xl font-semibold text-foreground">
                 Rruge te tjera hyrjeje
               </h3>
-              <p className="mt-3 max-w-3xl text-gray-600">
-                Faqet shtese mbulojne prona rezidenciale, vila, zyra, dyqane
-                dhe mirembajtje te vazhdueshme per biznes.
+              <p className="mt-2 max-w-3xl text-sm leading-6 text-muted">
+                Faqet shtese mbulojne prona rezidenciale, vila, zyra, dyqane dhe
+                mirembajtje te vazhdueshme per biznes.
               </p>
             </div>
-            <Link
-              href="/en/services"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600">
-              Shiko edhe faqet ne anglisht
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
 
-          <div className="mt-8 grid gap-8 md:grid-cols-3">
-            {secondaryLinks.map((item) => (
-              <Link
-                key={item.slug}
-                href={`/sherbime/${item.slug}`}
-                className="card-modern group block p-6 transition-transform duration-300 hover:scale-[1.02]">
-                <h4 className="text-lg font-bold text-gray-900 transition-colors group-hover:text-blue-700">
-                  {item.title}
-                </h4>
-                <p className="mt-3 leading-relaxed text-gray-600">
-                  {item.description}
-                </p>
-              </Link>
-            ))}
-          </div>
-        </section>
+            <div className="divide-y divide-border">
+              {secondaryLinks.map((item) => (
+                <Link
+                  key={item.slug}
+                  href={`/sherbime/${item.slug}`}
+                  className="group grid gap-2 px-5 py-4 transition-[background-color] duration-200 hover:bg-surface-muted sm:px-6">
+                  <span className="text-base font-semibold text-foreground transition-colors duration-200 group-hover:text-electric-700">
+                    {item.title}
+                  </span>
+                  <span className="text-sm leading-6 text-muted">
+                    {item.description}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </section>
 
-        <div className="mt-16 text-center motion-safe:md:animate-fade-in-up">
-          <div className="glass mx-auto max-w-2xl rounded-3xl pt-8">
-            <h3 className="mb-4 text-2xl font-bold text-gray-900">
-              Keni nevoje per pasqyre te plote?
-            </h3>
-            <p className="text-gray-600">
-              Hyrja me e mire eshte faqja e sherbimeve, sepse aty secila teme
-              ka faqen e vet dhe lidhet me udhezuesit perkates.
+          <aside className="rounded-lg border border-border bg-surface-raised p-5 shadow-sm sm:p-6">
+            <p className="text-sm font-semibold text-electric-700">
+              Pasqyre e plote
             </p>
-            <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <h3 className="mt-2 text-xl font-semibold text-foreground">
+              Hub-i i sherbimeve
+            </h3>
+            <p className="mt-3 text-sm leading-6 text-muted">
+              Nese vizitori nuk ka hyrje te qarte nga hero-ja, faqja e
+              sherbimeve mbledh temat, zonat dhe audiencat ne nje vend.
+            </p>
+            <div className="mt-5 grid gap-3">
               <Link
                 href="/sherbime"
-                className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-700">
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-surface-inverse px-4 text-sm font-semibold text-white transition-[background-color,box-shadow] duration-200 hover:bg-electric-900 hover:shadow-electric">
                 Hap hub-in e sherbimeve
               </Link>
               <Link
                 href="/blog"
-                className="inline-flex items-center gap-2 rounded-xl border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-50">
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-border bg-surface px-4 text-sm font-semibold text-muted-strong transition-[background-color,border-color,color] duration-200 hover:border-electric-200 hover:bg-electric-50 hover:text-electric-700">
                 Lexo blogun elektrik
               </Link>
             </div>
-          </div>
+          </aside>
         </div>
       </div>
     </section>

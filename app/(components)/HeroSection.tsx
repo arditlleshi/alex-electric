@@ -1,138 +1,255 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
   BadgeCheck,
   Clock3,
-  FileText,
   Globe,
   MapPin,
+  MessageCircle,
+  Phone,
+  ShieldCheck,
   Zap,
 } from "lucide-react";
+import TrackedContactLink from "./TrackedContactLink";
+import {
+  CONTACT_PHONE_DISPLAY,
+  CONTACT_PHONE_HREF,
+  CONTACT_WHATSAPP_HREF,
+} from "@/lib/contact";
+import CommercialElectric from "@/public/icons/commercial-electric.png";
+import ElectricCar from "@/public/icons/ev-charger.png";
+import Maintenance from "@/public/icons/maintenance.png";
+import ResidentialElectric from "@/public/icons/residential-electric.png";
+import SolarPanel from "@/public/icons/solar-panel.png";
+import logo from "@/public/main-logo-2.png";
 
-const startLinks = [
+const serviceRoutes = [
   {
-    title: "Elektricist ne Tirane",
-    description: "Faqja kryesore per kerkime lokale, riparime dhe instalime.",
+    title: "Tirane",
+    description: "Riparime, instalime dhe urgjenca per apartamente e biznese.",
     href: "/sherbime/elektricist-tirane",
+    image: ResidentialElectric,
   },
   {
-    title: "Elektricist ne Durres",
-    description: "Sherbim per vila, prona bregdetare, hotele dhe qira.",
+    title: "Durres",
+    description: "Sherbim per vila, apartamente bregdetare, hotele dhe qira.",
     href: "/sherbime/elektricist-durres",
+    image: CommercialElectric,
   },
   {
-    title: "English electrician pages",
-    description: "Faqe ne anglisht per expats, Airbnb hosts dhe biznese.",
-    href: "/en",
+    title: "Urgjenca",
+    description: "Defekte elektrike, panele, priza dhe kontroll sigurie.",
+    href: "/sherbime/elektricist-urgjent-tirane",
+    image: Maintenance,
   },
-];
+] as const;
+
+const capabilityItems = [
+  {
+    label: "EV",
+    image: ElectricCar,
+  },
+  {
+    label: "Solar",
+    image: SolarPanel,
+  },
+  {
+    label: "Mirembajtje",
+    image: Maintenance,
+  },
+] as const;
+
+const trustItems = [
+  {
+    Icon: Clock3,
+    label: "24/7",
+    detail: "Emergjenca",
+  },
+  {
+    Icon: MapPin,
+    label: "2 zona",
+    detail: "Tirane & Durres",
+  },
+  {
+    Icon: Globe,
+    label: "SQ / EN",
+    detail: "Komunikim i qarte",
+  },
+] as const;
 
 export default function HeroSection() {
   return (
     <header
       id="hero"
-      className="relative isolate flex min-h-[calc(100svh-3.5rem)] items-center overflow-hidden bg-gray-900 pb-12 pt-24 text-white sm:pb-14 sm:pt-28 lg:pb-16 lg:pt-32">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#172554] via-gray-900 to-[#0f172a]" />
-      <div className="absolute inset-0 -z-10 hidden md:block" aria-hidden="true">
-        <div className="absolute left-24 top-20 h-72 w-72 rounded-full bg-blue-700/20 blur-3xl" />
-        <div className="absolute right-20 top-1/3 h-80 w-80 rounded-full bg-amber-500/15 blur-3xl" />
-        <div className="absolute bottom-10 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-sky-500/15 blur-3xl" />
-      </div>
+      className="relative isolate overflow-hidden border-b border-border bg-background pt-16">
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(216,223,221,0.42)_1px,transparent_1px),linear-gradient(rgba(216,223,221,0.38)_1px,transparent_1px)] bg-[size:48px_48px]"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 bottom-0 -z-10 h-32 bg-gradient-to-t from-surface to-transparent"
+      />
 
-      <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-7 rounded-[2rem] border border-white/15 bg-white/[0.045] p-6 shadow-[0_30px_90px_rgba(2,6,23,0.55)] sm:p-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-8 lg:p-10">
-          <div className="min-w-0 text-center lg:text-left">
-            <div className="mb-5 flex flex-wrap justify-center gap-2 lg:justify-start">
-              <span className="inline-flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold text-blue-100">
-                <Clock3 className="h-3.5 w-3.5" />
-                24/7 emergjenca
+      <div className="mx-auto grid min-h-[calc(100svh-4rem)] max-w-7xl content-center gap-10 px-4 py-14 sm:px-6 sm:py-16 lg:grid-cols-[minmax(0,1.05fr)_minmax(22rem,0.95fr)] lg:px-8 lg:py-20">
+        <div className="min-w-0 self-center">
+          <div className="mb-7 flex flex-wrap gap-2">
+            {trustItems.map(({ Icon, label, detail }) => (
+              <span
+                key={label}
+                className="inline-flex min-h-9 items-center gap-2 rounded-lg border border-border bg-surface px-3 text-sm font-medium text-muted-strong shadow-sm">
+                <Icon aria-hidden="true" className="h-4 w-4 text-electric-600" />
+                <span className="font-semibold text-foreground">{label}</span>
+                <span className="text-muted">{detail}</span>
               </span>
-              <span className="inline-flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold text-blue-100">
-                <MapPin className="h-3.5 w-3.5" />
-                Tirane + Durres
-              </span>
-              <span className="inline-flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold text-blue-100">
-                <Globe className="h-3.5 w-3.5" />
-                SQ + EN support
-              </span>
-            </div>
-
-            <h1 className="mx-auto max-w-4xl text-balance text-4xl font-extrabold leading-[1.04] sm:text-5xl md:text-6xl lg:mx-0 lg:text-[4rem]">
-              <span className="block bg-clip-text text-gradient-sunset drop-shadow-md">
-                Alex Elektrik
-              </span>
-              <span className="mt-3 block text-2xl font-semibold text-gray-200/90 sm:mt-4 sm:text-3xl lg:text-[2.2rem]">
-                Sherbime elektrike per Tirane dhe Durres
-              </span>
-            </h1>
-
-            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-gray-300 sm:text-lg lg:mx-0">
-              Faqja kryesore tani ju con drejt sherbimeve te dedikuara: Tirane,
-              Durres, urgjenca, riparime, instalime, EV, solar dhe guida qe
-              mbulojne pyetjet me te zakonshme te klienteve.
-            </p>
-
-            <p className="mx-auto mt-5 max-w-2xl rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm leading-relaxed text-blue-100 sm:text-base lg:mx-0">
-              Looking for an English-speaking electrician in Tirana or Durres?
-              Start from the English hub for expats, landlords, Airbnb hosts,
-              and international businesses.
-            </p>
-
-            <div className="mt-7 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:flex-wrap sm:items-center lg:justify-start">
-              <Link
-                href="/sherbime"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-7 py-3 text-sm font-semibold text-white shadow-lg transition-transform duration-300 hover:scale-[1.02]">
-                <Zap className="h-5 w-5 shrink-0" />
-                Shiko sherbimet
-              </Link>
-              <Link
-                href="/blog"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-gray-500/70 bg-gray-700/45 px-7 py-3 text-sm font-semibold text-gray-100 transition-all duration-300 hover:bg-gray-700/75">
-                <FileText className="h-5 w-5 shrink-0" />
-                Lexo udhezuesit
-              </Link>
-              <Link
-                href="/en"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-blue-400/70 bg-blue-500/20 px-7 py-3 text-sm font-semibold text-blue-100 transition-all duration-300 hover:bg-blue-500/35">
-                English pages
-                <ArrowRight className="h-5 w-5 shrink-0" />
-              </Link>
-            </div>
+            ))}
           </div>
 
-          <aside className="relative min-w-0 overflow-hidden rounded-2xl border border-white/15 bg-[#0b1732]/55 p-5 text-left shadow-[0_18px_44px_rgba(15,23,42,0.45)] sm:p-6">
-            <div className="absolute -right-8 -top-12 h-40 w-40 rounded-full bg-orange-500/20 blur-3xl" />
-            <div className="absolute -bottom-10 -left-10 h-36 w-36 rounded-full bg-blue-500/20 blur-3xl" />
+          <div className="relative mb-7 h-20 w-52 sm:h-24 sm:w-64">
+            <Image
+              src={logo}
+              alt="Alex Elektrik"
+              priority
+              fill
+              sizes="(max-width: 640px) 208px, 256px"
+              className="object-contain object-left"
+            />
+          </div>
 
-            <h2 className="relative text-lg font-bold text-white">
-              Filloni nga faqja e duhur
-            </h2>
-            <p className="relative mt-3 text-sm leading-relaxed text-blue-100/90">
-              Qellimi i faqes kryesore eshte te drejtoje kerkimin drejt
-              faqeve me intent te qarte, jo te perpiqet te renditet per
-              cdo term ne nje vend te vetem.
-            </p>
+          <h1 className="max-w-3xl text-balance text-4xl font-semibold leading-[1.06] text-foreground sm:text-5xl lg:text-6xl">
+            Sherbime Elektrike per Shtepi, Prona & Biznese
+          </h1>
 
-            <div className="relative mt-6 space-y-3">
-              {startLinks.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="block rounded-2xl border border-white/10 bg-white/5 p-4 transition-colors hover:bg-white/10">
-                  <div className="flex items-start gap-3">
-                    <BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-emerald-300" />
-                    <div>
-                      <h3 className="font-semibold text-white">{item.title}</h3>
-                      <p className="mt-1 text-sm leading-relaxed text-blue-100/85">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </aside>
+          <p className="mt-6 max-w-2xl text-pretty text-lg leading-8 text-muted sm:text-xl">
+            Elektricist ne Tirane dhe Durres per riparime, instalime,
+            urgjenca, karikues EV, panele diellore dhe mirembajtje me komunikim
+            te qarte ne shqip ose anglisht.
+          </p>
+
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <TrackedContactLink
+              href={CONTACT_PHONE_HREF}
+              channel="phone"
+              source="hero"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-surface-inverse px-5 text-sm font-semibold text-white transition-[background-color,box-shadow] duration-200 hover:bg-electric-900 hover:shadow-electric">
+              <Phone aria-hidden="true" className="h-4 w-4" />
+              Telefono {CONTACT_PHONE_DISPLAY}
+            </TrackedContactLink>
+            <TrackedContactLink
+              href={CONTACT_WHATSAPP_HREF}
+              channel="whatsapp"
+              source="hero"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-border-strong bg-surface px-5 text-sm font-semibold text-muted-strong transition-[background-color,border-color,color] duration-200 hover:border-teal-500 hover:bg-surface-muted hover:text-teal-700">
+              <MessageCircle aria-hidden="true" className="h-4 w-4" />
+              WhatsApp
+            </TrackedContactLink>
+            <Link
+              href="/sherbime"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-border bg-transparent px-5 text-sm font-semibold text-muted-strong transition-[background-color,border-color,color] duration-200 hover:border-electric-200 hover:bg-electric-50 hover:text-electric-700">
+              Shiko sherbimet
+              <ArrowRight aria-hidden="true" className="h-4 w-4" />
+            </Link>
+          </div>
+
+          <div className="mt-10 grid max-w-3xl gap-3 sm:grid-cols-3">
+            {capabilityItems.map((item) => (
+              <div
+                key={item.label}
+                className="flex min-h-16 items-center gap-3 rounded-lg border border-border bg-surface/80 p-3 shadow-sm">
+                <span className="relative h-10 w-10 shrink-0 overflow-hidden rounded-lg bg-surface-muted">
+                  <Image
+                    src={item.image}
+                    alt=""
+                    fill
+                    sizes="40px"
+                    className="object-cover"
+                  />
+                </span>
+                <span className="min-w-0 text-sm font-semibold text-muted-strong">
+                  {item.label}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
+
+        <aside className="self-center overflow-hidden rounded-lg border border-border bg-surface shadow-soft">
+          <div className="border-b border-border p-5 sm:p-6">
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <p className="text-sm font-semibold text-electric-700">
+                  Nisuni nga zona ose nevoja
+                </p>
+                <h2 className="mt-2 text-2xl font-semibold leading-tight text-foreground">
+                  Rruget kryesore te sherbimit
+                </h2>
+              </div>
+              <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-signal-50 text-signal-600">
+                <Zap aria-hidden="true" className="h-5 w-5" />
+              </span>
+            </div>
+            <p className="mt-4 text-sm leading-6 text-muted">
+              Faqja kryesore tani orienton vizitorin drejt sherbimit me intent
+              te qarte, pa e ngarkuar me te gjitha temat ne nje ekran.
+            </p>
+          </div>
+
+          <ul aria-label="Rruget kryesore te sherbimit" className="divide-y divide-border">
+            {serviceRoutes.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="group grid grid-cols-[3.5rem_minmax(0,1fr)_auto] items-center gap-4 p-5 transition-[background-color] duration-200 hover:bg-surface-muted sm:p-6">
+                  <span className="relative h-14 w-14 overflow-hidden rounded-lg bg-surface-muted">
+                    <Image
+                      src={item.image}
+                      alt=""
+                      fill
+                      sizes="56px"
+                      className="object-cover"
+                    />
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block text-base font-semibold text-foreground">
+                      {item.title}
+                    </span>
+                    <span className="mt-1 block text-sm leading-6 text-muted">
+                      {item.description}
+                    </span>
+                  </span>
+                  <ArrowRight
+                    aria-hidden="true"
+                    className="h-4 w-4 shrink-0 text-muted transition-transform duration-200 group-hover:translate-x-0.5 group-hover:text-electric-700"
+                  />
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <div className="grid gap-3 border-t border-border bg-surface-raised p-5 sm:grid-cols-2 sm:p-6">
+            <div className="flex items-start gap-3">
+              <ShieldCheck
+                aria-hidden="true"
+                className="mt-0.5 h-5 w-5 shrink-0 text-success-500"
+              />
+              <p className="text-sm leading-6 text-muted">
+                Kontroll dhe testim para dorezimit.
+              </p>
+            </div>
+            <div className="flex items-start gap-3">
+              <BadgeCheck
+                aria-hidden="true"
+                className="mt-0.5 h-5 w-5 shrink-0 text-electric-600"
+              />
+              <p className="text-sm leading-6 text-muted">
+                Preventiv i qarte para fillimit.
+              </p>
+            </div>
+          </div>
+        </aside>
       </div>
     </header>
   );

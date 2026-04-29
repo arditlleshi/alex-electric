@@ -8,6 +8,8 @@ import {
   type ActiveSection,
   type NavigationIcon,
 } from "./navigation-data";
+import TrackedContactLink from "./TrackedContactLink";
+import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_HREF } from "@/lib/contact";
 import logo from "@/public/main-logo.png";
 
 const iconByName = {
@@ -19,18 +21,10 @@ const iconByName = {
 } satisfies Record<NavigationIcon, typeof Home>;
 
 function getDesktopLinkClass(active: boolean) {
-  return `group relative flex items-center gap-2 rounded-full px-3 py-2 font-medium transition-colors transition-shadow duration-300 lg:px-4 ${
+  return `group relative inline-flex min-h-10 items-center gap-2 rounded-lg px-3 text-sm font-medium transition-[background-color,color,box-shadow] duration-200 lg:px-3.5 ${
     active
-      ? "bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 shadow-sm"
-      : "text-gray-700 hover:text-blue-600"
-  }`;
-}
-
-function getDesktopBackgroundClass(active: boolean) {
-  return `absolute inset-0 rounded-full bg-gradient-to-r from-blue-50 to-blue-100 transition-[opacity,transform] duration-300 ${
-    active
-      ? "scale-100 opacity-100"
-      : "scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100"
+      ? "bg-electric-50 text-electric-700 shadow-sm"
+      : "text-muted-strong hover:bg-surface-muted hover:text-electric-700"
   }`;
 }
 
@@ -40,24 +34,29 @@ export default function Navigation({
   activeSection?: ActiveSection;
 }) {
   return (
-    <nav className="fixed left-0 right-0 top-0 z-[9999] border-b border-slate-200/70 bg-white/92 shadow-[0_8px_30px_rgba(15,23,42,0.08)] nav-backdrop">
-      <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8">
-        <div className="relative flex h-16 items-center justify-between gap-3 sm:h-[4.25rem]">
-          <Link href="/" className="group flex min-w-0 items-center">
-            <div className="relative flex h-11 w-28 items-center justify-center rounded-xl p-1.5 transition-colors duration-300 group-hover:bg-blue-50 sm:h-14 sm:w-36 sm:p-3">
+    <nav className="fixed inset-x-0 top-0 z-[9999] border-b border-border/80 bg-background/90 nav-backdrop">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between gap-4">
+          <Link
+            href="/"
+            aria-label="Alex Elektrik home"
+            className="group flex min-w-0 items-center gap-3 rounded-lg py-2 pr-2 transition-colors duration-200 hover:text-electric-700">
+            <span className="relative h-10 w-28 shrink-0 sm:w-32">
               <Image
                 src={logo}
-                alt="Alex Electric Logo"
+                alt="Alex Elektrik"
                 fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="object-contain transition-transform duration-300 group-hover:scale-105"
+                priority
+                sizes="128px"
+                className="object-contain object-left"
               />
-            </div>
+            </span>
+            <span className="hidden min-w-0 border-l border-border pl-3 text-xs font-medium leading-tight text-muted md:block">
+              Tirane & Durres
+            </span>
           </Link>
 
-          <MobileNavigation activeSection={activeSection} />
-
-          <div className="hidden items-center gap-1 rounded-full border border-gray-200/70 bg-white/75 px-2 py-1 shadow-md md:flex">
+          <div className="hidden items-center gap-1 md:flex">
             {navigationItems.map((item) => {
               const active = isActiveSection(activeSection, item);
               const Icon = iconByName[item.icon];
@@ -68,12 +67,24 @@ export default function Navigation({
                   href={item.href}
                   aria-current={active ? "page" : undefined}
                   className={getDesktopLinkClass(active)}>
-                  <Icon className="relative z-10 h-4 w-4" />
-                  <span className="relative z-10">{item.name}</span>
-                  <div className={getDesktopBackgroundClass(active)} />
+                  <Icon aria-hidden="true" className="h-4 w-4 shrink-0" />
+                  <span>{item.name}</span>
                 </Link>
               );
             })}
+          </div>
+
+          <div className="flex items-center gap-2">
+            <TrackedContactLink
+              href={CONTACT_PHONE_HREF}
+              channel="phone"
+              source="navigation"
+              className="hidden min-h-10 items-center gap-2 rounded-lg bg-surface-inverse px-3.5 text-sm font-semibold text-white transition-[background-color,box-shadow] duration-200 hover:bg-electric-900 hover:shadow-electric sm:inline-flex">
+              <Phone aria-hidden="true" className="h-4 w-4 shrink-0" />
+              <span>{CONTACT_PHONE_DISPLAY}</span>
+            </TrackedContactLink>
+
+            <MobileNavigation activeSection={activeSection} />
           </div>
         </div>
       </div>

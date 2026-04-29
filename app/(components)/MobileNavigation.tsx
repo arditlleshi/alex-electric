@@ -8,6 +8,7 @@ import {
   Globe,
   Home,
   Menu,
+  MessageCircle,
   Phone,
   X,
   Zap,
@@ -18,6 +19,12 @@ import {
   type ActiveSection,
   type NavigationIcon,
 } from "./navigation-data";
+import TrackedContactLink from "./TrackedContactLink";
+import {
+  CONTACT_PHONE_DISPLAY,
+  CONTACT_PHONE_HREF,
+  CONTACT_WHATSAPP_HREF,
+} from "@/lib/contact";
 
 const iconByName = {
   home: Home,
@@ -28,16 +35,10 @@ const iconByName = {
 } satisfies Record<NavigationIcon, typeof Home>;
 
 function getMobileLinkClass(active: boolean) {
-  return `flex items-center justify-between rounded-2xl px-4 py-3.5 text-base font-medium transition-colors transition-shadow duration-200 ${
+  return `flex min-h-12 items-center justify-between rounded-lg px-3 text-base font-medium transition-[background-color,color] duration-200 ${
     active
-      ? "bg-blue-50 text-blue-700 shadow-sm"
-      : "text-slate-700 hover:bg-slate-50 hover:text-blue-700"
-  }`;
-}
-
-function getMobileChevronClass(active: boolean) {
-  return `h-4 w-4 transition-colors duration-200 ${
-    active ? "text-blue-600" : "text-gray-400"
+      ? "bg-electric-50 text-electric-700"
+      : "text-muted-strong hover:bg-surface-muted hover:text-electric-700"
   }`;
 }
 
@@ -56,26 +57,30 @@ export default function MobileNavigation({
         aria-controls="mobile-navigation"
         aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
         onClick={() => setIsOpen((prev) => !prev)}
-        className="inline-flex h-11 items-center gap-2 rounded-full border border-slate-200 bg-white/90 px-4 text-sm font-semibold text-slate-800 shadow-sm transition-colors duration-200 hover:bg-slate-50 hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/70 focus-visible:ring-offset-2">
-        {isOpen ? <X className="h-5 w-5 shrink-0" /> : <Menu className="h-5 w-5 shrink-0" />}
-        <span>{isOpen ? "Close" : "Menu"}</span>
+        className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-surface text-foreground shadow-sm transition-[background-color,color,border-color] duration-200 hover:border-border-strong hover:bg-surface-muted hover:text-electric-700">
+        {isOpen ? (
+          <X aria-hidden="true" className="h-5 w-5" />
+        ) : (
+          <Menu aria-hidden="true" className="h-5 w-5" />
+        )}
       </button>
 
       <div
         id="mobile-navigation"
         aria-hidden={!isOpen}
-        className={`absolute right-0 top-[calc(100%+0.75rem)] z-50 w-[24rem] max-w-[calc(100vw-1.5rem)] transition-[opacity,transform] duration-200 ease-out motion-reduce:transition-none ${
+        className={`absolute right-0 top-[calc(100%+0.75rem)] z-50 w-[22rem] max-w-[calc(100vw-2rem)] transition-[opacity,transform] duration-200 ease-out motion-reduce:transition-none ${
           isOpen
             ? "pointer-events-auto translate-y-0 opacity-100"
             : "pointer-events-none -translate-y-2 opacity-0"
         }`}>
-        <div className="overflow-hidden rounded-[1.5rem] border border-slate-200/80 bg-white/96 shadow-[0_24px_60px_rgba(15,23,42,0.16)] ring-1 ring-black/5">
-          <div className="border-b border-slate-100 px-4 py-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
-              Quick Links
+        <div className="overflow-hidden rounded-lg border border-border bg-surface shadow-medium">
+          <div className="border-b border-border px-4 py-3">
+            <p className="text-xs font-semibold uppercase text-muted">
+              Navigim
             </p>
           </div>
-          <ul className="p-2">
+
+          <ul className="p-2" aria-label="mobile navigation">
             {navigationItems.map((item) => {
               const active = isActiveSection(activeSection, item);
               const Icon = iconByName[item.icon];
@@ -88,16 +93,42 @@ export default function MobileNavigation({
                     onClick={() => setIsOpen(false)}
                     tabIndex={isOpen ? 0 : -1}
                     className={getMobileLinkClass(active)}>
-                    <span className="inline-flex items-center gap-3">
-                      <Icon className="h-4 w-4 shrink-0" />
-                      {item.name}
+                    <span className="inline-flex min-w-0 items-center gap-3">
+                      <Icon aria-hidden="true" className="h-4 w-4 shrink-0" />
+                      <span className="truncate">{item.name}</span>
                     </span>
-                    <ChevronRight className={getMobileChevronClass(active)} />
+                    <ChevronRight
+                      aria-hidden="true"
+                      className="h-4 w-4 shrink-0 text-muted"
+                    />
                   </Link>
                 </li>
               );
             })}
           </ul>
+
+          <div className="grid gap-2 border-t border-border p-3">
+            <TrackedContactLink
+              href={CONTACT_PHONE_HREF}
+              channel="phone"
+              source="navigation"
+              tabIndex={isOpen ? 0 : -1}
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-surface-inverse px-4 text-sm font-semibold text-white transition-[background-color,box-shadow] duration-200 hover:bg-electric-900 hover:shadow-electric">
+              <Phone aria-hidden="true" className="h-4 w-4" />
+              {CONTACT_PHONE_DISPLAY}
+            </TrackedContactLink>
+            <TrackedContactLink
+              href={CONTACT_WHATSAPP_HREF}
+              channel="whatsapp"
+              source="navigation"
+              target="_blank"
+              rel="noopener noreferrer"
+              tabIndex={isOpen ? 0 : -1}
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-border bg-surface px-4 text-sm font-semibold text-muted-strong transition-[background-color,border-color,color] duration-200 hover:border-teal-500 hover:bg-surface-muted hover:text-teal-700">
+              <MessageCircle aria-hidden="true" className="h-4 w-4" />
+              WhatsApp
+            </TrackedContactLink>
+          </div>
         </div>
       </div>
     </div>

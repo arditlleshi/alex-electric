@@ -8,6 +8,8 @@ const NO_STORE_HEADERS = {
 
 const VALID_CHANNELS = new Set<ContactChannel>(["phone", "email", "whatsapp"]);
 const VALID_SOURCES = new Set<ContactSource>([
+  "navigation",
+  "hero",
   "contact-section",
   "footer",
   "faq-section",

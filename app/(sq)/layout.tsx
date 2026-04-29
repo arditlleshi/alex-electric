@@ -13,7 +13,7 @@ const inter = Inter({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#2563eb",
+  themeColor: "#f7f8f5",
 };
 
 export const metadata: Metadata = {
@@ -56,10 +56,8 @@ export default function AlbanianRootLayout({
 }>) {
   return (
     <html lang="sq" className="scroll-smooth">
-      <body
-        className={`${inter.variable} font-sans antialiased`}
-        suppressHydrationWarning>
-        <div className="min-h-screen bg-white">
+      <body className={`${inter.variable} bg-background font-sans text-foreground antialiased`}>
+        <div className="min-h-screen bg-background">
           {children}
           <Analytics />
         </div>

@@ -1,6 +1,8 @@
 export type ContactChannel = "phone" | "email" | "whatsapp";
 
 export type ContactSource =
+  | "navigation"
+  | "hero"
   | "contact-section"
   | "footer"
   | "faq-section"

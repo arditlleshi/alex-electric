@@ -11,6 +11,11 @@ export default function SiteShell({
 }>) {
   return (
     <>
+      <a
+        href="#main-content"
+        className="fixed left-4 top-4 z-[10000] -translate-y-20 rounded-lg bg-surface-inverse px-4 py-2 text-sm font-semibold text-white shadow-medium transition-transform duration-200 focus-visible:translate-y-0">
+        Kalo te permbajtja
+      </a>
       <Navigation activeSection={activeSection} />
       {children}
       <Footer />
