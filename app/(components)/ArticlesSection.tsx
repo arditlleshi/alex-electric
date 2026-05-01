@@ -2,17 +2,20 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { guidePages } from "@/lib/content/guides";
 
+const MAX_GUIDES = 6;
+
 const featuredGuides = [...guidePages]
   .filter((guide) => guide.featured)
   .sort((left, right) => Date.parse(right.date) - Date.parse(left.date))
-  .slice(0, 6);
+  .slice(0, MAX_GUIDES);
 
-const fallbackGuides =
-  featuredGuides.length > 0
-    ? featuredGuides
-    : [...guidePages]
-        .sort((left, right) => Date.parse(right.date) - Date.parse(left.date))
-        .slice(0, 6);
+const remainingGuides = [...guidePages]
+  .filter(
+    (guide) => !featuredGuides.some((featuredGuide) => featuredGuide.slug === guide.slug),
+  )
+  .sort((left, right) => Date.parse(right.date) - Date.parse(left.date));
+
+const homepageGuides = [...featuredGuides, ...remainingGuides].slice(0, MAX_GUIDES);
 
 export default function ArticlesSection() {
   return (
@@ -54,7 +57,7 @@ export default function ArticlesSection() {
         </header>
 
         <ul className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3" aria-label="featured guides">
-          {fallbackGuides.map((guide) => (
+          {homepageGuides.map((guide) => (
             <li key={guide.slug}>
               <Link
                 href={`/blog/${guide.slug}`}

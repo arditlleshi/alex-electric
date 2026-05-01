@@ -51,7 +51,7 @@ const capabilityItems = [
     image: ElectricCar,
   },
   {
-    label: "Solar",
+    label: "Panele Solare",
     image: SolarPanel,
   },
   {

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import {
-  ALBANIAN_GUIDE_SLUGS,
   buildGuideMetadata,
   renderGuidePage,
 } from "@/lib/guide-page";
+import { guidePageSlugs } from "@/lib/content/guides";
 
 export function generateStaticParams() {
-  return ALBANIAN_GUIDE_SLUGS.map((slug) => ({ slug }));
+  return guidePageSlugs.map((slug) => ({ slug }));
 }
 
 export function generateMetadata({
@@ -23,5 +23,5 @@ export default async function GuidePageRoute({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  return renderGuidePage(slug, "sq-AL");
+  return renderGuidePage(slug);
 }

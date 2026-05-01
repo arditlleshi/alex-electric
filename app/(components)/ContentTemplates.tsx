@@ -221,7 +221,9 @@ export function ServicePageTemplate({
   const source = isEnglish ? "english-service-page" : "service-page";
 
   return (
-    <main className="bg-gradient-to-br from-gray-50 via-white to-gray-50 pb-20 pt-28">
+    <main
+      lang={isEnglish ? "en" : "sq"}
+      className="bg-gradient-to-br from-gray-50 via-white to-gray-50 pb-20 pt-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Breadcrumbs items={breadcrumbs} />
 
@@ -422,7 +424,9 @@ export function GuidePageTemplate({
   const isEnglish = guide.locale === "en-US";
 
   return (
-    <main className="bg-gradient-to-br from-gray-50 via-white to-gray-50 pb-20 pt-28">
+    <main
+      lang={isEnglish ? "en" : "sq"}
+      className="bg-gradient-to-br from-gray-50 via-white to-gray-50 pb-20 pt-28">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <Breadcrumbs items={breadcrumbs} />
 
@@ -595,7 +599,9 @@ export function ServiceHubTemplate({
   locale?: ServicePage["locale"];
 }) {
   return (
-    <main className="bg-gradient-to-br from-gray-50 via-white to-gray-50 pb-20 pt-28">
+    <main
+      lang={locale === "en-US" ? "en" : "sq"}
+      className="bg-gradient-to-br from-gray-50 via-white to-gray-50 pb-20 pt-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Breadcrumbs items={breadcrumbs} />
         <header className="card-modern p-8 sm:p-10">
