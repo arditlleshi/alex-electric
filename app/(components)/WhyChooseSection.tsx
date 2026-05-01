@@ -12,37 +12,43 @@ const benefits = [
     Icon: BadgeCheck,
     title: "Eksperiencë & Cilësi",
     description:
-      "<p>Me nj&euml; dekad&euml; e gjysm&euml; p&euml;rvoj&euml; pune n&euml; terren, kemi hasur dhe zgjidhur me sukses nj&euml; gam&euml; t&euml; gjer&euml; problemesh <strong>elektrike</strong>. Kjo na jep besimin dhe aft&euml;sin&euml; p&euml;r t&euml; trajtuar &ccedil;do situat&euml; me kompetenc&euml;.</p>",
+      "Mbi 15 vjet pune ne terren me defekte, instalime dhe kontrolle ne prona rezidenciale e komerciale.",
+    toneClass: "border-electric-100 bg-electric-50 text-electric-700",
   },
   {
     Icon: Clock3,
     title: "Disponibilitet 24/7",
     description:
-      "<p>Problemet <strong>elektrike</strong> nuk presin! Prandaj, jemi gjithmon&euml; t&euml; gatsh&euml;m t&rsquo;ju ndihmojm&euml;, qoft&euml; dit&euml; apo nat&euml;. Ofrojm&euml; sh&euml;rbim emergjence <strong>24 or&euml;</strong> n&euml; dit&euml;, <strong>7 dit&euml; t&euml; jav&euml;s</strong>, q&euml; do t&euml; thot&euml; se mund t&euml; mb&euml;shteteni tek ne edhe jasht&euml; orarit standard.</p>",
+      "Nderhyrje per raste urgjente dhe koordinim i shpejte kur ka humbje energjie, probleme ne panel ose rrezik sigurie.",
+    toneClass: "border-signal-100 bg-signal-50 text-signal-600",
   },
   {
     Icon: Wrench,
     title: "Teknologji Moderne",
     description:
-      "<p>Industria elektrike p&euml;rparon me shpejt&euml;si, ndaj ne investojm&euml; vazhdimisht n&euml; teknologji moderne. Nga pajisjet inteligjente p&euml;r sht&euml;pi <strong>(smart home)</strong> tek sistemet efikase <strong>energjetikisht</strong>, ne ofrojm&euml; zgjidhje bashk&euml;kohore q&euml; kursejn&euml; <strong>energji</strong> dhe jan&euml; miq&euml;sore me mjedisin.</p>",
+      "Nga smart home te karikuesit EV dhe sistemet solar, zgjidhjet projektohen sipas ngarkeses reale dhe perdorimit te prones.",
+    toneClass: "border-border bg-surface text-muted-strong",
   },
   {
     Icon: ShieldCheck,
     title: "Siguria në radhë të parë",
     description:
-      "<p>Tek ne <strong>siguria elektrike</strong> nuk &euml;sht&euml; thjesht standard &ndash; &euml;sht&euml; kultur&euml;. &Ccedil;do instalim apo <strong>riparim elektrik</strong> realizohet duke respektuar me rigorozitet kodet dhe rregulloret e siguris&euml;</p>",
+      "Cdo pune mbyllet me kontroll funksional dhe verifikim te pikave kryesore para dorezimit te projektit.",
+    toneClass: "border-teal-500/20 bg-teal-500/10 text-teal-700",
   },
   {
     Icon: CircleDollarSign,
     title: "Çmime konkurruese & transparencë",
     description:
-      "<p>Marr&euml;dh&euml;nia me klientin fillon me besim. Ne sigurojm&euml; &ccedil;mime konkurruese dhe transparente p&euml;r &ccedil;do projekt. Para se t&euml; fillojm&euml; pun&euml;n, ju ofrojm&euml; nj&euml; preventiv t&euml; detajuar, pa tarifa t&euml; fshehura, n&euml; m&euml;nyr&euml; q&euml; t&euml; dini sakt&euml;sisht &ccedil;far&euml; po paguani dhe &ccedil;far&euml; vlere do t&euml; merrni.</p>",
+      "Preventivi dhe koha e punes diskutohen para fillimit, qe klienti te kuptoje qarte scope-in dhe kostot.",
+    toneClass: "border-copper-500/20 bg-[color:rgba(184,92,56,0.08)] text-copper-600",
   },
   {
     Icon: Languages,
     title: "Shërbim i Personalizuar",
     description:
-      "<p>V&euml;mendje individuale p&euml;r &ccedil;do <strong>projekt elektrik</strong>, duke ju dh&euml;n&euml; zgjidhjen m&euml; t&euml; mir&euml; sipas nevojave tuaja.</p>",
+      "Komunikim i drejtperdrejte ne shqip ose anglisht sipas rastit, me fokus te qarte te nevoja reale e klientit.",
+    toneClass: "border-border bg-surface text-muted-strong",
   },
 ];
 
@@ -80,17 +86,17 @@ export default function WhyChooseSection() {
               aria-label={benefit.title}
               className="rounded-lg border border-border bg-surface-raised p-5 shadow-sm">
               <div className="flex items-start gap-4">
-                <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-lg border border-electric-100 bg-electric-50 text-electric-700">
+                <span
+                  className={`inline-flex size-11 shrink-0 items-center justify-center rounded-lg border ${benefit.toneClass}`}>
                   <benefit.Icon aria-hidden="true" className="h-5 w-5" />
                 </span>
                 <div className="min-w-0">
                   <h3 className="text-lg font-semibold text-foreground">
                     {benefit.title}
                   </h3>
-                  <div
-                    dangerouslySetInnerHTML={{ __html: benefit.description }}
-                    className="mt-3 text-sm leading-6 text-muted"
-                  />
+                  <p className="mt-3 text-sm leading-6 text-muted">
+                    {benefit.description}
+                  </p>
                 </div>
               </div>
             </li>

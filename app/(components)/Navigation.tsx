@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FileText, Globe, Home, Phone, Zap } from "lucide-react";
+import HomeAnchorLink from "./HomeAnchorLink";
 import MobileNavigation from "./MobileNavigation";
 import {
   isActiveSection,
@@ -37,8 +38,8 @@ export default function Navigation({
     <nav className="fixed inset-x-0 top-0 z-[9999] border-b border-border/80 bg-background/90 nav-backdrop">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between gap-4">
-          <Link
-            href="/"
+          <HomeAnchorLink
+            href="/#hero"
             aria-label="Alex Elektrik home"
             className="group flex min-w-0 items-center gap-3 rounded-lg py-2 pr-2 transition-colors duration-200 hover:text-electric-700">
             <span className="relative h-10 w-28 shrink-0 sm:w-32">
@@ -54,7 +55,7 @@ export default function Navigation({
             <span className="hidden min-w-0 border-l border-border pl-3 text-xs font-medium leading-tight text-muted md:block">
               Tirane & Durres
             </span>
-          </Link>
+          </HomeAnchorLink>
 
           <div className="hidden items-center gap-1 md:flex">
             {navigationItems.map((item) => {
@@ -62,14 +63,25 @@ export default function Navigation({
               const Icon = iconByName[item.icon];
 
               return (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  aria-current={active ? "page" : undefined}
-                  className={getDesktopLinkClass(active)}>
-                  <Icon aria-hidden="true" className="h-4 w-4 shrink-0" />
-                  <span>{item.name}</span>
-                </Link>
+                item.section === "home" ? (
+                  <HomeAnchorLink
+                    key={item.name}
+                    href={item.href}
+                    aria-current={active ? "page" : undefined}
+                    className={getDesktopLinkClass(active)}>
+                    <Icon aria-hidden="true" className="h-4 w-4 shrink-0" />
+                    <span>{item.name}</span>
+                  </HomeAnchorLink>
+                ) : (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    aria-current={active ? "page" : undefined}
+                    className={getDesktopLinkClass(active)}>
+                    <Icon aria-hidden="true" className="h-4 w-4 shrink-0" />
+                    <span>{item.name}</span>
+                  </Link>
+                )
               );
             })}
           </div>

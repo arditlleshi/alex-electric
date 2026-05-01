@@ -19,6 +19,7 @@ import {
   type ActiveSection,
   type NavigationIcon,
 } from "./navigation-data";
+import HomeAnchorLink from "./HomeAnchorLink";
 import TrackedContactLink from "./TrackedContactLink";
 import {
   CONTACT_PHONE_DISPLAY,
@@ -87,21 +88,39 @@ export default function MobileNavigation({
 
               return (
                 <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    aria-current={active ? "page" : undefined}
-                    onClick={() => setIsOpen(false)}
-                    tabIndex={isOpen ? 0 : -1}
-                    className={getMobileLinkClass(active)}>
-                    <span className="inline-flex min-w-0 items-center gap-3">
-                      <Icon aria-hidden="true" className="h-4 w-4 shrink-0" />
-                      <span className="truncate">{item.name}</span>
-                    </span>
-                    <ChevronRight
-                      aria-hidden="true"
-                      className="h-4 w-4 shrink-0 text-muted"
-                    />
-                  </Link>
+                  {item.section === "home" ? (
+                    <HomeAnchorLink
+                      href={item.href}
+                      aria-current={active ? "page" : undefined}
+                      onClick={() => setIsOpen(false)}
+                      tabIndex={isOpen ? 0 : -1}
+                      className={getMobileLinkClass(active)}>
+                      <span className="inline-flex min-w-0 items-center gap-3">
+                        <Icon aria-hidden="true" className="h-4 w-4 shrink-0" />
+                        <span className="truncate">{item.name}</span>
+                      </span>
+                      <ChevronRight
+                        aria-hidden="true"
+                        className="h-4 w-4 shrink-0 text-muted"
+                      />
+                    </HomeAnchorLink>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      aria-current={active ? "page" : undefined}
+                      onClick={() => setIsOpen(false)}
+                      tabIndex={isOpen ? 0 : -1}
+                      className={getMobileLinkClass(active)}>
+                      <span className="inline-flex min-w-0 items-center gap-3">
+                        <Icon aria-hidden="true" className="h-4 w-4 shrink-0" />
+                        <span className="truncate">{item.name}</span>
+                      </span>
+                      <ChevronRight
+                        aria-hidden="true"
+                        className="h-4 w-4 shrink-0 text-muted"
+                      />
+                    </Link>
+                  )}
                 </li>
               );
             })}
