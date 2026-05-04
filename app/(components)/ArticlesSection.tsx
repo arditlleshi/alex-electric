@@ -3,19 +3,33 @@ import { ArrowRight } from "lucide-react";
 import { guidePages } from "@/lib/content/guides";
 
 const MAX_GUIDES = 6;
+const PRIORITY_GUIDE_SLUGS = [
+  "sa-kushton-instalimi-elektrik-ne-apartament",
+  "si-zgjidhet-paneli-elektrik",
+  "si-zgjidhet-karikuesi-ev-per-shtepi",
+  "what-to-check-before-buying-an-apartment-in-tirana-electrical-system-edition",
+  "can-you-install-an-ev-charger-in-an-apartment-building-in-albania",
+  "how-to-hire-an-electrician-in-tirana-as-a-foreign-resident",
+] as const;
 
-const featuredGuides = [...guidePages]
-  .filter((guide) => guide.featured)
-  .sort((left, right) => Date.parse(right.date) - Date.parse(left.date))
-  .slice(0, MAX_GUIDES);
+const guidePriority = new Map<string, number>(
+  PRIORITY_GUIDE_SLUGS.map((slug, index) => [slug, index]),
+);
 
-const remainingGuides = [...guidePages]
-  .filter(
-    (guide) => !featuredGuides.some((featuredGuide) => featuredGuide.slug === guide.slug),
-  )
-  .sort((left, right) => Date.parse(right.date) - Date.parse(left.date));
+function sortGuidesForPriority<T extends (typeof guidePages)[number]>(guides: T[]) {
+  return [...guides].sort((left, right) => {
+    const leftPriority = guidePriority.get(left.slug) ?? Number.MAX_SAFE_INTEGER;
+    const rightPriority = guidePriority.get(right.slug) ?? Number.MAX_SAFE_INTEGER;
 
-const homepageGuides = [...featuredGuides, ...remainingGuides].slice(0, MAX_GUIDES);
+    if (leftPriority !== rightPriority) {
+      return leftPriority - rightPriority;
+    }
+
+    return Date.parse(right.date) - Date.parse(left.date);
+  });
+}
+
+const homepageGuides = sortGuidesForPriority([...guidePages]).slice(0, MAX_GUIDES);
 
 export default function ArticlesSection() {
   return (
@@ -38,8 +52,8 @@ export default function ArticlesSection() {
             </p>
             <p className="mt-3 max-w-3xl text-sm leading-6 text-muted">
               Nese doni te kuptoni me mire problemin para se te telefononi nje
-              elektricist, ketu gjeni pyetje dhe raste qe dalin shpesh ne pune
-              reale.
+              elektricist, nisni nga udhezuesit kryesore per apartament,
+              panel, EV dhe kontrolle para blerjes ose instalimit.
             </p>
           </div>
 
@@ -92,16 +106,6 @@ export default function ArticlesSection() {
                 <p className="mt-3 flex-1 text-sm leading-6 text-muted">
                   {guide.excerpt}
                 </p>
-
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {guide.secondaryKeywords.slice(0, 3).map((keyword) => (
-                    <span
-                      key={keyword}
-                      className="rounded-lg border border-border bg-surface-raised px-3 py-1 text-xs font-medium text-muted-strong">
-                      {keyword}
-                    </span>
-                  ))}
-                </div>
 
                 <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-electric-700">
                   Lexo artikullin

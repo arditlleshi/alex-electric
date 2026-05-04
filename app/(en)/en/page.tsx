@@ -20,6 +20,25 @@ import {
 
 const EN_URL = `${SITE_URL}/en`;
 const EN_SERVICES_URL = `${SITE_URL}/en/services`;
+const PRIORITY_ENGLISH_SERVICE_SLUGS = [
+  "electrician-tirana",
+  "electrician-durres",
+  "emergency-electrician-tirana",
+  "ev-charger-installation-tirana",
+  "solar-panel-installation-tirana",
+] as const;
+const PRIORITY_ENGLISH_GUIDE_SLUGS = [
+  "what-to-check-before-buying-an-apartment-in-tirana-electrical-system-edition",
+  "can-you-install-an-ev-charger-in-an-apartment-building-in-albania",
+  "how-to-hire-an-electrician-in-tirana-as-a-foreign-resident",
+] as const;
+
+const servicePriority = new Map<string, number>(
+  PRIORITY_ENGLISH_SERVICE_SLUGS.map((slug, index) => [slug, index]),
+);
+const guidePriority = new Map<string, number>(
+  PRIORITY_ENGLISH_GUIDE_SLUGS.map((slug, index) => [slug, index]),
+);
 
 export const metadata: Metadata = {
   title: "English Electrical Services for Tirana and Durres | Alex Elektrik",
@@ -109,13 +128,34 @@ const collectionSchema = {
   ],
 };
 
-const corePages = englishServicePages.filter(
-  (page) => page.pageType === "service" || page.pageType === "location",
-);
-const audiencePages = englishServicePages.filter(
-  (page) => page.pageType === "audience",
-);
-const englishGuides = guidePages.filter((guide) => guide.locale === "en-US");
+const corePages = [...englishServicePages]
+  .filter((page) => page.pageType === "service" || page.pageType === "location")
+  .sort((left, right) => {
+    const leftPriority = servicePriority.get(left.slug) ?? Number.MAX_SAFE_INTEGER;
+    const rightPriority = servicePriority.get(right.slug) ?? Number.MAX_SAFE_INTEGER;
+
+    if (leftPriority !== rightPriority) {
+      return leftPriority - rightPriority;
+    }
+
+    return left.title.localeCompare(right.title, "en");
+  });
+const audiencePages = [...englishServicePages]
+  .filter((page) => page.pageType === "audience")
+  .sort((left, right) => left.title.localeCompare(right.title, "en"));
+const englishGuides = [...guidePages]
+  .filter((guide) => guide.locale === "en-US")
+  .sort((left, right) => {
+    const leftPriority = guidePriority.get(left.slug) ?? Number.MAX_SAFE_INTEGER;
+    const rightPriority = guidePriority.get(right.slug) ?? Number.MAX_SAFE_INTEGER;
+
+    if (leftPriority !== rightPriority) {
+      return leftPriority - rightPriority;
+    }
+
+    return Date.parse(right.date) - Date.parse(left.date);
+  })
+  .slice(0, 3);
 
 export default function EnglishPage() {
   return (
@@ -314,15 +354,15 @@ export default function EnglishPage() {
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div className="min-w-0">
               <span className="inline-flex min-h-9 items-center rounded-lg border border-teal-500/20 bg-teal-500/10 px-3 text-sm font-semibold text-teal-700">
-                Audience Pages
+                More Specific Pages
               </span>
               <h2 className="mt-5 max-w-3xl text-balance text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
-                Pages for real situations
+                Secondary pages for narrower situations
               </h2>
               <p className="mt-5 max-w-3xl text-pretty text-base leading-7 text-muted sm:text-lg">
-                These pages speak directly to the audiences that are most likely
-                to search in English: expats, landlords, Airbnb hosts, and
-                business operators.
+                These pages are still useful when the situation is more
+                specific, such as landlord handovers, Airbnb turnover work,
+                expat support, or small commercial spaces.
               </p>
             </div>
             <Link
@@ -338,7 +378,7 @@ export default function EnglishPage() {
               <Link
                 key={page.slug}
                 href={page.path}
-                className="group flex h-full flex-col rounded-lg border border-border bg-surface p-6 shadow-sm transition-[transform,background-color,border-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-border-strong hover:bg-surface-raised hover:shadow-soft">
+                className="group flex h-full flex-col rounded-lg border border-border bg-surface-raised p-6 shadow-sm transition-[background-color,border-color,color] duration-200 hover:border-teal-500/40 hover:bg-surface">
                 <h3 className="text-xl font-semibold text-foreground transition-colors duration-200 group-hover:text-electric-700">
                   {page.title}
                 </h3>

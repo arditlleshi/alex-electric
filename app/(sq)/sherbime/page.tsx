@@ -5,6 +5,33 @@ import { SITE_URL } from "@/lib/site";
 import { getOpenGraphImageUrl, sanitizeJsonLd } from "@/lib/seo";
 
 const SERVICES_URL = `${SITE_URL}/sherbime`;
+const PRIORITY_SERVICE_SLUGS = [
+  "elektricist-tirane",
+  "elektricist-durres",
+  "elektricist-urgjent-tirane",
+  "instalime-elektrike-tirane",
+  "elektricist-per-apartamente",
+  "panel-elektrik-tirane",
+  "karikues-ev-tirane",
+  "panele-diellore-tirane",
+] as const;
+
+const servicePriority = new Map<string, number>(
+  PRIORITY_SERVICE_SLUGS.map((slug, index) => [slug, index]),
+);
+
+function sortServicesByPriority<T extends (typeof albanianServicePages)[number]>(services: T[]) {
+  return [...services].sort((left, right) => {
+    const leftPriority = servicePriority.get(left.slug) ?? Number.MAX_SAFE_INTEGER;
+    const rightPriority = servicePriority.get(right.slug) ?? Number.MAX_SAFE_INTEGER;
+
+    if (leftPriority !== rightPriority) {
+      return leftPriority - rightPriority;
+    }
+
+    return left.title.localeCompare(right.title, "sq");
+  });
+}
 
 export const metadata: Metadata = {
   title: "Sherbime elektrike ne Tirane dhe Durres | Alex Elektrik",
@@ -37,7 +64,8 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesHubPage() {
-  const cards = albanianServicePages.map((service) => ({
+  const orderedServices = sortServicesByPriority([...albanianServicePages]);
+  const cards = orderedServices.map((service) => ({
     title: service.title,
     description: service.summary,
     href: `/sherbime/${service.slug}`,
@@ -57,7 +85,7 @@ export default function ServicesHubPage() {
       {
         "@type": "ItemList",
         "@id": `${SERVICES_URL}#itemlist`,
-        itemListElement: albanianServicePages.map((service, index) => ({
+        itemListElement: orderedServices.map((service, index) => ({
           "@type": "ListItem",
           position: index + 1,
           name: service.title,
@@ -96,13 +124,13 @@ export default function ServicesHubPage() {
         title="Sherbime elektrike per Tirane dhe Durres"
         description="Gjeni faqen e duhur per urgjenca elektrike, riparime, instalime, EV, solar dhe sherbime per apartamente, vila, biznese dhe prona me qira ne Tirane dhe Durres."
         introParagraphs={[
-          "Nisni nga faqja qe perputhet me problemin ose me pronen tuaj. Ketu jane mbledhur faqet kryesore per defekte, instalime, kontrolle sigurie dhe permiresime elektrike me kerkese te larte ne Tirane dhe Durres.",
-          "Nese ju duhet nje nderhyrje e shpejte, nje kontroll para dorezimit te prones, nje instalim i ri ose planifikim per EV dhe solar, kjo faqe ju con drejt sherbimit me te qarte pa ju humbur kohe me tekst te panevojshem.",
+          "Nisni nga faqet kryesore me kerkesen me te forte: elektricist ne Tirane ose Durres, urgjenca, instalime, apartamente, panel elektrik, EV dhe solar. Kjo ju con me shpejt te faqja qe ka me shume mundesi te zgjidhe situaten tuaj.",
+          "Me poshte gjeni edhe faqe me specifike per vila, biznese, ndricim ose smart home. Ato vlejne kur problemi eshte me i ngushte, por faqet kryesore zakonisht jane pika me e mire e nisjes.",
         ]}
         highlights={[
-          "Faqe lokale per Tirane dhe Durres per banesa, vila dhe biznese.",
-          "Sherbime te ndara sipas problemit, llojit te prones dhe nevojes reale.",
-          "Lidhje te dobishme drejt udhezuesve qe ju ndihmojne para telefonates.",
+          "Faqet kryesore jane renditur te parat per kerkimet me te forta lokale.",
+          "Faqet me specifike mbeten te hapura si mbeshtetje per raste me te ngushta.",
+          "Udhezuesit e blogut ju ndihmojne te kuptoni problemin para telefonates.",
         ]}
         cards={cards}
         breadcrumbs={[

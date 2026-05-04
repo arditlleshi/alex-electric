@@ -82,9 +82,9 @@ export const englishServicePages = [
       "English-speaking electrician in Tirana for urgent repairs, diagnostics, EV chargers, solar work, and planned electrical jobs across Tirana and Durres.",
     h1: "English-Speaking Electrician in Tirana",
     hero:
-      "Clear, fast electrical help for homeowners, tenants, landlords, and businesses that need an electrician in Tirana they can speak to in English.",
+      "Clear, practical electrical help in Tirana for homeowners, tenants, landlords, and businesses that need one English-speaking electrician for faults, upgrades, handovers, and day-to-day property issues.",
     summary:
-      "This page is for English-speaking clients in Tirana who need a local electrician for urgent faults, planned repairs, upgrades, or property handovers. It speaks directly to expats, rentals, and small businesses that want clear communication, a fast response, and no confusion about scope.",
+      "This is the main English entry page for Tirana. It is designed for people who need a reliable local electrician for urgent faults, planned repairs, upgrades, apartment move-ins, rental handovers, and small business work without language friction. It should stand apart from the narrower audience pages because it covers the broadest real search intent in English.",
     primaryKeyword: "electrician in tirana",
     secondaryKeywords: [
       "english speaking electrician tirana",
@@ -125,9 +125,9 @@ export const englishServicePages = [
       city: "Tirana",
       propertyType: "apartment",
       problem:
-        "The apartment kept tripping breakers during normal evening use and needed a clearer circuit layout.",
+        "A client in a newer Tirana apartment block kept tripping breakers during evening use and could not get a clear explanation in English about whether the issue was the panel, the load, or one bad circuit.",
       fix:
-        "A worn breaker was replaced, the circuits were balanced, and the key loads were reviewed again.",
+        "A worn breaker was replaced, the circuits were balanced, and the main kitchen and living-room loads were reviewed and explained clearly in English before the final test.",
       turnaround: "Same-day visit and final testing",
       outcome:
         "The property returned to stable operation with a clearer setup for the client.",
@@ -185,9 +185,9 @@ export const englishServicePages = [
       "Emergency electrician in Tirana for tripping breakers, burning smells, loss of power, damaged sockets, and other urgent electrical faults.",
     h1: "Emergency Electrician in Tirana",
     hero:
-      "Fast-response help for electrical problems that cannot wait until tomorrow and need a clear answer now.",
+      "Fast-response help for electrical problems in Tirana that cannot wait until tomorrow, especially when there is heat, smell, sparks, or part of the property has gone dark.",
     summary:
-      "This page is built for urgent electrical faults in Tirana and nearby areas, especially when there is a burning smell, repeated breaker trips, sparks, or partial loss of power. The focus is on quick safety triage, fast arrival, and a clear next step for the client.",
+      "This page is built for urgent electrical faults in Tirana and nearby areas, especially when there is a burning smell, repeated breaker trips, sparks, partial loss of power, or visible overheating at a socket or panel. It should stay clearly separate from general repair pages because the real value here is safety triage, same-day response, and quick isolation of risk.",
     primaryKeyword: "emergency electrician tirana",
     secondaryKeywords: [
       "electrician 24/7 tirana",
@@ -221,9 +221,9 @@ export const englishServicePages = [
       city: "Tirana",
       propertyType: "rental apartment",
       problem:
-        "The client reported a burning smell and partial lighting failure in one room.",
+        "The client reported a burning smell, partial lighting failure in one room, and a socket that had started to warm up after heater use in a rental apartment.",
       fix:
-        "The faulty line was isolated, the overheated connection was found, and the damaged part was replaced.",
+        "The faulty line was isolated first, the overheated connection was found near the affected point, and the damaged part was replaced before the rest of the flat was brought fully back online.",
       turnaround: "Same-day emergency response",
       outcome:
         "The space returned to a safe condition and the immediate risk was removed.",
@@ -646,9 +646,9 @@ export const englishServicePages = [
       "EV charger installation in Tirana for homes, garages, and workplaces, with load checks, protection, and safe electrical setup.",
     h1: "EV Charger Installation in Tirana",
     hero:
-      "Safe, practical EV charger installation for homes and businesses that need the charger sized and installed the right way.",
+      "Safe, practical EV charger installation for homes and businesses in Tirana that need the charger, panel, cable route, and daily charging routine planned the right way.",
     summary:
-      "This page is for EV owners and businesses that need a charger installed safely, with the right load check, protection, and cable route. It explains why panel capacity and proper installation matter more than simply mounting a charger on the wall.",
+      "This page is for EV owners and businesses that need a charger installed safely, with the right load check, protection, cable route, and parking setup. It should stand apart from generic EV pages because it answers the practical local questions first: can the panel carry the load, where should the charger sit, and how should the line be protected for everyday use.",
     primaryKeyword: "ev charger installation tirana",
     secondaryKeywords: [
       "home ev charger tirana",
@@ -682,9 +682,9 @@ export const englishServicePages = [
       city: "Tirana",
       propertyType: "private villa",
       problem:
-        "The property needed a charger line and a safe way to keep the rest of the house stable.",
+        "The property needed a charger line in a private garage, but the owner also wanted to make sure the rest of the house stayed stable when the EV charged in the evening.",
       fix:
-        "A dedicated line, load review, and protection setup were added before the charger was used.",
+        "A dedicated line, load review, and protection setup were added before the charger was used, with the charger point placed where cable access and daily parking worked cleanly.",
       turnaround: "Planned installation visit",
       outcome:
         "The property was ready for everyday EV charging with a clearer and safer layout.",
@@ -738,9 +738,9 @@ export const englishServicePages = [
       "Solar panel installation in Tirana for homes, villas, and small businesses with proper planning, safe wiring, and practical system design.",
     h1: "Solar Panel Installation in Tirana",
     hero:
-      "Solar work that starts with the property, the load, and the real use case instead of a generic kit-and-go approach.",
+      "Solar work that starts with the property, the roof, the panel, and the real daily load instead of a generic kit-and-go approach.",
     summary:
-      "This page is for property owners who want solar planning grounded in roof fit, electrical capacity, and realistic daily use. It focuses on safe integration, sensible system sizing, and clear next steps for villas and small businesses.",
+      "This page is for property owners who want solar planning grounded in roof fit, electrical capacity, shade exposure, and realistic daily use. It should stand apart from broader energy content because it focuses on the practical local decision: whether the property in Tirana or nearby areas is a good fit, how the panel should be prepared, and what size system actually makes sense.",
     primaryKeyword: "solar panel installation tirana",
     secondaryKeywords: [
       "solar electrician albania",
@@ -774,9 +774,9 @@ export const englishServicePages = [
       city: "Tirana",
       propertyType: "small business",
       problem:
-        "The business wanted a clearer plan for solar integration and a safer connection to the existing panel.",
+        "The business wanted a clearer plan for solar integration, but the existing panel and daily load pattern made it unclear what system size was actually realistic.",
       fix:
-        "The load, circuits, and integration plan were reviewed before the system was connected.",
+        "The load, circuits, roof fit, and integration plan were reviewed before the system was connected, so the owner could understand the technical path before committing to the final setup.",
       turnaround: "Planned installation and integration",
       outcome:
         "The project had a cleaner technical path and a safer setup for future use.",
@@ -830,9 +830,9 @@ export const englishServicePages = [
       "English-speaking electrician in Durres for apartments, villas, hotels, rentals, and coastal properties that need reliable electrical support.",
     h1: "English-Speaking Electrician in Durres",
     hero:
-      "Practical English electrical support for Durres, coastal rentals, villas, and businesses that need a dependable local electrician.",
+      "Practical English electrical support for Durres, coastal rentals, villas, and hospitality properties that need a dependable local electrician before guests arrive or the season begins.",
     summary:
-      "This page is for English-speaking property owners in Durres who need repairs, maintenance, or installations for coastal rentals, villas, hotels, and business spaces. It highlights the extra demands of humidity, seasonal use, and fast turnaround before guests arrive.",
+      "This page is for English-speaking property owners in Durres who need repairs, maintenance, or installations for coastal rentals, villas, hotels, and business spaces. It should stay distinct from the Tirana page because the real local angle is different: humidity, seasonal reopening, guest turnover, and properties that sit unused before suddenly coming under load again.",
     primaryKeyword: "electrician durres",
     secondaryKeywords: [
       "electrician in durres",
@@ -866,9 +866,9 @@ export const englishServicePages = [
       city: "Durres",
       propertyType: "small hotel",
       problem:
-        "The property needed a stable electrical check before the busy season began.",
+        "The property needed a stable electrical check before the busy season began after sitting partially unused through the off-season near the coast.",
       fix:
-        "The key circuits, lighting, and load points were reviewed and corrected in time for opening.",
+        "The key circuits, lighting, and load points were reviewed, the weak connections were corrected, and the property was tested in time for opening.",
       turnaround: "Planned pre-season visit",
       outcome:
         "The business entered the season with fewer risks and a clearer maintenance plan.",

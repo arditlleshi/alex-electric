@@ -62,9 +62,9 @@ export const albanianServicePages = [
       "Elektricist ne Tirane per instalime, riparime, diagnostikim, smart home, panele diellore dhe karikues EV me sherbim te shpejte ne kryeqytet.",
     h1: "Elektricist ne Tirane",
     hero:
-      "Sherbim elektrik profesional ne Tirane per banesa, vila, zyra dhe biznese qe duan pune te sigurt, komunikim te qarte dhe reagim te shpejte.",
+      "Sherbim elektrik ne Tirane per apartamente, hyrje te reja, vila, zyra dhe biznese qe duan zgjidhje te qarta per defekte, riparime, instalime dhe ngarkese moderne.",
     summary:
-      "Faqja kryesore per klientet ne Tirane qe kerkojne elektricist per urgjenca, riparime, instalime dhe kontrolle sigurie. Ajo flet qarte per lagjet, objektet rezidenciale dhe ambientet e biznesit qe kane nevoje per reagim te shpejte dhe pune te sigurt.",
+      "Faqja kryesore per klientet ne Tirane qe kerkojne elektricist per defekte te perseritura, instalime te reja, kontrolle sigurie dhe permiresime ne panel. Eshte e ndryshme nga faqet me specifike sepse mbulon kerkesat me te zakonshme ne lagje urbane, apartamente ne rinovim, hyrje te reja dhe ambiente pune me ngarkese te perditshme.",
     primaryKeyword: "elektricist ne tirane",
     secondaryKeywords: [
       "elektricist tirane",
@@ -103,9 +103,9 @@ export const albanianServicePages = [
       city: "Tirane",
       propertyType: "apartament urban",
       problem:
-        "Klienti kishte drita qe pulsonin dhe siguresa qe binin sa here ndiznin pajisje te ndryshme.",
+        "Ne nje apartament ne Don Bosko klienti kishte drita qe pulsonin, prize kuzhine me ngrohje dhe siguresa qe binin sa here ndiznin disa pajisje bashke.",
       fix:
-        "U kontrollua paneli, u ndane qarqet kryesore dhe u zgjidh nje lidhje e dobet ne linjen e ndricimit.",
+        "U kontrollua paneli, u ndane qarqet kryesore te kuzhines dhe ndricimit, dhe u rregullua nje lidhje e dobet qe po krijonte paqendrueshmeri ne linje.",
       turnaround: "Vizite e nje dite dhe testim final ne te njejten kohe.",
       outcome:
         "Instalimi u be me i sigurt, me me pak mbingarkese dhe me komunikim te qarte per perdorim te perditshem.",
@@ -156,9 +156,9 @@ export const albanianServicePages = [
       "Elektricist ne Durres per vila, apartamente, hotele, biznese bregdetare, riparime urgjente, instalime dhe mirembajtje elektrike.",
     h1: "Elektricist ne Durres",
     hero:
-      "Sherbim elektrik i fokusuar ne Durres per prona bregdetare, apartamente, vila dhe biznese qe kerkojne pune te qete, te rregullt dhe te sigurt.",
+      "Sherbim elektrik ne Durres per apartamente bregdetare, vila, hotele te vogla dhe prona me qira qe duan reagim te shpejte para sezonit, para check-in ose gjate ngarkeses se veres.",
     summary:
-      "Sherbim elektrik per Durresin, Golemin dhe zonat bregdetare ku ka vila, apartamente sezonale, hotele dhe biznese me fluks. Fokusi eshte te kontrolli praktik, reagimi i shpejte dhe puna qe e ben pronen gati per perdorim ose sezon.",
+      "Sherbim elektrik per Durresin, Golemin dhe zonat bregdetare ku instalimi ndikohet nga lageshtia, periudhat pa perdorim dhe ngarkesa e larte sezonale. Kjo faqe eshte me e forte per prona turistike dhe apartamente pushimi, jo thjesht si variant i faqes se Tiranes me nje emer tjeter qyteti.",
     primaryKeyword: "elektricist durres",
     secondaryKeywords: [
       "sherbime elektrike durres",
@@ -197,9 +197,9 @@ export const albanianServicePages = [
       city: "Durres",
       propertyType: "vile bregdetare",
       problem:
-        "Klienti raportonte rryme te paqendrueshme dhe ndricim te dobet ne prag te sezonit.",
+        "Pronari i nje vile ne Golem raportonte rryme te paqendrueshme, ndricim te dobet ne oborr dhe nderprerje sa here viheshin ne pune kondicioneret para hapjes se sezonit.",
       fix:
-        "U kontrolluan qarqet kryesore, u shtrenguan lidhjet dhe u veçuan ngarkesat kryesore te shtepise.",
+        "U kontrolluan qarqet kryesore, u shtrenguan lidhjet e liruara nga lagështia dhe u vecuan ngarkesat kryesore te shtepise per perdorimin sezonal.",
       turnaround: "Zgjidhje brenda nje vizite dhe testim ne fund te punes.",
       outcome:
         "Prona u be gati per perdorim sezonal me me pak risk dhe me funksionim me te rregullt.",
@@ -250,9 +250,9 @@ export const albanianServicePages = [
       "Elektricist urgjent ne Tirane per defekte te menjehershme, siguresa qe bien, era djegieje, rryme te dobet dhe riparime 24 ore.",
     h1: "Elektricist Urgjent ne Tirane",
     hero:
-      "Kur problemi elektrik nuk pret, ofrohet reagim i shpejte ne Tirane per erë djegieje, siguresa qe bien, shkendija dhe nderprerje te rrezikshme.",
+      "Kur problemi elektrik nuk pret, kjo faqe eshte per raste te qarta rreziku ne Tirane: erë djegieje, panel qe nxehet, prize me shkendija, nderprerje te papritura dhe qarqe qe bien vazhdimisht.",
     summary:
-      "Sherbim urgjent per rastet kur ka rrezik te menjehershem ose ambienti mbetet pa rryme. Fokusi eshte te sinjalet e rrezikut, koha e reagimit dhe zgjidhja e shpejte qe e kthen instalimin ne gjendje te sigurt.",
+      "Sherbim urgjent per rastet kur ka rrezik te menjehershem ose ambienti mbetet pa rryme ne menyre qe pengon perdorimin normal. Kjo faqe duhet te dalloje qarte nga riparimet e zakonshme sepse fokusohet te siguria e menjehershme, izolimi i problemit dhe reagimi ne te njejten dite kur rasti e kerkon.",
     primaryKeyword: "elektricist urgjent tirane",
     secondaryKeywords: [
       "elektricist 24 ore tirane",
@@ -284,9 +284,9 @@ export const albanianServicePages = [
       city: "Tirane",
       propertyType: "apartament me qira",
       problem:
-        "Qiramarresi raportoi erë djegieje dhe fikje te pjesshme te ndriçimit ne nje dhome.",
+        "Qiramarresi ne nje apartament te Ali Demit raportoi erë djegieje, fikje te pjesshme te ndriçimit dhe nje prize qe kishte nisur te nxehej pas perdorimit te ngrohjes.",
       fix:
-        "U izolua linja problematike, u gjet lidhja e mbinxehur dhe u zevendesua pjese e demtuar.",
+        "U izolua linja problematike, u gjet lidhja e mbinxehur prane pikes se ngarkuar dhe u zevendesua pjesa e demtuar para se problemi te perhapej ne qarkun tjeter.",
       turnaround: "Nderhyrje e shpejte ne te njejten dite.",
       outcome:
         "Rreziku u ul menjehere dhe ambienti u kthye ne gjendje te sigurt per perdorim.",
@@ -424,9 +424,9 @@ export const albanianServicePages = [
       "Instalime elektrike ne Tirane per banesa te reja, rikonstruksione, zgjerim linjash, shtim qarqesh, ndricim dhe organizim paneli.",
     h1: "Instalime Elektrike ne Tirane",
     hero:
-      "Instalime elektrike ne Tirane per projekte qe nisin nga zero ose kalojne ne rinovim dhe kane nevoje per zbatim te paster e te sigurt.",
+      "Instalime elektrike ne Tirane per apartamente ne rinovim, vila, zyra dhe ndertime te reja qe kane nevoje per ndarje te qarte qarqesh, panel te organizuar dhe kapacitet per pajisjet e sotme.",
     summary:
-      "Sherbim per ndertime te reja, apartamente ne rinovim dhe sisteme qe duhen modernizuar. Fokusi eshte te projektimi i qarqeve, organizimi i panelit dhe instalimi qe e mban ngarkesen e sotme pa kompromis ne siguri.",
+      "Sherbim per ndertime te reja, apartamente ne rinovim dhe sisteme qe duhen modernizuar per kuzhine me ngarkese te larte, kondicionere, ndricim te riorganizuar dhe pajisje moderne. Kjo faqe eshte me e ndryshme nga riparimet e zakonshme sepse fokusohet te planifikimi i punes nga fillimi, jo thjesht te rregullimi i nje pike me defekt.",
     primaryKeyword: "instalime elektrike tirane",
     secondaryKeywords: [
       "instalim elektrik apartament",
@@ -458,9 +458,9 @@ export const albanianServicePages = [
       city: "Tirane",
       propertyType: "apartament i rinovuar",
       problem:
-        "Pronari po riorganizonte ambientin dhe kishte nevoje per qarqe me te pastra dhe me te sigurta.",
+        "Pronari po riorganizonte nje apartament ne Astir, po shtonte kuzhine te re, kondicionere dhe ndricim tavanor, por instalimi ekzistues nuk kishte ndarje te qarte qarqesh.",
       fix:
-        "U projektua ndarje e re, u vendosen pika te reja dhe u riorganizua paneli per me shume qartesi.",
+        "U projektua ndarje e re e qarqeve, u vendosen pika te reja sipas planit te mobilimit dhe u riorganizua paneli per me shume qartesi dhe zgjerim te ardhshëm.",
       turnaround: "Zbatim brenda planit te rinovimit.",
       outcome:
         "Instalimi u be me i rregullt, me me shume kapacitet dhe me mire per perdorim afatgjate.",
@@ -598,9 +598,9 @@ export const albanianServicePages = [
       "Panele diellore ne Tirane per shtepi, vila dhe biznese me projektim, instalim, lidhje te sigurte dhe mirembajtje afatgjate.",
     h1: "Panele Diellore ne Tirane",
     hero:
-      "Panele diellore ne Tirane per shtepi, vila dhe biznese qe kerkojne kursim, planifikim te sakte dhe lidhje te sigurt me instalimin ekzistues.",
+      "Panele diellore ne Tirane per vila, shtepi dhe biznese te vogla qe duan te kuptojne nese prona e tyre e mban vertet sistemin, sa duhet te prodhoje dhe si lidhet sakte me panelin ekzistues.",
     summary:
-      "Sherbim qe mbulon vleresimin, dimensionimin dhe integrimin e sistemit sipas konsumit real, kulmit dhe objektit. Eshte veçanerisht i pershtatshem per vila, godina te vogla dhe biznese qe duan sistem te planifikuar me kujdes.",
+      "Sherbim qe mbulon vleresimin, dimensionimin dhe integrimin e sistemit sipas konsumit real, orientimit te kulmit, hijezimit dhe gjendjes se panelit elektrik. Kjo faqe duhet te dalloje nga informacioni i pergjithshem per solar sepse fokusohet te projektimi praktik per prona ne Tirane dhe zonat rreth saj.",
     primaryKeyword: "panele diellore tirane",
     secondaryKeywords: [
       "instalim panele diellore",
@@ -632,9 +632,9 @@ export const albanianServicePages = [
       city: "Tirane",
       propertyType: "vile familjare",
       problem:
-        "Pronari donte ulje te shpenzimeve dhe nje sistem qe te punonte paster me instalimin ekzistues.",
+        "Pronari i nje vile ne Lunder donte ulje te shpenzimeve, por nuk ishte i sigurt nese orientimi i kulmit dhe paneli ekzistues e mbanin nje sistem te dobishem.",
       fix:
-        "U be dimensionim sipas konsumit, u rregullua lidhja me panelin dhe u planifikua mirembajtja.",
+        "U be dimensionim sipas konsumit real, u rishikua lidhja me panelin elektrik dhe u planifikua menyra e monitorimit dhe mirembajtjes pas instalimit.",
       turnaround: "Projektim dhe instalim sipas fazave te punes.",
       outcome:
         "Sistemi u integrua me rregull dhe klienti mori qartesi per performancen dhe kujdesin.",
@@ -685,9 +685,9 @@ export const albanianServicePages = [
       "Karikues EV ne Tirane per instalime ne shtepi dhe biznese me kontroll ngarkese, mbrojtje, lidhje te sigurt dhe planifikim te qarte.",
     h1: "Karikues EV ne Tirane",
     hero:
-      "Karikues EV ne Tirane per shtepi, garazhe dhe biznese qe po kalojne ne levizje elektrike dhe duan instalim te sigurt.",
+      "Karikues EV ne Tirane per shtepi, garazhe, vila dhe biznese qe duan te kuptojne nese paneli e mban ngarkesen, ku vendoset me mire pajisja dhe si behet karikimi i sigurt cdo dite.",
     summary:
-      "Sherbim qe mbulon jo vetem montimin, por edhe kontrollin e panelit, zgjedhjen e fuqise dhe vendosjen me praktike te pajisjes. Eshte i pershtatshem per banesa, parkingje private dhe biznese me fluks te qendrueshem.",
+      "Sherbim qe mbulon jo vetem montimin, por edhe kontrollin e panelit, zgjedhjen e fuqise, rrugen e kabllimit dhe menyren me praktike te perdorimit. Kjo faqe eshte me e forte kur klienti ka pyetje reale per parkim, panel, linje te dedikuar dhe perdorim te perditshem, jo vetem per blerjen e nje pajisjeje.",
     primaryKeyword: "karikues ev tirane",
     secondaryKeywords: [
       "instalim karikues ev",
@@ -719,9 +719,9 @@ export const albanianServicePages = [
       city: "Tirane",
       propertyType: "garazh privat",
       problem:
-        "Pronari kishte nevoje per karikim te perditeshem por nuk ishte i sigurt nese paneli e mbante ngarkesen.",
+        "Pronari i nje vile ne Farke kishte nevoje per karikim te perditeshem ne garazh, por nuk ishte i sigurt nese paneli ekzistues e mbante ngarkesen bashke me kondicioneret dhe pajisjet e tjera.",
       fix:
-        "U vleresua instalimi, u nda nje qark i dedikuar dhe u montua karikuesi me mbrojtje te pershtatshme.",
+        "U vleresua instalimi, u nda nje qark i dedikuar nga paneli kryesor dhe u montua karikuesi me mbrojtje te pershtatshme dhe rruge kabllimi me te paster.",
       turnaround: "Planifikim dhe instalim ne nje proces te vetem.",
       outcome:
         "Karikimi u be me i thjeshte, me i sigurt dhe me i qarte per perdorim te perditshem.",
@@ -1208,9 +1208,9 @@ export const albanianServicePages = [
       "Elektricist per apartamente ne Tirane dhe Durres per kontroll, riparime, instalime, shtim pikash dhe permiresim te instalimit.",
     h1: "Elektricist per Apartamente",
     hero:
-      "Elektricist per apartamente ne Tirane dhe Durres per pronare dhe qiramarres qe kerkojne zgjidhje te shpejta dhe praktike.",
+      "Elektricist per apartamente ne Tirane dhe Durres per pronare, bleres dhe qiramarres qe duan kontroll te qarte para hyrjes ne prone, para qiradhenies ose gjate perdorimit te perditshem.",
     summary:
-      "Sherbim per problemet e zakonshme te apartamenteve te vjetra dhe te reja, nga mbingarkesa dhe pikat e pakta te energjise deri te kontrollet para hyrjes ne prone. Eshte i vlefshem per banesa, qira dhe apartamente te reja ne Tirane e Durres.",
+      "Sherbim per problemet e zakonshme te apartamenteve te vjetra dhe te reja, nga mbingarkesa ne kuzhine dhe mungesa e pikave te energjise deri te kontrollet para hyrjes ne prone. Kjo faqe duhet te dale me vete sepse apartamenti ka probleme shume me specifike se vila ose biznesi: panel i vogel, kuzhine e ngarkuar, prize te shumta ne pak hapesire dhe kontroll para qirase ose blerjes.",
     primaryKeyword: "elektricist per apartamente",
     secondaryKeywords: [
       "instalime apartament",
@@ -1242,9 +1242,9 @@ export const albanianServicePages = [
       city: "Tirane",
       propertyType: "apartament me qira",
       problem:
-        "Pronari donte ta pergatiste apartamentin per qira dhe kishte nje ose dy pika jo funksionale.",
+        "Pronari po pergatiste nje apartament ne Tirane per qira dhe kishte prize jo funksionale ne kuzhine, ndricim te dobet ne koridor dhe mungese pikash ne dhomen e gjumit.",
       fix:
-        "U rregulluan pikat problematike dhe u shtua nje organizim me i mire i zones se kuzhines.",
+        "U rregulluan pikat problematike, u shtua organizim me i mire ne zonen e kuzhines dhe u kontrolluan qarqet kryesore para dorezimit te apartamentit.",
       turnaround: "Pergatitje para dorëzimit te apartamentit.",
       outcome:
         "Banesa u be me e sigurt dhe me e pershtatshme per qiramarres te rinj.",

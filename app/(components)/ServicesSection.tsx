@@ -46,6 +46,13 @@ const primaryServiceCards: {
       "Per siguresa qe bien, prize qe nxehet, ere djegieje ose nderprerje energjie qe nuk pret deri neser.",
   },
   {
+    slug: "instalime-elektrike-tirane",
+    image: SmartHome,
+    eyebrow: "Instalime",
+    summary:
+      "Per apartamente, shtepi dhe ambiente pune qe kane nevoje per instalim te ri, rinovim ose shtim qarqesh.",
+  },
+  {
     slug: "karikues-ev-tirane",
     image: ElectricCar,
     eyebrow: "EV",
@@ -58,13 +65,6 @@ const primaryServiceCards: {
     eyebrow: "Solar",
     summary:
       "Per shtepi dhe vila qe duan zgjidhje me panele diellore sipas konsumit, buxhetit dhe hapesires.",
-  },
-  {
-    slug: "smart-home-tirane",
-    image: SmartHome,
-    eyebrow: "Smart home",
-    summary:
-      "Per ndricim inteligjent, kontroll me telefon dhe automatizim praktik ne apartament, shtepi ose vile.",
   },
 ];
 
@@ -80,16 +80,22 @@ const secondaryLinks: {
       "Per apartamente, hyrje te reja, prona me qira dhe kontrolle para dorezimit.",
   },
   {
-    slug: "elektricist-per-vila",
-    title: "Vila dhe prona te medha",
+    slug: "panel-elektrik-tirane",
+    title: "Panel dhe siguri",
     description:
-      "Per vila, ndricim te jashtem, smart home, panel elektrik dhe ngarkese me te larte.",
+      "Per kontroll paneli, ndarje qarqesh dhe permiresime kur ngarkesa eshte rritur.",
   },
   {
     slug: "mirembajtje-elektrike-biznese",
     title: "Biznese dhe mirembajtje",
     description:
       "Per zyra, dyqane, restorante, hotele dhe mirembajtje elektrike te vazhdueshme.",
+  },
+  {
+    slug: "smart-home-tirane",
+    title: "Smart home dhe komoditet",
+    description:
+      "Per automatizim, ndricim inteligjent dhe zgjidhje me te vecanta qe vijne pas punes baze elektrike.",
   },
 ];
 
@@ -130,7 +136,7 @@ export default function ServicesSection() {
             <p className="mt-3 max-w-3xl text-sm leading-6 text-muted">
               Ketu mund te hapni drejt faqet per riparime elektrike, instalime
               elektrike, elektricist urgjent, karikues EV, panele diellore dhe
-              smart home.
+              faqet kryesore qe kane me shume kerkese.
             </p>
           </div>
 
@@ -200,8 +206,8 @@ export default function ServicesSection() {
                 Rruge te tjera hyrjeje
               </h3>
               <p className="mt-2 max-w-3xl text-sm leading-6 text-muted">
-                Faqet shtese ju ndihmojne te gjeni me shpejt sherbimin e duhur
-                per apartamente, vila, zyra, dyqane dhe mirembajtje elektrike.
+                Ketu kaloni te faqe me specifike kur problemi lidhet me
+                apartamente, panel elektrik, biznese ose zgjidhje me te vecanta.
               </p>
             </div>
 

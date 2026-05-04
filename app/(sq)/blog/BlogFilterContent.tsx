@@ -5,6 +5,18 @@ import { useSearchParams } from "next/navigation";
 import { guidePages } from "@/lib/content/guides";
 
 type BlogLanguage = "all" | "sq" | "en";
+const PRIORITY_GUIDE_SLUGS = [
+  "sa-kushton-instalimi-elektrik-ne-apartament",
+  "si-zgjidhet-paneli-elektrik",
+  "si-zgjidhet-karikuesi-ev-per-shtepi",
+  "what-to-check-before-buying-an-apartment-in-tirana-electrical-system-edition",
+  "can-you-install-an-ev-charger-in-an-apartment-building-in-albania",
+  "how-to-hire-an-electrician-in-tirana-as-a-foreign-resident",
+] as const;
+
+const guidePriority = new Map<string, number>(
+  PRIORITY_GUIDE_SLUGS.map((slug, index) => [slug, index]),
+);
 
 function getNormalizedLang(lang: string | undefined): BlogLanguage {
   if (lang === "sq" || lang === "en") {
@@ -15,13 +27,22 @@ function getNormalizedLang(lang: string | undefined): BlogLanguage {
 }
 
 function getFilteredGuides(lang: BlogLanguage) {
-  if (lang === "all") {
-    return guidePages;
-  }
-
-  return guidePages.filter((guide) =>
+  const filtered = lang === "all"
+    ? guidePages
+    : guidePages.filter((guide) =>
     lang === "en" ? guide.locale === "en-US" : guide.locale === "sq-AL",
   );
+
+  return [...filtered].sort((left, right) => {
+    const leftPriority = guidePriority.get(left.slug) ?? Number.MAX_SAFE_INTEGER;
+    const rightPriority = guidePriority.get(right.slug) ?? Number.MAX_SAFE_INTEGER;
+
+    if (leftPriority !== rightPriority) {
+      return leftPriority - rightPriority;
+    }
+
+    return Date.parse(right.date) - Date.parse(left.date);
+  });
 }
 
 function FilterLink({
@@ -83,15 +104,6 @@ function GuideCardList({
                 {guide.title}
               </h2>
               <p className="mt-3 text-sm leading-6 text-muted sm:text-base">{guide.excerpt}</p>
-              <ul className="mt-5 flex flex-wrap gap-2">
-                {guide.secondaryKeywords.slice(0, 3).map((keyword) => (
-                  <li key={keyword}>
-                    <span className="inline-flex min-h-7 items-center rounded-lg border border-border bg-surface-raised px-3 text-xs font-medium text-muted">
-                      {keyword}
-                    </span>
-                  </li>
-                ))}
-              </ul>
               <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-electric-700">
                 Lexo udhezuesin
               </span>

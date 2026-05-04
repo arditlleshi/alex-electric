@@ -123,11 +123,11 @@ const rawGuidePages = [
     path: blogPath(englishGuideSlugs.englishTiranaGuide),
     locale: "en-US",
     guideType: "existing",
-    title: "English-speaking electrician in Tirana: what expats should check",
+    title: "English-speaking electrician in Tirana: what to prepare before the first visit",
     description:
-      "A practical English guide to finding an English-speaking electrician in Tirana, with safety checks, pricing expectations, and emergency-response tips.",
+      "A practical English guide for expats and foreign residents who want to prepare the right details before the first electrician visit in Tirana.",
     excerpt:
-      "A simple buying guide for foreign residents, landlords, and business owners who need electrical help in Tirana without language friction.",
+      "A first-visit checklist for foreign residents who want to explain the problem clearly and avoid wasted time on the first callout.",
     eyebrow: "English guide",
     date: "2026-02-18",
     primaryKeyword: "english speaking electrician tirana",
@@ -140,60 +140,60 @@ const rawGuidePages = [
     city: "Tirana",
     sections: [
       section(
-        "Ask for scope, credentials, and clear communication",
+        "Prepare the basic property details first",
         [
-          "A good electrician should be able to explain what will be checked, what will be replaced, and how long the job should take.",
-          "English communication matters because it reduces mistakes and makes urgent jobs easier to handle.",
+          "Before the first visit, note the property type, neighborhood, and whether the issue affects the whole property or only one room.",
+          "That gives the electrician enough context to tell whether the first step is a fault callout, a handover check, or a planned upgrade visit.",
         ],
         [
-          "Licensing and insurance",
-          "Written scope before work starts",
-          "Clear arrival window",
-        ],
-      ),
-      section(
-        "Prioritize safety before speed",
-        [
-          "Emergency response is useful, but the first job is to make the property safe and understand the real cause.",
-          "Panel checks, grounding, and circuit inspection are more important than a quick visual fix.",
-        ],
-        [
-          "Breaker condition",
-          "Cable integrity",
-          "Grounding verification",
+          "Property type and neighborhood",
+          "Which room or circuit is affected",
+          "Whether the issue is constant or only appears under load",
         ],
       ),
       section(
-        "Plan for EV and solar before you need them",
+        "Know which symptoms matter most",
         [
-          "If the property may add an EV charger or solar system later, the panel should be checked early.",
-          "That keeps the next upgrade cheaper and avoids rework after the initial visit.",
+          "A burning smell, heat at a socket, visible sparks, or repeated breaker trips should be mentioned immediately because they change the urgency of the visit.",
+          "A clear symptom description often matters more than a long story about the whole property.",
         ],
         [
-          "Load calculation",
-          "Future capacity",
-          "Safer upgrade path",
+          "Burning smell or visible heat",
+          "Breaker trips or partial outage",
+          "Recent renovation or new appliance",
         ],
       ),
       section(
-        "Keep one reliable contact",
+        "Prepare photos if the issue is visible",
         [
-          "For expats, the best setup is one trusted electrician who can handle both routine work and urgent callouts.",
+          "A photo of the panel, the affected socket, or the lighting point can make the first conversation much shorter and more useful.",
+          "This is especially helpful when you are booking in English from abroad or helping a tenant remotely.",
+        ],
+        [
+          "Panel photo",
+          "Photo of the affected point",
+          "Short note about when the problem appears",
+        ],
+      ),
+      section(
+        "Use the first visit to separate repair from upgrade work",
+        [
+          "The first visit should help you understand whether you need a quick repair, a wider panel review, or a bigger upgrade for EV, solar, or renovation work.",
         ],
       ),
     ],
     faq: [
       faq(
-        "Do I need Albanian to book this type of electrician?",
-        "No. The page is designed for people who want English support from the first message to the final explanation.",
+        "Do I need Albanian to book?",
+        "No. This page is meant for people who want to prepare the first conversation in English.",
       ),
       faq(
-        "Should I choose on price alone?",
-        "No. Compare scope, materials, timing, and follow-up support, not just the lowest number.",
+        "What should I send before the first visit?",
+        "The best starting point is the property type, the location, the main symptom, and any photo of the panel or affected point.",
       ),
       faq(
-        "Is this useful for landlords and business owners too?",
-        "Yes. It should help anyone who needs a reliable local contact and clear communication.",
+        "Is this the same as a guide about choosing who to hire?",
+        "No. This page is about preparing the first visit well. A separate guide should help you compare electricians and quotes.",
       ),
     ],
     primaryService: en.tirana,
@@ -416,44 +416,44 @@ const rawGuidePages = [
     guideType: "existing",
     title: "Si funksionon instalimi i panelit diellor ne shtepi",
     description:
-      "Nje udhezues hap pas hapi per te kuptuar procesin e instalimit te paneleve diellore, kostot kryesore dhe lidhjen me panelin elektrik.",
+      "Nje udhezues hap pas hapi per te kuptuar si zhvillohet procesi i instalimit solar nga kontrolli fillestar deri te testimi final.",
     excerpt:
-      "Një guidë bazike për pronarët që duan të kuptojnë si planifikohet, montohet dhe testohet një sistem solar.",
+      "Nje guide qe shpjegon rrjedhen reale te nje projekti solar, jo llogaritjen e numrit te paneleve.",
     eyebrow: "Energji diellore",
     date: "2025-07-10",
     primaryKeyword: "panele diellore tirane",
-    secondaryKeywords: ["instalim panele diellore", "sistem fotovoltaik", "mirëmbajtje panelesh"],
+    secondaryKeywords: ["instalim panele diellore", "sistem fotovoltaik", "mirembajtje panelesh"],
     city: "Tirane",
     sections: [
       section(
-        "Vlerësimi i vendndodhjes",
+        "Vleresimi fillestar ne prone",
         [
-          "Përpara instalimit duhet parë ekspozimi ndaj diellit, pjerrësia e çatisë dhe hijëzimi.",
+          "Para se te nise puna, duhen kontrolluar orientimi, hijezimi, gjendja e catise dhe menyra si sistemi do te lidhet me panelin elektrik ekzistues.",
         ],
       ),
       section(
-        "Projektimi i sistemit",
+        "Projektimi dhe ndarja e punes",
         [
-          "Kapaciteti i paneleve, invertorit dhe kabllimit duhet të planifikohet sipas konsumit real.",
+          "Ne kete faze percaktohet pozicioni i invertorit, rruga e kabllove, mbrojtjet ne panel dhe rendi i puneve ne terren.",
         ],
       ),
       section(
         "Instalimi dhe testimi",
         [
-          "Pasi montohen panelet, sistemi duhet testuar dhe monitoruar që prodhimi të jetë i qëndrueshëm.",
+          "Pasi montohen panelet dhe lidhet sistemi, duhen bere testimet elektrike, verifikimi i prodhimit dhe kontrolli i integrimit me rrjetin e prones.",
         ],
       ),
       section(
-        "Mirëmbajtja pas instalimit",
+        "Dorezimi dhe mirembajtja pas instalimit",
         [
-          "Një sistem i mirë kërkon kontroll periodik dhe një mënyrë të qartë për të parë prodhimin.",
+          "Pas aktivizimit, pronari duhet te dije si kontrollohet prodhimi, kur kerkohet kontroll periodik dhe cfare shenjash tregojne se sistemi duhet pare perseri.",
         ],
       ),
     ],
     faq: [
-      faq("A duhet të kem çati të madhe?", "Jo gjithmonë. Madhësia varet nga konsumi dhe hapësira e disponueshme."),
-      faq("A duhet kontroll i panelit elektrik?", "Po. Integrimi me rrjetin ekzistues është pjesë e rëndësishme e punës."),
-      faq("A është kjo vetëm për shtëpi?", "Jo. Mund të jetë shumë e vlefshme edhe për biznese të vogla."),
+      faq("A e shpjegon kjo guide sa panele duhen?", "Jo. Kjo guide shpjegon procesin e instalimit, ndersa llogaritja e numrit te paneleve kerkon nje vleresim te vecante."),
+      faq("A duhet kontroll i panelit elektrik?", "Po. Integrimi me rrjetin ekzistues eshte pjese e rendesishme e projektit solar."),
+      faq("A eshte kjo vetem per shtepi?", "Jo. I njejti proces vlen edhe per vila dhe biznese te vogla, me ndryshime sipas ngarkeses."),
     ],
     primaryService: sq.solar,
     secondaryService: sq.panel,
@@ -633,39 +633,39 @@ const rawGuidePages = [
     guideType: "planned",
     title: "Sa panele diellore duhen per nje shtepi ne Shqiperi",
     description:
-      "Nje guide per te kuptuar si llogaritet numri i paneleve diellore sipas konsumit, orientimit te çatise dhe hapesires se disponueshme.",
+      "Nje guide per te kuptuar si llogaritet numri i paneleve diellore sipas konsumit, orientimit te catise, hijezimit dhe hapesires se disponueshme.",
     excerpt:
-      "Nuk ka një numër magjik paneleve; sistemi duhet llogaritur sipas konsumit të shtëpisë dhe hapësirës së çatisë.",
+      "Kjo guide eshte per dimensionimin dhe numrin e paneleve, jo per hapat e instalimit ne terren.",
     eyebrow: "Planifikim solar",
     date: "2026-03-18",
     primaryKeyword: "panele diellore per shtepi",
     secondaryKeywords: ["sistem fotovoltaik", "instalim panele diellore", "panele diellore tirane"],
-    audience: "Pronarë shtëpish, vilash dhe biznese të vogla",
+    audience: "Pronare shtepish, vilash dhe biznese te vogla",
     city: "Tirane",
     sections: [
       section(
-        "Konsumi ditor",
+        "Konsumi ditor dhe sezonal",
         [
-          "Numri i paneleve varet nga sa energji përdorni realisht dhe në cilat orë e përdorni më shumë.",
+          "Numri i paneleve nis nga konsumi real i energjise, por duhet pare edhe si ndryshon perdorimi mes veres, dimrit dhe ngarkesave si bojleri apo kondicioneri.",
         ],
       ),
       section(
-        "Hapësira e çatisë dhe orientimi",
+        "Hapesira e catise, orientimi dhe hijezimi",
         [
-          "Çatia, hijëzimi dhe orientimi janë pjesë po aq e rëndësishme sa vetë paneli.",
+          "Edhe nese konsumi del i larte, cdo sistem kufizohet nga siperfaqja e catise, drejtimi i saj dhe zonat qe mbeten ne hije gjate dites.",
         ],
       ),
       section(
-        "Pse duhet integrim i saktë",
+        "Pse numri i paneleve nuk mjafton i vetem",
         [
-          "Sistemi solar nuk duhet parë i ndarë nga paneli elektrik dhe përdorimi i përditshëm i shtëpisë.",
+          "Perzgjedhja e paneleve duhet pare bashke me invertorin, panelin elektrik, ngarkesat e ardhshme dhe nese po planifikohet edhe nje karikues EV.",
         ],
       ),
     ],
     faq: [
-      faq("A duhet ta di konsumimin para se të zgjedh?", "Po. Konsumi ditor është baza e llogaritjes."),
-      faq("A mund të vendoset edhe në vilë?", "Po. Vilat janë shpesh një nga rastet më të mira për solar."),
-      faq("A lidhet me EV?", "Po. Nëse keni EV, planifikimi duhet bërë së bashku."),
+      faq("A shpjegon kjo guide edhe procesin e instalimit?", "Jo. Kjo guide fokusohet te dimensionimi dhe numri i paneleve, jo te hapat e montimit ne terren."),
+      faq("A duhet ta di konsumimin para se te zgjedh?", "Po. Konsumi real eshte pika e nisjes per te kuptuar sa panele mund te duhen."),
+      faq("A lidhet kjo me EV?", "Po. Nese po planifikoni edhe karikues per makine elektrike, kjo duhet llogaritur qe ne fillim."),
     ],
     primaryService: sq.solar,
     secondaryService: sq.panel,
@@ -686,9 +686,9 @@ const rawGuidePages = [
     guideType: "planned",
     title: "How to hire an electrician in Tirana as a foreign resident",
     description:
-      "A practical English guide to choosing a reliable electrician in Tirana when you want clear communication, fast help, and less language stress.",
+      "A practical English guide to comparing electricians, quotes, and scope in Tirana when you want clear communication and fewer surprises.",
     excerpt:
-      "A guide for foreign residents who want to compare electricians by scope, response time, and safety rather than just price.",
+      "A guide for foreign residents who want to compare who to hire, what to ask for, and how to judge a quote without relying on price alone.",
     eyebrow: "English guide",
     date: "2026-03-18",
     primaryKeyword: "how to hire an electrician in tirana",
@@ -697,34 +697,36 @@ const rawGuidePages = [
     city: "Tirana",
     sections: [
       section(
-        "Start with scope and communication",
+        "Compare scope before you compare price",
         [
-          "The best electrician should be able to explain the job clearly and tell you what is covered before work begins.",
+          "The first thing to compare is what the electrician says will actually be checked, repaired, or replaced.",
+          "Two quotes can look similar in price while covering very different amounts of work.",
         ],
       ),
       section(
-        "Check safety before speed",
+        "Ask how the diagnosis will be handled",
         [
-          "Fast response matters, but safety checks and a clean diagnosis matter more when the problem could be serious.",
+          "A good electrician should explain whether the first visit is a quick repair, a diagnosis, or the start of a larger upgrade conversation.",
+          "That matters even more when you are booking from abroad or helping a tenant remotely.",
         ],
       ),
       section(
-        "Compare value, not only price",
+        "Check materials, timing, and follow-up",
         [
-          "Look at the quality of materials, the expected finish, and the follow-up support instead of choosing the cheapest quote immediately.",
+          "Look at the materials, the expected finish, the arrival window, and whether the electrician explains what happens after the job is done.",
         ],
       ),
       section(
-        "Keep one reliable contact",
+        "Use a first visit guide separately",
         [
-          "The easiest path for foreigners is usually one electrician they can use again for later repairs and upgrades.",
+          "This guide is about choosing who to hire. A separate checklist should help you prepare the first visit once you have chosen the electrician.",
         ],
       ),
     ],
     faq: [
-      faq("Do I need Albanian to book?", "No. The guide is built around English communication."),
-      faq("Should I ask for a written scope?", "Yes. It makes the job easier to compare and easier to finish well."),
-      faq("Is this also useful for businesses?", "Yes. It works for homes, rentals, and commercial spaces."),
+      faq("Should I ask for a written scope?", "Yes. That makes different electricians much easier to compare."),
+      faq("Should I choose the cheapest quote?", "Not by default. Compare scope, timing, materials, and follow-up, not only the number."),
+      faq("Is this the same as preparing the first visit?", "No. This page is about choosing who to hire; a separate page should help you prepare the visit itself."),
     ],
     primaryService: en.tirana,
     secondaryService: en.expats,
@@ -897,9 +899,9 @@ const rawGuidePages = [
     guideType: "planned",
     title: "Solar vs grid power for villas and small businesses in Albania",
     description:
-      "A practical English comparison of solar and grid power for property owners who want to lower costs, plan smarter, and size upgrades realistically.",
+      "A practical English comparison for villas and small businesses that want to decide whether solar is worth it now or whether a cleaner grid setup is the smarter first step.",
     excerpt:
-      "A decision guide for villas and small businesses that are comparing solar with a more traditional grid-only setup.",
+      "A decision guide that helps property owners compare whether they need solar now, or whether panel and load improvements should come first.",
     eyebrow: "Solar guide",
     date: "2026-03-18",
     primaryKeyword: "solar panel installation tirana",
@@ -914,15 +916,15 @@ const rawGuidePages = [
         ],
       ),
       section(
-        "When grid power is still enough",
+        "When a better grid setup is the smarter first move",
         [
           "Some properties simply need better panel work, better load control, or a cleaner electrical setup before solar becomes necessary.",
         ],
       ),
       section(
-        "Why planning matters more than hardware",
+        "Why this is different from sizing or installation guides",
         [
-          "The best outcome comes from matching the system to the property instead of buying panels first and planning later.",
+          "This page is about the choice between solar and a better grid-only setup. Separate guides should cover how many panels you need or how the installation process works.",
         ],
       ),
     ],

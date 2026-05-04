@@ -5,6 +5,30 @@ import { SITE_URL } from "@/lib/site";
 import { getOpenGraphImageUrl, sanitizeJsonLd } from "@/lib/seo";
 
 const EN_SERVICES_URL = `${SITE_URL}/en/services`;
+const PRIORITY_SERVICE_SLUGS = [
+  "electrician-tirana",
+  "electrician-durres",
+  "emergency-electrician-tirana",
+  "ev-charger-installation-tirana",
+  "solar-panel-installation-tirana",
+] as const;
+
+const servicePriority = new Map<string, number>(
+  PRIORITY_SERVICE_SLUGS.map((slug, index) => [slug, index]),
+);
+
+function sortServicesByPriority<T extends (typeof englishServicePages)[number]>(services: T[]) {
+  return [...services].sort((left, right) => {
+    const leftPriority = servicePriority.get(left.slug) ?? Number.MAX_SAFE_INTEGER;
+    const rightPriority = servicePriority.get(right.slug) ?? Number.MAX_SAFE_INTEGER;
+
+    if (leftPriority !== rightPriority) {
+      return leftPriority - rightPriority;
+    }
+
+    return left.title.localeCompare(right.title, "en");
+  });
+}
 
 export const metadata: Metadata = {
   title: "English electrical services in Tirana and Durres | Alex Elektrik",
@@ -37,7 +61,8 @@ export const metadata: Metadata = {
 };
 
 export default function EnglishServicesHubPage() {
-  const cards = englishServicePages.map((service) => ({
+  const orderedServices = sortServicesByPriority([...englishServicePages]);
+  const cards = orderedServices.map((service) => ({
     title: service.title,
     description: service.summary,
     href: service.path,
@@ -57,7 +82,7 @@ export default function EnglishServicesHubPage() {
       {
         "@type": "ItemList",
         "@id": `${EN_SERVICES_URL}#itemlist`,
-        itemListElement: englishServicePages.map((service, index) => ({
+        itemListElement: orderedServices.map((service, index) => ({
           "@type": "ListItem",
           position: index + 1,
           name: service.title,
@@ -103,13 +128,13 @@ export default function EnglishServicesHubPage() {
         title="English electrical services for Tirana and Durres"
         description="Find the right English-language page for emergency electrical work, repairs, rentals, expat support, EV chargers, solar projects, and business properties in Tirana and Durres."
         introParagraphs={[
-          "Start with the page that matches the real situation. Some visitors need urgent help for a fault, others need support for a rental, a landlord handover, an EV charger, a solar plan, or a wider electrical upgrade.",
-          "If you are booking from abroad, moving into a new property, preparing a rental, or comparing options before a visit, these pages make the first conversation clearer and more practical.",
+          "Start with the strongest core pages first: Tirana, Durres, emergency work, EV chargers, and solar projects. Those pages cover the clearest English search intent and are usually the best first stop before moving to a narrower audience page.",
+          "More specific pages for expats, landlords, Airbnb hosts, and offices are still available below. They help when the situation is more specific, but the core pages are the best starting point for most visitors.",
         ]}
         highlights={[
-          "Direct routes to emergency, rental, expat, EV, solar, and business pages.",
-          "Useful for property owners in Tirana, Durres, and nearby coastal areas.",
-          "Written to help English-speaking visitors reach the right page before they call.",
+          "Core English service pages are shown first for the strongest search demand.",
+          "Audience pages stay available as support for rentals, expats, and business use.",
+          "Built to help English-speaking visitors reach the right page before they call.",
         ]}
         cards={cards}
         breadcrumbs={[
