@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     title: "English electrical services in Tirana and Durres | Alex Elektrik",
     description:
-      "Hub page for English-speaking visitors who need the right service or audience page quickly.",
+      "English service overview with direct routes for emergency work, rentals, expat support, EV chargers, solar planning, and business properties.",
     images: [
       {
         url: getOpenGraphImageUrl("/en/services"),
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 export default function EnglishServicesHubPage() {
   const cards = englishServicePages.map((service) => ({
     title: service.title,
-    description: service.metaDescription,
+    description: service.summary,
     href: service.path,
   }));
 
@@ -101,16 +101,15 @@ export default function EnglishServicesHubPage() {
       <ServiceHubTemplate
         locale="en-US"
         title="English electrical services for Tirana and Durres"
-        description="Explore the English-language pages for emergency repairs, expat support, landlord and Airbnb work, EV chargers, solar projects, and coastal-property maintenance."
+        description="Find the right English-language page for emergency electrical work, repairs, rentals, expat support, EV chargers, solar projects, and business properties in Tirana and Durres."
         introParagraphs={[
-          "Use this hub to choose the page that matches your property, timing, and language needs. The strongest pages cover urgent callouts, expat support, landlord handovers, Airbnb turnover issues, EV charging, solar planning, and coastal properties.",
-          "If you are comparing quotes, moving into a new apartment, preparing a rental, or planning an upgrade, these pages are written to move you quickly from search to the right service page and a clear next step.",
-          "The main decision is usually whether you need a general electrician, a property-specific page, or an upgrade page for EV, solar, or a larger panel review. Opening the right page first makes the call shorter, the scope clearer, and the next step easier to understand if you are booking in English from abroad or managing the property remotely. It also makes remote planning easier.",
+          "Start with the page that matches the real situation. Some visitors need urgent help for a fault, others need support for a rental, a landlord handover, an EV charger, a solar plan, or a wider electrical upgrade.",
+          "If you are booking from abroad, moving into a new property, preparing a rental, or comparing options before a visit, these pages make the first conversation clearer and more practical.",
         ]}
         highlights={[
-          "Fast routes to emergency, expat, landlord, Airbnb, EV, and solar pages.",
-          "Coverage for Tirana, Durres, and English-speaking property owners.",
-          "Built to connect visitors to the right page before they call or message.",
+          "Direct routes to emergency, rental, expat, EV, solar, and business pages.",
+          "Useful for property owners in Tirana, Durres, and nearby coastal areas.",
+          "Written to help English-speaking visitors reach the right page before they call.",
         ]}
         cards={cards}
         breadcrumbs={[

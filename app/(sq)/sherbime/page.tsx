@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Sherbime elektrike ne Tirane dhe Durres | Alex Elektrik",
     description:
-      "Hub-i shqiptar i sherbimeve me lidhje drejt faqeve per urgjenca, riparime, instalime, solar, EV dhe projekte te targetuara.",
+      "Faqja kryesore e sherbimeve elektrike me lidhje direkte per urgjenca, riparime, instalime, EV, solar dhe sherbime per banesa e biznese.",
     url: SERVICES_URL,
     locale: "sq_AL",
     images: [
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 export default function ServicesHubPage() {
   const cards = albanianServicePages.map((service) => ({
     title: service.title,
-    description: service.metaDescription,
+    description: service.summary,
     href: `/sherbime/${service.slug}`,
   }));
 
@@ -94,15 +94,15 @@ export default function ServicesHubPage() {
       />
       <ServiceHubTemplate
         title="Sherbime elektrike per Tirane dhe Durres"
-        description="Kjo faqe lidh te gjitha faqet kryesore te sherbimit: urgjenca, riparime, instalime, panele, EV, smart home dhe zgjidhje te dedikuara per apartamente, vila dhe biznese."
+        description="Gjeni faqen e duhur per urgjenca elektrike, riparime, instalime, EV, solar dhe sherbime per apartamente, vila, biznese dhe prona me qira ne Tirane dhe Durres."
         introParagraphs={[
-          "Zgjidhni faqen qe perputhet me problemin ose pronen tuaj. Faqet kryesore mbulojne kerkimet me te forta ne Tirane dhe Durres, si dhe sherbimet me intent te larte per banesa, vila dhe biznese.",
-          "Nese kerkoni reagim te shpejte, kontroll sigurie, instalim te ri ose zgjidhje energjie si EV dhe solar, kjo qender ju drejton te faqja me e pershtatshme pa humbur kohe me informacion te pergjithshem.",
+          "Nisni nga faqja qe perputhet me problemin ose me pronen tuaj. Ketu jane mbledhur faqet kryesore per defekte, instalime, kontrolle sigurie dhe permiresime elektrike me kerkese te larte ne Tirane dhe Durres.",
+          "Nese ju duhet nje nderhyrje e shpejte, nje kontroll para dorezimit te prones, nje instalim i ri ose planifikim per EV dhe solar, kjo faqe ju con drejt sherbimit me te qarte pa ju humbur kohe me tekst te panevojshem.",
         ]}
         highlights={[
-          "Faqe lokale per Tirane dhe Durres me intent komercial.",
-          "Sherbime te ndara sipas problematikave, tipit te prones dhe audiences.",
-          "Lidhje direkte drejt udhezuesve qe mbeshtesin vendimin e klientit.",
+          "Faqe lokale per Tirane dhe Durres per banesa, vila dhe biznese.",
+          "Sherbime te ndara sipas problemit, llojit te prones dhe nevojes reale.",
+          "Lidhje te dobishme drejt udhezuesve qe ju ndihmojne para telefonates.",
         ]}
         cards={cards}
         breadcrumbs={[

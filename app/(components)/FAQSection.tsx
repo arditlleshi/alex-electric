@@ -5,36 +5,34 @@ import { CONTACT_PHONE_HREF } from "@/lib/contact";
 
 export const faqData: { question: string; answer: string }[] = [
   {
-    question: "Sa kohë merr instalimi i një sistemi elektrik të plotë?",
+    question: "Sa kohe merr instalimi i nje sistemi elektrik te plote?",
     answer:
-      "<p>Koha e instalimit varet nga kompleksiteti i projektit. Një apartament mesatar kërkon 2-3 ditë, ndërsa një vilë e madhe mund të kërkojë 5-7 ditë. Ne ofrojmë vlerësim falas dhe kohor preciz pas inspektimit fillestar.</p>",
+      "<p>Koha varet nga madhesia dhe kompleksiteti i punes. Nje apartament mesatar mund te kerkoje 2 deri ne 3 dite, ndersa nje vile me me shume pika dhe ngarkese me te larte mund te kerkoje me shume kohe pas kontrollit fillestar.</p>",
   },
   {
-    question: "A ofroni garanci për punimet elektrike që kryeni?",
+    question: "A ofroni garanci per punimet elektrike qe kryeni?",
     answer:
-      "<p>Po, çdo <strong>instalim apo riparim elektrik</strong> që realizojmë mbulohet me garanci, sepse besojmë tek cilësia dhe siguria e punës sonë.</p>",
+      "<p>Po. Cdo <strong>instalim elektrik</strong> ose <strong>riparim elektrik</strong> behet me kontroll final dhe mbeshtetje te qarte, sepse siguria dhe cilesia e punes jane pjese kryesore e sherbimit.</p>",
   },
   {
-    question:
-      "A mund të instaloj një karikues makine elektrike në banesën time private?",
+    question: "A mund te instaloni karikues makine elektrike ne shtepi?",
     answer:
-      "<p>Sigurisht. Ne kryejmë <strong>instalime profesionale të karikuesve EV</strong> në shtëpi dhe biznese, duke ofruar zgjidhje të përshtatshme sipas ambientit tuaj.</p>",
+      "<p>Po. Bejme <strong>instalim karikuesi EV</strong> ne shtepi, vile dhe disa prona biznesi, pasi kontrollojme panelin elektrik, ngarkesen dhe zgjidhjen me te pershtatshme per perdorimin tuaj.</p>",
   },
   {
-    question:
-      "A më ndihmoni në zgjedhjen e sistemit më të mirë fotovoltaik për shtëpi?",
+    question: "A ndihmoni edhe me panele diellore per shtepi ose vile?",
     answer:
-      "<p>Patjetër! Ne ju ndihmojmë në çdo hap, nga projektimi deri tek <strong>instalimi i paneleve diellore</strong>, duke u bazuar në konsumin tuaj dhe buxhetin e disponueshëm.</p>",
+      "<p>Po. Mund te ndihmojme me sqarimin, planifikimin dhe <strong>instalimin e paneleve diellore</strong> sipas konsumit, buxhetit dhe hapesires qe ka prona.</p>",
   },
   {
-    question: "Sa shpejt mund të vijë elektricisti në rast urgjence?",
+    question: "Sa shpejt mund te vije elektricisti ne rast urgjence?",
     answer:
-      "<p>Ne ofrojmë <strong>shërbim 24 orë në ditë, 7 ditë në javë</strong>. Në rast urgjence, zakonisht mbërrijmë në vendin tuaj brenda 1 ore nga telefonata juaj.</p>",
+      "<p>Per raste urgjente si siguresa qe bien, prize qe nxehet ose ere djegieje, telefoni dhe WhatsApp jane menyrat me te shpejta per kontakt. Koha e reagimit varet nga zona dhe rasti, por urgjencat trajtohen me perparesi.</p>",
   },
   {
-    question: "Do you offer service in English for expats and foreign clients?",
+    question: "A punoni edhe per apartamente me qira ose prona para dorezimit?",
     answer:
-      "<p>Yes. We provide <strong>English-speaking electrical support</strong> for homeowners, tenants, and businesses in Tirana and nearby areas, including urgent callouts.</p>",
+      "<p>Po. Shume kerkesa vijne nga pronare qe duan kontroll elektrik para qiradhenies, shitjes ose dorezimit te apartamentit, sidomos kur ka prize, ndricim ose panel elektrik qe duhet verifikuar.</p>",
   },
 ];
 
@@ -50,12 +48,9 @@ export default function FAQSection() {
             Pyetjet me te shpeshta
           </h2>
           <p className="mt-5 text-pretty text-base leading-7 text-muted sm:text-lg">
-            Pergjigjet kryesore per instalime, riparime, urgjenca, EV, solar dhe
-            sherbime ne shqip ose anglisht.
-          </p>
-          <p className="mt-3 text-sm leading-6 text-muted">
-            Need help in English? Contact us directly by phone, email or
-            WhatsApp.
+            Pergjigje te shkurtra per instalime elektrike, riparime elektrike,
+            urgjenca, karikues EV, panele diellore dhe kontroll sigurie per
+            apartamente, shtepi e biznese.
           </p>
         </div>
 
@@ -70,7 +65,7 @@ export default function FAQSection() {
             </h3>
             <p className="mt-3 text-sm leading-6 text-muted sm:text-base">
               Na kontaktoni direkt per pyetje specifike, preventiv ose sqarime
-              per projektin tuaj.
+              per apartamentin, shtepine ose biznesin tuaj.
             </p>
             <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
               <TrackedContactLink

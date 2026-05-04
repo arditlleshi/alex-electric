@@ -19,9 +19,9 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Alex Elektrik | Sherbime elektrike per Tirane dhe Durres",
+  title: "Alex Elektrik | Elektricist ne Tirane dhe Durres",
   description:
-    "Sherbime elektrike ne Tirane dhe Durres per urgjenca, riparime, instalime, EV, solar dhe mbeshtetje ne shqip e anglisht.",
+    "Elektricist ne Tirane dhe Durres per riparime elektrike, instalime elektrike, urgjenca, panel elektrik, karikues EV dhe panele diellore.",
   metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: SITE_URL,
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: SITE_URL,
-    title: "Alex Elektrik | Sherbime elektrike per Tirane dhe Durres",
+    title: "Alex Elektrik | Elektricist ne Tirane dhe Durres",
     description:
-      "Qendra kryesore e Alex Elektrik per sherbime, guida dhe kontakt ne Tirane dhe Durres.",
+      "Sherbime elektrike per shtepi, apartamente, vila dhe biznese ne Tirane dhe Durres.",
     locale: "sq_AL",
     images: [
       {

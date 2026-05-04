@@ -57,7 +57,7 @@ export function resolveRelatedServices(
     .filter((service): service is SiteServicePage => Boolean(service))
     .map((service) => ({
       title: service.title,
-      description: service.metaDescription,
+      description: service.summary,
       href: getServiceHref(service),
     }));
 }

@@ -29,11 +29,9 @@ export default function FAQAccordion({
             }`}
             aria-expanded={openIndex === index}
             aria-controls={`faq-content-${index}`}>
-            <div className="min-w-0">
-              <h3 className="text-base font-semibold leading-6 text-foreground sm:text-lg">
-                {faq.question}
-              </h3>
-            </div>
+            <span className="min-w-0 text-base font-semibold leading-6 text-foreground sm:text-lg">
+              {faq.question}
+            </span>
             <span
               className={`inline-flex size-8 shrink-0 items-center justify-center rounded-lg border transition-[transform,background-color,color,border-color] duration-200 ${
                 openIndex === index

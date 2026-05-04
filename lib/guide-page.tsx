@@ -60,9 +60,10 @@ export function buildGuideMetadata(slug: string): Metadata {
   }
 
   const canonical = `${SITE_URL}/blog/${guide.slug}`;
+  const metadataTitle = `${guide.title} | Alex Elektrik`;
 
   return {
-    title: guide.title,
+    title: metadataTitle,
     description: guide.description,
     metadataBase: new URL(SITE_URL),
     keywords: [guide.primaryKeyword, ...guide.secondaryKeywords],
@@ -71,7 +72,7 @@ export function buildGuideMetadata(slug: string): Metadata {
     },
     openGraph: {
       type: "article",
-      title: guide.title,
+      title: metadataTitle,
       description: guide.description,
       url: canonical,
       locale: guide.locale.replace("-", "_"),
@@ -86,7 +87,7 @@ export function buildGuideMetadata(slug: string): Metadata {
     },
     twitter: {
       card: "summary_large_image",
-      title: guide.title,
+      title: metadataTitle,
       description: guide.description,
       images: [getTwitterImageUrl(`/blog/${guide.slug}`)],
     },
@@ -116,7 +117,7 @@ export function renderGuidePage(
   const relatedServices = guide.relatedServices.map((service) => ({
     title: service.label,
     description:
-      getServicePage(service.slug)?.metaDescription ??
+      getServicePage(service.slug)?.summary ??
       (guide.locale === "en-US"
         ? "Related service from the site service library."
         : "Sherbim i lidhur nga rrjeti yne i faqeve."),
@@ -228,14 +229,14 @@ export function renderGuidePage(
           {
             title: guide.primaryService.label,
             description:
-              getServicePage(guide.primaryService.slug)?.metaDescription ??
+              getServicePage(guide.primaryService.slug)?.summary ??
               guide.description,
             href: guide.primaryService.path,
           },
           {
             title: guide.secondaryService.label,
             description:
-              getServicePage(guide.secondaryService.slug)?.metaDescription ??
+              getServicePage(guide.secondaryService.slug)?.summary ??
               guide.excerpt,
             href: guide.secondaryService.path,
           },

@@ -1,14 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowRight,
-  Globe,
-  Mail,
-  MapPin,
-  MessageCircle,
-  Phone,
-} from "lucide-react";
+import { ArrowRight, Globe, Mail, MapPin, Phone } from "lucide-react";
 import TrackedContactLink from "./TrackedContactLink";
+import WhatsAppIcon from "./WhatsAppIcon";
 import { albanianServicePages } from "@/lib/content/albanian-services";
 import { englishServicePages } from "@/lib/content/english-services";
 import {
@@ -184,7 +178,7 @@ export default async function Footer() {
                   href={CONTACT_EMAIL_HREF}
                   channel="email"
                   source="footer"
-                  className="group inline-flex items-start gap-2 text-sm text-slate-300 transition-colors duration-200 hover:text-white">
+                  className="group inline-flex items-start gap-2 text-sm text-slate-300 visited:text-slate-300 transition-colors duration-200 hover:text-white">
                   <Mail aria-hidden="true" className="mt-0.5 h-4 w-4 text-electric-200" />
                   <span className="break-all">{CONTACT_EMAIL_ADDRESS}</span>
                 </TrackedContactLink>
@@ -206,8 +200,8 @@ export default async function Footer() {
                   source="footer"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-2 text-sm text-slate-300 transition-colors duration-200 hover:text-white">
-                  <MessageCircle aria-hidden="true" className="h-4 w-4 text-teal-400" />
+                  className="group inline-flex items-center gap-2 text-sm text-slate-300 visited:text-slate-300 transition-colors duration-200 hover:text-white">
+                  <WhatsAppIcon aria-hidden="true" className="h-4 w-4 text-teal-300" />
                   <span>WhatsApp</span>
                 </TrackedContactLink>
               </li>

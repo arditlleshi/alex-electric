@@ -1,14 +1,14 @@
 import { createSeoImage, seoImageContentType, seoImageSize } from "@/lib/og";
 
-export const alt = "Blog elektrik dhe guides praktike";
+export const alt = "Keshilla elektrike dhe udhezues praktik";
 export const size = seoImageSize;
 export const contentType = seoImageContentType;
 
 export default function Image() {
   return createSeoImage({
-    eyebrow: "Blog elektrik",
-    title: "Guides praktike per urgjenca, instalime, EV dhe solar",
+    eyebrow: "Keshilla elektrike",
+    title: "Udhezues praktik per urgjenca, instalime, EV dhe solar",
     subtitle:
-      "Artikuj qe lidhen drejtperdrejt me faqet e sherbimit ne Tirane dhe Durres.",
+      "Keshilla te dobishme qe lidhen me sherbimet elektrike ne Tirane dhe Durres.",
   });
 }

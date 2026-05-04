@@ -22,36 +22,49 @@ const primaryServiceCards: {
     | typeof SolarPanel
     | typeof SmartHome;
   eyebrow: string;
+  summary: string;
 }[] = [
   {
     slug: "elektricist-tirane",
     image: ResidentialElectric,
     eyebrow: "Tirane",
+    summary:
+      "Per apartamente, shtepi dhe biznese ne Tirane qe kane nevoje per riparime elektrike, instalime ose kontroll sigurie.",
   },
   {
     slug: "elektricist-durres",
     image: CommercialElectric,
     eyebrow: "Durres",
+    summary:
+      "Per vila, apartamente bregdetare, hotele te vogla dhe prona me qira ne Durres dhe zonat perreth.",
   },
   {
     slug: "elektricist-urgjent-tirane",
     image: Maintenance,
     eyebrow: "Urgjenca",
+    summary:
+      "Per siguresa qe bien, prize qe nxehet, ere djegieje ose nderprerje energjie qe nuk pret deri neser.",
   },
   {
     slug: "karikues-ev-tirane",
     image: ElectricCar,
     eyebrow: "EV",
+    summary:
+      "Per familje dhe prona qe duan karikues makine elektrike me instalim te sigurt dhe panel te kontrolluar.",
   },
   {
     slug: "panele-diellore-tirane",
     image: SolarPanel,
     eyebrow: "Solar",
+    summary:
+      "Per shtepi dhe vila qe duan zgjidhje me panele diellore sipas konsumit, buxhetit dhe hapesires.",
   },
   {
     slug: "smart-home-tirane",
     image: SmartHome,
     eyebrow: "Smart home",
+    summary:
+      "Per ndricim inteligjent, kontroll me telefon dhe automatizim praktik ne apartament, shtepi ose vile.",
   },
 ];
 
@@ -62,21 +75,21 @@ const secondaryLinks: {
 }[] = [
   {
     slug: "elektricist-per-apartamente",
-    title: "Prona rezidenciale",
+    title: "Apartamente dhe hyrje",
     description:
-      "Faqe per apartamente, hyrje te reja, qira dhe kontrolle para dorezimit.",
+      "Per apartamente, hyrje te reja, prona me qira dhe kontrolle para dorezimit.",
   },
   {
     slug: "elektricist-per-vila",
     title: "Vila dhe prona te medha",
     description:
-      "Lidhje me faqet per vila, ndricim te jashtem, smart home dhe ngarkese me te larte.",
+      "Per vila, ndricim te jashtem, smart home, panel elektrik dhe ngarkese me te larte.",
   },
   {
     slug: "mirembajtje-elektrike-biznese",
     title: "Biznese dhe mirembajtje",
     description:
-      "Rruge hyrjeje per zyra, dyqane, restorante, hotele dhe sherbime te vazhdueshme.",
+      "Per zyra, dyqane, restorante, hotele dhe mirembajtje elektrike te vazhdueshme.",
   },
 ];
 
@@ -99,12 +112,7 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="relative border-t border-border bg-background">
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 bg-[linear-gradient(90deg,rgba(216,223,221,0.18)_1px,transparent_1px),linear-gradient(rgba(216,223,221,0.14)_1px,transparent_1px)] bg-[size:64px_64px]"
-      />
-
+      className="border-t border-border bg-background">
       <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <header className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
           <div className="min-w-0">
@@ -112,16 +120,17 @@ export default function ServicesSection() {
               Faqe Sherbimesh
             </span>
             <h2 className="mt-5 max-w-3xl text-balance text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
-              Zgjidhni faqen qe i pershtatet kerkimit tuaj
+              Gjeni sherbimin elektrik qe ju duhet
             </h2>
             <p className="mt-5 max-w-3xl text-pretty text-base leading-7 text-muted sm:text-lg">
-              Hero-ja orienton vizitorin. Ketu vazhdohet me rruget kryesore:
-              zona, urgjenca dhe sherbime me intent te larte qe meritojne faqen
-              e tyre.
+              Nese kerkoni elektricist ne Tirane ose Durres, zgjidhni sherbimin
+              sipas zones, urgjences ose llojit te punes qe ju duhet ne shtepi,
+              apartament, vile apo biznes.
             </p>
             <p className="mt-3 max-w-3xl text-sm leading-6 text-muted">
-              Vizitoret qe kerkojne sherbim ne anglisht kalojne drejt faqeve te
-              dedikuara, jo ne nje overview te ngarkuar.
+              Ketu mund te hapni drejt faqet per riparime elektrike, instalime
+              elektrike, elektricist urgjent, karikues EV, panele diellore dhe
+              smart home.
             </p>
           </div>
 
@@ -129,13 +138,13 @@ export default function ServicesSection() {
             <Link
               href="/sherbime"
               className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-surface-inverse px-4 text-sm font-semibold text-white transition-[background-color,box-shadow] duration-200 hover:bg-electric-900 hover:shadow-electric">
-              Hap hub-in e sherbimeve
+              Shiko te gjitha sherbimet
               <ArrowRight aria-hidden="true" className="h-4 w-4" />
             </Link>
             <Link
               href="/en/services"
-              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-border bg-surface px-4 text-sm font-semibold text-muted-strong transition-[background-color,border-color,color] duration-200 hover:border-teal-500 hover:bg-surface-muted hover:text-teal-700">
-              Open English service pages
+              className="inline-flex min-h-11 items-center justify-center text-sm font-medium text-muted transition-colors duration-200 hover:text-teal-700">
+              English pages
             </Link>
           </div>
         </header>
@@ -143,7 +152,7 @@ export default function ServicesSection() {
         <ul
           aria-label="Sherbimet kryesore"
           className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {cards.map(({ service, image, eyebrow }) => (
+          {cards.map(({ service, image, eyebrow, summary }) => (
             <li key={service.slug}>
               <Link
                 href={`/sherbime/${service.slug}`}
@@ -166,7 +175,7 @@ export default function ServicesSection() {
                   {service.title}
                 </h3>
                 <p className="mt-3 flex-1 text-sm leading-6 text-muted">
-                  {service.metaDescription}
+                  {summary}
                 </p>
                 <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-electric-700">
                   Hap faqen
@@ -191,8 +200,8 @@ export default function ServicesSection() {
                 Rruge te tjera hyrjeje
               </h3>
               <p className="mt-2 max-w-3xl text-sm leading-6 text-muted">
-                Faqet shtese mbulojne prona rezidenciale, vila, zyra, dyqane dhe
-                mirembajtje te vazhdueshme per biznes.
+                Faqet shtese ju ndihmojne te gjeni me shpejt sherbimin e duhur
+                per apartamente, vila, zyra, dyqane dhe mirembajtje elektrike.
               </p>
             </div>
 
@@ -218,17 +227,18 @@ export default function ServicesSection() {
               Pasqyre e plote
             </p>
             <h3 className="mt-2 text-xl font-semibold text-foreground">
-              Hub-i i sherbimeve
+              Te gjitha sherbimet
             </h3>
             <p className="mt-3 text-sm leading-6 text-muted">
-              Nese vizitori nuk ka hyrje te qarte nga hero-ja, faqja e
-              sherbimeve mbledh temat, zonat dhe audiencat ne nje vend.
+              Nese doni te shihni te gjitha sherbimet elektrike ne nje vend,
+              kjo faqe mbledh zonat, llojet e punes dhe nevojat me te zakonshme
+              per kliente familjare dhe biznese.
             </p>
             <div className="mt-5 grid gap-3">
               <Link
                 href="/sherbime"
                 className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-surface-inverse px-4 text-sm font-semibold text-white transition-[background-color,box-shadow] duration-200 hover:bg-electric-900 hover:shadow-electric">
-                Hap hub-in e sherbimeve
+                Shiko te gjitha sherbimet
               </Link>
               <Link
                 href="/blog"

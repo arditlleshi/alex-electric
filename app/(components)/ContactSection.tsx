@@ -4,10 +4,10 @@ import {
   Globe,
   Mail,
   MapPin,
-  MessageCircle,
   Phone,
 } from "lucide-react";
 import TrackedContactLink from "./TrackedContactLink";
+import WhatsAppIcon from "./WhatsAppIcon";
 import {
   CONTACT_EMAIL_ADDRESS,
   CONTACT_EMAIL_HREF,
@@ -35,7 +35,7 @@ const primaryActions: {
     channel: "phone",
     title: "Telefononi Menjehere",
     description:
-      "Per urgjenca, mungese energjie ose diagnostikim te shpejte ne telefon.",
+      "Per urgjenca, mungese energjie, siguresa qe bien ose diagnostikim te shpejte ne telefon.",
     Icon: Phone,
     link: CONTACT_PHONE_HREF,
     label: CONTACT_PHONE_DISPLAY,
@@ -48,7 +48,7 @@ const primaryActions: {
   {
     title: "Dergo Detajet me Email",
     description:
-      "Per preventiv, scope me te plote, foto dhe kerkesa qe duan dokumentim.",
+      "Per preventiv, pershkrim me te plote, foto dhe kerkesa qe duan dokumentim.",
     channel: "email",
     Icon: Mail,
     link: CONTACT_EMAIL_HREF,
@@ -63,9 +63,9 @@ const primaryActions: {
   {
     title: "Shkruani ne WhatsApp",
     description:
-      "Kanal praktik per foto, video te shkurtra dhe koordinim te menjehershem.",
+      "Kanal praktik per foto, video te shkurtra dhe koordinim te shpejte.",
     channel: "whatsapp",
-    Icon: MessageCircle,
+    Icon: WhatsAppIcon,
     link: CONTACT_WHATSAPP_HREF,
     label: "Na shkruani ne WhatsApp",
     eyebrow: "Per koordinim te shpejte",
@@ -93,7 +93,8 @@ const supportPoints = [
   },
   {
     title: "Kur te na kontaktoni",
-    description: "Telefon ose WhatsApp per urgjenca, email kur kerkesa ka specifika ose foto.",
+    description:
+      "Telefon ose WhatsApp per urgjenca, email kur kerkesa ka me shume detaje, foto ose plan pune.",
     Icon: Clock3,
     toneClass: "text-signal-600",
   },
@@ -103,32 +104,19 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden border-t border-border bg-surface-muted">
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 bg-[linear-gradient(90deg,rgba(24,32,38,0.05)_1px,transparent_1px),linear-gradient(rgba(24,32,38,0.04)_1px,transparent_1px)] bg-[size:64px_64px]"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute left-[-8rem] top-10 h-64 w-64 rounded-full bg-electric-100/70 blur-3xl"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute bottom-[-7rem] right-[-4rem] h-56 w-56 rounded-full bg-signal-100/60 blur-3xl"
-      />
-
-      <div className="relative mx-auto grid max-w-7xl gap-8 px-4 py-20 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(21rem,1.02fr)] lg:items-start lg:px-8">
+      className="border-t border-border bg-surface">
+      <div className="mx-auto grid max-w-7xl gap-8 px-4 py-20 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(21rem,1.02fr)] lg:items-start lg:px-8">
         <div className="min-w-0 self-start">
           <span className="inline-flex min-h-9 items-center rounded-lg border border-electric-100 bg-electric-50 px-3 text-sm font-semibold text-electric-700">
             Na Kontaktoni
           </span>
           <h2 className="mt-5 max-w-3xl text-balance text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
-            Kontakti duhet te jete i thjeshte, i shpejte dhe i qarte
+            Na kontaktoni per riparim, instalim ose nderhyrje urgjente
           </h2>
           <p className="mt-5 max-w-3xl text-pretty text-base leading-7 text-muted sm:text-lg">
-            Kjo pjese nuk duhet te sillet si footer i dyte. Qellimi ketu eshte
-            veprimi: zgjidhni kanalin, dergoni kerkesen dhe merrni pergjigje pa
-            kaluar neper nje bllok tjeter navigimi.
+            Zgjidhni menyren me te thjeshte per te na kontaktuar. Telefoni dhe
+            WhatsApp jane me te shpejta per urgjenca, ndersa emaili eshte i
+            pershtatshem kur kerkesa ka me shume detaje ose foto.
           </p>
           <p className="mt-3 max-w-3xl text-sm leading-6 text-muted">
             Need support in English? We can discuss the work scope and provide a
@@ -151,27 +139,34 @@ export default function ContactSection() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-teal-500/25 bg-surface px-4 text-sm font-semibold text-teal-700 transition-[background-color,border-color,color,transform] duration-200 hover:-translate-y-0.5 hover:border-teal-500/45 hover:bg-teal-500/10">
+              <WhatsAppIcon aria-hidden="true" className="h-4 w-4" />
               Na shkruani ne WhatsApp
             </TrackedContactLink>
           </div>
 
           <ul
             aria-label="Detaje kontakti"
-            className="mt-10 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+            className="mt-10 grid gap-3 sm:grid-cols-3">
             {supportPoints.map((point) => (
               <li
                 key={point.title}
                 className="rounded-lg border border-border bg-surface p-4 shadow-sm">
-                <p className="inline-flex items-center gap-2 text-sm font-semibold text-foreground">
-                  <point.Icon
-                    aria-hidden="true"
-                    className={`h-4 w-4 ${point.toneClass}`}
-                  />
-                  {point.title}
-                </p>
-                <p className="mt-2 text-sm leading-6 text-muted">
-                  {point.description}
-                </p>
+                <div className="flex items-start gap-x-3">
+                  <span className="flex h-5 items-center">
+                    <point.Icon
+                      aria-hidden="true"
+                      className={`h-4 w-4 flex-none ${point.toneClass}`}
+                    />
+                  </span>
+                  <div className="min-w-0">
+                    <p className="text-sm font-semibold text-foreground">
+                      {point.title}
+                    </p>
+                    <p className="mt-2 text-sm leading-6 text-muted">
+                      {point.description}
+                    </p>
+                  </div>
+                </div>
               </li>
             ))}
           </ul>
@@ -182,7 +177,7 @@ export default function ContactSection() {
           </address>
         </div>
 
-        <div className="rounded-lg border border-border bg-surface p-5 shadow-medium sm:p-6">
+        <div className="rounded-lg border border-border bg-surface-raised p-5 shadow-sm sm:p-6">
           <div className="border-b border-border pb-4">
             <p className="text-sm font-semibold text-electric-700">
               Zgjidhni kanalin e duhur
@@ -191,9 +186,9 @@ export default function ContactSection() {
               Tre rruge te qarta per te nisur kontaktin
             </h3>
             <p className="mt-3 text-sm leading-6 text-muted">
-              Ketu fokusi eshte reagimi, jo navigimi. Secili kanal ka nje rol te
-              qarte ne varesi te urgjences dhe sasise se informacionit qe doni te
-              ndani.
+              Secili kanal ka nje perdorim te qarte sipas urgjences dhe llojit
+              te informacionit qe doni te ndani per shtepi, apartament ose
+              biznes.
             </p>
           </div>
 
@@ -201,7 +196,7 @@ export default function ContactSection() {
             {primaryActions.map((item) => (
             <li
               key={item.link}
-              className={`rounded-lg border p-5 transition-[background-color,border-color,transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-soft ${item.cardClass}`}>
+              className={`rounded-lg border p-5 transition-[background-color,border-color] duration-200 ${item.cardClass}`}>
               <div className="flex items-start gap-4">
                 <span
                   className={`inline-flex size-12 shrink-0 items-center justify-center rounded-lg border ${item.toneClass}`}>
@@ -233,7 +228,7 @@ export default function ContactSection() {
           ))}
           </ul>
 
-          <div className="mt-5 rounded-lg border border-border bg-surface-raised p-4">
+          <div className="mt-5 rounded-lg border border-border bg-surface p-4">
             <p className="text-sm font-semibold text-foreground">
               Cfare ndihmon per nje pergjigje me te sakte
             </p>

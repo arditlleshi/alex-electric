@@ -8,7 +8,6 @@ import {
   Globe,
   Home,
   Menu,
-  MessageCircle,
   Phone,
   X,
   Zap,
@@ -21,6 +20,7 @@ import {
 } from "./navigation-data";
 import HomeAnchorLink from "./HomeAnchorLink";
 import TrackedContactLink from "./TrackedContactLink";
+import WhatsAppIcon from "./WhatsAppIcon";
 import {
   CONTACT_PHONE_DISPLAY,
   CONTACT_PHONE_HREF,
@@ -144,7 +144,7 @@ export default function MobileNavigation({
               rel="noopener noreferrer"
               tabIndex={isOpen ? 0 : -1}
               className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-border bg-surface px-4 text-sm font-semibold text-muted-strong transition-[background-color,border-color,color] duration-200 hover:border-teal-500 hover:bg-surface-muted hover:text-teal-700">
-              <MessageCircle aria-hidden="true" className="h-4 w-4" />
+              <WhatsAppIcon aria-hidden="true" className="h-4 w-4" />
               WhatsApp
             </TrackedContactLink>
           </div>

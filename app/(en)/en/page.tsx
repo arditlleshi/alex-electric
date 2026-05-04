@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Globe, MapPin, MessageCircle, Phone } from "lucide-react";
+import { ArrowRight, CalendarDays, CheckCircle2, Globe, MapPin, Phone } from "lucide-react";
 import TrackedContactLink from "@/app/(components)/TrackedContactLink";
+import WhatsAppIcon from "@/app/(components)/WhatsAppIcon";
 import { englishServicePages } from "@/lib/content/english-services";
 import { guidePages } from "@/lib/content/guides";
 import {
@@ -121,30 +122,21 @@ export default function EnglishPage() {
     <main
       id="main-content"
       lang="en"
-      className="bg-background pb-20 pt-16">
+      className="bg-background pb-20 pt-24">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: sanitizeJsonLd(collectionSchema) }}
       />
 
-      <section className="relative overflow-hidden border-b border-border bg-background">
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-[linear-gradient(90deg,rgba(216,223,221,0.22)_1px,transparent_1px),linear-gradient(rgba(216,223,221,0.18)_1px,transparent_1px)] bg-[size:56px_56px]"
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-surface to-transparent"
-        />
-
-        <div className="relative mx-auto grid max-w-7xl gap-8 px-4 py-16 sm:px-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(20rem,0.95fr)] lg:px-8 lg:py-20">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-8 rounded-lg border border-border bg-surface px-6 py-8 shadow-soft sm:px-8 sm:py-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(20rem,0.95fr)]">
           <div className="min-w-0 self-center">
             <div className="flex flex-wrap gap-2">
-              <span className="inline-flex min-h-9 items-center gap-2 rounded-lg border border-border bg-surface px-3 text-sm font-medium text-muted-strong shadow-sm">
+              <span className="inline-flex min-h-9 items-center gap-2 rounded-lg border border-electric-100 bg-electric-50 px-3 text-sm font-semibold text-electric-700">
                 <Globe aria-hidden="true" className="h-4 w-4 text-electric-600" />
                 English support
               </span>
-              <span className="inline-flex min-h-9 items-center gap-2 rounded-lg border border-border bg-surface px-3 text-sm font-medium text-muted-strong shadow-sm">
+              <span className="inline-flex min-h-9 items-center gap-2 rounded-lg border border-border bg-surface-raised px-3 text-sm font-semibold text-muted-strong">
                 <MapPin aria-hidden="true" className="h-4 w-4 text-electric-600" />
                 Tirana & Durres
               </span>
@@ -155,9 +147,9 @@ export default function EnglishPage() {
             </h1>
             <p className="mt-6 max-w-3xl text-pretty text-lg leading-8 text-muted sm:text-xl">
               Start here if you need an English-speaking electrician in Tirana
-              or Durres. These pages route visitors to the right service for
-              urgent faults, rentals, expat support, EV chargers, solar
-              planning, and coastal properties.
+              or Durres. These pages help expats, landlords, rentals, small
+              businesses, and coastal property owners reach the right service
+              for faults, repairs, upgrades, EV chargers, and solar work.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -176,7 +168,7 @@ export default function EnglishPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-border-strong bg-surface px-5 text-sm font-semibold text-muted-strong transition-[background-color,border-color,color] duration-200 hover:border-teal-500 hover:bg-surface-muted hover:text-teal-700">
-                <MessageCircle aria-hidden="true" className="h-4 w-4" />
+                <WhatsAppIcon aria-hidden="true" className="h-4 w-4" />
                 WhatsApp
               </TrackedContactLink>
               <Link
@@ -187,60 +179,42 @@ export default function EnglishPage() {
               </Link>
             </div>
 
-            <div className="mt-10 grid max-w-3xl gap-3 sm:grid-cols-3">
-              {[
-                "Emergency faults and urgent callouts",
-                "Rental, landlord, and handover support",
-                "EV, solar, and upgrade planning",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="rounded-lg border border-border bg-surface/80 px-4 py-4 text-sm font-medium text-muted-strong shadow-sm">
-                  {item}
-                </div>
-              ))}
-            </div>
+            <p className="mt-8 text-sm text-muted">
+              English pages for urgent electrical faults, rental support, EV chargers, solar planning, and property checks.
+            </p>
           </div>
 
-          <aside className="self-center overflow-hidden rounded-lg border border-border bg-surface shadow-soft">
-            <div className="border-b border-border p-5 sm:p-6">
+          <aside className="self-center rounded-lg border border-electric-100 bg-electric-50/60 p-6">
+            <div>
               <p className="text-sm font-semibold text-electric-700">
-                English service routing
+                How this page helps
               </p>
               <h2 className="mt-2 text-2xl font-semibold leading-tight text-foreground">
-                Where visitors usually need help first
+                The clearest way to choose the right page first
               </h2>
               <p className="mt-4 text-sm leading-6 text-muted">
-                This page exists to shorten the first conversation. Instead of
-                one broad overview, the main routes separate urgent work,
-                property type, and English-language support.
+                Use one main service page and one supporting guide before you
+                call. That usually makes the first conversation shorter and the
+                likely scope easier to understand.
               </p>
             </div>
 
-            <div className="divide-y divide-border">
+            <div className="mt-5 space-y-3">
               {[
                 "Faults or power issues that need an immediate visit",
                 "Rental, landlord, and Airbnb turnover work",
                 "Planned upgrades like EV charging, solar, or electrical checks",
-              ].map((item, index) => (
+              ].map((item) => (
                 <div
                   key={item}
-                  className="grid gap-2 px-5 py-4 sm:grid-cols-[auto_minmax(0,1fr)] sm:px-6">
-                  <span className="inline-flex size-9 items-center justify-center rounded-lg bg-electric-50 text-sm font-semibold text-electric-700">
-                    {index + 1}
-                  </span>
-                  <p className="min-w-0 text-sm leading-6 text-muted">{item}</p>
+                  className="flex items-start gap-3 rounded-lg border border-electric-100 bg-surface px-4 py-4 text-sm leading-6 text-muted">
+                  <CheckCircle2
+                    aria-hidden="true"
+                    className="mt-0.5 h-5 w-5 shrink-0 text-electric-700"
+                  />
+                  <p className="min-w-0">{item}</p>
                 </div>
               ))}
-            </div>
-
-            <div className="grid gap-3 border-t border-border bg-surface-raised p-5 sm:grid-cols-2 sm:p-6">
-              <div className="rounded-lg border border-border bg-surface px-4 py-3 text-sm text-muted">
-                Clear scope before the visit
-              </div>
-              <div className="rounded-lg border border-border bg-surface px-4 py-3 text-sm text-muted">
-                English communication throughout the job
-              </div>
             </div>
           </aside>
         </div>
@@ -280,10 +254,13 @@ export default function EnglishPage() {
                 "Any renovation, EV plan, solar plan, or tenant handover linked to the job.",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-electric-600" />
-                  <span>{item}</span>
-                </li>
-              ))}
+                <CheckCircle2
+                  aria-hidden="true"
+                  className="mt-0.5 h-5 w-5 shrink-0 text-electric-700"
+                />
+                <span>{item}</span>
+              </li>
+            ))}
             </ul>
           </aside>
         </div>
@@ -317,7 +294,7 @@ export default function EnglishPage() {
                   {page.title}
                 </h3>
                 <p className="mt-3 flex-1 text-sm leading-6 text-muted">
-                  {page.metaDescription}
+                  {page.summary}
                 </p>
                 <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-electric-700">
                   Open Page
@@ -400,6 +377,14 @@ export default function EnglishPage() {
                 key={guide.slug}
                 href={`/blog/${guide.slug}`}
                 className="group flex h-full flex-col rounded-lg border border-border bg-surface p-6 shadow-sm transition-[transform,background-color,border-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-border-strong hover:bg-background hover:shadow-soft">
+                <p className="inline-flex items-center gap-2 text-sm text-muted">
+                  <CalendarDays aria-hidden="true" className="h-4 w-4" />
+                  {new Date(guide.date).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </p>
                 <h3 className="text-xl font-semibold text-foreground transition-colors duration-200 group-hover:text-electric-700">
                   {guide.title}
                 </h3>

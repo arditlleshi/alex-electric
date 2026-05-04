@@ -29,15 +29,17 @@ export default function ArticlesSection() {
               Blog & Guides
             </span>
             <h2 className="mt-5 max-w-3xl text-balance text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
-              Artikuj qe lidhen direkt me faqet e sherbimit
+              Keshilla dhe guida per probleme elektrike ne shtepi dhe biznes
             </h2>
             <p className="mt-5 max-w-3xl text-pretty text-base leading-7 text-muted sm:text-lg">
-              Cdo guide i ri i shton faqes se sherbimit me shume hyrje organike
-              dhe me shume mbulim per pyetjet qe dalin ne pune reale.
+              Lexoni artikuj te thjeshte per riparime elektrike, instalime,
+              siguresa, priza, panel elektrik, karikues EV dhe siguri ne
+              shtepi ose ne ambient pune.
             </p>
             <p className="mt-3 max-w-3xl text-sm leading-6 text-muted">
-              English-language guides jane pjese e te njejtit sistem dhe lidhen
-              me filtrin perkates ne blog.
+              Nese doni te kuptoni me mire problemin para se te telefononi nje
+              elektricist, ketu gjeni pyetje dhe raste qe dalin shpesh ne pune
+              reale.
             </p>
           </div>
 
@@ -50,8 +52,8 @@ export default function ArticlesSection() {
             </Link>
             <Link
               href="/blog?lang=en"
-              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-border bg-surface px-4 text-sm font-semibold text-muted-strong transition-[background-color,border-color,color] duration-200 hover:border-teal-500 hover:bg-surface-muted hover:text-teal-700">
-              Open English guides
+              className="inline-flex min-h-11 items-center justify-center text-sm font-medium text-muted transition-colors duration-200 hover:text-teal-700">
+              English guides
             </Link>
           </div>
         </header>

@@ -10,45 +10,45 @@ import {
 const benefits = [
   {
     Icon: BadgeCheck,
-    title: "Eksperiencë & Cilësi",
+    title: "Eksperience ne terren",
     description:
-      "Mbi 15 vjet pune ne terren me defekte, instalime dhe kontrolle ne prona rezidenciale e komerciale.",
+      "Mbi 15 vjet pune me defekte, instalime elektrike dhe kontrolle sigurie per shtepi, apartamente te vjetra, vila dhe biznese.",
     toneClass: "border-electric-100 bg-electric-50 text-electric-700",
   },
   {
     Icon: Clock3,
-    title: "Disponibilitet 24/7",
+    title: "Reagim i shpejte",
     description:
-      "Nderhyrje per raste urgjente dhe koordinim i shpejte kur ka humbje energjie, probleme ne panel ose rrezik sigurie.",
-    toneClass: "border-signal-100 bg-signal-50 text-signal-600",
+      "Nderhyrje per raste urgjente kur ka humbje energjie, siguresa qe bien, prize qe nxehet ose problem ne panel elektrik.",
+    toneClass: "border-electric-100 bg-electric-50 text-electric-700",
   },
   {
     Icon: Wrench,
-    title: "Teknologji Moderne",
+    title: "Sherbime per nevoja te ndryshme",
     description:
-      "Nga smart home te karikuesit EV dhe sistemet solar, zgjidhjet projektohen sipas ngarkeses reale dhe perdorimit te prones.",
+      "Nga riparime elektrike ne apartament dhe kontroll para qiradhenies, te smart home, karikues EV dhe zgjidhje solar per vila.",
     toneClass: "border-border bg-surface text-muted-strong",
   },
   {
     Icon: ShieldCheck,
-    title: "Siguria në radhë të parë",
+    title: "Siguria vjen e para",
     description:
-      "Cdo pune mbyllet me kontroll funksional dhe verifikim te pikave kryesore para dorezimit te projektit.",
+      "Cdo pune mbyllet me kontroll funksional dhe verifikim te pikave kryesore para dorezimit, qe instalimi te jete i sigurt ne perdorim te perditshem.",
     toneClass: "border-teal-500/20 bg-teal-500/10 text-teal-700",
   },
   {
     Icon: CircleDollarSign,
-    title: "Çmime konkurruese & transparencë",
+    title: "Cmim dhe plan i qarte",
     description:
-      "Preventivi dhe koha e punes diskutohen para fillimit, qe klienti te kuptoje qarte scope-in dhe kostot.",
-    toneClass: "border-copper-500/20 bg-[color:rgba(184,92,56,0.08)] text-copper-600",
+      "Preventivi dhe koha e punes diskutohen para fillimit, qe klienti te kuptoje qarte kostot dhe hapat e punes pa surpriza.",
+    toneClass: "border-border bg-surface text-muted-strong",
   },
   {
     Icon: Languages,
-    title: "Shërbim i Personalizuar",
+    title: "Komunikim ne shqip ose anglisht",
     description:
-      "Komunikim i drejtperdrejte ne shqip ose anglisht sipas rastit, me fokus te qarte te nevoja reale e klientit.",
-    toneClass: "border-border bg-surface text-muted-strong",
+      "Sherbim i qarte per familje, pronare me qira, biznese te vogla dhe kliente te huaj qe kane nevoje per shpjegim te thjeshte.",
+    toneClass: "border-teal-500/20 bg-teal-500/10 text-teal-700",
   },
 ];
 
@@ -65,20 +65,22 @@ export default function WhyChooseSection() {
               Arsye praktike per te punuar me Alex Elektrik
             </h2>
             <p className="mt-5 max-w-3xl text-pretty text-base leading-7 text-muted sm:text-lg">
-              Ketu fokusi nuk eshte marketingu i tepruar. Vizitori duhet te shohe
-              shpejt pse ky sherbim duket i besueshem, i qarte dhe i pershtatshem
-              per nderhyrje ne prone ose biznes.
+              Kur kerkoni elektricist per shtepi, apartament ose biznes, ju
+              duhet pune e sigurt, komunikim i qarte dhe reagim i shpejte. Keto
+              jane arsyet kryesore pse familje, pronare dhe biznese te vogla
+              zgjedhin kete sherbim ne Tirane dhe Durres.
             </p>
           </div>
 
           <div className="rounded-lg border border-border bg-surface-raised p-5 text-sm leading-6 text-muted shadow-sm">
             Pikat kyce jane: siguria, qartesia e cmimit, disponueshmeria dhe
-            komunikimi ne shqip ose anglisht.
+            komunikimi i drejteperdrejte nga kontakti i pare deri ne fund te
+            punes.
           </div>
         </div>
 
         <ul
-          aria-label="Pse të Na Zgjidhni Ne"
+          aria-label="Pse te na zgjidhni"
           className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {benefits.map((benefit) => (
             <li
