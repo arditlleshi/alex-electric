@@ -5,14 +5,13 @@ import {
   ChevronRight,
   MapPin,
   Phone,
-  Zap,
 } from "lucide-react";
 import Breadcrumbs from "./Breadcrumbs";
 import FAQAccordion from "./FAQAccordion";
 import TrackedContactLink from "./TrackedContactLink";
 import WhatsAppIcon from "./WhatsAppIcon";
 import { CONTACT_PHONE_HREF, CONTACT_WHATSAPP_HREF } from "@/lib/contact";
-import type { GuidePage, ProofItem, ServicePage } from "@/lib/content/types";
+import type { GuidePage, ServicePage } from "@/lib/content/types";
 
 type RelatedLink = {
   title: string;
@@ -88,57 +87,6 @@ function SectionCard({
         ))}
       </ul>
     </SurfaceCard>
-  );
-}
-
-function ProofCard({
-  proof,
-  locale,
-}: {
-  proof: ProofItem;
-  locale: ServicePage["locale"];
-}) {
-  const headingId = `proof-card-${proof.id}`;
-
-  return (
-    <article
-      className="overflow-hidden rounded-lg border border-border bg-surface shadow-soft"
-      aria-labelledby={headingId}>
-      <div className="border-b border-border px-6 py-6 sm:px-8">
-        <span className="inline-flex min-h-8 items-center rounded-lg border border-electric-100 bg-electric-50 px-3 text-xs font-semibold text-electric-700">
-          {proof.eyebrow}
-        </span>
-        <h2
-          id={headingId}
-          className="mt-4 text-3xl font-semibold text-foreground sm:text-4xl">
-          {proof.title}
-        </h2>
-        <p className="mt-2 text-sm leading-6 text-muted">
-          {proof.city} | {proof.propertyType}
-        </p>
-      </div>
-
-      <div className="px-6 py-6 sm:px-8">
-        <p className="text-base leading-7 text-muted sm:text-lg">{proof.summary}</p>
-        <ul className="mt-6 space-y-3">
-          {proof.bullets.map((bullet) => (
-            <li key={bullet} className="flex items-start gap-3 text-sm leading-6 text-muted sm:text-base">
-              <Zap
-                aria-hidden="true"
-                className="mt-0.5 h-5 w-5 shrink-0 text-signal-600"
-              />
-              <span>{bullet}</span>
-            </li>
-          ))}
-        </ul>
-        <div className="mt-6 rounded-lg border border-border bg-surface-raised px-5 py-4 text-sm leading-6 text-muted sm:text-base">
-          <strong className="text-foreground">
-            {locale === "en-US" ? "Result:" : "Rezultati:"}
-          </strong>{" "}
-          {proof.outcome}
-        </div>
-      </div>
-    </article>
   );
 }
 
@@ -226,59 +174,13 @@ function ContactBar({
   );
 }
 
-function InlineLinkPanel({
-  title,
-  description,
-  links,
-  locale,
-}: {
-  title: string;
-  description: string;
-  links: RelatedLink[];
-  locale: ServicePage["locale"];
-}) {
-  if (links.length === 0) {
-    return null;
-  }
-
-  return (
-    <section className="mt-8 rounded-lg border border-border bg-surface-raised p-6">
-      <h2 className="text-xl font-semibold text-foreground">{title}</h2>
-      <p className="mt-3 text-sm leading-6 text-muted">{description}</p>
-      <ul className="mt-5 grid gap-4 md:grid-cols-2">
-        {links.map((link) => (
-          <li key={link.href}>
-            <Link
-              href={link.href}
-              className="group block rounded-lg border border-border bg-surface px-4 py-4 transition-[background-color,border-color,box-shadow] duration-200 hover:border-border-strong hover:bg-surface-raised hover:shadow-soft">
-              <h3 className="font-semibold text-foreground transition-colors duration-200 group-hover:text-electric-700">
-                {link.title}
-              </h3>
-              <p className="mt-2 text-sm leading-6 text-muted">{link.description}</p>
-              <span className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-electric-700">
-                {locale === "en-US" ? "Open page" : "Hap faqen"}
-                <ChevronRight
-                  aria-hidden="true"
-                  className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5"
-                />
-              </span>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </section>
-  );
-}
-
 export function ServicePageTemplate({
   service,
-  proof,
   breadcrumbs,
   relatedServices,
   relatedGuides,
 }: {
   service: ServicePage;
-  proof: ProofItem;
   breadcrumbs: { label: string; href?: string }[];
   relatedServices: RelatedLink[];
   relatedGuides: RelatedLink[];
@@ -286,6 +188,113 @@ export function ServicePageTemplate({
   const locale = service.locale;
   const isEnglish = locale === "en-US";
   const source = isEnglish ? "english-service-page" : "service-page";
+  const isMinimalSolarPage = service.slug === "panele-diellore-tirane";
+
+  if (isMinimalSolarPage) {
+    return (
+      <PageShell locale={locale}>
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbs} />
+
+          <header className="rounded-lg border border-border bg-surface shadow-soft">
+            <div className="grid gap-8 px-6 py-8 sm:px-8 sm:py-10 lg:grid-cols-[1.2fr_0.8fr]">
+              <div className="min-w-0">
+                <span className="inline-flex min-h-9 items-center rounded-lg border border-electric-100 bg-electric-50 px-3 text-sm font-semibold text-electric-700">
+                  Projektim / Instalim / Mirëmbajtje
+                </span>
+                <h1 className="mt-5 max-w-4xl text-balance text-4xl font-semibold leading-[1.06] text-foreground sm:text-5xl">
+                  {service.h1}
+                </h1>
+                <p className="mt-5 max-w-3xl text-pretty text-base leading-7 text-muted sm:text-lg">
+                  {service.hero}
+                </p>
+                <ContactBar source={source} locale={locale} />
+              </div>
+
+              <MutedCard className="border-electric-100 bg-electric-50/60 p-6">
+                <h2 className="text-xl font-semibold text-foreground">
+                  Çfarë përfshin
+                </h2>
+                <p className="mt-4 text-sm leading-6 text-muted sm:text-base">
+                  {service.summary}
+                </p>
+                <ul className="mt-5 space-y-3">
+                  {service.whenToCall.map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-sm leading-6 text-muted">
+                      <CheckCircle2
+                        aria-hidden="true"
+                        className="mt-0.5 h-4 w-4 shrink-0 text-electric-700"
+                      />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-6 rounded-lg border border-electric-100 bg-surface px-4 py-4">
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
+                    Zona e shërbimit
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-muted sm:text-base">
+                    {service.serviceAreas.join(", ")}
+                  </p>
+                </div>
+              </MutedCard>
+            </div>
+          </header>
+
+          <section className="mt-12 grid gap-6 lg:grid-cols-2">
+            <SectionCard
+              title="Pse klientët na zgjedhin"
+              items={service.problems}
+            />
+            <SectionCard title="Si punojmë" items={service.processSteps} />
+          </section>
+
+          <section className="mt-16" aria-labelledby="service-faq-heading">
+            <div className="text-center">
+              <h2
+                id="service-faq-heading"
+                className="text-3xl font-semibold text-foreground sm:text-4xl">
+                Pyetjet më të shpeshta
+              </h2>
+            </div>
+            <div className="mt-8">
+              <FAQAccordion
+                faqs={service.faqs.map((item) => ({
+                  question: item.question,
+                  answer: `<p>${item.answer}</p>`,
+                }))}
+              />
+            </div>
+          </section>
+
+          {relatedServices.length ? (
+            <section className="mt-16" aria-labelledby="related-service-links-heading">
+              <h2
+                id="related-service-links-heading"
+                className="text-3xl font-semibold text-foreground sm:text-4xl">
+                Shërbime të lidhura
+              </h2>
+              <ul className="mt-6 grid gap-4 md:grid-cols-2">
+                {relatedServices.slice(0, 4).map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="group flex min-h-20 items-center justify-between rounded-lg border border-border bg-surface px-5 py-4 text-base font-semibold text-foreground transition-[background-color,border-color,box-shadow] duration-200 hover:border-border-strong hover:bg-surface-raised hover:text-electric-700 hover:shadow-soft">
+                      <span>{link.title}</span>
+                      <ChevronRight
+                        aria-hidden="true"
+                        className="h-4 w-4 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5"
+                      />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ) : null}
+        </div>
+      </PageShell>
+    );
+  }
 
   return (
     <PageShell locale={locale}>
@@ -296,7 +305,7 @@ export function ServicePageTemplate({
           <div className="grid gap-8 px-6 py-8 sm:px-8 sm:py-10 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="min-w-0">
               <span className="inline-flex min-h-9 items-center rounded-lg border border-electric-100 bg-electric-50 px-3 text-sm font-semibold text-electric-700">
-                {isEnglish ? "Service page" : "Faqe sherbimi"}
+                {isEnglish ? "Service page" : "Faqe shërbimi"}
               </span>
               <h1 className="mt-5 max-w-4xl text-balance text-4xl font-semibold leading-[1.06] text-foreground sm:text-5xl">
                 {service.h1}
@@ -305,20 +314,6 @@ export function ServicePageTemplate({
                 {service.hero}
               </p>
               <ContactBar source={source} locale={locale} />
-              <InlineLinkPanel
-                title={
-                  isEnglish
-                    ? "Useful guides before you book"
-                    : "Udhezues te dobishem para se te rezervoni"
-                }
-                description={
-                  isEnglish
-                    ? "If this matches your problem or upgrade, open one guide before you call so the first conversation starts with clearer context."
-                    : "Nese kjo perputhet me problemin ose permiresimin qe kerkoni, hapni nje guide para telefonates qe biseda e pare te nise me kontekst me te qarte."
-                }
-                links={relatedGuides.slice(0, 3)}
-                locale={locale}
-              />
             </div>
 
             <MutedCard className="border-electric-100 bg-electric-50/60 p-6">
@@ -341,7 +336,7 @@ export function ServicePageTemplate({
               </ul>
               <div className="mt-6 rounded-lg border border-electric-100 bg-surface px-4 py-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
-                  {isEnglish ? "Best next step" : "Hapi me i mire"}
+                {isEnglish ? "Best next step" : "Hapi më i mirë"}
                 </p>
                 <p className="mt-2 text-sm leading-6 text-muted sm:text-base">{service.callToAction}</p>
               </div>
@@ -351,14 +346,14 @@ export function ServicePageTemplate({
 
         <section className="mt-12 grid gap-6 lg:grid-cols-2">
           <SectionCard
-            title={isEnglish ? "When to call us" : "Kur duhet te na kontaktoni"}
+            title={isEnglish ? "When to call us" : "Kur duhet të na kontaktoni"}
             items={service.whenToCall}
           />
           <SectionCard
             title={
               isEnglish
                 ? "Common problems we solve"
-                : "Problemet qe zgjidhim me shpesh"
+                : "Problemet që zgjidhim më shpesh"
             }
             items={service.problems}
           />
@@ -371,7 +366,7 @@ export function ServicePageTemplate({
           />
           <MutedCard>
             <h2 className="text-2xl font-semibold text-foreground">
-              {isEnglish ? "Areas covered" : "Zonat qe mbulojme"}
+              {isEnglish ? "Areas covered" : "Zonat që mbulojmë"}
             </h2>
             <ul className="mt-5 space-y-3">
               {service.serviceAreas.map((area) => (
@@ -386,7 +381,7 @@ export function ServicePageTemplate({
             </ul>
             <div className="mt-6 rounded-lg border border-border bg-surface px-4 py-4 text-sm leading-6 text-muted">
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
-                {isEnglish ? "Next step" : "Hapi i radhes"}
+                {isEnglish ? "Next step" : "Hapi i radhës"}
               </p>
               <p className="mt-3">{service.callToAction}</p>
             </div>
@@ -398,24 +393,24 @@ export function ServicePageTemplate({
             <h2 className="text-2xl font-semibold text-foreground">
               {isEnglish
                 ? "What helps before the visit"
-                : "Cfare ndihmon para vizites"}
+                : "Çfarë ndihmon para vizitës"}
             </h2>
             <p className="mt-5 text-base leading-7 text-muted sm:text-lg">
               {isEnglish
                 ? "The fastest visit starts with a clear description of the symptom: which room is affected, when the problem started, whether breakers trip, and whether there is heat, smell, or visible sparking. That helps separate a quick repair from a wider panel or load problem before the electrician arrives."
-                : "Nderhyrja me e shpejte nis kur simptoma pershkruhet qarte: cili ambient preket, kur nisi problemi, nese bien siguresat dhe nese ka nxehje, ere djegieje ose shkendija. Kjo ndihmon te ndahet nje riparim i thjeshte nga nje problem me i gjere ne panel ose ne ngarkese para mberritjes se elektricistit."}
+                : "Ndërhyrja më e shpejtë nis kur simptoma përshkruhet qartë: cili ambient preket, kur nisi problemi, nëse bien siguresat dhe nëse ka nxehje, erë djegieje ose shkëndija. Kjo ndihmon të ndahet një riparim i thjeshtë nga një problem më i gjerë në panel ose në ngarkesë para mbërritjes së elektricistit."}
             </p>
             <p className="mt-4 text-base leading-7 text-muted sm:text-lg">
               {isEnglish
                 ? "In Tirana and Durres many properties combine older wiring, renovation leftovers, and newer heavy appliances on the same installation. A few useful details in the first call usually lead to a shorter visit, a clearer quote, and a safer first intervention."
-                : "Ne Tirane dhe Durres shume prona bashkojne instalime me te vjetra, punime rinovimi te pjesshme dhe pajisje te reja me ngarkese te larte ne te njejtin rrjet. Disa detaje te dobishme ne telefonaten e pare zakonisht e bejne viziten me te shkurter, preventivin me te qarte dhe nderhyrjen fillestare me te sigurt."}
+                : "Në Tiranë dhe Durrës shumë prona bashkojnë instalime më të vjetra, punime rinovimi të pjesshme dhe pajisje të reja me ngarkesë të lartë në të njëjtin rrjet. Disa detaje të dobishme në telefonatën e parë zakonisht e bëjnë vizitën më të shkurtër, preventivin më të qartë dhe ndërhyrjen fillestare më të sigurt."}
             </p>
           </SurfaceCard>
           <MutedCard>
             <h2 className="text-2xl font-semibold text-foreground">
               {isEnglish
                 ? "Useful details to prepare"
-                : "Detaje te dobishme per t'i pergatitur"}
+                : "Detaje të dobishme për t'i përgatitur"}
             </h2>
             <ul className="mt-5 space-y-3">
               {(isEnglish
@@ -426,10 +421,10 @@ export function ServicePageTemplate({
                     "Any recent renovation, new appliance, EV plan, or solar work linked to the issue.",
                   ]
                 : [
-                    "Lloji i prones dhe mosha e instalimit nese e dini.",
+                    "Lloji i pronës dhe mosha e instalimit nëse e dini.",
                     "Cilat ambiente, priza, drita ose pajisje preken nga problemi.",
-                    "Nese defekti eshte i vazhdueshem, vjen me nderprerje ose shfaqet nen ngarkese.",
-                    "Cdo rinovim, pajisje e re, plan EV ose pune solar qe lidhet me situaten.",
+                    "Nëse defekti është i vazhdueshëm, vjen me ndërprerje ose shfaqet nën ngarkesë.",
+                    "Çdo rinovim, pajisje e re, plan EV ose punë solar që lidhet me situatën.",
                   ]
               ).map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm leading-6 text-muted sm:text-base">
@@ -444,16 +439,12 @@ export function ServicePageTemplate({
           </MutedCard>
         </section>
 
-        <div className="mt-12">
-          <ProofCard proof={proof} locale={locale} />
-        </div>
-
         <section className="mt-16" aria-labelledby="service-faq-heading">
           <div className="text-center">
             <h2
               id="service-faq-heading"
               className="text-3xl font-semibold text-foreground sm:text-4xl">
-              {isEnglish ? "Frequently asked questions" : "Pyetjet me te shpeshta"}
+              {isEnglish ? "Frequently asked questions" : "Pyetjet më të shpeshta"}
             </h2>
           </div>
           <div className="mt-8">
@@ -467,12 +458,12 @@ export function ServicePageTemplate({
         </section>
 
         <RelatedGrid
-          title={isEnglish ? "Related services" : "Sherbime te lidhura"}
+          title={isEnglish ? "Related services" : "Shërbime të lidhura"}
           links={relatedServices}
           locale={locale}
         />
         <RelatedGrid
-          title={isEnglish ? "Helpful guides" : "Udhezues te dobishem"}
+          title={isEnglish ? "Helpful guides" : "Udhëzues të dobishëm"}
           links={relatedGuides}
           locale={locale}
         />
@@ -483,15 +474,11 @@ export function ServicePageTemplate({
 
 export function GuidePageTemplate({
   guide,
-  proof,
-  leadServices,
   breadcrumbs,
   relatedServices,
   relatedGuides,
 }: {
   guide: GuidePage;
-  proof: ProofItem;
-  leadServices: RelatedLink[];
   breadcrumbs: { label: string; href?: string }[];
   relatedServices: RelatedLink[];
   relatedGuides: RelatedLink[];
@@ -525,20 +512,6 @@ export function GuidePageTemplate({
             )}
           </p>
           <ContactBar source="guide-page" locale={guide.locale} />
-          <InlineLinkPanel
-            title={
-              isEnglish
-                ? "Need local help with this issue?"
-                : "Keni nevoje per ndihme lokale me kete problem?"
-            }
-            description={
-              isEnglish
-                ? "If this guide matches the fault or upgrade you are dealing with, open the most relevant service page before you call."
-                : "Nese kjo guide perputhet me defektin ose permiresimin qe po kerkoni, hapni fillimisht faqen e sherbimit me te afert."
-            }
-            links={leadServices}
-            locale={guide.locale}
-          />
         </header>
 
         <article className="mt-12 space-y-8">
@@ -574,22 +547,22 @@ export function GuidePageTemplate({
             <h2 className="text-2xl font-semibold text-foreground">
               {isEnglish
                 ? `How to use this guide in ${guide.city ?? "Tirana"}`
-                : `Si ta perdorni kete guide ne ${guide.city ?? "Tirane"}`}
+                : `Si ta përdorni këtë guidë në ${guide.city ?? "Tiranë"}`}
             </h2>
             <p className="mt-5 text-base leading-7 text-muted sm:text-lg">
               {isEnglish
                 ? "Use this page as a pre-call checklist, not as a replacement for an on-site diagnosis. In Tirana and Durres, the same symptom can come from ageing apartment wiring, an overloaded panel, or a quick repair that never solved the root cause."
-                : "Perdoreni kete faqe si liste kontrolli para telefonates, jo si zevendesim per diagnostikimin ne terren. Ne Tirane dhe Durres i njejti simptom mund te vije nga instalimi i vjeter i apartamentit, nje panel i mbingarkuar ose nje riparim i shpejte qe nuk e ka zgjidhur shkakun."}
+                : "Përdoreni këtë faqe si listë kontrolli para telefonatës, jo si zëvendësim për diagnostikimin në terren. Në Tiranë dhe Durrës i njëjti simptom mund të vijë nga instalimi i vjetër i apartamentit, një panel i mbingarkuar ose një riparim i shpejtë që nuk e ka zgjidhur shkakun."}
             </p>
             <p className="mt-4 text-base leading-7 text-muted sm:text-lg">
               {isEnglish
                 ? "Open one service page and one supporting page before you call. That usually gives enough context to describe the issue clearly and understand the likely scope."
-                : "Hapni nje faqe sherbimi dhe nje faqe mbeshtetese para telefonates. Zakonisht kjo mjafton per ta pershkruar qarte problemin dhe per te kuptuar fushen e mundshme te punes."}
+                : "Hapni një faqe shërbimi dhe një faqe mbështetëse para telefonatës. Zakonisht kjo mjafton për ta përshkruar qartë problemin dhe për të kuptuar fushën e mundshme të punës."}
             </p>
           </SurfaceCard>
           <MutedCard>
             <h2 className="text-2xl font-semibold text-foreground">
-              {isEnglish ? "Details worth checking" : "Detaje qe vlejne te kontrollohen"}
+              {isEnglish ? "Details worth checking" : "Detaje që vlejnë të kontrollohen"}
             </h2>
             <ul className="mt-5 space-y-3">
               {(isEnglish
@@ -600,10 +573,10 @@ export function GuidePageTemplate({
                     "Any new appliance, solar plan, EV plan, or tenancy change linked to the issue.",
                   ]
                 : [
-                    "Lloji i prones dhe nese instalimi eshte prekur me pare nga rinovime.",
-                    "Simptoma e sakte, ambienti dhe ora kur shfaqet problemi.",
-                    "Nese paneli, prizat ose dritat japin nxehje, ere djegieje ose bien shpesh.",
-                    "Cdo pajisje e re, plan solar, plan EV ose ndryshim qiraje qe lidhet me situaten.",
+                    "Lloji i pronës dhe nëse instalimi është prekur më parë nga rinovime.",
+                    "Simptoma e saktë, ambienti dhe ora kur shfaqet problemi.",
+                    "Nëse paneli, prizat ose dritat japin nxehje, erë djegieje ose bien shpesh.",
+                    "Çdo pajisje e re, plan solar, plan EV ose ndryshim qiraje që lidhet me situatën.",
                   ]
               ).map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm leading-6 text-muted sm:text-base">
@@ -615,24 +588,15 @@ export function GuidePageTemplate({
                 </li>
               ))}
             </ul>
-            <p className="mt-5 text-sm leading-6 text-muted">
-              {isEnglish
-                ? "These checks make the first call more useful and help decide whether you need a repair, an inspection, or a larger upgrade."
-                : "Keto kontrolle e bejne telefonaten e pare me te dobishme dhe ndihmojne te kuptohet nese ju duhet riparim, inspektim apo nje permiresim me i madh."}
-            </p>
           </MutedCard>
         </section>
-
-        <div className="mt-12">
-          <ProofCard proof={proof} locale={guide.locale} />
-        </div>
 
         <section className="mt-16" aria-labelledby="guide-faq-heading">
           <div className="text-center">
             <h2
               id="guide-faq-heading"
               className="text-3xl font-semibold text-foreground sm:text-4xl">
-              {isEnglish ? "Frequently asked questions" : "Pyetjet me te shpeshta"}
+              {isEnglish ? "Frequently asked questions" : "Pyetjet më të shpeshta"}
             </h2>
           </div>
           <div className="mt-8">
@@ -646,12 +610,12 @@ export function GuidePageTemplate({
         </section>
 
         <RelatedGrid
-          title={isEnglish ? "Related services" : "Sherbime te lidhura"}
+          title={isEnglish ? "Related services" : "Shërbime të lidhura"}
           links={relatedServices}
           locale={guide.locale}
         />
         <RelatedGrid
-          title={isEnglish ? "More guides" : "Me shume udhezues"}
+          title={isEnglish ? "More guides" : "Më shumë udhëzues"}
           links={relatedGuides}
           locale={guide.locale}
         />
@@ -668,6 +632,13 @@ export function ServiceHubTemplate({
   cards,
   breadcrumbs,
   locale = "sq-AL",
+  eyebrow,
+  highlightsTitle,
+  overviewTitle,
+  overviewParagraphs,
+  featuredTitle,
+  featuredDescription,
+  cardsSectionTitle,
 }: {
   title: string;
   description: string;
@@ -676,8 +647,44 @@ export function ServiceHubTemplate({
   cards: RelatedLink[];
   breadcrumbs: { label: string; href?: string }[];
   locale?: ServicePage["locale"];
+  eyebrow?: string;
+  highlightsTitle?: string;
+  overviewTitle?: string;
+  overviewParagraphs?: string[];
+  featuredTitle?: string;
+  featuredDescription?: string;
+  cardsSectionTitle?: string;
 }) {
   const isEnglish = locale === "en-US";
+  const resolvedEyebrow =
+    eyebrow ?? (isEnglish ? "Electrical services" : "Shërbime elektrike");
+  const resolvedHighlightsTitle =
+    highlightsTitle ??
+    (isEnglish ? "Why customers call us" : "Pse klientët na kontaktojnë");
+  const resolvedOverviewTitle =
+    overviewTitle ??
+    (isEnglish ? "Main electrical services" : "Shërbimet kryesore");
+  const resolvedOverviewParagraphs =
+    overviewParagraphs ??
+    (isEnglish
+      ? [
+          "Choose the page that matches the work you need most: emergency electrician, repairs, installations, electrical panels, EV chargers, solar work, apartment jobs, or business support.",
+          "You can also open more specific pages for rentals, villas, offices, hotels, lighting, and smart home upgrades.",
+        ]
+      : [
+          "Zgjidhni faqen që përputhet me punën që ju duhet më shumë: urgjencë elektrike, riparim, instalim, panel elektrik, karikues EV, solar, apartament ose shërbim për biznes.",
+          "Më poshtë gjeni edhe faqe më specifike për prona me qira, vila, zyra, hotele, ndriçim dhe smart home.",
+        ]);
+  const resolvedFeaturedTitle =
+    featuredTitle ??
+    (isEnglish ? "Most requested pages" : "Faqet më të kërkuara");
+  const resolvedFeaturedDescription =
+    featuredDescription ??
+    (isEnglish
+      ? "These pages cover the most common requests from customers in Tirana and Durres."
+      : "Këto faqe mbulojnë kërkesat më të shpeshta nga klientët në Tiranë dhe Durrës.");
+  const resolvedCardsSectionTitle =
+    cardsSectionTitle ?? (isEnglish ? "All electrical services" : "Të gjitha shërbimet");
 
   return (
     <PageShell locale={locale}>
@@ -686,7 +693,7 @@ export function ServiceHubTemplate({
 
         <header className="rounded-lg border border-border bg-surface shadow-soft p-8 sm:p-10">
           <span className="inline-flex min-h-9 items-center rounded-lg border border-electric-100 bg-electric-50 px-3 text-sm font-semibold text-electric-700">
-            {isEnglish ? "Service hub" : "Qendra e sherbimeve"}
+            {resolvedEyebrow}
           </span>
           <h1 className="mt-5 text-balance text-4xl font-semibold leading-[1.06] text-foreground sm:text-5xl">
             {title}
@@ -712,9 +719,7 @@ export function ServiceHubTemplate({
             {highlights?.length ? (
               <MutedCard>
                 <h2 className="text-2xl font-semibold text-foreground">
-                  {isEnglish
-                    ? "What this hub helps you find"
-                    : "Cfare ju ndihmon te gjeni kjo qender"}
+                  {resolvedHighlightsTitle}
                 </h2>
                 <ul className="mt-5 space-y-3">
                   {highlights.map((highlight) => (
@@ -735,24 +740,21 @@ export function ServiceHubTemplate({
         <section className="mt-10 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
           <SurfaceCard>
             <h2 className="text-2xl font-semibold text-foreground">
-              {isEnglish ? "How to use this hub" : "Si ta perdorni kete qender"}
+              {resolvedOverviewTitle}
             </h2>
-            <p className="mt-5 text-base leading-7 text-muted sm:text-lg">
-              {isEnglish
-                ? "Start with the page that matches the real situation, not only the broad keyword. Some visitors need a fault diagnosis, others need a full installation, and others are comparing EV, solar, rentals, or business support."
-                : "Filloni me faqen qe perputhet me situaten reale, jo vetem me fjalen e pergjithshme. Disa vizitore kane nevoje per diagnostikim defekti, te tjere per instalim te plote, dhe te tjere po krahasojne EV, solar, prona me qira ose sherbime per biznes."}
-            </p>
-            <p className="mt-4 text-base leading-7 text-muted sm:text-lg">
-              {isEnglish
-                ? "After opening a main page, use one supporting guide or supporting service page to compare property type, timing, and next-step work."
-                : "Pasi te hapni nje faqe kryesore, perdorni edhe nje guide ose nje faqe mbeshtetese per te krahasuar llojin e prones, kohen dhe punen qe vjen me pas."}
-            </p>
+            {resolvedOverviewParagraphs.map((paragraph, index) => (
+              <p
+                key={paragraph}
+                className={`text-base leading-7 text-muted sm:text-lg ${
+                  index === 0 ? "mt-5" : "mt-4"
+                }`}>
+                {paragraph}
+              </p>
+            ))}
           </SurfaceCard>
           <MutedCard>
             <h2 className="text-2xl font-semibold text-foreground">
-              {isEnglish
-                ? "Strong pages to open first"
-                : "Faqe te forta per t'i hapur te parat"}
+              {resolvedFeaturedTitle}
             </h2>
             <ul className="mt-5 space-y-3">
               {cards.slice(0, 4).map((card) => (
@@ -766,18 +768,16 @@ export function ServiceHubTemplate({
               ))}
             </ul>
             <p className="mt-5 text-sm leading-6 text-muted">
-              {isEnglish
-                ? "Compare one main page and one supporting page before you call. That usually gives enough context to describe the issue clearly."
-                : "Krahasoni nje faqe kryesore dhe nje faqe mbeshtetese para telefonates. Zakonisht kjo mjafton per ta pershkruar qarte problemin."}
+              {resolvedFeaturedDescription}
             </p>
           </MutedCard>
         </section>
 
         <section className="mt-10" aria-labelledby="service-hub-list-heading">
-          <h2 id="service-hub-list-heading" className="sr-only">
-            {isEnglish ? "Service pages" : "Faqet e sherbimeve"}
+          <h2 id="service-hub-list-heading" className="text-3xl font-semibold text-foreground sm:text-4xl">
+            {resolvedCardsSectionTitle}
           </h2>
-          <ul className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {cards.map((card) => (
               <li key={card.href} className="h-full">
                 <article className="h-full rounded-lg border border-border bg-surface shadow-sm transition-[transform,background-color,border-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-border-strong hover:bg-surface-raised hover:shadow-soft">

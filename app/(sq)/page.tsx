@@ -8,7 +8,7 @@ import ScrollReveal from "@/app/(components)/ScrollReveal";
 import ServicesSection from "@/app/(components)/ServicesSection";
 import SiteShell from "@/app/(components)/SiteShell";
 import WhyChooseSection from "@/app/(components)/WhyChooseSection";
-import { CONTACT_EMAIL_ADDRESS, CONTACT_PHONE_NUMBER } from "@/lib/contact";
+import { CONTACT_PHONE_NUMBER } from "@/lib/contact";
 import { SITE_URL } from "@/lib/site";
 import {
   LOCAL_BUSINESS_ID,
@@ -19,9 +19,9 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Alex Elektrik | Elektricist ne Tirane dhe Durres",
+  title: "Alex Elektrik | Elektricist në Tiranë dhe Durrës",
   description:
-    "Elektricist ne Tirane dhe Durres per riparime elektrike, instalime elektrike, urgjenca, panel elektrik, karikues EV dhe panele diellore.",
+    "Elektricist në Tiranë dhe Durrës për riparime elektrike, instalime, urgjenca, kontroll paneli, karikues EV dhe panele diellore për banesa, apartamente dhe biznese.",
   metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: SITE_URL,
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: SITE_URL,
-    title: "Alex Elektrik | Elektricist ne Tirane dhe Durres",
+    title: "Alex Elektrik | Elektricist në Tiranë dhe Durrës",
     description:
-      "Sherbime elektrike per shtepi, apartamente, vila dhe biznese ne Tirane dhe Durres.",
+      "Shërbime elektrike për shtëpi, apartamente, vila dhe biznese në Tiranë dhe Durrës.",
     locale: "sq_AL",
     images: [
       {
@@ -46,6 +46,13 @@ export const metadata: Metadata = {
         alt: "Alex Elektrik",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Alex Elektrik | Elektricist në Tiranë dhe Durrës",
+    description:
+      "Riparime elektrike, instalime, urgjenca, panele elektrike, EV dhe solar për banesa e biznese në Tiranë dhe Durrës.",
+    images: [`${SITE_URL}/opengraph-image`],
   },
 };
 
@@ -60,13 +67,12 @@ const homepageJsonLd = {
         image: ORGANIZATION_LOGO_URL,
         logo: ORGANIZATION_LOGO_URL,
         telephone: CONTACT_PHONE_NUMBER,
-        email: CONTACT_EMAIL_ADDRESS,
         priceRange: "$$",
-      areaServed: ["Tirane", "Durres"],
+      areaServed: ["Tiranë", "Durrës"],
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Tirane",
-        addressLocality: "Tirane",
+        streetAddress: "Tiranë",
+        addressLocality: "Tiranë",
         postalCode: "1001",
         addressCountry: "AL",
       },
@@ -96,6 +102,7 @@ const homepageJsonLd = {
         "Instalime elektrike",
         "Riparime elektrike",
         "Elektricist urgjent",
+        "Kontroll paneli elektrik",
         "Karikues EV",
         "Panele diellore",
       ].map((serviceName) => ({

@@ -6,15 +6,12 @@ import {
 } from "@/lib/seo";
 import {
   getAlbanianServicePage,
-  type AlbanianServicePageEntry,
 } from "./albanian-services";
 import {
   getEnglishServicePage,
-  type EnglishServicePageEntry,
 } from "./english-services";
 import { getGuidePage } from "./guides";
 import { getServicePage, type SiteServicePage } from "./services";
-import type { ProofItem } from "./types";
 
 export type LinkCard = {
   title: string;
@@ -84,26 +81,6 @@ export function getEnglishAlternateService(albanianSlug: string) {
 export function getAlbanianAlternateService(englishSlug: string) {
   const albanianSlug = ENGLISH_TO_ALBANIAN_ALTERNATES[englishSlug];
   return albanianSlug ? getAlbanianServicePage(albanianSlug) : undefined;
-}
-
-export function toProofItem(
-  proof: AlbanianServicePageEntry["proof"] | EnglishServicePageEntry["proof"],
-  eyebrow = "Shembull pune",
-): ProofItem {
-  const normalizedId = `${proof.city}-${proof.title}`
-    .toLowerCase()
-    .replace(/\s+/g, "-");
-
-  return {
-    id: `proof-${normalizedId}`,
-    eyebrow,
-    title: proof.title,
-    city: proof.city,
-    propertyType: proof.propertyType,
-    summary: `${proof.problem} ${proof.fix}`,
-    bullets: [proof.problem, proof.fix, proof.turnaround],
-    outcome: proof.outcome,
-  };
 }
 
 export function buildServiceMetadata(

@@ -2,18 +2,6 @@ export type EnglishServiceLocale = "en-US";
 
 export type EnglishPageType = "service" | "audience" | "location";
 
-export interface EnglishServiceProofBlock {
-  sourceId: string;
-  title: string;
-  city: string;
-  propertyType: string;
-  problem: string;
-  fix: string;
-  turnaround: string;
-  outcome: string;
-  evidenceHint: string;
-}
-
 export interface EnglishServiceFAQ {
   question: string;
   answer: string;
@@ -38,7 +26,6 @@ export interface EnglishServicePageEntry {
   whenToCall: readonly string[];
   problems: readonly string[];
   processSteps: readonly string[];
-  proof: EnglishServiceProofBlock;
   faqs: readonly EnglishServiceFAQ[];
   relatedServiceSlugs: readonly string[];
   relatedGuideSlugs: readonly string[];
@@ -119,21 +106,6 @@ export const englishServicePages = [
       "Complete the repair or installation with testing at the end.",
       "Receive a short summary of what was fixed and what to watch next.",
     ],
-    proof: {
-      sourceId: "tirana-apartment-rewire",
-      title: "Tirana apartment load correction",
-      city: "Tirana",
-      propertyType: "apartment",
-      problem:
-        "A client in a newer Tirana apartment block kept tripping breakers during evening use and could not get a clear explanation in English about whether the issue was the panel, the load, or one bad circuit.",
-      fix:
-        "A worn breaker was replaced, the circuits were balanced, and the main kitchen and living-room loads were reviewed and explained clearly in English before the final test.",
-      turnaround: "Same-day visit and final testing",
-      outcome:
-        "The property returned to stable operation with a clearer setup for the client.",
-      evidenceHint:
-        "Pair this page with a real panel photo, a before-and-after note, and a short client quote.",
-    },
     faqs: [
       {
         question: "Do you speak English on-site?",
@@ -215,21 +187,6 @@ export const englishServicePages = [
       "Isolate the fault, repair the failed part, and test the system.",
       "Receive a short follow-up note about what to monitor next.",
     ],
-    proof: {
-      sourceId: "tirana-emergency-panel",
-      title: "Urgent panel fault in Tirana",
-      city: "Tirana",
-      propertyType: "rental apartment",
-      problem:
-        "The client reported a burning smell, partial lighting failure in one room, and a socket that had started to warm up after heater use in a rental apartment.",
-      fix:
-        "The faulty line was isolated first, the overheated connection was found near the affected point, and the damaged part was replaced before the rest of the flat was brought fully back online.",
-      turnaround: "Same-day emergency response",
-      outcome:
-        "The space returned to a safe condition and the immediate risk was removed.",
-      evidenceHint:
-        "Use this with a real panel photo and a short note about the response time.",
-    },
     faqs: [
       {
         question: "Should I call immediately if I smell burning?",
@@ -308,21 +265,6 @@ export const englishServicePages = [
       "Complete the job and confirm the result in plain language.",
       "Keep one contact for later maintenance or follow-up work.",
     ],
-    proof: {
-      sourceId: "tirana-apartment-rewire",
-      title: "English-speaking apartment repair in Tirana",
-      city: "Tirana",
-      propertyType: "rental apartment",
-      problem:
-        "The client needed a simple English explanation of repeated breaker trips after moving in.",
-      fix:
-        "The load was checked, the panel issue was corrected, and the main risk points were explained clearly.",
-      turnaround: "Same-day visit",
-      outcome:
-        "The client got a clear answer and a safer setup without having to guess what had been done.",
-      evidenceHint:
-        "Pair this page with a real client quote from an expat or international tenant.",
-    },
     faqs: [
       {
         question: "Do I need to speak Albanian to book?",
@@ -400,21 +342,6 @@ export const englishServicePages = [
       "Complete the repair and test the room or appliance before guests arrive.",
       "Keep a simple maintenance record for future turnarounds.",
     ],
-    proof: {
-      sourceId: "durres-hotel-maintenance",
-      title: "Short-term rental maintenance in Durres",
-      city: "Durres",
-      propertyType: "holiday rental",
-      problem:
-        "The property needed a quick electrical check and fixes before the next guest arrival window.",
-      fix:
-        "The relevant lines and lighting points were reviewed, and the issue was resolved before check-in.",
-      turnaround: "Fast pre-arrival turnaround",
-      outcome:
-        "The host kept the booking on schedule and avoided a guest-facing problem.",
-      evidenceHint:
-        "Use a real turnover photo and a short host quote if available.",
-    },
     faqs: [
       {
         question: "Can you work between guest check-outs and check-ins?",
@@ -492,21 +419,6 @@ export const englishServicePages = [
       "Finish the repair work and confirm the result before handover.",
       "Keep the record for the next tenant or lease cycle.",
     ],
-    proof: {
-      sourceId: "tirana-apartment-rewire",
-      title: "Rental handover repair in Tirana",
-      city: "Tirana",
-      propertyType: "rental apartment",
-      problem:
-        "The landlord needed a small electrical list handled before a new tenant moved in.",
-      fix:
-        "The critical points were inspected, repaired, and documented for the handover.",
-      turnaround: "Pre-lease turnaround",
-      outcome:
-        "The unit was ready for the next tenant with fewer risks and fewer surprises.",
-      evidenceHint:
-        "Use a real move-in checklist or handover photo if you have one.",
-    },
     faqs: [
       {
         question: "Can you work before a new tenant moves in?",
@@ -584,21 +496,6 @@ export const englishServicePages = [
       "Carry out the work with as little disruption as possible.",
       "Confirm the result and give a simple maintenance note for the team.",
     ],
-    proof: {
-      sourceId: "tirana-smart-lighting",
-      title: "Commercial lighting and control update in Tirana",
-      city: "Tirana",
-      propertyType: "shop",
-      problem:
-        "The business needed more usable power points and clearer display lighting.",
-      fix:
-        "The layout was adjusted and the lighting was improved so the space worked better for staff and customers.",
-      turnaround: "Planned work around business hours",
-      outcome:
-        "The shop became more functional without losing a full day of trading.",
-      evidenceHint:
-        "Use a real storefront or office photo, not stock imagery.",
-    },
     faqs: [
       {
         question: "Can you work around opening hours?",
@@ -676,21 +573,6 @@ export const englishServicePages = [
       "Install the dedicated line and charger hardware.",
       "Test the system and confirm charging behavior before handover.",
     ],
-    proof: {
-      sourceId: "tirana-ev-home",
-      title: "Home EV charger setup in Tirana",
-      city: "Tirana",
-      propertyType: "private villa",
-      problem:
-        "The property needed a charger line in a private garage, but the owner also wanted to make sure the rest of the house stayed stable when the EV charged in the evening.",
-      fix:
-        "A dedicated line, load review, and protection setup were added before the charger was used, with the charger point placed where cable access and daily parking worked cleanly.",
-      turnaround: "Planned installation visit",
-      outcome:
-        "The property was ready for everyday EV charging with a clearer and safer layout.",
-      evidenceHint:
-        "Use a real charger photo and a simple load-check note if available.",
-    },
     faqs: [
       {
         question: "Can you check the panel before installing a charger?",
@@ -768,21 +650,6 @@ export const englishServicePages = [
       "Install the solar hardware and connect it safely to the panel.",
       "Test the system and explain the next maintenance steps.",
     ],
-    proof: {
-      sourceId: "tirana-solar-business",
-      title: "Solar integration for a small business in Tirana",
-      city: "Tirana",
-      propertyType: "small business",
-      problem:
-        "The business wanted a clearer plan for solar integration, but the existing panel and daily load pattern made it unclear what system size was actually realistic.",
-      fix:
-        "The load, circuits, roof fit, and integration plan were reviewed before the system was connected, so the owner could understand the technical path before committing to the final setup.",
-      turnaround: "Planned installation and integration",
-      outcome:
-        "The project had a cleaner technical path and a safer setup for future use.",
-      evidenceHint:
-        "Use a real roof photo or panel photo with a short note about the system size.",
-    },
     faqs: [
       {
         question: "Do you help choose the right system size?",
@@ -860,21 +727,6 @@ export const englishServicePages = [
       "Complete the repair, maintenance, or installation.",
       "Confirm the result and keep one contact for future visits.",
     ],
-    proof: {
-      sourceId: "durres-hotel-maintenance",
-      title: "Coastal hospitality maintenance in Durres",
-      city: "Durres",
-      propertyType: "small hotel",
-      problem:
-        "The property needed a stable electrical check before the busy season began after sitting partially unused through the off-season near the coast.",
-      fix:
-        "The key circuits, lighting, and load points were reviewed, the weak connections were corrected, and the property was tested in time for opening.",
-      turnaround: "Planned pre-season visit",
-      outcome:
-        "The business entered the season with fewer risks and a clearer maintenance plan.",
-      evidenceHint:
-        "Use a real hotel, rental, or coastal property photo when this page goes live.",
-    },
     faqs: [
       {
         question: "Do you work in Golem and the beach area?",

@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import { ServiceHubTemplate } from "@/app/(components)/ContentTemplates";
 import { albanianServicePages } from "@/lib/content/albanian-services";
 import { SITE_URL } from "@/lib/site";
-import { getOpenGraphImageUrl, sanitizeJsonLd } from "@/lib/seo";
+import {
+  LOCAL_BUSINESS_ID,
+  WEBSITE_ID,
+  getOpenGraphImageUrl,
+  sanitizeJsonLd,
+} from "@/lib/seo";
 
 const SERVICES_URL = `${SITE_URL}/sherbime`;
 const PRIORITY_SERVICE_SLUGS = [
@@ -14,6 +19,19 @@ const PRIORITY_SERVICE_SLUGS = [
   "panel-elektrik-tirane",
   "karikues-ev-tirane",
   "panele-diellore-tirane",
+] as const;
+const SERVICE_HUB_KEYWORDS = [
+  "sherbime elektrike tirane",
+  "sherbime elektrike durres",
+  "elektricist ne tirane",
+  "elektricist durres",
+  "elektricist urgjent tirane",
+  "riparime elektrike tirane",
+  "instalime elektrike tirane",
+  "elektricist per apartamente",
+  "panel elektrik tirane",
+  "karikues ev tirane",
+  "panele diellore tirane",
 ] as const;
 
 const servicePriority = new Map<string, number>(
@@ -36,8 +54,9 @@ function sortServicesByPriority<T extends (typeof albanianServicePages)[number]>
 export const metadata: Metadata = {
   title: "Sherbime elektrike ne Tirane dhe Durres | Alex Elektrik",
   description:
-    "Faqet kryesore te sherbimeve elektrike ne Tirane dhe Durres per urgjenca, riparime, instalime, panele diellore, EV dhe biznese.",
+    "Gjeni sherbimin e duhur elektrik ne Tirane dhe Durres per urgjenca, riparime, instalime, panele elektrike, apartamente, biznese, karikues EV dhe panele diellore.",
   metadataBase: new URL(SITE_URL),
+  keywords: [...SERVICE_HUB_KEYWORDS],
   alternates: {
     canonical: SERVICES_URL,
     languages: {
@@ -49,7 +68,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Sherbime elektrike ne Tirane dhe Durres | Alex Elektrik",
     description:
-      "Faqja kryesore e sherbimeve elektrike me lidhje direkte per urgjenca, riparime, instalime, EV, solar dhe sherbime per banesa e biznese.",
+      "Qender sherbimesh per elektricist ne Tirane dhe Durres me faqe per urgjenca, riparime, instalime, apartamente, biznese, EV dhe solar.",
     url: SERVICES_URL,
     locale: "sq_AL",
     images: [
@@ -57,9 +76,16 @@ export const metadata: Metadata = {
         url: getOpenGraphImageUrl("/sherbime"),
         width: 1200,
         height: 630,
-        alt: "Sherbime elektrike - Alex Elektrik",
+        alt: "Sherbime elektrike ne Tirane dhe Durres - Alex Elektrik",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sherbime elektrike ne Tirane dhe Durres | Alex Elektrik",
+    description:
+      "Faqe qendrore per elektricist, urgjenca, riparime, instalime, apartamente, biznese, EV dhe panele diellore.",
+    images: [getOpenGraphImageUrl("/sherbime")],
   },
 };
 
@@ -67,7 +93,7 @@ export default function ServicesHubPage() {
   const orderedServices = sortServicesByPriority([...albanianServicePages]);
   const cards = orderedServices.map((service) => ({
     title: service.title,
-    description: service.summary,
+    description: service.metaDescription,
     href: `/sherbime/${service.slug}`,
   }));
 
@@ -76,11 +102,31 @@ export default function ServicesHubPage() {
     "@graph": [
       {
         "@type": "CollectionPage",
-        "@id": `${SERVICES_URL}#collection`,
+        "@id": `${SERVICES_URL}#webpage`,
         url: SERVICES_URL,
         name: "Sherbime elektrike ne Tirane dhe Durres",
+        inLanguage: "sq-AL",
         description:
-          "Faqe qendrore me sherbimet elektrike te Alex Elektrik per banesa, vila, biznese dhe projekte energjie.",
+          "Faqe qendrore me sherbimet elektrike te Alex Elektrik per banesa, apartamente, vila, prona me qira, biznese dhe projekte energjie ne Tirane dhe Durres.",
+        keywords: [...SERVICE_HUB_KEYWORDS].join(", "),
+        isPartOf: {
+          "@id": WEBSITE_ID,
+        },
+        publisher: {
+          "@id": LOCAL_BUSINESS_ID,
+        },
+        mainEntity: {
+          "@id": `${SERVICES_URL}#itemlist`,
+        },
+        about: [
+          { "@type": "Thing", name: "Elektricist ne Tirane" },
+          { "@type": "Thing", name: "Elektricist ne Durres" },
+          { "@type": "Thing", name: "Elektricist urgjent ne Tirane" },
+          { "@type": "Thing", name: "Instalime elektrike ne Tirane" },
+          { "@type": "Thing", name: "Riparime elektrike ne Tirane" },
+          { "@type": "Thing", name: "Karikues EV ne Tirane" },
+          { "@type": "Thing", name: "Panele diellore ne Tirane" },
+        ],
       },
       {
         "@type": "ItemList",
@@ -89,7 +135,17 @@ export default function ServicesHubPage() {
           "@type": "ListItem",
           position: index + 1,
           name: service.title,
-          item: `${SITE_URL}/sherbime/${service.slug}`,
+          item: {
+            "@type": "Service",
+            name: service.title,
+            url: `${SITE_URL}/sherbime/${service.slug}`,
+            description: service.metaDescription,
+            serviceType: service.primaryKeyword,
+            areaServed: [...service.serviceAreas],
+            provider: {
+              "@id": LOCAL_BUSINESS_ID,
+            },
+          },
         })),
       },
       {
@@ -121,17 +177,27 @@ export default function ServicesHubPage() {
         dangerouslySetInnerHTML={{ __html: sanitizeJsonLd(jsonLd) }}
       />
       <ServiceHubTemplate
-        title="Sherbime elektrike per Tirane dhe Durres"
-        description="Gjeni faqen e duhur per urgjenca elektrike, riparime, instalime, EV, solar dhe sherbime per apartamente, vila, biznese dhe prona me qira ne Tirane dhe Durres."
+        eyebrow="Sherbime elektrike"
+        title="Sherbime elektrike ne Tirane dhe Durres"
+        description="Elektricist ne Tirane dhe Durres per urgjenca, riparime, instalime elektrike, panele elektrike, apartamente, vila, biznese, karikues EV dhe panele diellore, me sherbim per banesa, prona me qira dhe ambiente pune."
         introParagraphs={[
-          "Nisni nga faqet kryesore me kerkesen me te forte: elektricist ne Tirane ose Durres, urgjenca, instalime, apartamente, panel elektrik, EV dhe solar. Kjo ju con me shpejt te faqja qe ka me shume mundesi te zgjidhe situaten tuaj.",
-          "Me poshte gjeni edhe faqe me specifike per vila, biznese, ndricim ose smart home. Ato vlejne kur problemi eshte me i ngushte, por faqet kryesore zakonisht jane pika me e mire e nisjes.",
+          "Ofron sherbime elektrike per banesa, apartamente, vila, zyra, dyqane, restorante, hotele dhe prona me qira ne Tirane dhe Durres.",
+          "Nga urgjencat dhe riparimet e shpejta te instalimet e reja, panelet elektrike, karikuesit EV dhe panelet diellore, zgjidhni sherbimin qe ju pershtatet dhe na kontaktoni per vizite ose vleresim.",
         ]}
         highlights={[
-          "Faqet kryesore jane renditur te parat per kerkimet me te forta lokale.",
-          "Faqet me specifike mbeten te hapura si mbeshtetje per raste me te ngushta.",
-          "Udhezuesit e blogut ju ndihmojne te kuptoni problemin para telefonates.",
+          "Reagim i shpejte per urgjenca dhe defekte qe nuk presin.",
+          "Riparime, instalime dhe kontrolle sigurie per banesa e biznese.",
+          "Sherbime per panele elektrike, EV, solar dhe ngarkesa moderne.",
+          "Komunikim i qarte per problemin, punen dhe hapat e radhes.",
         ]}
+        highlightsTitle="Pse na zgjedhin klientet"
+        overviewTitle="Sherbimet kryesore"
+        overviewParagraphs={[
+          "Sherbimet me te kerkuara perfshijne elektricist ne Tirane, elektricist ne Durres, urgjenca elektrike, riparime, instalime dhe kontroll paneli.",
+          "Ofrohen gjithashtu zgjidhje per apartamente, vila, zyra, dyqane, restorante, hotele, karikues EV, panele diellore, ndricim LED dhe smart home.",
+        ]}
+        featuredTitle="Sherbimet me te kerkuara"
+        cardsSectionTitle="Te gjitha sherbimet elektrike"
         cards={cards}
         breadcrumbs={[
           { label: "Kreu", href: "/" },

@@ -6,7 +6,6 @@ import {
   guidePages,
   type GuidePageEntry,
 } from "@/lib/content/guides";
-import { getProofItem } from "@/lib/content/proof";
 import { getServicePage } from "@/lib/content/services";
 import { normalizeGuideSlug } from "@/lib/content/site-helpers";
 import type { GuidePage } from "@/lib/content/types";
@@ -47,7 +46,6 @@ function toTemplateGuide(guide: GuidePageEntry): GuidePage {
     faqs: guide.faq,
     primaryServiceSlug: guide.primaryService.slug,
     secondaryServiceSlug: guide.secondaryService.slug,
-    proofId: guide.proofReferences[0]?.proofId ?? "tirana-apartment-rewire",
     featured: guide.featured,
   };
 }
@@ -101,16 +99,6 @@ export function renderGuidePage(
   const guide = getGuidePage(slug);
 
   if (!guide || (expectedLocale && guide.locale !== expectedLocale)) {
-    notFound();
-  }
-
-  const proof =
-    getProofItem(
-      guide.proofReferences[0]?.proofId ?? "tirana-apartment-rewire",
-      guide.locale,
-    ) ?? getProofItem("tirana-apartment-rewire", guide.locale);
-
-  if (!proof) {
     notFound();
   }
 
@@ -224,23 +212,6 @@ export function renderGuidePage(
       />
       <GuidePageTemplate
         guide={toTemplateGuide(guide)}
-        proof={proof}
-        leadServices={[
-          {
-            title: guide.primaryService.label,
-            description:
-              getServicePage(guide.primaryService.slug)?.summary ??
-              guide.description,
-            href: guide.primaryService.path,
-          },
-          {
-            title: guide.secondaryService.label,
-            description:
-              getServicePage(guide.secondaryService.slug)?.summary ??
-              guide.excerpt,
-            href: guide.secondaryService.path,
-          },
-        ]}
         breadcrumbs={[
           {
             label: guide.locale === "en-US" ? "Home" : "Kreu",

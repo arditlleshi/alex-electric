@@ -10,7 +10,6 @@ import {
   getEnglishAlternateService,
   resolveRelatedGuides,
   resolveRelatedServices,
-  toProofItem,
 } from "@/lib/content/site-helpers";
 import { SITE_URL } from "@/lib/site";
 import {
@@ -62,7 +61,6 @@ export default async function AlbanianServicePage({
   }
 
   const canonical = `${SITE_URL}/sherbime/${service.slug}`;
-  const proof = toProofItem(service.proof);
   const relatedServices = resolveRelatedServices(service.relatedServiceSlugs);
   const relatedGuides = resolveRelatedGuides(service.relatedGuideSlugs);
 
@@ -133,7 +131,6 @@ export default async function AlbanianServicePage({
       />
       <ServicePageTemplate
         service={service}
-        proof={proof}
         breadcrumbs={[
           { label: "Kreu", href: "/" },
           { label: "Sherbime", href: "/sherbime" },

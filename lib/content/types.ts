@@ -5,17 +5,6 @@ export type FAQItem = {
   answer: string;
 };
 
-export type ProofItem = {
-  id: string;
-  eyebrow: string;
-  title: string;
-  city: string;
-  propertyType: string;
-  summary: string;
-  bullets: string[];
-  outcome: string;
-};
-
 export type ServicePage = {
   slug: string;
   locale: PageLocale;
@@ -31,16 +20,6 @@ export type ServicePage = {
   whenToCall: readonly string[];
   problems: readonly string[];
   processSteps: readonly string[];
-  proof: {
-    title: string;
-    city: string;
-    propertyType: string;
-    problem: string;
-    fix: string;
-    turnaround: string;
-    outcome: string;
-    evidenceHint?: string;
-  };
   faqs: readonly FAQItem[];
   relatedServiceSlugs: readonly string[];
   relatedGuideSlugs: readonly string[];
@@ -71,6 +50,5 @@ export type GuidePage = {
   faqs: readonly FAQItem[];
   primaryServiceSlug: string;
   secondaryServiceSlug: string;
-  proofId: string;
   featured?: boolean;
 };

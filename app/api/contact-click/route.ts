@@ -6,7 +6,7 @@ const NO_STORE_HEADERS = {
   "Cache-Control": "no-store, no-cache, must-revalidate",
 };
 
-const VALID_CHANNELS = new Set<ContactChannel>(["phone", "email", "whatsapp"]);
+const VALID_CHANNELS = new Set<ContactChannel>(["phone", "whatsapp"]);
 const VALID_SOURCES = new Set<ContactSource>([
   "navigation",
   "hero",

@@ -56,7 +56,6 @@ type ContactClickBlob = {
 
 const createEmptyTotals = (): ChannelTotals => ({
   phone: 0,
-  email: 0,
   whatsapp: 0,
 });
 
@@ -81,7 +80,6 @@ function normalizeTotals(
 ): ChannelTotals {
   return {
     phone: totals?.phone ?? 0,
-    email: totals?.email ?? 0,
     whatsapp: totals?.whatsapp ?? 0,
   };
 }

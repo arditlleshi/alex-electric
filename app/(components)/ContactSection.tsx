@@ -1,16 +1,12 @@
 import {
   ArrowRight,
-  Clock3,
   Globe,
-  Mail,
   MapPin,
   Phone,
 } from "lucide-react";
 import TrackedContactLink from "./TrackedContactLink";
 import WhatsAppIcon from "./WhatsAppIcon";
 import {
-  CONTACT_EMAIL_ADDRESS,
-  CONTACT_EMAIL_HREF,
   CONTACT_PHONE_DISPLAY,
   CONTACT_PHONE_HREF,
   CONTACT_WHATSAPP_HREF,
@@ -33,42 +29,27 @@ const primaryActions: {
 }[] = [
   {
     channel: "phone",
-    title: "Telefononi Menjehere",
+    title: "Telefononi menjëherë",
     description:
-      "Per urgjenca, mungese energjie, siguresa qe bien ose diagnostikim te shpejte ne telefon.",
+      "Për urgjenca, mungesë energjie, siguresa që bien ose diagnostikim të shpejtë në telefon.",
     Icon: Phone,
     link: CONTACT_PHONE_HREF,
     label: CONTACT_PHONE_DISPLAY,
-    eyebrow: "Reagimi me i shpejte",
+    eyebrow: "Reagimi më i shpejtë",
     toneClass: "border-electric-100 bg-electric-50 text-electric-700",
     cardClass:
       "border-electric-100 bg-electric-50/70 hover:border-electric-200 hover:bg-electric-50",
     linkClass: "text-electric-700 hover:text-electric-900",
   },
   {
-    title: "Dergo Detajet me Email",
+    title: "Shkruani në WhatsApp",
     description:
-      "Per preventiv, pershkrim me te plote, foto dhe kerkesa qe duan dokumentim.",
-    channel: "email",
-    Icon: Mail,
-    link: CONTACT_EMAIL_HREF,
-    label: CONTACT_EMAIL_ADDRESS,
-    eyebrow: "Per kerkesa te plota",
-    toneClass: "border-signal-100 bg-signal-50 text-signal-600",
-    cardClass:
-      "border-signal-100 bg-signal-50/80 hover:border-signal-400/60 hover:bg-signal-50",
-    linkClass:
-      "text-signal-600 hover:text-copper-600 break-all hyphens-auto text-left",
-  },
-  {
-    title: "Shkruani ne WhatsApp",
-    description:
-      "Kanal praktik per foto, video te shkurtra dhe koordinim te shpejte.",
+      "Kanal praktik për foto, video të shkurtra dhe koordinim të shpejtë.",
     channel: "whatsapp",
     Icon: WhatsAppIcon,
     link: CONTACT_WHATSAPP_HREF,
-    label: "Na shkruani ne WhatsApp",
-    eyebrow: "Per koordinim te shpejte",
+    label: "Na shkruani në WhatsApp",
+    eyebrow: "Për koordinim të shpejtë",
     toneClass: "border-teal-500/20 bg-teal-500/10 text-teal-700",
     cardClass:
       "border-teal-500/20 bg-teal-500/10 hover:border-teal-500/35 hover:bg-teal-500/12",
@@ -80,23 +61,16 @@ const primaryActions: {
 
 const supportPoints = [
   {
-    title: "Zona e sherbimit",
-    description: "Tirane, Durres dhe raste te perzgjedhura sipas projektit.",
+    title: "Zona e shërbimit",
+    description: "Tiranë, Durrës dhe vizita të planifikuara sipas projektit.",
     Icon: MapPin,
     toneClass: "text-electric-700",
   },
   {
     title: "Gjuha e komunikimit",
-    description: "Shqip dhe anglisht per kliente vendas, te huaj dhe prona me qira.",
+    description: "Shqip dhe anglisht për klientë vendas, të huaj dhe prona me qira.",
     Icon: Globe,
     toneClass: "text-teal-700",
-  },
-  {
-    title: "Kur te na kontaktoni",
-    description:
-      "Telefon ose WhatsApp per urgjenca, email kur kerkesa ka me shume detaje, foto ose plan pune.",
-    Icon: Clock3,
-    toneClass: "text-signal-600",
   },
 ];
 
@@ -108,19 +82,19 @@ export default function ContactSection() {
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-20 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(21rem,1.02fr)] lg:items-start lg:px-8">
         <div className="min-w-0 self-start">
           <span className="inline-flex min-h-9 items-center rounded-lg border border-electric-100 bg-electric-50 px-3 text-sm font-semibold text-electric-700">
-            Na Kontaktoni
+            Na kontaktoni
           </span>
           <h2 className="mt-5 max-w-3xl text-balance text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
-            Na kontaktoni per riparim, instalim ose nderhyrje urgjente
+            Na kontaktoni për urgjencë, riparim ose instalim elektrik
           </h2>
           <p className="mt-5 max-w-3xl text-pretty text-base leading-7 text-muted sm:text-lg">
-            Zgjidhni menyren me te thjeshte per te na kontaktuar. Telefoni dhe
-            WhatsApp jane me te shpejta per urgjenca, ndersa emaili eshte i
-            pershtatshem kur kerkesa ka me shume detaje ose foto.
+            Zgjidhni mënyrën më të thjeshtë për të na kontaktuar. Telefoni dhe
+            WhatsApp janë mënyrat më praktike për urgjenca, koordinim të
+            shpejtë dhe dërgim fotosh ose detajesh për projektin.
           </p>
           <p className="mt-3 max-w-3xl text-sm leading-6 text-muted">
-            Need support in English? We can discuss the work scope and provide a
-            clear estimate by phone, email or WhatsApp.
+            Need support in English? Mund të flasim për punën dhe të japim një
+            vlerësim të qartë me telefon ose WhatsApp.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -140,13 +114,13 @@ export default function ContactSection() {
               rel="noopener noreferrer"
               className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-teal-500/25 bg-surface px-4 text-sm font-semibold text-teal-700 transition-[background-color,border-color,color,transform] duration-200 hover:-translate-y-0.5 hover:border-teal-500/45 hover:bg-teal-500/10">
               <WhatsAppIcon aria-hidden="true" className="h-4 w-4" />
-              Na shkruani ne WhatsApp
+              Na shkruani në WhatsApp
             </TrackedContactLink>
           </div>
 
           <ul
             aria-label="Detaje kontakti"
-            className="mt-10 grid gap-3 sm:grid-cols-3">
+            className="mt-10 grid gap-3 sm:grid-cols-2">
             {supportPoints.map((point) => (
               <li
                 key={point.title}
@@ -173,7 +147,7 @@ export default function ContactSection() {
 
           <address className="mt-8 not-italic text-sm leading-6 text-muted">
             <span className="font-semibold text-foreground">Vendndodhja:</span>{" "}
-            Tirane, Shqiperi
+            Tiranë, Shqipëri
           </address>
         </div>
 
@@ -183,11 +157,11 @@ export default function ContactSection() {
               Zgjidhni kanalin e duhur
             </p>
             <h3 className="mt-2 text-2xl font-semibold text-foreground">
-              Tre rruge te qarta per te nisur kontaktin
+              Telefon ose WhatsApp
             </h3>
             <p className="mt-3 text-sm leading-6 text-muted">
-              Secili kanal ka nje perdorim te qarte sipas urgjences dhe llojit
-              te informacionit qe doni te ndani per shtepi, apartament ose
+              Secili kanal ka një përdorim të qartë sipas urgjencës dhe llojit
+              të informacionit që doni të ndani për shtëpi, apartament ose
               biznes.
             </p>
           </div>
@@ -230,11 +204,12 @@ export default function ContactSection() {
 
           <div className="mt-5 rounded-lg border border-border bg-surface p-4">
             <p className="text-sm font-semibold text-foreground">
-              Cfare ndihmon per nje pergjigje me te sakte
+              Çfarë ndihmon për një përgjigje më të saktë
             </p>
             <p className="mt-2 text-sm leading-6 text-muted">
-              Shkruani zonen, llojin e problemit, nese eshte urgjence dhe dergoni
-              foto kur eshte e mundur. Kjo e ben vleresimin fillestar me te shpejte.
+              Shkruani zonën, llojin e problemit, nëse është urgjencë dhe
+              dërgoni foto kur është e mundur. Kjo e bën vlerësimin fillestar
+              më të shpejtë.
             </p>
           </div>
         </div>

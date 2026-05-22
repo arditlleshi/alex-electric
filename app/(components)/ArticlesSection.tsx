@@ -40,19 +40,19 @@ export default function ArticlesSection() {
         <header className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
           <div className="min-w-0">
             <span className="inline-flex min-h-9 items-center rounded-lg border border-electric-100 bg-electric-50 px-3 text-sm font-semibold text-electric-700">
-              Blog & Guides
+              Këshilla elektrike
             </span>
             <h2 className="mt-5 max-w-3xl text-balance text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
-              Keshilla dhe guida per probleme elektrike ne shtepi dhe biznes
+              Këshilla praktike për probleme elektrike në shtëpi dhe biznes
             </h2>
             <p className="mt-5 max-w-3xl text-pretty text-base leading-7 text-muted sm:text-lg">
-              Lexoni artikuj te thjeshte per riparime elektrike, instalime,
-              siguresa, priza, panel elektrik, karikues EV dhe siguri ne
-              shtepi ose ne ambient pune.
+              Lexoni artikuj të thjeshtë për riparime elektrike, instalime,
+              siguresa, priza, panel elektrik, karikues EV dhe siguri në
+              shtëpi ose në ambient pune.
             </p>
             <p className="mt-3 max-w-3xl text-sm leading-6 text-muted">
-              Nese doni te kuptoni me mire problemin para se te telefononi nje
-              elektricist, nisni nga udhezuesit kryesore per apartament,
+              Nëse doni të kuptoni më mirë problemin para se të telefononi një
+              elektricist, nisni nga udhëzuesit kryesorë për apartament,
               panel, EV dhe kontrolle para blerjes ose instalimit.
             </p>
           </div>
@@ -61,7 +61,7 @@ export default function ArticlesSection() {
             <Link
               href="/blog"
               className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-surface-inverse px-4 text-sm font-semibold text-white transition-[background-color,box-shadow] duration-200 hover:bg-electric-900 hover:shadow-electric">
-              Shiko te gjithe artikujt
+              Shiko të gjithë artikujt
               <ArrowRight aria-hidden="true" className="h-4 w-4" />
             </Link>
             <Link

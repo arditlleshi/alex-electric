@@ -10,7 +10,6 @@ import {
   getAlbanianAlternateService,
   resolveRelatedGuides,
   resolveRelatedServices,
-  toProofItem,
 } from "@/lib/content/site-helpers";
 import { SITE_URL } from "@/lib/site";
 import {
@@ -62,7 +61,6 @@ export default async function EnglishServicePage({
   }
 
   const canonical = `${SITE_URL}${service.path}`;
-  const proof = toProofItem(service.proof, "Project snapshot");
   const relatedServices = resolveRelatedServices(service.relatedServiceSlugs);
   const relatedGuides = resolveRelatedGuides(service.relatedGuideSlugs);
 
@@ -133,7 +131,6 @@ export default async function EnglishServicePage({
       />
       <ServicePageTemplate
         service={service}
-        proof={proof}
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "English", href: "/en" },

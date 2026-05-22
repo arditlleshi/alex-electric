@@ -14,6 +14,7 @@ import SolarPanel from "@/public/icons/solar-panel.png";
 
 const primaryServiceCards: {
   slug: AlbanianServiceSlug;
+  title?: string;
   image:
     | typeof ResidentialElectric
     | typeof CommercialElectric
@@ -26,45 +27,51 @@ const primaryServiceCards: {
 }[] = [
   {
     slug: "elektricist-tirane",
+    title: "Elektricist në Tiranë",
     image: ResidentialElectric,
-    eyebrow: "Tirane",
+    eyebrow: "Tiranë",
     summary:
-      "Per apartamente, shtepi dhe biznese ne Tirane qe kane nevoje per riparime elektrike, instalime ose kontroll sigurie.",
+      "Për apartamente, shtëpi dhe biznese në Tiranë që kanë nevojë për riparime elektrike, instalime ose kontroll sigurie.",
   },
   {
     slug: "elektricist-durres",
+    title: "Elektricist në Durrës",
     image: CommercialElectric,
-    eyebrow: "Durres",
+    eyebrow: "Durrës",
     summary:
-      "Per vila, apartamente bregdetare, hotele te vogla dhe prona me qira ne Durres dhe zonat perreth.",
+      "Për vila, apartamente bregdetare, hotele të vogla dhe prona me qira në Durrës dhe zonat përreth.",
   },
   {
     slug: "elektricist-urgjent-tirane",
+    title: "Elektricist Urgjent në Tiranë",
     image: Maintenance,
-    eyebrow: "Urgjenca",
+    eyebrow: "Urgjencë",
     summary:
-      "Per siguresa qe bien, prize qe nxehet, ere djegieje ose nderprerje energjie qe nuk pret deri neser.",
+      "Për siguresa që bien, prizë që nxehet, erë djegieje ose ndërprerje energjie që nuk pret deri nesër.",
   },
   {
     slug: "instalime-elektrike-tirane",
+    title: "Instalime Elektrike në Tiranë",
     image: SmartHome,
     eyebrow: "Instalime",
     summary:
-      "Per apartamente, shtepi dhe ambiente pune qe kane nevoje per instalim te ri, rinovim ose shtim qarqesh.",
+      "Për apartamente, shtëpi dhe ambiente pune që kanë nevojë për instalim të ri, rinovim ose shtim qarqesh.",
   },
   {
     slug: "karikues-ev-tirane",
+    title: "Karikues EV në Tiranë",
     image: ElectricCar,
     eyebrow: "EV",
     summary:
-      "Per familje dhe prona qe duan karikues makine elektrike me instalim te sigurt dhe panel te kontrolluar.",
+      "Për familje dhe prona që duan karikues makine elektrike me instalim të sigurt dhe panel të kontrolluar.",
   },
   {
     slug: "panele-diellore-tirane",
+    title: "Panele Diellore në Tiranë",
     image: SolarPanel,
     eyebrow: "Solar",
     summary:
-      "Per shtepi dhe vila qe duan zgjidhje me panele diellore sipas konsumit, buxhetit dhe hapesires.",
+      "Për shtëpi dhe vila që duan zgjidhje me panele diellore sipas konsumit, buxhetit dhe hapësirës.",
   },
 ];
 
@@ -77,25 +84,25 @@ const secondaryLinks: {
     slug: "elektricist-per-apartamente",
     title: "Apartamente dhe hyrje",
     description:
-      "Per apartamente, hyrje te reja, prona me qira dhe kontrolle para dorezimit.",
+      "Për apartamente, hyrje të reja, prona me qira dhe kontrolle para dorëzimit.",
   },
   {
     slug: "panel-elektrik-tirane",
     title: "Panel dhe siguri",
     description:
-      "Per kontroll paneli, ndarje qarqesh dhe permiresime kur ngarkesa eshte rritur.",
+      "Për kontroll paneli, ndarje qarqesh dhe përmirësime kur ngarkesa është rritur.",
   },
   {
     slug: "mirembajtje-elektrike-biznese",
-    title: "Biznese dhe mirembajtje",
+    title: "Biznese dhe mirëmbajtje",
     description:
-      "Per zyra, dyqane, restorante, hotele dhe mirembajtje elektrike te vazhdueshme.",
+      "Për zyra, dyqane, restorante, hotele dhe mirëmbajtje elektrike të vazhdueshme.",
   },
   {
     slug: "smart-home-tirane",
     title: "Smart home dhe komoditet",
     description:
-      "Per automatizim, ndricim inteligjent dhe zgjidhje me te vecanta qe vijne pas punes baze elektrike.",
+      "Për automatizim, ndriçim inteligjent dhe zgjidhje më të veçanta që vijnë pas punës bazë elektrike.",
   },
 ];
 
@@ -123,20 +130,19 @@ export default function ServicesSection() {
         <header className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
           <div className="min-w-0">
             <span className="inline-flex min-h-9 items-center rounded-lg border border-electric-100 bg-electric-50 px-3 text-sm font-semibold text-electric-700">
-              Faqe Sherbimesh
+              Shërbimet kryesore
             </span>
             <h2 className="mt-5 max-w-3xl text-balance text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
-              Gjeni sherbimin elektrik qe ju duhet
+              Shërbime elektrike për shtëpi, apartamente dhe biznese
             </h2>
             <p className="mt-5 max-w-3xl text-pretty text-base leading-7 text-muted sm:text-lg">
-              Nese kerkoni elektricist ne Tirane ose Durres, zgjidhni sherbimin
-              sipas zones, urgjences ose llojit te punes qe ju duhet ne shtepi,
-              apartament, vile apo biznes.
+              Nëse kërkoni elektricist në Tiranë ose Durrës, këtu gjeni faqet
+              kryesore për urgjenca, riparime elektrike, instalime, kontroll
+              paneli, karikues EV dhe panele diellore.
             </p>
             <p className="mt-3 max-w-3xl text-sm leading-6 text-muted">
-              Ketu mund te hapni drejt faqet per riparime elektrike, instalime
-              elektrike, elektricist urgjent, karikues EV, panele diellore dhe
-              faqet kryesore qe kane me shume kerkese.
+              Zgjidhni shërbimin sipas qytetit, urgjencës ose llojit të pronës
+              dhe kaloni direkt te faqja që i përshtatet punës që ju duhet.
             </p>
           </div>
 
@@ -144,7 +150,7 @@ export default function ServicesSection() {
             <Link
               href="/sherbime"
               className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-surface-inverse px-4 text-sm font-semibold text-white transition-[background-color,box-shadow] duration-200 hover:bg-electric-900 hover:shadow-electric">
-              Shiko te gjitha sherbimet
+              Shiko të gjitha shërbimet
               <ArrowRight aria-hidden="true" className="h-4 w-4" />
             </Link>
             <Link
@@ -156,9 +162,9 @@ export default function ServicesSection() {
         </header>
 
         <ul
-          aria-label="Sherbimet kryesore"
+          aria-label="Shërbimet kryesore"
           className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {cards.map(({ service, image, eyebrow, summary }) => (
+          {cards.map(({ service, image, eyebrow, summary, title }) => (
             <li key={service.slug}>
               <Link
                 href={`/sherbime/${service.slug}`}
@@ -170,7 +176,7 @@ export default function ServicesSection() {
                   <Image
                     src={image}
                     fill
-                    alt={service.title}
+                    alt={title ?? service.title}
                     placeholder="blur"
                     blurDataURL={image.src}
                     sizes="80px"
@@ -178,7 +184,7 @@ export default function ServicesSection() {
                   />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground transition-colors duration-200 group-hover:text-electric-700">
-                  {service.title}
+                  {title ?? service.title}
                 </h3>
                 <p className="mt-3 flex-1 text-sm leading-6 text-muted">
                   {summary}
@@ -203,11 +209,11 @@ export default function ServicesSection() {
               <h3
                 id="services-spotlight"
                 className="text-xl font-semibold text-foreground">
-                Rruge te tjera hyrjeje
+                Shërbime sipas nevojës
               </h3>
               <p className="mt-2 max-w-3xl text-sm leading-6 text-muted">
-                Ketu kaloni te faqe me specifike kur problemi lidhet me
-                apartamente, panel elektrik, biznese ose zgjidhje me te vecanta.
+                Kaloni te faqet më specifike kur puna lidhet me apartamente,
+                panel elektrik, biznese ose zgjidhje smart home.
               </p>
             </div>
 
@@ -230,21 +236,20 @@ export default function ServicesSection() {
 
           <aside className="rounded-lg border border-border bg-surface-raised p-5 shadow-sm sm:p-6">
             <p className="text-sm font-semibold text-electric-700">
-              Pasqyre e plote
+              Më shumë shërbime
             </p>
             <h3 className="mt-2 text-xl font-semibold text-foreground">
-              Te gjitha sherbimet
+              Shihni të gjitha shërbimet
             </h3>
             <p className="mt-3 text-sm leading-6 text-muted">
-              Nese doni te shihni te gjitha sherbimet elektrike ne nje vend,
-              kjo faqe mbledh zonat, llojet e punes dhe nevojat me te zakonshme
-              per kliente familjare dhe biznese.
+              Faqja e plotë e shërbimeve mbledh zonat, llojet e punës dhe
+              nevojat më të zakonshme për klientë familjarë dhe biznese.
             </p>
             <div className="mt-5 grid gap-3">
               <Link
                 href="/sherbime"
                 className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-surface-inverse px-4 text-sm font-semibold text-white transition-[background-color,box-shadow] duration-200 hover:bg-electric-900 hover:shadow-electric">
-                Shiko te gjitha sherbimet
+                Shiko të gjitha shërbimet
               </Link>
               <Link
                 href="/blog"

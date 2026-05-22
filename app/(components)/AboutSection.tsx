@@ -41,10 +41,10 @@ function FeatureCard({
 }
 
 const operationalMetrics = [
-  { value: "15+", label: "vite pune si elektricist" },
-  { value: "24/7", label: "sherbim emergjence" },
-  { value: "<1h", label: "pergjigje e shpejte ne Tirane" },
-  { value: "100%", label: "kontroll para dorezimit" },
+  { value: "15+", label: "vite përvojë si elektricist" },
+  { value: "24/7", label: "shërbim emergjence" },
+  { value: "<1h", label: "përgjigje e shpejtë në Tiranë" },
+  { value: "100%", label: "kontroll final para dorëzimit" },
 ];
 
 const workProtocol = [
@@ -52,19 +52,19 @@ const workProtocol = [
     Icon: ShieldCheck,
     title: "Kontroll i problemit",
     description:
-      "Kontrollojme instalimin elektrik dhe gjejme shkakun e problemit sa me shpejt.",
+      "Kontrollojmë instalimin elektrik dhe gjejmë shkakun e problemit sa më shpejt.",
   },
   {
     Icon: Zap,
     title: "Riparim ose instalim",
     description:
-      "Bejme riparime elektrike ose instalim elektrik me pune te paster dhe materiale cilesore.",
+      "Bëjmë riparime elektrike ose instalim elektrik me punë të pastër dhe materiale cilësore.",
   },
   {
     Icon: BadgeCheck,
     title: "Testim final",
     description:
-      "Testojme cdo pike para dorezimit qe gjithcka te punoje ne menyre te sigurt.",
+      "Testojmë çdo pikë para dorëzimit që gjithçka të punojë në mënyrë të sigurt.",
   },
 ];
 
@@ -72,23 +72,23 @@ const features = [
   {
     Icon: BadgeCheck,
     toneClass: "border-electric-100 bg-electric-50 text-electric-700",
-    title: "Mbi 15 vjet eksperience",
+    title: "Mbi 15 vjet përvojë",
     description:
-      "<p>Pune e perditshme ne terren me <strong>riparime elektrike</strong>, <strong>instalime elektrike</strong> dhe kontrolle sigurie per apartamente, vila, prona me qira dhe biznese ne Tirane e Durres.</p>",
+      "<p>Punë e përditshme në terren me <strong>riparime elektrike</strong>, <strong>instalime elektrike</strong> dhe kontrolle sigurie për apartamente, vila, prona me qira dhe biznese në Tiranë e Durrës.</p>",
   },
   {
     Icon: Bolt,
     toneClass: "border-signal-100 bg-signal-50 text-signal-600",
-    title: "Zgjidhje moderne",
+    title: "Zgjidhje për nevoja moderne",
     description:
-      "<p>Zgjidhje praktike per <strong>smart home</strong>, <strong>panelet diellore</strong>, ndricim modern dhe <strong>karikues EV</strong> sipas ngarkeses reale dhe menyres si perdoret prona.</p>",
+      "<p>Zgjidhje praktike për <strong>smart home</strong>, <strong>panelet diellore</strong>, ndriçim modern dhe <strong>karikues EV</strong> sipas ngarkesës reale dhe mënyrës si përdoret prona.</p>",
   },
   {
     Icon: ShieldCheck,
     toneClass: "border-teal-500/20 bg-teal-500/10 text-teal-700",
-    title: "Sherbim i qarte dhe i besueshem",
+    title: "Komunikim i qartë nga fillimi në fund",
     description:
-      "<p>Klienti merr shpjegim te qarte per problemin, punen qe duhet bere dhe hapat deri ne testimin final, qofte per nje prize te vetme apo nje instalim me te madh.</p>",
+      "<p>Klienti merr shpjegim të qartë për problemin, punën që duhet bërë dhe hapat deri në testimin final, qoftë për një prizë të vetme apo një instalim më të madh.</p>",
   },
 ];
 
@@ -101,17 +101,17 @@ export default function AboutSection() {
         <div className="grid gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(20rem,1.05fr)] lg:items-start">
           <div className="min-w-0">
             <span className="inline-flex min-h-9 items-center rounded-lg border border-electric-100 bg-electric-50 px-3 text-sm font-semibold text-electric-700">
-              Njihuni Me Ekspertin
+              Përvoja jonë
             </span>
             <h2 className="mt-5 max-w-3xl text-balance text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
-              Rreth Alex Elektrik
+              Elektricist me përvojë për banesa, apartamente dhe biznese
             </h2>
             <p className="mt-5 max-w-2xl text-pretty text-base leading-7 text-muted sm:text-lg">
-              Puna ne terren, diagnostikimi i qarte dhe komunikimi i
-              drejteperdrejte jane baza e cdo sherbimi elektrik. Qellimi eshte
-              qe klienti te kuptoje shpejt problemin, zgjidhjen dhe cfare
-              rezultati pritet nga puna, sidomos kur behet fjale per apartamente
-              te vjetra, vila, prona me qira ose biznese qe nuk mund te humbin kohe.
+              Alex Elektrik punon çdo ditë me riparime elektrike, instalime të
+              reja dhe kontrolle sigurie në apartamente, vila, prona me qira
+              dhe ambiente pune. Qëllimi është i thjeshtë: problemi të kuptohet
+              shpejt, zgjidhja të shpjegohet qartë dhe puna të mbyllet në mënyrë
+              të sigurt.
             </p>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -146,10 +146,10 @@ export default function AboutSection() {
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="text-sm font-semibold text-electric-700">
-                    Procesi i punes
+                    Procesi i punës
                   </p>
                   <h3 className="mt-2 text-2xl font-semibold leading-tight text-foreground">
-                    Nga kontrolli te dorezimi
+                    Nga kontrolli te dorëzimi
                   </h3>
                 </div>
                 <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-lg bg-electric-50 text-electric-700">
@@ -157,9 +157,10 @@ export default function AboutSection() {
                 </span>
               </div>
               <p className="mt-4 text-sm leading-6 text-muted">
-                Hapat jane te thjeshte: kontroll, nderhyrje dhe testim final.
-                Keshtu klienti e di cfare po behet, sa mund te zgjase puna dhe
-                si mbyllet ne menyre te sigurt, pa paqartesi per koston ose hapat e ardhshem.
+                Hapat janë të thjeshtë: kontroll, ndërhyrje dhe testim final.
+                Kështu klienti e di çfarë po bëhet, sa mund të zgjasë puna dhe
+                si mbyllet në mënyrë të sigurt, pa paqartësi për koston ose
+                hapat e ardhshëm.
               </p>
             </div>
 
@@ -193,10 +194,10 @@ export default function AboutSection() {
                 </span>
                 <div className="min-w-0">
                   <p className="text-sm font-semibold text-foreground">
-                    Pune e sigurt
+                    Punë e sigurt
                   </p>
                   <p className="mt-1 text-sm leading-6 text-muted">
-                    Kontroll final para dorezimit.
+                    Kontroll final para dorëzimit.
                   </p>
                 </div>
               </div>
@@ -206,10 +207,10 @@ export default function AboutSection() {
                 </span>
                 <div className="min-w-0">
                   <p className="text-sm font-semibold text-foreground">
-                    Kosto e qarte
+                    Kosto e qartë
                   </p>
                   <p className="mt-1 text-sm leading-6 text-muted">
-                    Preventiv dhe kohe pune para fillimit.
+                    Preventiv dhe kohë pune para fillimit.
                   </p>
                 </div>
               </div>
@@ -218,7 +219,7 @@ export default function AboutSection() {
             <div className="border-t border-border bg-background px-5 py-4 text-sm font-medium text-muted-strong sm:px-6">
               <span className="inline-flex items-center gap-2">
                 <Wrench aria-hidden="true" className="h-4 w-4 text-electric-600" />
-                Sherbime elektrike ne Tirane, Durres dhe nderhyrje urgjente sipas rastit
+                Shërbime elektrike në Tiranë, Durrës dhe ndërhyrje urgjente sipas rastit
               </span>
             </div>
           </aside>

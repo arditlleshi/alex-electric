@@ -1,13 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Globe, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowRight, Globe, MapPin, Phone } from "lucide-react";
 import TrackedContactLink from "./TrackedContactLink";
 import WhatsAppIcon from "./WhatsAppIcon";
 import { albanianServicePages } from "@/lib/content/albanian-services";
 import { englishServicePages } from "@/lib/content/english-services";
 import {
-  CONTACT_EMAIL_ADDRESS,
-  CONTACT_EMAIL_HREF,
   CONTACT_PHONE_DISPLAY,
   CONTACT_PHONE_HREF,
   CONTACT_WHATSAPP_HREF,
@@ -16,7 +14,7 @@ import logo from "@/public/main-logo.png";
 
 const quickLinks = [
   { label: "Kreu", href: "/" },
-  { label: "Sherbime", href: "/sherbime" },
+  { label: "Shërbime", href: "/sherbime" },
   { label: "Blog", href: "/blog" },
   { label: "English", href: "/en" },
   { label: "Kontakt", href: "/#contact" },
@@ -65,13 +63,13 @@ export default async function Footer() {
             />
           </div>
           <p className="min-w-0 text-sm leading-6 text-slate-300 md:justify-self-center">
-            Sherbime elektrike ne Tirane & Durres me mbeshtetje ne shqip dhe
+            Shërbime elektrike ne Tiranë & Durrës me support në shqip dhe
             anglisht.
           </p>
           <div className="flex flex-wrap gap-2 md:justify-self-end">
             <span className="inline-flex min-h-8 items-center gap-1.5 rounded-md border border-white/12 px-2.5 text-xs font-semibold text-slate-200">
               <MapPin aria-hidden="true" className="h-3.5 w-3.5 text-electric-200" />
-              Tirane & Durres
+              Tiranë & Durrës
             </span>
             <span className="inline-flex min-h-8 items-center gap-1.5 rounded-md border border-white/12 px-2.5 text-xs font-semibold text-slate-200">
               <Globe aria-hidden="true" className="h-3.5 w-3.5 text-teal-400" />
@@ -175,16 +173,6 @@ export default async function Footer() {
             <ul className="mt-3 space-y-2.5" aria-label="contact items">
               <li>
                 <TrackedContactLink
-                  href={CONTACT_EMAIL_HREF}
-                  channel="email"
-                  source="footer"
-                  className="group inline-flex items-start gap-2 text-sm text-slate-300 visited:text-slate-300 transition-colors duration-200 hover:text-white">
-                  <Mail aria-hidden="true" className="mt-0.5 h-4 w-4 text-electric-200" />
-                  <span className="break-all">{CONTACT_EMAIL_ADDRESS}</span>
-                </TrackedContactLink>
-              </li>
-              <li>
-                <TrackedContactLink
                   href={CONTACT_PHONE_HREF}
                   channel="phone"
                   source="footer"
@@ -239,7 +227,7 @@ export default async function Footer() {
           <p>© 2026 Alex Elektrik. Te gjitha te drejtat e rezervuara.</p>
           <p className="inline-flex items-center gap-1.5">
             <span className="h-1.5 w-1.5 rounded-full bg-success-500" aria-hidden="true" />
-            Operim ne Tirane dhe Durres
+            Operim ne Tiranë dhe Durrës
           </p>
         </div>
       </div>

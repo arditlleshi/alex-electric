@@ -20,18 +20,18 @@ import logo from "@/public/main-logo-2.png";
 const reassuranceItems = [
   {
     Icon: MapPin,
-    title: "Zona e sherbimit",
-    description: "Tirane, Durres dhe nderhyrje te planifikuara sipas rastit.",
+    title: "Zona e shërbimit",
+    description: "Tiranë, Durrës dhe ndërhyrje të planifikuara për banesa e biznese.",
   },
   {
     Icon: Clock3,
-    title: "Kur ka urgjence",
-    description: "Telefoni dhe WhatsApp jane menyrat me te shpejta per reagim.",
+    title: "Kur ka urgjencë",
+    description: "Telefoni dhe WhatsApp janë mënyrat më të shpejta kur ka mungesë energjie ose rrezik.",
   },
   {
     Icon: Wrench,
-    title: "Cfare perfshihet",
-    description: "Riparime, instalime, kontroll sigurie dhe pune me sqarim te qarte.",
+    title: "Çfarë ofrohet",
+    description: "Riparime, instalime, kontroll paneli, priza, ndriçim dhe zgjidhje për EV e solar.",
   },
 ] as const;
 
@@ -63,13 +63,13 @@ export default function HeroSection() {
           </div>
 
           <h1 className="max-w-3xl text-balance text-4xl font-semibold leading-[1.06] text-foreground sm:text-5xl lg:text-6xl">
-            Elektricist ne Tirane dhe Durres per shtepi, apartamente dhe biznese
+            Elektricist në Tiranë dhe Durrës për banesa, apartamente dhe biznese
           </h1>
 
           <p className="mt-6 max-w-2xl text-pretty text-lg leading-8 text-muted sm:text-xl">
-            Sherbime elektrike per riparime, instalime, siguresa, priza dhe
-            panel elektrik, si edhe zgjidhje per karikues EV, panele diellore
-            dhe mirembajtje te rregullt.
+            Shërbime elektrike për riparime, instalime, siguresa, priza,
+            ndriçim dhe panel elektrik, si edhe zgjidhje për karikues EV,
+            panele diellore dhe mirëmbajtje të rregullt.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -94,13 +94,13 @@ export default function HeroSection() {
             <Link
               href="/sherbime"
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-border bg-transparent px-5 text-sm font-semibold text-muted-strong transition-[background-color,border-color,color] duration-200 hover:border-electric-200 hover:bg-electric-50 hover:text-electric-700">
-              Shiko sherbimet
+              Shiko shërbimet
               <ArrowRight aria-hidden="true" className="h-4 w-4" />
             </Link>
           </div>
 
           <p className="mt-6 text-sm leading-6 text-muted">
-            Sherbim ne Tirane dhe Durres, me nderhyrje urgjente sipas rastit.
+            Shërbim në Tiranë dhe Durrës, me ndërhyrje urgjente dhe vizita të planifikuara sipas rastit.
           </p>
         </div>
 
@@ -109,10 +109,10 @@ export default function HeroSection() {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p className="text-sm font-semibold text-electric-700">
-                  Si punojme
+                  Si punojmë
                 </p>
                 <h2 className="mt-2 text-2xl font-semibold leading-tight text-foreground">
-                  Nje fillim i qarte per cdo kerkese
+                  Një fillim i qartë për çdo kërkesë
                 </h2>
               </div>
               <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-electric-50 text-electric-700">
@@ -120,13 +120,13 @@ export default function HeroSection() {
               </span>
             </div>
             <p className="mt-4 text-sm leading-6 text-muted">
-              Fillimisht degjojme problemin ose punen qe ju duhet, pastaj
-              sqarojme hapat, kohen dhe menyren me te pershtatshme per
-              nderhyrje.
+              Fillimisht dëgjojmë problemin ose punën që ju duhet, pastaj
+              sqarojmë hapat, kohën dhe mënyrën më të përshtatshme për
+              ndërhyrje.
             </p>
           </div>
 
-          <ul aria-label="Pikat kryesore te sherbimit" className="divide-y divide-border">
+          <ul aria-label="Pikat kryesore të shërbimit" className="divide-y divide-border">
             {reassuranceItems.map((item) => (
               <li key={item.title} className="grid gap-3 p-5 sm:grid-cols-[auto_minmax(0,1fr)] sm:p-6">
                 <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-surface-muted text-electric-700">
@@ -145,13 +145,13 @@ export default function HeroSection() {
               <Link
                 href="/sherbime"
                 className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-surface-inverse px-4 text-sm font-semibold text-white transition-[background-color,box-shadow] duration-200 hover:bg-electric-900 hover:shadow-electric">
-                Shiko sherbimet
+                Shiko shërbimet
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
               </Link>
               <Link
                 href="#contact"
                 className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-border bg-surface px-4 text-sm font-semibold text-muted-strong transition-[background-color,border-color,color] duration-200 hover:border-electric-200 hover:bg-electric-50 hover:text-electric-700">
-                Kerkoni kontakt
+                Kontakt
               </Link>
             </div>
           </div>

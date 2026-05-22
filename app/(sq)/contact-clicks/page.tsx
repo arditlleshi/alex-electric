@@ -29,13 +29,11 @@ type ContactClicksPageProps = {
 
 const CHANNEL_LABELS = {
   phone: "Phone",
-  email: "Email",
   whatsapp: "WhatsApp",
 } as const;
 
 const CHANNEL_STYLES = {
   phone: "border-emerald-400/20 bg-emerald-400/10 text-emerald-200",
-  email: "border-sky-400/20 bg-sky-400/10 text-sky-200",
   whatsapp: "border-teal-400/20 bg-teal-400/10 text-teal-200",
 } as const;
 
@@ -208,7 +206,7 @@ async function ContactClicksContent({
           </p>
           <h1 className="mt-3 text-3xl font-bold">Contact Click Log</h1>
           <p className="mt-3 text-sm leading-6 text-slate-300">
-            Vendos secretin per te pare JSON log-un e klikimeve te phone, email dhe WhatsApp.
+            Vendos secretin per te pare JSON log-un e klikimeve te phone dhe WhatsApp.
           </p>
           <div className="mt-6">
             <StatusMessage status={status} />
@@ -242,7 +240,7 @@ async function ContactClicksContent({
     Promise.resolve(isContactClickBlobConfigured()),
     Promise.resolve(isContactClickViewerConfigured()),
   ]);
-  const totalClicks = log.totals.phone + log.totals.email + log.totals.whatsapp;
+  const totalClicks = log.totals.phone + log.totals.whatsapp;
   const sourceRows = SOURCE_ORDER.map((source) => {
     const stats = log.sources[source];
 
@@ -251,7 +249,6 @@ async function ContactClicksContent({
       label: formatSourceLabel(source),
       total: stats?.total ?? 0,
       phone: stats?.byChannel.phone ?? 0,
-      email: stats?.byChannel.email ?? 0,
       whatsapp: stats?.byChannel.whatsapp ?? 0,
       lastClickedAt: formatDisplayTime(
         stats?.lastClickedAtTirana,
@@ -275,7 +272,7 @@ async function ContactClicksContent({
               Contact Click Log
             </h1>
             <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-300">
-              Clear server-rendered reporting for phone, email, and WhatsApp clicks.
+              Clear server-rendered reporting for phone and WhatsApp clicks.
               All visible timestamps below use Europe/Tirane.
             </p>
             <div className="mt-4 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.18em] text-slate-300">
@@ -320,11 +317,6 @@ async function ContactClicksContent({
           hint="Calls and tap-to-call clicks"
         />
         <MetricCard
-          label="Email"
-          value={log.totals.email}
-          hint="Mailto link clicks"
-        />
-        <MetricCard
           label="WhatsApp"
           value={log.totals.whatsapp}
           hint="WhatsApp chat openings"
@@ -349,7 +341,7 @@ async function ContactClicksContent({
             <div className="p-6">
               <EmptyTableState
                 title="No clicks yet"
-                description="Once someone taps phone, email, or WhatsApp, the rows will appear here."
+                description="Once someone taps phone or WhatsApp, the rows will appear here."
               />
             </div>
           ) : (
@@ -403,7 +395,6 @@ async function ContactClicksContent({
                   <th className="px-6 py-4 font-medium">Source</th>
                   <th className="px-6 py-4 font-medium">Total</th>
                   <th className="px-6 py-4 font-medium">Phone</th>
-                  <th className="px-6 py-4 font-medium">Email</th>
                   <th className="px-6 py-4 font-medium">WhatsApp</th>
                 </tr>
               </thead>
@@ -423,7 +414,6 @@ async function ContactClicksContent({
                       {row.total}
                     </td>
                     <td className="px-6 py-4 text-slate-300">{row.phone}</td>
-                    <td className="px-6 py-4 text-slate-300">{row.email}</td>
                     <td className="px-6 py-4 text-slate-300">{row.whatsapp}</td>
                   </tr>
                 ))}
