@@ -421,7 +421,7 @@ export function ServicePageTemplate({
                     "Any recent renovation, new appliance, EV plan, or solar work linked to the issue.",
                   ]
                 : [
-                    "Lloji i pronës dhe mosha e instalimit nëse e dini.",
+                    "Lloji i pronës dhe periudha e instalimit nëse e dini.",
                     "Cilat ambiente, priza, drita ose pajisje preken nga problemi.",
                     "Nëse defekti është i vazhdueshëm, vjen me ndërprerje ose shfaqet nën ngarkesë.",
                     "Çdo rinovim, pajisje e re, plan EV ose punë solar që lidhet me situatën.",

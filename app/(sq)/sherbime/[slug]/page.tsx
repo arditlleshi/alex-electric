@@ -133,7 +133,7 @@ export default async function AlbanianServicePage({
         service={service}
         breadcrumbs={[
           { label: "Kreu", href: "/" },
-          { label: "Sherbime", href: "/sherbime" },
+          { label: "Shërbime", href: "/sherbime" },
           { label: service.title },
         ]}
         relatedServices={relatedServices}

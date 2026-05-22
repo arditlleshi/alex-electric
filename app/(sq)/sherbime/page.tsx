@@ -185,23 +185,23 @@ export default function ServicesHubPage() {
           "Nga urgjencat dhe riparimet e shpejta te instalimet e reja, panelet elektrike, karikuesit EV dhe panelet diellore, zgjidhni sherbimin qe ju pershtatet dhe na kontaktoni per vizite ose vleresim.",
         ]}
         highlights={[
-          "Reagim i shpejte per urgjenca dhe defekte qe nuk presin.",
-          "Riparime, instalime dhe kontrolle sigurie per banesa e biznese.",
-          "Sherbime per panele elektrike, EV, solar dhe ngarkesa moderne.",
-          "Komunikim i qarte per problemin, punen dhe hapat e radhes.",
+          "Reagim i shpejtë për urgjenca dhe defekte që nuk presin.",
+          "Riparime, instalime dhe kontrolle sigurie për banesa e biznese.",
+          "Shërbime për panele elektrike, EV, solar dhe pajisje moderne.",
+          "Komunikim i qartë për problemin, punën dhe hapat e radhës.",
         ]}
         highlightsTitle="Pse na zgjedhin klientet"
-        overviewTitle="Sherbimet kryesore"
+        overviewTitle="Shërbimet kryesore"
         overviewParagraphs={[
-          "Sherbimet me te kerkuara perfshijne elektricist ne Tirane, elektricist ne Durres, urgjenca elektrike, riparime, instalime dhe kontroll paneli.",
-          "Ofrohen gjithashtu zgjidhje per apartamente, vila, zyra, dyqane, restorante, hotele, karikues EV, panele diellore, ndricim LED dhe smart home.",
+          "Shërbimet më të kërkuara përfshijne elektricist në Tiranë, elektricist në Durrës, urgjenca elektrike, riparime, instalime dhe kontroll paneli.",
+          "Ofrohen gjithashtu zgjidhje për apartamente, vila, zyra, dyqane, restorante, hotele, karikues EV, panele diellore, ndricim LED dhe smart home.",
         ]}
-        featuredTitle="Sherbimet me te kerkuara"
+        featuredTitle="Shërbimet më të kërkuara"
         cardsSectionTitle="Te gjitha sherbimet elektrike"
         cards={cards}
         breadcrumbs={[
           { label: "Kreu", href: "/" },
-          { label: "Sherbime" },
+          { label: "Shërbime" },
         ]}
       />
     </>

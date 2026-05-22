@@ -4,7 +4,7 @@ import { SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Alex Elektrik",
   description:
-    "Sherbime elektrike ne Tirane dhe Durres per urgjenca, riparime, instalime, EV, solar dhe mbeshtetje ne shqip e anglisht.",
+    "Shërbime elektrike në Tiranë dhe Durrës për urgjenca, riparime, instalime, EV, solar dhe suport në anglisht.",
   metadataBase: new URL(SITE_URL),
   keywords: [
     "sherbime elektrike tirane",

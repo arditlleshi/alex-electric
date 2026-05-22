@@ -44,11 +44,11 @@ export const albanianServicePages = [
   {
     slug: "elektricist-tirane",
     locale: "sq-AL",
-    title: "Elektricist ne Tiranë",
-    metaTitle: "Elektricist ne Tiranë | Instalime, Riparime & Emergjenca",
+    title: "Elektricist në Tiranë",
+    metaTitle: "Elektricist në Tiranë | Instalime, Riparime & Emergjenca",
     metaDescription:
-      "Elektricist ne Tiranë per instalime, riparime, diagnostikim, smart home, panele diellore dhe karikues EV me shërbim te shpejte ne kryeqytet.",
-    h1: "Elektricist ne Tiranë",
+      "Elektricist në Tiranë për instalime, riparime, diagnostikim, smart home, panele diellore dhe karikues EV me shërbim te shpejte ne kryeqytet.",
+    h1: "Elektricist në Tiranë",
     hero:
       "Shërbim elektrik në Tiranë për apartamente, vila, zyra dhe biznese që kanë nevojë për riparime, instalime, diagnostikim dhe përmirësime në panel kur instalimi është i vjetër, kur po bëhet rinovim ose kur duhen shtuar pika të reja për pajisjet e përditshme.",
     summary:
@@ -119,7 +119,7 @@ export const albanianServicePages = [
       albanianGuideSlugs.installCost,
       albanianGuideSlugs.panelGuide,
     ],
-    callToAction: "Kontaktoni tani per vizite dhe vleresim ne Tiranë.",
+    callToAction: "Kontaktoni tani për vizite dhe vlerësim në Tiranë.",
   },
   {
     slug: "elektricist-durres",
@@ -1088,9 +1088,9 @@ export const albanianServicePages = [
       "Elektricist per vila ne Tiranë, Durrës dhe zonat perreth per instalime, ndriçim, panele, smart home dhe mirëmbajtje sezonale.",
     h1: "Elektricist per Vila",
     hero:
-      "Elektricist per vila qe kane me shume zona, me shume ngarkese dhe me shume nevoje per planifikim te paster e te kujdesshem.",
+      "Elektricist për vila që kanë më shume zona, më shumë ngarkesë dhe më shumë nevojë për planifikim të pastër e të kujdesshëm.",
     summary:
-      "Shërbim per vila me ambiente te medha, oborre, ndriçim te jashtem dhe panele qe duhet ta mbajne ngarkesen pa probleme. është veçanerisht i dobishem per zonat rezidenciale ne Tiranë, Durrës dhe pronat sezonale perreth.",
+      "Shërbim për vila me ambiente të mëdha, oborre, ndriçim të jashtëm dhe panele që duhet ta mbajne ngarkesën pa probleme. Është veçanerisht i dobishem për zonat rezidenciale në Tiranë, Durrës dhe pronat sezonale përreth.",
     primaryKeyword: "elektricist per vila",
     secondaryKeywords: [
       "instalime vile",
@@ -1100,43 +1100,43 @@ export const albanianServicePages = [
     ],
     serviceAreas: ["Tiranë", "Durrës", "Farkë", "Lundër", "Golem", "Mali i Robit"],
     whenToCall: [
-      "Kur vila ka ambiente te shumta dhe instalimi duhet ndare mire.",
-      "Kur ndricimi i jashtem ose i oborrit ka nevoje per rregullim.",
-      "Kur keni pajisje te renda dhe doni te shmangni mbingarkesen.",
-      "Kur po modernizoni vilen me smart home, EV ose panele diellore.",
+      "Kur vila ka ambiente të shumta dhe instalimi duhet ndarë mire.",
+      "Kur ndricimi i jashtëm ose i oborrit ka nevojë për rregullim.",
+      "Kur keni pajisje të rënda dhe doni te shmangni mbingarkesën.",
+      "Kur po modernizoni vilën me smart home, EV ose panele diellore.",
     ],
     problems: [
-      "Shperndarje e gabuar e ngarkeses ne nje prone te madhe.",
-      "Oborre dhe zona te jashtme qe kerkojne ndriçim me te mire.",
-      "Nevoje per zgjidhje te qarta per pike te shumta dhe ambiente te ndryshme.",
-      "Integrim i sistemeve te reja me panelin ekzistues.",
+      "Shpërndarje e gabuar e ngarkesës në një pronë të madhe.",
+      "Oborre dhe zona të jashtme që kërkojne ndriçim më të mire.",
+      "Nevoje për zgjidhje të qarta për pike të shumta dhe ambiente të ndryshme.",
+      "Integrim i sistemeve të reja me panelin ekzistues.",
     ],
     processSteps: [
-      "Bëhet vleresim i zones dhe ngarkeses reale te vilës.",
-      "Planifikohet instalimi ose permiresimi sipas ambientit dhe perdorimit.",
-      "Kryhet puna ne ambientet e brendshme dhe te jashtme.",
-      "Testohet sistemi dhe jepen udhezime per sezonet me perdorim me te larte.",
+      "Bëhet vleresim i zones dhe ngarkesës reale të vilës.",
+      "Planifikohet instalimi ose përmiresimi sipas ambientit dhe përdorimit.",
+      "Kryhet puna ne ambientet e brendshme dhe të jashtme.",
+      "Testohet sistemi dhe jepen udhëzime për sezonet me përdorim më të lartë.",
     ],
     faqs: [
       {
-        question: "A e mbuloni edhe ndricimin e jashtem?",
+        question: "A e mbuloni edhe ndricimin e jashtëm?",
         answer:
-          "Po. Ndricimi i jashtem dhe i oborrit është nje nga kerkesat me te zakonshme per vila.",
+          "Po. Ndricimi i jashtëm dhe i oborrit është nje nga kerkesat më të zakonshme për vila.",
       },
       {
         question: "A punoni ne Durrës dhe zonat bregdetare?",
         answer:
-          "Po, sidomos ku vilat dhe pronat sezionale kerkojne kontroll me te mire.",
+          "Po, sidomos ku vilat dhe pronat sezionale kërkojne kontroll më të mire.",
       },
       {
-        question: "A mund te shtohet smart home ne vile?",
+        question: "A mund te shtohet smart home në vile?",
         answer:
-          "Po. Smart home mund te shtohet ne vile kur kerkohet me shume komoditet dhe kontroll.",
+          "Po. Smart home mund të shtohet në vila.",
       },
       {
-        question: "A jepni ndihme edhe per panele diellore ose EV?",
+        question: "A jepni ndihmë edhe për panele diellore ose EV?",
         answer:
-          "Po. Vila është shpesh prone e pershtatshme edhe per panele diellore ose karikues EV.",
+          "Po. Vila është shumë e përshtatshme për panele diellore dhe karikues EV.",
       },
     ],
     relatedServiceSlugs: [
@@ -1156,14 +1156,14 @@ export const albanianServicePages = [
     slug: "elektricist-per-restorante-hotele",
     locale: "sq-AL",
     title: "Elektricist per Restorante dhe Hotele",
-    metaTitle: "Elektricist per Restorante & Hotele | Tiranë, Durrës, Bregdet",
+    metaTitle: "Elektricist për Restorante & Hotele | Tiranë, Durrës, Bregdet",
     metaDescription:
-      "Elektricist per restorante dhe hotele ne Tiranë, Durrës dhe zonat turistike per ndriçim, kuzhine, panele dhe mirëmbajtje.",
-    h1: "Elektricist per Restorante dhe Hotele",
+      "Elektricist për restorante dhe hotele ne Tiranë, Durrës dhe zonat turistike për ndriçim, kuzhine, panele dhe mirëmbajtje.",
+    h1: "Elektricist për Restorante dhe Hotele",
     hero:
-      "Elektricist per restorante dhe hotele ku nje defekt i vogel mund te prishë sherbimin, rezervimet ose eksperiencen e klientit.",
+      "Elektricist per restorante dhe hotele ku një defekt i vogël mund të prishë shërbimin, rezervimet ose eksperiencën e klientit.",
     summary:
-      "Shërbim per restorante, hotele dhe struktura mikpritjeje qe kane nevoje per stabilitet, siguri dhe reagim te shpejte. është veçanerisht i vlefshem ne Tiranë dhe Durrës, ku fluksi i klienteve rritet shpejt ne sezona te caktuara.",
+      "Shërbim për restorante, hotele dhe struktura mikpritjeje që kanë nevoje per stabilitet, siguri dhe reagim te shpejte. është veçanerisht i vlefshem ne Tiranë dhe Durrës, ku fluksi i klienteve rritet shpejt ne sezona te caktuara.",
     primaryKeyword: "elektricist per restorante dhe hotele",
     secondaryKeywords: [
       "elektricist per restorante",
@@ -1173,22 +1173,22 @@ export const albanianServicePages = [
     ],
     serviceAreas: ["Tiranë", "Durrës", "Plazh", "Golem", "qendra turistike"],
     whenToCall: [
-      "Kur kuzhina, ndricimi ose pajisjet e sherbimit nuk jane me te qendrueshme.",
-      "Kur hoteli ka nevoje per vizite para sezonit te larte.",
-      "Kur doni te shmangni nderprerjet qe ndikojne direkt te klienti.",
-      "Kur duhet mirëmbajtje periodike per nje ambient me fluks te larte.",
+      "Kur kuzhina, ndricimi ose pajisjet e shërbimit nuk janë më të qëndrueshme.",
+      "Kur hoteli ka nevoje për vizite para sezonit te larte.",
+      "Kur doni te shmangni ndërprerjet që ndikojne direkt te klienti.",
+      "Kur duhet mirëmbajtje periodike për një ambient me fluks te larte.",
     ],
     problems: [
-      "Pajisje te shumta qe ngarkojne linjat ne kuzhine dhe salle.",
-      "Ndriçim qe duhet te punoje pa nderprerje ne orar sherbimi.",
-      "Rrezik nga defekte qe ndikojne rezervimet ose sherbimin e klientit.",
-      "Nevoje per plan mirembajtjeje para sezonit te larte.",
+      "Pajisje të shumta që ngarkojne linjat në kuzhine dhe salle.",
+      "Ndriçim që duhet të punoje pa nderprerje ne orar sherbimi.",
+      "Rrezik nga defekte që ndikojne rezervimet ose shërbimin e klientit.",
+      "Nevoje për plan mirëmbajtjeje para sezonit me fluks të lartë.",
     ],
     processSteps: [
-      "Percaktohen zonat kritike: kuzhine, salle, dhoma dhe ambiente sherbimi.",
+      "Përcaktohen zonat kritike: kuzhinë, sallë, dhoma dhe ambiente shërbimi.",
       "Bëhet kontrolli i rrjetit dhe identifikimi i pikave me rrezik.",
-      "Kryhen riparimet ose permiresimet qe duhen para perdorimit te plote.",
-      "Vendoset nje plan i rregullt kontrolli per te shmangur nderprerje.",
+      "Kryhen riparimet ose përmiresimet që duhen para përdorimit të plotë.",
+      "Vendoset një plan i rregullt kontrolli për të shmangur ndërprerje.",
     ],
     faqs: [
       {
@@ -1228,11 +1228,11 @@ export const albanianServicePages = [
   {
     slug: "elektricist-per-zyra-dyqane",
     locale: "sq-AL",
-    title: "Elektricist per Zyra dhe Dyqane",
-    metaTitle: "Elektricist per Zyra dhe Dyqane | Tiranë & Durrës",
+    title: "Elektricist për Zyra dhe Dyqane",
+    metaTitle: "Elektricist për Zyra dhe Dyqane | Tiranë & Durrës",
     metaDescription:
-      "Elektricist per zyra dhe dyqane ne Tiranë dhe Durrës per instalime, riparime, ndriçim, panel dhe mirëmbajtje te vazhdueshme.",
-    h1: "Elektricist per Zyra dhe Dyqane",
+      "Elektricist për zyra dhe dyqane ne Tiranë dhe Durrës per instalime, riparime, ndriçim, panel dhe mirëmbajtje te vazhdueshme.",
+    h1: "Elektricist për Zyra dhe Dyqane",
     hero:
       "Shërbim elektrik për zyra dhe dyqane në Tiranë dhe Durrës që kanë nevojë për ndriçim të mirë, stabilitet në punë dhe riparime ose instalime që bëhen me sa më pak ndërprerje për aktivitetin e përditshëm.",
     summary:

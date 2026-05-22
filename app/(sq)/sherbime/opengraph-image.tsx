@@ -1,6 +1,6 @@
 import { createSeoImage, seoImageContentType, seoImageSize } from "@/lib/og";
 
-export const alt = "Sherbime elektrike ne Tirane dhe Durres";
+export const alt = "Shërbime elektrike në Tiranë dhe Durrës";
 export const size = seoImageSize;
 export const contentType = seoImageContentType;
 
