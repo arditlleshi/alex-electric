@@ -318,7 +318,7 @@ export function ServicePageTemplate({
 
             <MutedCard className="border-electric-100 bg-electric-50/60 p-6">
               <h2 className="text-xl font-semibold text-foreground">
-                {isEnglish ? "Good fit for" : "E pershtatshme per"}
+                {isEnglish ? "Good fit for" : "E përshtatshme për"}
               </h2>
               <p className="mt-4 text-sm leading-6 text-muted sm:text-base">
                 {service.summary}

@@ -12,7 +12,7 @@ export type NavigationItem = {
 export const navigationItems: readonly NavigationItem[] = [
   { name: "Kreu", href: "/#hero", icon: "home", section: "home" },
   {
-    name: "Sherbime",
+    name: "Shërbime",
     href: "/sherbime",
     icon: "services",
     section: "services",

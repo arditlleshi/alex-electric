@@ -6,9 +6,9 @@ export const contentType = seoImageContentType;
 
 export default function Image() {
   return createSeoImage({
-    eyebrow: "Qendra e sherbimeve",
-    title: "Sherbime elektrike ne Tirane dhe Durres",
+    eyebrow: "Qëndra e shërbimeve",
+    title: "Shërbime elektrike në Tiranë dhe Durres",
     subtitle:
-      "Faqe per urgjenca, riparime, instalime, EV, solar dhe sherbime per biznese.",
+      "Faqe për urgjenca, riparime, instalime, EV, solar dhe shërbime për biznese.",
   });
 }

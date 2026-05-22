@@ -108,7 +108,7 @@ export default async function AlbanianServicePage({
           {
             "@type": "ListItem",
             position: 2,
-            name: "Sherbime",
+            name: "Shërbime",
             item: `${SITE_URL}/sherbime`,
           },
           {
