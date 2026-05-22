@@ -53,7 +53,7 @@ export default function Navigation({
               />
             </span>
             <span className="hidden min-w-0 border-l border-border pl-3 text-xs font-medium leading-tight text-muted md:block">
-              Tirane & Durres
+              Tiranë & Durrës
             </span>
           </HomeAnchorLink>
 

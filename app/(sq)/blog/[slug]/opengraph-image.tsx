@@ -14,11 +14,11 @@ export default async function Image({
   const guide = getGuidePage(slug);
 
   return createSeoImage({
-    eyebrow: guide?.locale === "en-US" ? "English guide" : "Udhezues praktik",
+    eyebrow: guide?.locale === "en-US" ? "English guide" : "Udhëzues praktik",
     title: guide?.title ?? "Guide elektrik",
     subtitle:
       guide?.description ??
-      "Keshilla praktike per sherbime elektrike ne Tirane dhe Durres.",
+      "Keshilla praktike për shërbime elektrike në Tiranë dhe Durrës.",
     locale: guide?.locale === "en-US" ? "en" : "sq",
   });
 }

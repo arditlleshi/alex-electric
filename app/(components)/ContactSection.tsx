@@ -153,9 +153,6 @@ export default function ContactSection() {
 
         <div className="rounded-lg border border-border bg-surface-raised p-5 shadow-sm sm:p-6">
           <div className="border-b border-border pb-4">
-            <p className="text-sm font-semibold text-electric-700">
-              Zgjidhni kanalin e duhur
-            </p>
             <h3 className="mt-2 text-2xl font-semibold text-foreground">
               Telefon ose WhatsApp
             </h3>
