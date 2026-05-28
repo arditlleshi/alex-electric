@@ -1,48 +1,61 @@
-This is a [Next.js](https://nextjs.org) application managed with [Bun](https://bun.sh/).
+# Alex Electric
 
-## Getting Started
+A modern, SEO-focused business website for an electrical services company in Albania.
+
+The project was built with Next.js, TypeScript, Tailwind CSS, and Bun, with a strong focus on local SEO, responsive design, performance, and clear customer conversion flows.
+
+Live website: https://alex-electric.com
+
+## Overview
+
+Alex Electric is a business website for electrical services in Tirana and Durrës. The goal of the project is to help customers quickly understand the services offered, contact the business, and find location-specific service pages through search engines.
+
+The website includes pages and content for:
+
+- Electrical repairs
+- Emergency electrician services
+- Electrical installations
+- EV charger installation
+- Solar panel services
+- Smart home services
+- Apartment, villa, and business electrical work
+- Albanian and English content
+
+## Tech stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Bun
+- next-sitemap
+- Vercel Analytics
+- Framer Motion
+- Lucide React
+
+## Main features
+
+- Responsive layout for mobile, tablet, and desktop
+- SEO-focused page structure
+- Local service pages for Tirana and Durrës
+- Sitemap generation
+- Optimized metadata
+- WhatsApp and phone call CTAs
+- Albanian and English navigation
+- Reusable UI components
+- Clean content structure for service-based businesses
+
+## What I focused on
+
+- Creating a clear user journey from landing page to contact
+- Building reusable sections and components
+- Structuring content for local SEO
+- Keeping the UI simple, fast, and easy to understand
+- Making the website useful for real customers, not only visually attractive
+
+## Local development
 
 Install dependencies:
 
 ```bash
 bun install
-```
-
-Start the development server:
-
-```bash
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-To create a production build:
-
-```bash
-bun run build
-```
-
-To start the already-built production server:
-
-```bash
-bun run start
-```
-
-You can start editing the page by modifying `app/page.tsx`. The page updates automatically as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font).
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
