@@ -31,7 +31,9 @@ export interface GuidePageEntry {
   locale: GuideLocale;
   guideType: "existing" | "planned";
   title: string;
+  metaTitle: string;
   description: string;
+  metaDescription: string;
   excerpt: string;
   eyebrow: string;
   date: string;
@@ -121,8 +123,11 @@ const rawGuidePages = [
     locale: "en-US",
     guideType: "existing",
     title: "English-speaking electrician in Tirana: what to prepare before the first visit",
+    metaTitle: "English-Speaking Electrician in Tirana: First Visit Checklist",
     description:
       "A practical English guide for expats and foreign residents who want to prepare the right details before the first electrician visit in Tirana.",
+    metaDescription:
+      "Need an English-speaking electrician in Tirana? Use this first-visit checklist to prepare photos, symptoms, panel details, and booking information.",
     excerpt:
       "A first-visit checklist for foreign residents who want to explain the problem clearly and avoid wasted time on the first callout.",
     eyebrow: "English guide",
@@ -209,8 +214,11 @@ const rawGuidePages = [
     locale: "sq-AL",
     guideType: "existing",
     title: "Instalime elektrike moderne per shtepi, zyra dhe biznese",
+    metaTitle: "Instalime Elektrike në Tiranë për Shtëpi, Zyra dhe Biznese",
     description:
       "Një përmbledhje profesionale e shërbimeve elektrike: instalime, riparime, panele diellore dhe stacione karikimi për automjete elektrike.",
+    metaDescription:
+      "Udhëzues për instalime elektrike në Tiranë për shtëpi, zyra dhe biznese: planifikim, siguri, panel elektrik, EV dhe panele diellore.",
     excerpt:
       "Një guidë praktike për pronarë shtëpish, zyrash dhe biznesesh që duan instalim më të sigurt dhe më të rregullt.",
     eyebrow: "Udhëzues praktik",
@@ -301,8 +309,11 @@ const rawGuidePages = [
     locale: "sq-AL",
     guideType: "existing",
     title: "Si të zgjedhësh një elektricist të besueshëm në Tiranë",
+    metaTitle: "Si të Zgjedhësh një Elektricist në Tiranë",
     description:
       "Keshillat kryesore per te identifikuar nje profesionist te kualifikuar, te besueshem dhe te qarte ne komunikim per nevojat tuaja elektrike.",
+    metaDescription:
+      "Mësoni si të zgjidhni një elektricist në Tiranë duke krahasuar licencat, komunikimin, garancinë, materialet dhe ofertën reale të punës.",
     excerpt:
       "Një guidë e thjeshtë për të krahasuar ofruesit e shërbimit pa u fokusuar vetëm te çmimi më i ulët.",
     eyebrow: "Si të zgjedhësh",
@@ -359,8 +370,11 @@ const rawGuidePages = [
     locale: "sq-AL",
     guideType: "existing",
     title: "5 shenja kur duhet nje elektricist urgjent ne Tirane",
+    metaTitle: "Elektricist Urgjent në Tiranë: 5 Shenja Kryesore",
     description:
       "Shenjat kryesore qe tregojne kur duhet te telefononi menjehere nje elektricist urgjent dhe cfare duhet te kontrolloni pa humbur kohe.",
+    metaDescription:
+      "Zbuloni 5 shenjat kryesore kur duhet një elektricist urgjent në Tiranë, nga era e djegies dhe shkëndijat te siguresat që bien shpesh.",
     excerpt:
       "Një listë e qartë e shenjave që tregojnë se problemi elektrik nuk duhet lënë për më vonë.",
     eyebrow: "Urgjencë",
@@ -412,8 +426,11 @@ const rawGuidePages = [
     locale: "sq-AL",
     guideType: "existing",
     title: "Si funksionon instalimi i panelit diellor ne shtepi",
+    metaTitle: "Panele Diellore në Tiranë: Si Funksionon Instalimi në Shtëpi",
     description:
       "Nje udhezues hap pas hapi per te kuptuar si zhvillohet procesi i instalimit solar nga kontrolli fillestar deri te testimi final.",
+    metaDescription:
+      "Kuptoni si zhvillohet instalimi i paneleve diellore në Tiranë, nga kontrolli i pronës dhe panelit elektrik deri te testimi final.",
     excerpt:
       "Nje guide qe shpjegon rrjedhen reale te nje projekti solar, jo llogaritjen e numrit te paneleve.",
     eyebrow: "Energji diellore",
@@ -470,8 +487,11 @@ const rawGuidePages = [
     locale: "sq-AL",
     guideType: "planned",
     title: "Sa kushton instalimi elektrik ne apartament ne Tirane",
+    metaTitle: "Sa Kushton Instalimi Elektrik në Apartament në Tiranë?",
     description:
       "Nje udhezues praktik per te kuptuar cfare ndikon ne koston e instalimit elektrik ne apartament, nga qarqet dhe paneli te puna ne terren.",
+    metaDescription:
+      "Shihni çfarë ndikon në koston e instalimit elektrik në apartament në Tiranë: qarqet, paneli, pikat elektrike, gjendja ekzistuese dhe puna në terren.",
     excerpt:
       "Një guidë që ndihmon pronarët dhe qiramarrësit të kuptojnë pse çmimi ndryshon nga një apartament te tjetri.",
     eyebrow: "Kosto dhe planifikim",
@@ -524,8 +544,11 @@ const rawGuidePages = [
     locale: "sq-AL",
     guideType: "planned",
     title: "Si zgjidhet paneli elektrik per apartament ose vile",
+    metaTitle: "Panel Elektrik në Tiranë: Si Zgjidhet për Apartament ose Vilë",
     description:
       "Nje guide per te kuptuar si zgjidhet paneli elektrik sipas ngarkeses, sigurise, mbrojtjes dhe zgjerimit te ardhshem te prones.",
+    metaDescription:
+      "Mësoni si të zgjidhni panel elektrik në Tiranë sipas ngarkesës, mbrojtjes, siguresave, etiketimeve dhe zgjerimeve si EV ose solar.",
     excerpt:
       "Paneli elektrik është zemra e instalimit dhe duhet zgjedhur me kujdes, jo vetëm sipas çmimit.",
     eyebrow: "Panel dhe siguri",
@@ -576,8 +599,11 @@ const rawGuidePages = [
     locale: "sq-AL",
     guideType: "planned",
     title: "Si zgjidhet karikuesi EV per shtepi dhe panel ne Shqiperi",
+    metaTitle: "Karikues EV në Tiranë: Si Zgjidhet për Shtëpi",
     description:
       "Nje guide per te kuptuar si zgjidhet karikuesi EV per shtepi sipas panelit, parkimit, sigurise dhe perdorimit te perditshem.",
+    metaDescription:
+      "Udhëzues për zgjedhjen e karikuesit EV në Tiranë sipas panelit elektrik, vendit të parkimit, sigurisë dhe linjës së dedikuar.",
     excerpt:
       "Shpjegon çfarë duhet parë para se të montohet një karikues për makinë elektrike në shtëpi.",
     eyebrow: "EV dhe karikim",
@@ -629,8 +655,11 @@ const rawGuidePages = [
     locale: "sq-AL",
     guideType: "planned",
     title: "Sa panele diellore duhen per nje shtepi ne Shqiperi",
+    metaTitle: "Sa Panele Diellore Duhen për një Shtëpi? Udhëzues Praktik",
     description:
       "Nje guide per te kuptuar si llogaritet numri i paneleve diellore sipas konsumit, orientimit te catise, hijezimit dhe hapesires se disponueshme.",
+    metaDescription:
+      "Mësoni si llogaritet numri i paneleve diellore për një shtëpi sipas konsumit, orientimit, hijezimit, çatisë dhe ngarkesave të ardhshme.",
     excerpt:
       "Kjo guide eshte per dimensionimin dhe numrin e paneleve, jo per hapat e instalimit ne terren.",
     eyebrow: "Planifikim solar",
@@ -682,8 +711,11 @@ const rawGuidePages = [
     locale: "en-US",
     guideType: "planned",
     title: "How to hire an electrician in Tirana as a foreign resident",
+    metaTitle: "How to Hire an Electrician in Tirana as a Foreign Resident",
     description:
       "A practical English guide to comparing electricians, quotes, and scope in Tirana when you want clear communication and fewer surprises.",
+    metaDescription:
+      "Learn how to hire an electrician in Tirana by comparing scope, quotes, timing, materials, and communication before you book the first visit.",
     excerpt:
       "A guide for foreign residents who want to compare who to hire, what to ask for, and how to judge a quote without relying on price alone.",
     eyebrow: "English guide",
@@ -744,8 +776,11 @@ const rawGuidePages = [
     locale: "en-US",
     guideType: "planned",
     title: "Electrical safety checklist for Airbnb hosts in Tirana",
+    metaTitle: "Electrical Safety Checklist for Airbnb Hosts in Tirana",
     description:
       "A practical checklist for short-term rental hosts who need a safe property between guest turnovers, repairs, and guest-ready inspections.",
+    metaDescription:
+      "Use this Airbnb electrical safety checklist in Tirana to inspect sockets, lighting, breaker stability, and maintenance risks between guest stays.",
     excerpt:
       "A host-focused checklist that covers sockets, lighting, panel checks, and fast turnaround repairs.",
     eyebrow: "Host checklist",
@@ -797,8 +832,11 @@ const rawGuidePages = [
     locale: "en-US",
     guideType: "planned",
     title: "Electrical checks before buying an apartment in Tirana",
+    metaTitle: "Electrical Checks Before Buying an Apartment in Tirana",
     description:
       "An English checklist for buyers who want to avoid hidden electrical problems, unsafe panels, and surprise repair costs before closing on an apartment.",
+    metaDescription:
+      "Review the key electrical checks before buying an apartment in Tirana, including panel condition, hidden load issues, grounding, and future upgrades.",
     excerpt:
       "A buyer's checklist that focuses on panel condition, grounding, socket layout, and signs of hidden load problems.",
     eyebrow: "Buyer checklist",
@@ -846,8 +884,11 @@ const rawGuidePages = [
     locale: "en-US",
     guideType: "planned",
     title: "EV chargers in Albanian apartment buildings: what to check",
+    metaTitle: "EV Charger Installation in Albania: Apartment Building Checklist",
     description:
       "An English guide to the practical questions behind apartment EV charging in Albania, from panel capacity to parking layout.",
+    metaDescription:
+      "Find out what to check before EV charger installation in an Albanian apartment building, from panel capacity and parking layout to dedicated protection.",
     excerpt:
       "A practical guide for apartment owners and tenants who want to know whether EV charging is realistic in their building.",
     eyebrow: "EV guide",
@@ -895,8 +936,11 @@ const rawGuidePages = [
     locale: "en-US",
     guideType: "planned",
     title: "Solar vs grid power for villas and small businesses in Albania",
+    metaTitle: "Solar Panel Installation in Tirana: Solar vs Grid Power",
     description:
       "A practical English comparison for villas and small businesses that want to decide whether solar is worth it now or whether a cleaner grid setup is the smarter first step.",
+    metaDescription:
+      "Compare solar panel installation in Tirana with a cleaner grid-only setup for villas and small businesses, including load planning and upgrade timing.",
     excerpt:
       "A decision guide that helps property owners compare whether they need solar now, or whether panel and load improvements should come first.",
     eyebrow: "Solar guide",

@@ -33,8 +33,8 @@ function toTemplateGuide(guide: GuidePageEntry): GuidePage {
     slug: guide.slug,
     locale: guide.locale,
     title: guide.title,
-    metaTitle: guide.title,
-    metaDescription: guide.description,
+    metaTitle: guide.metaTitle,
+    metaDescription: guide.metaDescription,
     excerpt: guide.excerpt,
     eyebrow: guide.eyebrow,
     date: guide.date,
@@ -58,11 +58,11 @@ export function buildGuideMetadata(slug: string): Metadata {
   }
 
   const canonical = `${SITE_URL}/blog/${guide.slug}`;
-  const metadataTitle = `${guide.title} | Alex Elektrik`;
+  const metadataTitle = `${guide.metaTitle} | Alex Elektrik`;
 
   return {
     title: metadataTitle,
-    description: guide.description,
+    description: guide.metaDescription,
     metadataBase: new URL(SITE_URL),
     keywords: [guide.primaryKeyword, ...guide.secondaryKeywords],
     alternates: {
@@ -71,7 +71,7 @@ export function buildGuideMetadata(slug: string): Metadata {
     openGraph: {
       type: "article",
       title: metadataTitle,
-      description: guide.description,
+      description: guide.metaDescription,
       url: canonical,
       locale: guide.locale.replace("-", "_"),
       images: [
@@ -86,7 +86,7 @@ export function buildGuideMetadata(slug: string): Metadata {
     twitter: {
       card: "summary_large_image",
       title: metadataTitle,
-      description: guide.description,
+      description: guide.metaDescription,
       images: [getTwitterImageUrl(`/blog/${guide.slug}`)],
     },
   };
@@ -129,7 +129,7 @@ export function renderGuidePage(
         "@type": "BlogPosting",
         "@id": `${canonical}#article`,
         headline: guide.title,
-        description: guide.description,
+        description: guide.metaDescription,
         url: canonical,
         datePublished: new Date(guide.date).toISOString(),
         dateModified: new Date(guide.date).toISOString(),
