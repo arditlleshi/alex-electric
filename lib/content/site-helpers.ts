@@ -61,7 +61,6 @@ export function resolveRelatedServices(
 
 const ALBANIAN_TO_ENGLISH_ALTERNATES: Record<string, string> = {
   "elektricist-tirane": "electrician-tirana",
-  "elektricist-durres": "electrician-durres",
   "elektricist-urgjent-tirane": "emergency-electrician-tirana",
   "karikues-ev-tirane": "ev-charger-installation-tirana",
   "panele-diellore-tirane": "solar-panel-installation-tirana",

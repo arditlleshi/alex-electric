@@ -1,13 +1,13 @@
 import { createSeoImage, seoImageContentType, seoImageSize } from "@/lib/og";
 
-export const alt = "Alex Elektrik - shërbime elektrike në Tiranë dhe Durrës";
+export const alt = "Alex Elektrik - shërbime elektrike në Tiranë";
 export const size = seoImageSize;
 export const contentType = seoImageContentType;
 
 export default function Image() {
   return createSeoImage({
     eyebrow: "Shërbime elektrike",
-    title: "Elektricist në Tiranë dhe Durrës",
+    title: "Elektricist në Tiranë",
     subtitle:
       "Emergjenca, riparime, instalime, EV, solar dhe support dhe në anglisht.",
   });

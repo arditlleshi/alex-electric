@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     locale: "sq_AL",
     title: "Keshilla elektrike dhe udhezues praktik | Alex Elektrik",
     description:
-      "Udhezues praktik per defekte elektrike, instalime, EV, solar dhe sherbime per banesa e biznese ne Tirane dhe Durres.",
+      "Udhezues praktik per defekte elektrike, instalime, EV, solar dhe sherbime per banesa e biznese ne Tirane.",
     images: [
       {
         url: getOpenGraphImageUrl("/blog"),
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Keshilla elektrike dhe udhezues praktik | Alex Elektrik",
     description:
-      "Udhezues praktik per riparime, instalime, EV, solar dhe kontroll elektrik ne Tirane dhe Durres.",
+      "Udhezues praktik per riparime, instalime, EV, solar dhe kontroll elektrik ne Tirane.",
     images: [getTwitterImageUrl("/blog")],
   },
 };
@@ -87,7 +87,7 @@ export default function BlogPage() {
             </h1>
             <p className="mt-5 max-w-3xl text-base leading-7 text-muted sm:text-lg">
               Ketu gjeni udhezues qe lidhen me sherbimet tona elektrike ne
-              Tirane dhe Durres. Tema kryesore perfshijne urgjenca, riparime,
+              Tirane. Tema kryesore perfshijne urgjenca, riparime,
               instalime, EV, solar, apartamente, prona me qira dhe faqet ne
               anglisht per kliente nderkombetare.
             </p>

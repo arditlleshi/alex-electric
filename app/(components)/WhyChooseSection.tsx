@@ -68,7 +68,7 @@ export default function WhyChooseSection() {
               Kur kërkoni elektricist për shtëpi, apartament ose biznes, ju
               duhet punë e sigurt, komunikim i qartë dhe reagim i shpejtë. Këto
               janë arsyet kryesore pse familje, pronarë dhe biznese të vogla
-              zgjedhin këtë shërbim në Tiranë dhe Durrës.
+              zgjedhin këtë shërbim në Tiranë.
             </p>
           </div>
 

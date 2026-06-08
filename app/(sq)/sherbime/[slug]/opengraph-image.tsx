@@ -18,6 +18,6 @@ export default async function Image({
     title: service?.title ?? "Sherbim elektrik ne Tirane",
     subtitle:
       service?.metaDescription ??
-      "Riparime, instalime, diagnostikim dhe zgjidhje elektrike ne Tirane dhe Durres.",
+      "Riparime, instalime, diagnostikim dhe zgjidhje elektrike ne Tirane.",
   });
 }

@@ -12,7 +12,6 @@ import {
 const SERVICES_URL = `${SITE_URL}/sherbime`;
 const PRIORITY_SERVICE_SLUGS = [
   "elektricist-tirane",
-  "elektricist-durres",
   "elektricist-urgjent-tirane",
   "instalime-elektrike-tirane",
   "elektricist-per-apartamente",
@@ -22,9 +21,7 @@ const PRIORITY_SERVICE_SLUGS = [
 ] as const;
 const SERVICE_HUB_KEYWORDS = [
   "sherbime elektrike tirane",
-  "sherbime elektrike durres",
   "elektricist ne tirane",
-  "elektricist durres",
   "elektricist urgjent tirane",
   "riparime elektrike tirane",
   "instalime elektrike tirane",
@@ -52,9 +49,9 @@ function sortServicesByPriority<T extends (typeof albanianServicePages)[number]>
 }
 
 export const metadata: Metadata = {
-  title: "Shërbime elektrike në Tiranë dhe Durrës | Alex Elektrik",
+  title: "Shërbime elektrike në Tiranë | Alex Elektrik",
   description:
-    "Gjeni shërbimin e duhur elektrik në Tiranë dhe Durrës për urgjenca, riparime, instalime, panele elektrike, apartamente, biznese, karikues EV dhe panele diellore.",
+    "Gjeni shërbimin e duhur elektrik në Tiranë për urgjenca, riparime, instalime, panele elektrike, apartamente, biznese, karikues EV dhe panele diellore.",
   metadataBase: new URL(SITE_URL),
   keywords: [...SERVICE_HUB_KEYWORDS],
   alternates: {
@@ -66,9 +63,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    title: "Shërbime elektrike në Tiranë dhe Durrës | Alex Elektrik",
+    title: "Shërbime elektrike në Tiranë | Alex Elektrik",
     description:
-      "Qendër shërbimesh për elektricist në Tiranë dhe Durrë per urgjenca, riparime, instalime, apartamente, biznese, EV dhe solar.",
+      "Qendër shërbimesh për elektricist në Tiranë per urgjenca, riparime, instalime, apartamente, biznese, EV dhe solar.",
     url: SERVICES_URL,
     locale: "sq_AL",
     images: [
@@ -76,13 +73,13 @@ export const metadata: Metadata = {
         url: getOpenGraphImageUrl("/sherbime"),
         width: 1200,
         height: 630,
-        alt: "Shërbime elektrike në Tiranë dhe Durrës - Alex Elektrik",
+        alt: "Shërbime elektrike në Tiranë - Alex Elektrik",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shërbime elektrike në Tiranë dhe Durrës | Alex Elektrik",
+    title: "Shërbime elektrike në Tiranë | Alex Elektrik",
     description:
       "Faqe qëndrore për elektricist, urgjenca, riparime, instalime, apartamente, biznese, EV dhe panele diellore.",
     images: [getOpenGraphImageUrl("/sherbime")],
@@ -104,10 +101,10 @@ export default function ServicesHubPage() {
         "@type": "CollectionPage",
         "@id": `${SERVICES_URL}#webpage`,
         url: SERVICES_URL,
-        name: "Shërbime elektrike në Tiranë dhe Durrës",
+        name: "Shërbime elektrike në Tiranë",
         inLanguage: "sq-AL",
         description:
-          "Faqe qëndrore me shërbimet elektrike të Alex Elektrik për shtëpi, apartamente, vila, prona me qira, biznese dhe projekte energjie në Tiranë dhe Durrës.",
+          "Faqe qëndrore me shërbimet elektrike të Alex Elektrik për shtëpi, apartamente, vila, prona me qira, biznese dhe projekte energjie në Tiranë.",
         keywords: [...SERVICE_HUB_KEYWORDS].join(", "),
         isPartOf: {
           "@id": WEBSITE_ID,
@@ -120,7 +117,6 @@ export default function ServicesHubPage() {
         },
         about: [
           { "@type": "Thing", name: "Elektricist ne Tirane" },
-          { "@type": "Thing", name: "Elektricist ne Durres" },
           { "@type": "Thing", name: "Elektricist urgjent ne Tirane" },
           { "@type": "Thing", name: "Instalime elektrike ne Tirane" },
           { "@type": "Thing", name: "Riparime elektrike ne Tirane" },
@@ -178,10 +174,10 @@ export default function ServicesHubPage() {
       />
       <ServiceHubTemplate
         eyebrow="Shërbime elektrike"
-        title="Shërbime elektrike në Tiranë dhe Durrës"
-        description="Elektricist në Tiranë dhe Durrës për urgjenca, riparime, instalime elektrike, panele elektrike, apartamente, vila, biznese, karikues EV dhe panele diellore, me shërbim për shtëpi, prona me qira dhe ambiente pune."
+        title="Shërbime elektrike në Tiranë"
+        description="Elektricist në Tiranë për urgjenca, riparime, instalime elektrike, panele elektrike, apartamente, vila, biznese, karikues EV dhe panele diellore, me shërbim për shtëpi, prona me qira dhe ambiente pune."
         introParagraphs={[
-          "Ofron shërbime elektrike për shtëpi, apartamente, vila, zyra, dyqane, restorante, hotele dhe prona me qira në Tiranë dhe Durrës.",
+          "Ofron shërbime elektrike për shtëpi, apartamente, vila, zyra, dyqane, restorante, hotele dhe prona me qira në Tiranë.",
           "Nga urgjencat dhe riparimet e shpejta te instalimet e reja, panelet elektrike, karikuesit EV dhe panelet diellore, zgjidhni shërbimin që ju përshtatet dhe na kontaktoni për vizitë ose vlerësim.",
         ]}
         highlights={[
@@ -193,7 +189,7 @@ export default function ServicesHubPage() {
         highlightsTitle="Pse na zgjedhin klientet"
         overviewTitle="Shërbimet kryesore"
         overviewParagraphs={[
-          "Shërbimet më të kërkuara përfshijne elektricist në Tiranë, elektricist në Durrës, urgjenca elektrike, riparime, instalime dhe kontroll paneli.",
+          "Shërbimet më të kërkuara përfshijne elektricist në Tiranë, urgjenca elektrike, riparime, instalime dhe kontroll paneli.",
           "Ofrohen gjithashtu zgjidhje për apartamente, vila, zyra, dyqane, restorante, hotele, karikues EV, panele diellore, ndricim LED dhe smart home.",
         ]}
         featuredTitle="Shërbimet më të kërkuara"

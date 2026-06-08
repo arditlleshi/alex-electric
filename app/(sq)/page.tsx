@@ -19,9 +19,9 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Alex Elektrik | Elektricist në Tiranë dhe Durrës",
+  title: "Alex Elektrik | Elektricist në Tiranë",
   description:
-    "Elektricist në Tiranë dhe Durrës për riparime elektrike, instalime, urgjenca, kontroll paneli, karikues EV dhe panele diellore për banesa, apartamente dhe biznese.",
+    "Elektricist në Tiranë për riparime elektrike, instalime, urgjenca, kontroll paneli, karikues EV dhe panele diellore për banesa, apartamente dhe biznese.",
   metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: SITE_URL,
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: SITE_URL,
-    title: "Alex Elektrik | Elektricist në Tiranë dhe Durrës",
+    title: "Alex Elektrik | Elektricist në Tiranë",
     description:
-      "Shërbime elektrike për shtëpi, apartamente, vila dhe biznese në Tiranë dhe Durrës.",
+      "Shërbime elektrike për shtëpi, apartamente, vila dhe biznese në Tiranë.",
     locale: "sq_AL",
     images: [
       {
@@ -49,9 +49,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alex Elektrik | Elektricist në Tiranë dhe Durrës",
+    title: "Alex Elektrik | Elektricist në Tiranë",
     description:
-      "Riparime elektrike, instalime, urgjenca, panele elektrike, EV dhe solar për banesa e biznese në Tiranë dhe Durrës.",
+      "Riparime elektrike, instalime, urgjenca, panele elektrike, EV dhe solar për banesa e biznese në Tiranë.",
     images: [`${SITE_URL}/opengraph-image`],
   },
 };
@@ -68,7 +68,7 @@ const homepageJsonLd = {
         logo: ORGANIZATION_LOGO_URL,
         telephone: CONTACT_PHONE_NUMBER,
         priceRange: "$$",
-      areaServed: ["Tiranë", "Durrës"],
+      areaServed: ["Tiranë"],
       address: {
         "@type": "PostalAddress",
         streetAddress: "Tiranë",

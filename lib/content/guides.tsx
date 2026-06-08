@@ -74,7 +74,6 @@ const proof = (proofId: string, note: string): GuideProofReference => ({
 
 const sq = {
   tirane: sqService("elektricist-tirane", "Elektricist ne Tirane"),
-  durres: sqService("elektricist-durres", "Elektricist ne Durres"),
   urgent: sqService("elektricist-urgjent-tirane", "Elektricist urgjent ne Tirane"),
   repair: sqService("riparime-elektrike-tirane", "Riparime elektrike ne Tirane"),
   install: sqService("instalime-elektrike-tirane", "Instalime elektrike ne Tirane"),
@@ -104,17 +103,15 @@ const en = {
   offices: enService("electrician-for-offices-and-shops", "Electrician for offices and shops"),
   ev: enService("ev-charger-installation-tirana", "EV charger installation in Tirana"),
   solar: enService("solar-panel-installation-tirana", "Solar panel installation in Tirana"),
-  durres: enService("electrician-durres", "English-speaking electrician in Durres"),
 } as const;
 
 const proofIds = {
   tiranaApartmentRewire: "tirana-apartment-rewire",
-  durresSeasonalCheck: "durres-villa-seasonal-check",
   tiranaEmergencyPanel: "tirana-emergency-panel",
   tiranaSmartLighting: "tirana-smart-lighting",
   tiranaEvHome: "tirana-ev-home",
   tiranaSolarBusiness: "tirana-solar-business",
-  durresHotelMaintenance: "durres-hotel-maintenance",
+  tiranaRentalMaintenance: "tirana-rental-maintenance",
 } as const;
 
 const rawGuidePages = [
@@ -780,18 +777,18 @@ const rawGuidePages = [
     ],
     faq: [
       faq("Should I inspect between guests?", "Yes. Even a short check can prevent a bad stay."),
-      faq("Does this help with Durres too?", "Yes, especially for coastal rentals and summer turnover jobs."),
+      faq("Does this help with Tirana rentals too?", "Yes. It is written for short-term rentals in Tirana and works well for fast turnover jobs."),
       faq("Can I use it for multiple units?", "Yes. It works well for hosts with more than one property."),
     ],
     primaryService: en.airbnb,
     secondaryService: en.emergency,
-    relatedServices: [en.landlords, en.tirana, en.durres],
+    relatedServices: [en.landlords, en.tirana, en.emergency],
     relatedGuideSlugs: [
       englishGuideSlugs.howToHire,
       englishGuideSlugs.apartmentChecklist,
     ],
     proofReferences: [
-      proof(proofIds.durresHotelMaintenance, "The Durres hospitality maintenance proof fits the turnover and readiness angle."),
+      proof(proofIds.tiranaRentalMaintenance, "The Tirana rental maintenance proof fits the turnover and readiness angle."),
     ],
   },
   {
@@ -886,7 +883,7 @@ const rawGuidePages = [
     ],
     primaryService: en.ev,
     secondaryService: en.tirana,
-    relatedServices: [en.landlords, en.solar, en.durres],
+    relatedServices: [en.landlords, en.solar, en.tirana],
     relatedGuideSlugs: [englishGuideSlugs.howToHire, englishGuideSlugs.solarVsGrid],
     proofReferences: [
       proof(proofIds.tiranaEvHome, "The home EV setup proof is the best match for charger feasibility and load checks."),
@@ -935,7 +932,7 @@ const rawGuidePages = [
     ],
     primaryService: en.solar,
     secondaryService: en.ev,
-    relatedServices: [en.tirana, en.durres, en.offices],
+    relatedServices: [en.tirana, en.ev, en.offices],
     relatedGuideSlugs: [englishGuideSlugs.evApartment, englishGuideSlugs.howToHire],
     proofReferences: [
       proof(proofIds.tiranaSolarBusiness, "This proof is the best fit for the planning and integration discussion."),

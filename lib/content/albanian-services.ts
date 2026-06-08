@@ -122,86 +122,6 @@ export const albanianServicePages = [
     callToAction: "Kontaktoni tani për vizite dhe vlerësim në Tiranë.",
   },
   {
-    slug: "elektricist-durres",
-    locale: "sq-AL",
-    title: "Elektricist ne Durrës",
-    metaTitle: "Elektricist ne Durrës | Banesa, Vila, Hotele & Emergjenca",
-    metaDescription:
-      "Elektricist ne Durrës per vila, apartamente, hotele, biznese bregdetare, riparime urgjente, instalime dhe mirëmbajtje elektrike.",
-    h1: "Elektricist ne Durrës",
-    hero:
-      "Shërbim elektrik në Durrës për apartamente bregdetare, vila, hotele të vogla dhe prona me qira që kanë nevojë për riparime, instalime dhe kontrolle sigurie para sezonit, gjatë verës ose sa herë që instalimi nuk punon si duhet.",
-    summary:
-      "Shërbim elektrik për apartamente, vila, hotele të vogla dhe biznese në Durrës, Golem dhe zonat përreth me riparime, instalime, kontrolle sigurie dhe mirëmbajtje sezonale.",
-    primaryKeyword: "elektricist durres",
-    secondaryKeywords: [
-      "shërbime elektrike durres",
-      "riparime elektrike durres",
-      "instalime elektrike durres",
-      "elektricist urgjent durres",
-    ],
-    serviceAreas: [
-      "Durrës qender",
-      "Plazh",
-      "Shkembi i Kavajes",
-      "Golem",
-      "Mali i Robit",
-      "zona turistike",
-    ],
-    whenToCall: [
-      "Kur nje apartament pushimi ka defekt para ardhjes se vizitoreve.",
-      "Kur vila ose hoteli ka rritje ngarkese gjate sezonit.",
-      "Kur doni kontroll para qiradhenies afatshkurter ose dorezimit.",
-      "Kur keni probleme me ndricimin, panelin ose linjat e kuzhines.",
-    ],
-    problems: [
-      "Objekte sezonale qe rrijne gjate pa perdorim dhe zhvillojne defekte.",
-      "Rrjeta elektrike te ngarkuara nga kondicionere, frigorifere dhe pajisje te tjera.",
-      "Nevoje per zgjidhje me te pastra per vila dhe hotele bregdetare.",
-      "Aksese te shpejta per riparime qe duhet te kryhen para check-in.",
-    ],
-    processSteps: [
-      "Merrni kontakt dhe pershkruani zonen, tipin e objektit dhe simptomen.",
-      "Vendoset nese duhet vizite urgjente apo planifikim per te nesermen.",
-      "Kryhet kontrolli i instalimit, panelit dhe pajisjeve qe krijojne ngarkese.",
-      "Mbyllet puna me testim dhe udhezime per mirëmbajtje sezonale.",
-    ],
-    faqs: [
-      {
-        question: "A punoni edhe ne zona turistike si Golem?",
-        answer:
-          "Po. Sherbimi mbulon Durresin, Golemin dhe zonat bregdetare perreth sipas kerkeses.",
-      },
-      {
-        question: "A është i pershtatshem sherbimi per vila dhe hotele?",
-        answer:
-          "Po. Sherbimi është i pershtatshem per vila, apartamente me qira, hotele te vogla dhe prona turistike.",
-      },
-      {
-        question: "A vini per pune te vogla dhe kontrolla?",
-        answer:
-          "Po, sepse ne Durrës shpesh problemi fillon si nje defekt i vogel dhe shndërrohet ne nderprerje me te madhe.",
-      },
-      {
-        question: "A ofroni konsultim per sezonin e veres?",
-        answer:
-          "Po. Kontrollet para sezonit jane te dobishme kur ngarkesa ne prona bregdetare rritet ndjeshem.",
-      },
-    ],
-    relatedServiceSlugs: [
-      "elektricist-urgjent-tirane",
-      "riparime-elektrike-tirane",
-      "mirembajtje-elektrike-biznese",
-      "elektricist-per-restorante-hotele",
-    ],
-    relatedGuideSlugs: [
-      albanianGuideSlugs.urgentElectrician,
-      albanianGuideSlugs.breakersFrequent,
-      albanianGuideSlugs.installCost,
-    ],
-    callToAction: "Kontaktoni tani per shërbim elektrik ne Durrës dhe zonat perreth.",
-  },
-  {
     slug: "elektricist-urgjent-tirane",
     locale: "sq-AL",
     title: "Elektricist Urgjent ne Tiranë",
@@ -865,7 +785,7 @@ export const albanianServicePages = [
     title: "Mirëmbajtje Elektrike per Biznese",
     metaTitle: "Mirëmbajtje Elektrike per Biznese | Zyra, Dyqane & Lokale",
     metaDescription:
-      "Mirëmbajtje elektrike per biznese ne Tiranë dhe Durrës per zyra, dyqane, restorante, lokale dhe objekte qe kerkojne stabilitet.",
+      "Mirëmbajtje elektrike per biznese ne Tiranë per zyra, dyqane, restorante, lokale dhe objekte qe kerkojne stabilitet.",
     h1: "Mirëmbajtje Elektrike per Biznese",
     hero:
       "Mirëmbajtje elektrike per biznese qe duan vazhdimesi pune dhe parandalim te nderprerjeve qe kushtojne kohe e para.",
@@ -878,7 +798,7 @@ export const albanianServicePages = [
       "kontroll periodik elektrik",
       "riparime per zyra dhe dyqane",
     ],
-    serviceAreas: ["Tiranë", "Durrës", "Bllok", "qendra tregtare", "zona biznesi"],
+    serviceAreas: ["Tiranë", "Bllok", "qendra tregtare", "zona biznesi"],
     whenToCall: [
       "Kur biznesi nuk mund te perballoje nderprerje te gjata ose te shpeshta.",
       "Kur doni kontroll periodik perpara sezonit te ngarkuar.",
@@ -904,9 +824,9 @@ export const albanianServicePages = [
           "Po. Mirembajtja e rregullt është nje nga arsyet kryesore pse bizneset e perdorin kete shërbim.",
       },
       {
-        question: "A punoni edhe ne Durrës?",
+        question: "A punoni ne te gjithe Tiranen?",
         answer:
-          "Po. Sherbimi mbulon edhe Durresin, sidomos per biznese qe kane nevoje per stabilitet te larte.",
+          "Po. Sherbimi mbulon zonat kryesore te Tiranes per biznese qe kane nevoje per stabilitet te larte.",
       },
       {
         question: "A është kjo e vlefshme per zyra dhe dyqane?",
@@ -1012,10 +932,10 @@ export const albanianServicePages = [
     title: "Elektricist per Apartamente",
     metaTitle: "Elektricist per Apartamente | Kontroll, Riparim & Instalime",
     metaDescription:
-      "Elektricist per apartamente ne Tiranë dhe Durrës per kontroll, riparime, instalime, shtim pikash dhe permiresim te instalimit.",
+      "Elektricist per apartamente ne Tiranë per kontroll, riparime, instalime, shtim pikash dhe permiresim te instalimit.",
     h1: "Elektricist per Apartamente",
     hero:
-      "Elektricist për apartamente në Tiranë dhe Durrës për pronarë, blerës dhe qiramarrës që duan kontroll të qartë, riparime të sigurta dhe përmirësime praktike para hyrjes në pronë, para qiradhënies ose gjatë përdorimit të përditshëm.",
+      "Elektricist për apartamente në Tiranë për pronarë, blerës dhe qiramarrës që duan kontroll të qartë, riparime të sigurta dhe përmirësime praktike para hyrjes në pronë, para qiradhënies ose gjatë përdorimit të përditshëm.",
     summary:
       "Shërbim për kontroll, riparime, instalime dhe shtim pikash në apartamente të vjetra e të reja, me fokus te kuzhina, paneli, prizat dhe siguria para hyrjes, qiradhënies ose shitjes.",
     primaryKeyword: "elektricist per apartamente",
@@ -1025,7 +945,7 @@ export const albanianServicePages = [
       "kontroll elektrik apartament",
       "shtim prizash apartament",
     ],
-    serviceAreas: ["Tiranë", "Durrës", "Astir", "Don Bosko", "Plazh"],
+    serviceAreas: ["Tiranë", "Astir", "Don Bosko"],
     whenToCall: [
       "Kur po merrni apartament te ri dhe doni kontroll sigurie.",
       "Kur qiramarresi raporton probleme me prize, celesa ose ndriçim.",
@@ -1061,16 +981,15 @@ export const albanianServicePages = [
           "Po, sepse kontrolli para marrjes ne dorezim është nje nevoje shume e forte lokale.",
       },
       {
-        question: "A punoni edhe ne Durrës?",
+        question: "A punoni vetem ne Tirane?",
         answer:
-          "Po, sidomos per apartamente bregdetare dhe apartamente me qira.",
+          "Po. Sherbimi per apartamente ofrohet ne Tirane.",
       },
     ],
     relatedServiceSlugs: [
       "elektricist-tirane",
       "riparime-elektrike-tirane",
       "instalime-elektrike-tirane",
-      "elektricist-durres",
     ],
     relatedGuideSlugs: [
       albanianGuideSlugs.installCost,
@@ -1085,12 +1004,12 @@ export const albanianServicePages = [
     title: "Elektricist per Vila",
     metaTitle: "Elektricist per Vila | Instalime, Ndriçim & Kontroll",
     metaDescription:
-      "Elektricist per vila ne Tiranë, Durrës dhe zonat perreth per instalime, ndriçim, panele, smart home dhe mirëmbajtje sezonale.",
+      "Elektricist per vila ne Tiranë dhe zonat rezidenciale perreth per instalime, ndriçim, panele, smart home dhe mirëmbajtje sezonale.",
     h1: "Elektricist per Vila",
     hero:
       "Elektricist për vila që kanë më shume zona, më shumë ngarkesë dhe më shumë nevojë për planifikim të pastër e të kujdesshëm.",
     summary:
-      "Shërbim për vila me ambiente të mëdha, oborre, ndriçim të jashtëm dhe panele që duhet ta mbajne ngarkesën pa probleme. Është veçanerisht i dobishem për zonat rezidenciale në Tiranë, Durrës dhe pronat sezonale përreth.",
+      "Shërbim për vila me ambiente të mëdha, oborre, ndriçim të jashtëm dhe panele që duhet ta mbajne ngarkesën pa probleme. Është veçanerisht i dobishem për zonat rezidenciale në Tiranë dhe pronat që kërkojnë planifikim të pastër.",
     primaryKeyword: "elektricist per vila",
     secondaryKeywords: [
       "instalime vile",
@@ -1098,7 +1017,7 @@ export const albanianServicePages = [
       "panel elektrik vile",
       "smart home vile",
     ],
-    serviceAreas: ["Tiranë", "Durrës", "Farkë", "Lundër", "Golem", "Mali i Robit"],
+    serviceAreas: ["Tiranë", "Farkë", "Lundër"],
     whenToCall: [
       "Kur vila ka ambiente të shumta dhe instalimi duhet ndarë mire.",
       "Kur ndricimi i jashtëm ose i oborrit ka nevojë për rregullim.",
@@ -1124,9 +1043,9 @@ export const albanianServicePages = [
           "Po. Ndricimi i jashtëm dhe i oborrit është nje nga kerkesat më të zakonshme për vila.",
       },
       {
-        question: "A punoni ne Durrës dhe zonat bregdetare?",
+        question: "A punoni ne zonat rezidenciale te Tiranes?",
         answer:
-          "Po, sidomos ku vilat dhe pronat sezionale kërkojne kontroll më të mire.",
+          "Po, sidomos aty ku vilat dhe pronat me ngarkese te larte kerkojne kontroll me te mire.",
       },
       {
         question: "A mund te shtohet smart home në vile?",
@@ -1156,14 +1075,14 @@ export const albanianServicePages = [
     slug: "elektricist-per-restorante-hotele",
     locale: "sq-AL",
     title: "Elektricist per Restorante dhe Hotele",
-    metaTitle: "Elektricist për Restorante & Hotele | Tiranë, Durrës, Bregdet",
+    metaTitle: "Elektricist për Restorante & Hotele | Tiranë",
     metaDescription:
-      "Elektricist për restorante dhe hotele ne Tiranë, Durrës dhe zonat turistike për ndriçim, kuzhine, panele dhe mirëmbajtje.",
+      "Elektricist për restorante dhe hotele ne Tiranë për ndriçim, kuzhine, panele dhe mirëmbajtje.",
     h1: "Elektricist për Restorante dhe Hotele",
     hero:
       "Elektricist per restorante dhe hotele ku një defekt i vogël mund të prishë shërbimin, rezervimet ose eksperiencën e klientit.",
     summary:
-      "Shërbim për restorante, hotele dhe struktura mikpritjeje që kanë nevoje per stabilitet, siguri dhe reagim te shpejte. është veçanerisht i vlefshem ne Tiranë dhe Durrës, ku fluksi i klienteve rritet shpejt ne sezona te caktuara.",
+      "Shërbim për restorante, hotele dhe struktura mikpritjeje që kanë nevoje per stabilitet, siguri dhe reagim te shpejte. Është veçanerisht i vlefshem ne Tiranë, ku fluksi i klienteve kerkon sistem qe mban ngarkesen.",
     primaryKeyword: "elektricist per restorante dhe hotele",
     secondaryKeywords: [
       "elektricist per restorante",
@@ -1171,7 +1090,7 @@ export const albanianServicePages = [
       "mirëmbajtje elektrike hotel",
       "elektricist per lokale",
     ],
-    serviceAreas: ["Tiranë", "Durrës", "Plazh", "Golem", "qendra turistike"],
+    serviceAreas: ["Tiranë", "qendra turistike", "zona me fluks"],
     whenToCall: [
       "Kur kuzhina, ndricimi ose pajisjet e shërbimit nuk janë më të qëndrueshme.",
       "Kur hoteli ka nevoje për vizite para sezonit te larte.",
@@ -1197,9 +1116,9 @@ export const albanianServicePages = [
           "Po. Kontrollet para sezonit te larte jane nje nga rastet me te zakonshme per hotele dhe restorante.",
       },
       {
-        question: "A e mbuloni edhe Durresin dhe zonat turistike?",
+        question: "A e mbuloni edhe zonat me fluks ne Tirane?",
         answer:
-          "Po. Sherbimi mbulon edhe Durresin dhe zonat turistike ku bizneset varen nga sezoni.",
+          "Po. Sherbimi mbulon edhe zonat e Tiranes ku bizneset varen nga fluksi i larte.",
       },
       {
         question: "A mund te behet plan mirembajtjeje periodike?",
@@ -1229,12 +1148,12 @@ export const albanianServicePages = [
     slug: "elektricist-per-zyra-dyqane",
     locale: "sq-AL",
     title: "Elektricist për Zyra dhe Dyqane",
-    metaTitle: "Elektricist për Zyra dhe Dyqane | Tiranë & Durrës",
+    metaTitle: "Elektricist për Zyra dhe Dyqane | Tiranë",
     metaDescription:
-      "Elektricist për zyra dhe dyqane ne Tiranë dhe Durrës per instalime, riparime, ndriçim, panel dhe mirëmbajtje te vazhdueshme.",
+      "Elektricist për zyra dhe dyqane ne Tiranë per instalime, riparime, ndriçim, panel dhe mirëmbajtje te vazhdueshme.",
     h1: "Elektricist për Zyra dhe Dyqane",
     hero:
-      "Shërbim elektrik për zyra dhe dyqane në Tiranë dhe Durrës që kanë nevojë për ndriçim të mirë, stabilitet në punë dhe riparime ose instalime që bëhen me sa më pak ndërprerje për aktivitetin e përditshëm.",
+      "Shërbim elektrik për zyra dhe dyqane në Tiranë që kanë nevojë për ndriçim të mirë, stabilitet në punë dhe riparime ose instalime që bëhen me sa më pak ndërprerje për aktivitetin e përditshëm.",
     summary:
       "Shërbim për zyra, dyqane dhe hapësira pune që kanë nevojë për instalime, riparime, ndriçim, panel elektrik dhe mirëmbajtje të vazhdueshme pa penguar punën e përditshme.",
     primaryKeyword: "elektricist per zyra dhe dyqane",
@@ -1244,7 +1163,7 @@ export const albanianServicePages = [
       "riparime per zyra",
       "instalime per dyqane",
     ],
-    serviceAreas: ["Tiranë", "Durrës", "Bllok", "qendra tregtare", "zona biznesi"],
+    serviceAreas: ["Tiranë", "Bllok", "qendra tregtare", "zona biznesi"],
     whenToCall: [
       "Kur zyra ka nevoje per me shume pika pune ose ndriçim me te mire.",
       "Kur dyqani ka problem me dritat, panelin ose pajisjet e ekspozimit.",
@@ -1270,9 +1189,9 @@ export const albanianServicePages = [
           "Po. Puna planifikohet me sa me pak nderprerje per aktivitetin e perditshëm.",
       },
       {
-        question: "A mbuloni edhe dyqanet ne Durrës?",
+        question: "A mbuloni edhe dyqanet ne zonat kryesore te Tiranes?",
         answer:
-          "Po, sepse bizneset ne qender dhe ne zona turistike shpesh kerkojne shërbim te shpejte.",
+          "Po, sepse bizneset ne qender dhe ne zonat kryesore shpesh kerkojne shërbim te shpejte.",
       },
       {
         question: "A mund te shtoni pika te reja pune?",

@@ -74,7 +74,7 @@ const features = [
     toneClass: "border-electric-100 bg-electric-50 text-electric-700",
     title: "Mbi 15 vjet përvojë",
     description:
-      "<p>Punë e përditshme në terren me <strong>riparime elektrike</strong>, <strong>instalime elektrike</strong> dhe kontrolle sigurie për apartamente, vila, prona me qira dhe biznese në Tiranë e Durrës.</p>",
+      "<p>Punë e përditshme në terren me <strong>riparime elektrike</strong>, <strong>instalime elektrike</strong> dhe kontrolle sigurie për apartamente, vila, prona me qira dhe biznese në Tiranë.</p>",
   },
   {
     Icon: Bolt,
@@ -219,7 +219,7 @@ export default function AboutSection() {
             <div className="border-t border-border bg-background px-5 py-4 text-sm font-medium text-muted-strong sm:px-6">
               <span className="inline-flex items-center gap-2">
                 <Wrench aria-hidden="true" className="h-4 w-4 text-electric-600" />
-                Shërbime elektrike në Tiranë, Durrës dhe ndërhyrje urgjente sipas rastit
+                Shërbime elektrike në Tiranë dhe ndërhyrje urgjente sipas rastit
               </span>
             </div>
           </aside>

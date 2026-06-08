@@ -7,7 +7,6 @@ import { getOpenGraphImageUrl, sanitizeJsonLd } from "@/lib/seo";
 const EN_SERVICES_URL = `${SITE_URL}/en/services`;
 const PRIORITY_SERVICE_SLUGS = [
   "electrician-tirana",
-  "electrician-durres",
   "emergency-electrician-tirana",
   "ev-charger-installation-tirana",
   "solar-panel-installation-tirana",
@@ -31,9 +30,9 @@ function sortServicesByPriority<T extends (typeof englishServicePages)[number]>(
 }
 
 export const metadata: Metadata = {
-  title: "English electrical services in Tirana and Durres | Alex Elektrik",
+  title: "English electrical services in Tirana | Alex Elektrik",
   description:
-    "English electrical services in Tirana and Durres for emergencies, rentals, expat support, EV chargers, solar planning, and business properties.",
+    "English electrical services in Tirana for emergencies, rentals, expat support, EV chargers, solar planning, and business properties.",
   metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: EN_SERVICES_URL,
@@ -46,7 +45,7 @@ export const metadata: Metadata = {
     type: "website",
     url: EN_SERVICES_URL,
     locale: "en_US",
-    title: "English electrical services in Tirana and Durres | Alex Elektrik",
+    title: "English electrical services in Tirana | Alex Elektrik",
     description:
       "English service overview with direct routes for emergency work, rentals, expat support, EV chargers, solar planning, and business properties.",
     images: [
@@ -75,7 +74,7 @@ export default function EnglishServicesHubPage() {
         "@type": "CollectionPage",
         "@id": `${EN_SERVICES_URL}#collection`,
         url: EN_SERVICES_URL,
-        name: "English electrical services in Tirana and Durres",
+        name: "English electrical services in Tirana",
         description:
           "English hub that links visitors to service pages, audience pages, and location pages.",
       },
@@ -125,10 +124,10 @@ export default function EnglishServicesHubPage() {
       />
       <ServiceHubTemplate
         locale="en-US"
-        title="English electrical services for Tirana and Durres"
-        description="Find the right English-language page for emergency electrical work, repairs, rentals, expat support, EV chargers, solar projects, and business properties in Tirana and Durres."
+        title="English electrical services for Tirana"
+        description="Find the right English-language page for emergency electrical work, repairs, rentals, expat support, EV chargers, solar projects, and business properties in Tirana."
         introParagraphs={[
-          "Start with the strongest core pages first: Tirana, Durres, emergency work, EV chargers, and solar projects. Those pages cover the clearest English search intent and are usually the best first stop before moving to a narrower audience page.",
+          "Start with the strongest core pages first: Tirana, emergency work, EV chargers, and solar projects. Those pages cover the clearest English search intent and are usually the best first stop before moving to a narrower audience page.",
           "More specific pages for expats, landlords, Airbnb hosts, and offices are still available below. They help when the situation is more specific, but the core pages are the best starting point for most visitors.",
         ]}
         highlights={[

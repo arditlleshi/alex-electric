@@ -6,7 +6,7 @@ Production website for an electrical services business in Albania, built as a bi
 
 ## Overview
 
-Alex Electric is a real business website for electrical services in Tirana, Durres, and nearby areas. The project is designed to help customers quickly understand the available services, choose the right page for their need, and contact the business by phone or WhatsApp.
+Alex Electric is a real business website for electrical services in Tirana. The project is designed to help customers quickly understand the available services, choose the right page for their need, and contact the business by phone or WhatsApp.
 
 The site also works as a portfolio case study in practical product engineering: it combines local SEO strategy, structured content, multilingual routing, reusable UI sections, analytics-aware contact flows, and modern frontend implementation.
 
@@ -26,7 +26,7 @@ The site also works as a portfolio case study in practical product engineering: 
 
 - Albanian homepage and service pages
 - English hub for expats, landlords, Airbnb hosts, businesses, and coastal property owners
-- Location-focused pages for Tirana and Durres
+- Location-focused pages for Tirana
 - Service pages for repairs, installations, emergency work, electrical panels, EV chargers, solar panels, smart home work, apartments, villas, offices, shops, restaurants, and hotels
 - Blog and guide content connected back to relevant services
 - Dynamic metadata and social preview images for important routes
@@ -68,7 +68,7 @@ The site is structured around high-intent customer needs:
 This project uses a content model built around search intent instead of only a generic services list.
 
 - Main service pages target direct commercial searches.
-- Location pages target local demand in Tirana and Durres.
+- Location pages target local demand in Tirana.
 - Audience pages target specific customer groups such as expats, landlords, and Airbnb hosts.
 - Guide pages support informational searches and link users back to relevant service pages.
 - Metadata, canonical links, language alternates, Open Graph images, and structured data are generated per route where appropriate.

@@ -53,7 +53,6 @@ const englishServiceSlugs = {
   offices: "electrician-for-offices-and-shops",
   ev: "ev-charger-installation-tirana",
   solar: "solar-panel-installation-tirana",
-  durres: "electrician-durres",
 } as const;
 
 export const englishServicePages = [
@@ -66,7 +65,7 @@ export const englishServicePages = [
     metaTitle:
       "English-Speaking Electrician in Tirana | Repairs and Emergency",
     metaDescription:
-      "English-speaking electrician in Tirana for urgent repairs, diagnostics, EV chargers, solar work, and planned electrical jobs across Tirana and Durres.",
+      "English-speaking electrician in Tirana for urgent repairs, diagnostics, EV chargers, solar work, and planned electrical jobs across the city.",
     h1: "English-Speaking Electrician in Tirana",
     hero:
       "Clear, practical electrical help in Tirana for homeowners, tenants, landlords, and businesses that need one English-speaking electrician for faults, upgrades, handovers, and day-to-day property issues.",
@@ -113,9 +112,9 @@ export const englishServicePages = [
           "Yes. English support is available from the first call through the final explanation on-site.",
       },
       {
-        question: "Do you also work in Durres?",
+        question: "Do you only work in Tirana?",
         answer:
-          "Yes. Tirana is the main focus, but we also cover Durres for the right repair, rental, and installation work.",
+          "Yes. Services are now focused on Tirana only.",
       },
       {
         question: "Can you help with renovation planning?",
@@ -214,7 +213,6 @@ export const englishServicePages = [
       englishServiceSlugs.expats,
       englishServiceSlugs.airbnb,
       englishServiceSlugs.landlords,
-      englishServiceSlugs.durres,
     ],
     relatedGuideSlugs: [
       englishGuideSlugs.howToHire,
@@ -246,7 +244,7 @@ export const englishServicePages = [
       "electrician for rentals tirana",
     ],
     audience: "Expats, foreign homeowners, and international tenants",
-    serviceAreas: ["Tirana", "Durres", "central neighborhoods", "new apartment blocks"],
+    serviceAreas: ["Tirana", "central neighborhoods", "new apartment blocks"],
     whenToCall: [
       "When you move into a new property and want a quick safety check.",
       "When a landlord issue needs an English-speaking electrician.",
@@ -282,9 +280,9 @@ export const englishServicePages = [
           "No. We also cover villas, rentals, and small business spaces used by foreign clients.",
       },
       {
-        question: "Can you also help in Durres?",
+        question: "Do you work outside Tirana?",
         answer:
-          "Yes, especially for expats living near the coast or managing a second property there.",
+          "No. This service is focused on Tirana properties only.",
       },
     ],
     relatedServiceSlugs: [
@@ -309,7 +307,7 @@ export const englishServicePages = [
     metaTitle:
       "Electrician for Airbnb Hosts in Tirana | Fast Repairs",
     metaDescription:
-      "Electrician for Airbnb hosts in Tirana and Durres for fast turnover repairs, guest-ready safety checks, and short-term rental maintenance.",
+      "Electrician for Airbnb hosts in Tirana for fast turnover repairs, guest-ready safety checks, and short-term rental maintenance.",
     h1: "Electrician for Airbnb Hosts in Tirana",
     hero:
       "Fast, practical electrical support for hosts and property managers who need the next guest to arrive to a working, safe apartment.",
@@ -323,7 +321,7 @@ export const englishServicePages = [
       "short term rental electrician albania",
     ],
     audience: "Airbnb hosts, short-term rental managers, and property operators",
-    serviceAreas: ["Tirana", "Durres", "Blloku", "central apartments", "coastal rentals"],
+    serviceAreas: ["Tirana", "Blloku", "central apartments", "short-term rentals"],
     whenToCall: [
       "When a guest reports a socket, light, or breaker issue before check-in.",
       "When you need a quick safety check between guest turnovers.",
@@ -349,9 +347,9 @@ export const englishServicePages = [
           "Yes. Fast turnover work between guest check-out and check-in is one of the main reasons hosts use this service.",
       },
       {
-        question: "Do you also help in Durres?",
+        question: "Is this only for Tirana rentals?",
         answer:
-          "Yes. Coastal rentals and summer turnover jobs are a strong fit.",
+          "Yes. This page now focuses on short-term rentals in Tirana.",
       },
       {
         question: "Can you handle recurring maintenance for multiple units?",
@@ -368,7 +366,6 @@ export const englishServicePages = [
       englishServiceSlugs.tirana,
       englishServiceSlugs.emergency,
       englishServiceSlugs.landlords,
-      englishServiceSlugs.durres,
     ],
     relatedGuideSlugs: [
       englishGuideSlugs.airbnbChecklist,
@@ -386,7 +383,7 @@ export const englishServicePages = [
     metaTitle:
       "Electrician for Landlords in Tirana | Repairs and Handover",
     metaDescription:
-      "Electrician for landlords in Tirana and Durres for inspection, handover repairs, tenant issues, and planned maintenance across rental homes.",
+      "Electrician for landlords in Tirana for inspection, handover repairs, tenant issues, and planned maintenance across rental homes.",
     h1: "Electrician for Landlords in Tirana",
     hero:
       "Clear, practical electrical support for landlords and property managers who need safer handovers and fewer repeat calls from tenants.",
@@ -400,7 +397,7 @@ export const englishServicePages = [
       "landlord electrician albania",
     ],
     audience: "Landlords, property managers, and rental operators",
-    serviceAreas: ["Tirana", "Durres", "rental apartments", "villas", "managed properties"],
+    serviceAreas: ["Tirana", "rental apartments", "villas", "managed properties"],
     whenToCall: [
       "When a tenant reports a repeated socket, lighting, or breaker problem.",
       "When you want a handover check before a new tenant moves in.",
@@ -426,9 +423,9 @@ export const englishServicePages = [
           "Yes. Pre-handover checks and repairs before a new tenant moves in are one of the main reasons landlords use this page.",
       },
       {
-        question: "Do you support both Tirana and Durres rentals?",
+        question: "Do you support rental properties across Tirana?",
         answer:
-          "Yes. We support rental properties in both Tirana and Durres.",
+          "Yes. We support rental properties across Tirana.",
       },
       {
         question: "Can you help with a simple inspection report?",
@@ -445,7 +442,6 @@ export const englishServicePages = [
       englishServiceSlugs.tirana,
       englishServiceSlugs.emergency,
       englishServiceSlugs.airbnb,
-      englishServiceSlugs.durres,
     ],
     relatedGuideSlugs: [
       englishGuideSlugs.apartmentChecklist,
@@ -463,7 +459,7 @@ export const englishServicePages = [
     metaTitle:
       "Electrician for Offices and Shops in Tirana | Commercial Help",
     metaDescription:
-      "Electrician for offices and shops in Tirana and Durres for commercial repairs, lighting, panel work, extra circuits, and maintenance.",
+      "Electrician for offices and shops in Tirana for commercial repairs, lighting, panel work, extra circuits, and maintenance.",
     h1: "Electrician for Offices and Shops in Tirana",
     hero:
       "Commercial electrical help for offices, shops, and small business spaces that need stable power and less downtime.",
@@ -477,7 +473,7 @@ export const englishServicePages = [
       "commercial electrician albania",
     ],
     audience: "Office managers, shop owners, and small business operators",
-    serviceAreas: ["Tirana", "Durres", "commercial streets", "business districts", "shopping areas"],
+    serviceAreas: ["Tirana", "commercial streets", "business districts", "shopping areas"],
     whenToCall: [
       "When your office needs more sockets, lighting, or workstation circuits.",
       "When your shop has a panel, lighting, or display problem that affects sales.",
@@ -513,16 +509,15 @@ export const englishServicePages = [
           "Yes. Adding practical capacity is part of the core offer here.",
       },
       {
-        question: "Do you also help in Durres business areas?",
+        question: "Do you cover businesses across Tirana?",
         answer:
-          "Yes. That is especially useful for the coastal business season.",
+          "Yes. Businesses across Tirana are covered.",
       },
     ],
     relatedServiceSlugs: [
       englishServiceSlugs.tirana,
       englishServiceSlugs.emergency,
       englishServiceSlugs.landlords,
-      englishServiceSlugs.durres,
     ],
     relatedGuideSlugs: [
       englishGuideSlugs.howToHire,
@@ -554,7 +549,7 @@ export const englishServicePages = [
       "wallbox tirana",
     ],
     city: "Tirana",
-    serviceAreas: ["Tirana", "Durres", "private garages", "parking spaces", "business parking"],
+    serviceAreas: ["Tirana", "private garages", "parking spaces", "business parking"],
     whenToCall: [
       "When you buy an EV and need a safe charger setup at home.",
       "When you want to check whether the panel can handle the new load.",
@@ -590,16 +585,15 @@ export const englishServicePages = [
           "Yes. Commercial parking and business use should be included.",
       },
       {
-        question: "Do you also help in Durres?",
+        question: "Is this service limited to Tirana?",
         answer:
-          "Yes. That is useful for coastal homes, rentals, and businesses.",
+          "Yes. EV charger installation is offered in Tirana only.",
       },
     ],
     relatedServiceSlugs: [
       englishServiceSlugs.tirana,
       englishServiceSlugs.emergency,
       englishServiceSlugs.solar,
-      englishServiceSlugs.durres,
     ],
     relatedGuideSlugs: [
       englishGuideSlugs.evApartment,
@@ -631,7 +625,7 @@ export const englishServicePages = [
       "photovoltaic installation tirana",
     ],
     city: "Tirana",
-    serviceAreas: ["Tirana", "Durres", "villas", "small businesses", "rural-edge properties"],
+    serviceAreas: ["Tirana", "villas", "small businesses", "rural-edge properties"],
     whenToCall: [
       "When you want to check whether the roof or site is a good fit for solar.",
       "When you are comparing the load and the likely system size.",
@@ -667,15 +661,14 @@ export const englishServicePages = [
           "Yes. Solar and EV charging can be planned together so the property is ready for both systems.",
       },
       {
-        question: "Do you also work in Durres?",
+        question: "Do you only work in Tirana?",
         answer:
-          "Yes, especially for coastal homes and seasonal properties.",
+          "Yes. Solar planning and installation are now offered in Tirana only.",
       },
     ],
     relatedServiceSlugs: [
       englishServiceSlugs.tirana,
       englishServiceSlugs.ev,
-      englishServiceSlugs.durres,
       englishServiceSlugs.offices,
     ],
     relatedGuideSlugs: [
@@ -684,83 +677,6 @@ export const englishServicePages = [
       englishGuideSlugs.howToHire,
     ],
     callToAction: "Book a solar feasibility check and installation plan.",
-  },
-  {
-    slug: englishServiceSlugs.durres,
-    path: "/en/services/electrician-durres",
-    locale: "en-US",
-    pageType: "location",
-    title: "English-Speaking Electrician in Durres",
-    metaTitle:
-      "English-Speaking Electrician in Durres | Coastal Repairs",
-    metaDescription:
-      "English-speaking electrician in Durres for apartments, villas, hotels, rentals, and coastal properties that need reliable electrical support.",
-    h1: "English-Speaking Electrician in Durres",
-    hero:
-      "Practical English electrical support for Durres, coastal rentals, villas, and hospitality properties that need a dependable local electrician before guests arrive or the season begins.",
-    summary:
-      "This page is for English-speaking property owners in Durres who need repairs, maintenance, or installations for coastal rentals, villas, hotels, and business spaces. It should stay distinct from the Tirana page because the real local angle is different: humidity, seasonal reopening, guest turnover, and properties that sit unused before suddenly coming under load again.",
-    primaryKeyword: "electrician durres",
-    secondaryKeywords: [
-      "electrician in durres",
-      "electrical services durres",
-      "english speaking electrician durres",
-      "emergency electrician durres",
-    ],
-    city: "Durres",
-    serviceAreas: ["Durres city", "beach area", "Golem", "Shkembi i Kavajes", "seasonal rentals"],
-    whenToCall: [
-      "When a coastal apartment or villa needs a quick repair before guests arrive.",
-      "When a hotel or rental unit needs seasonal maintenance and checks.",
-      "When lighting, sockets, or the panel are not holding up under load.",
-      "When you want an English-speaking contact for a property in Durres.",
-    ],
-    problems: [
-      "Seasonal properties that sit unused and then need quick restoration.",
-      "Coastal humidity and wear that can affect sockets, lights, and panels.",
-      "Hotels and rentals that need faster turnaround between uses.",
-      "Owners who want a practical local electrician with English communication.",
-    ],
-    processSteps: [
-      "Share the property type, area, and the problem in simple English.",
-      "Get a clear next step and rough timing before work starts.",
-      "Complete the repair, maintenance, or installation.",
-      "Confirm the result and keep one contact for future visits.",
-    ],
-    faqs: [
-      {
-        question: "Do you work in Golem and the beach area?",
-        answer:
-          "Yes. We cover Golem, the beach area, and the wider Durres coast for the right jobs.",
-      },
-      {
-        question: "Is this useful for villas and hotels?",
-        answer:
-          "Yes. Villas, hotels, and seasonal rentals are some of the strongest use cases for this page.",
-      },
-      {
-        question: "Can you handle seasonal maintenance?",
-        answer:
-          "Yes. Seasonal maintenance is a strong fit for coastal properties and guest-ready rentals.",
-      },
-      {
-        question: "Do you speak English for foreign owners?",
-        answer:
-          "Yes. English communication is available for foreign owners, guests, and property managers.",
-      },
-    ],
-    relatedServiceSlugs: [
-      englishServiceSlugs.tirana,
-      englishServiceSlugs.emergency,
-      englishServiceSlugs.airbnb,
-      englishServiceSlugs.landlords,
-    ],
-    relatedGuideSlugs: [
-      englishGuideSlugs.howToHire,
-      englishGuideSlugs.airbnbChecklist,
-      englishGuideSlugs.solarVsGrid,
-    ],
-    callToAction: "Call for English electrical support in Durres today.",
   },
 ] as const satisfies readonly EnglishServicePageEntry[];
 

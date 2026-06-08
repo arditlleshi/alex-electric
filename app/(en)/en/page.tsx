@@ -22,7 +22,6 @@ const EN_URL = `${SITE_URL}/en`;
 const EN_SERVICES_URL = `${SITE_URL}/en/services`;
 const PRIORITY_ENGLISH_SERVICE_SLUGS = [
   "electrician-tirana",
-  "electrician-durres",
   "emergency-electrician-tirana",
   "ev-charger-installation-tirana",
   "solar-panel-installation-tirana",
@@ -41,9 +40,9 @@ const guidePriority = new Map<string, number>(
 );
 
 export const metadata: Metadata = {
-  title: "English Electrical Services for Tirana and Durres | Alex Elektrik",
+  title: "English Electrical Services for Tirana | Alex Elektrik",
   description:
-    "English electrical services in Tirana and Durres for expats, rentals, emergencies, EV chargers, solar projects, and property support.",
+    "English electrical services in Tirana for expats, rentals, emergencies, EV chargers, solar projects, and property support.",
   metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: EN_URL,
@@ -57,7 +56,7 @@ export const metadata: Metadata = {
     type: "website",
     url: EN_URL,
     locale: "en_US",
-    title: "English Electrical Services for Tirana and Durres | Alex Elektrik",
+    title: "English Electrical Services for Tirana | Alex Elektrik",
     description:
       "Start from the English hub for expats, rentals, businesses, and emergency electrical work.",
     images: [
@@ -71,7 +70,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "English Electrical Services for Tirana and Durres",
+    title: "English Electrical Services for Tirana",
     description:
       "English-language electrical support for expats, landlords, rentals, and small businesses.",
     images: [getTwitterImageUrl("/en")],
@@ -89,7 +88,7 @@ const collectionSchema = {
       "@type": "CollectionPage",
       "@id": `${EN_URL}#collection`,
       url: EN_URL,
-      name: "English Electrical Services for Tirana and Durres",
+      name: "English Electrical Services for Tirana",
       description:
         "English overview page with links to service pages, audience pages, and guides.",
       inLanguage: "en-US",
@@ -178,17 +177,17 @@ export default function EnglishPage() {
               </span>
               <span className="inline-flex min-h-9 items-center gap-2 rounded-lg border border-border bg-surface-raised px-3 text-sm font-semibold text-muted-strong">
                 <MapPin aria-hidden="true" className="h-4 w-4 text-electric-600" />
-                Tirana & Durres
+                Tirana
               </span>
             </div>
 
             <h1 className="mt-6 max-w-4xl text-balance text-4xl font-semibold leading-[1.06] text-foreground sm:text-5xl lg:text-6xl">
-              English Electrical Services for Tirana, Durres & Coastal Properties
+              English Electrical Services for Tirana
             </h1>
             <p className="mt-6 max-w-3xl text-pretty text-lg leading-8 text-muted sm:text-xl">
-              Start here if you need an English-speaking electrician in Tirana
-              or Durres. These pages help expats, landlords, rentals, small
-              businesses, and coastal property owners reach the right service
+              Start here if you need an English-speaking electrician in Tirana.
+              These pages help expats, landlords, rentals, and small
+              businesses reach the right service
               for faults, repairs, upgrades, EV chargers, and solar work.
             </p>
 
@@ -275,7 +274,7 @@ export default function EnglishPage() {
               larger upgrade.
             </p>
             <p className="mt-4 text-base leading-7 text-muted sm:text-lg">
-              In Tirana and Durres, wasted time usually comes from a mismatch
+              In Tirana, wasted time usually comes from a mismatch
               between the search term and the actual problem. Use the service
               pages below to narrow that down, then open one guide and one
               service page before you call so the first conversation starts with

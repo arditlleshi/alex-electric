@@ -21,7 +21,7 @@ export function createSeoImage({
   subtitle,
   locale = "sq",
 }: SeoImageOptions) {
-  const badgeText = locale === "en" ? "Tirana and Durres" : "Tirane dhe Durres";
+  const badgeText = locale === "en" ? "Tirana" : "Tirane";
   const footerText =
     locale === "en"
       ? "Fast electrical support, diagnostics, repairs, EV, solar"

@@ -402,8 +402,8 @@ export function ServicePageTemplate({
             </p>
             <p className="mt-4 text-base leading-7 text-muted sm:text-lg">
               {isEnglish
-                ? "In Tirana and Durres many properties combine older wiring, renovation leftovers, and newer heavy appliances on the same installation. A few useful details in the first call usually lead to a shorter visit, a clearer quote, and a safer first intervention."
-                : "Në Tiranë dhe Durrës shumë prona bashkojnë instalime më të vjetra, punime rinovimi të pjesshme dhe pajisje të reja me ngarkesë të lartë në të njëjtin rrjet. Disa detaje të dobishme në telefonatën e parë zakonisht e bëjnë vizitën më të shkurtër, preventivin më të qartë dhe ndërhyrjen fillestare më të sigurt."}
+                ? "In Tirana many properties combine older wiring, renovation leftovers, and newer heavy appliances on the same installation. A few useful details in the first call usually lead to a shorter visit, a clearer quote, and a safer first intervention."
+                : "Në Tiranë shumë prona bashkojnë instalime më të vjetra, punime rinovimi të pjesshme dhe pajisje të reja me ngarkesë të lartë në të njëjtin rrjet. Disa detaje të dobishme në telefonatën e parë zakonisht e bëjnë vizitën më të shkurtër, preventivin më të qartë dhe ndërhyrjen fillestare më të sigurt."}
             </p>
           </SurfaceCard>
           <MutedCard>
@@ -551,8 +551,8 @@ export function GuidePageTemplate({
             </h2>
             <p className="mt-5 text-base leading-7 text-muted sm:text-lg">
               {isEnglish
-                ? "Use this page as a pre-call checklist, not as a replacement for an on-site diagnosis. In Tirana and Durres, the same symptom can come from ageing apartment wiring, an overloaded panel, or a quick repair that never solved the root cause."
-                : "Përdoreni këtë faqe si listë kontrolli para telefonatës, jo si zëvendësim për diagnostikimin në terren. Në Tiranë dhe Durrës i njëjti simptom mund të vijë nga instalimi i vjetër i apartamentit, një panel i mbingarkuar ose një riparim i shpejtë që nuk e ka zgjidhur shkakun."}
+                ? "Use this page as a pre-call checklist, not as a replacement for an on-site diagnosis. In Tirana, the same symptom can come from ageing apartment wiring, an overloaded panel, or a quick repair that never solved the root cause."
+                : "Përdoreni këtë faqe si listë kontrolli para telefonatës, jo si zëvendësim për diagnostikimin në terren. Në Tiranë i njëjti simptom mund të vijë nga instalimi i vjetër i apartamentit, një panel i mbingarkuar ose një riparim i shpejtë që nuk e ka zgjidhur shkakun."}
             </p>
             <p className="mt-4 text-base leading-7 text-muted sm:text-lg">
               {isEnglish
@@ -681,8 +681,8 @@ export function ServiceHubTemplate({
   const resolvedFeaturedDescription =
     featuredDescription ??
     (isEnglish
-      ? "These pages cover the most common requests from customers in Tirana and Durres."
-      : "Këto faqe mbulojnë kërkesat më të shpeshta nga klientët në Tiranë dhe Durrës.");
+      ? "These pages cover the most common requests from customers in Tirana."
+      : "Këto faqe mbulojnë kërkesat më të shpeshta nga klientët në Tiranë.");
   const resolvedCardsSectionTitle =
     cardsSectionTitle ?? (isEnglish ? "All electrical services" : "Të gjitha shërbimet");
 

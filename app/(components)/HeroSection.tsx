@@ -21,7 +21,7 @@ const reassuranceItems = [
   {
     Icon: MapPin,
     title: "Zona e shërbimit",
-    description: "Tiranë, Durrës dhe ndërhyrje të planifikuara për banesa e biznese.",
+    description: "Tiranë dhe ndërhyrje të planifikuara për banesa e biznese.",
   },
   {
     Icon: Clock3,
@@ -63,7 +63,7 @@ export default function HeroSection() {
           </div>
 
           <h1 className="max-w-3xl text-balance text-4xl font-semibold leading-[1.06] text-foreground sm:text-5xl lg:text-6xl">
-            Elektricist në Tiranë dhe Durrës për banesa, apartamente dhe biznese
+            Elektricist në Tiranë për banesa, apartamente dhe biznese
           </h1>
 
           <p className="mt-6 max-w-2xl text-pretty text-lg leading-8 text-muted sm:text-xl">
@@ -100,7 +100,7 @@ export default function HeroSection() {
           </div>
 
           <p className="mt-6 text-sm leading-6 text-muted">
-            Shërbim në Tiranë dhe Durrës, me ndërhyrje urgjente dhe vizita të planifikuara sipas rastit.
+            Shërbim në Tiranë, me ndërhyrje urgjente dhe vizita të planifikuara sipas rastit.
           </p>
         </div>
 

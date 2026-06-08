@@ -9,6 +9,6 @@ export default function Image() {
     eyebrow: "Keshilla elektrike",
     title: "Udhezues praktik per urgjenca, instalime, EV dhe solar",
     subtitle:
-      "Keshilla te dobishme qe lidhen me sherbimet elektrike ne Tirane dhe Durres.",
+      "Keshilla te dobishme qe lidhen me sherbimet elektrike ne Tirane.",
   });
 }

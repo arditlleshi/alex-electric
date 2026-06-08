@@ -41,12 +41,12 @@ const primaryServiceCards: {
       "Për apartamente, shtëpi dhe biznese në Tiranë që kanë nevojë për riparime elektrike, instalime, diagnostikim ose kontroll sigurie.",
   },
   {
-    slug: "elektricist-durres",
-    title: "Elektricist në Durrës",
+    slug: "mirembajtje-elektrike-biznese",
+    title: "Mirembajtje elektrike per biznese",
     image: CommercialElectric,
-    eyebrow: "Durrës",
+    eyebrow: "Biznese",
     summary:
-      "Për vila, apartamente bregdetare, prona me qira dhe biznese të vogla në Durrës, Golem dhe zonat përreth.",
+      "Për zyra, dyqane, restorante dhe ambiente pune në Tiranë që kanë nevojë për stabilitet dhe reagim të shpejtë.",
   },
   {
     slug: "elektricist-urgjent-tirane",
@@ -141,7 +141,7 @@ export default function ServicesSection() {
               Shërbime elektrike për shtëpi, apartamente, vila dhe biznese
             </h2>
             <p className="mt-5 max-w-3xl text-pretty text-base leading-7 text-muted sm:text-lg">
-              Alex Elektrik ofron shërbime elektrike në Tiranë dhe Durrës për
+              Alex Elektrik ofron shërbime elektrike në Tiranë për
               defekte të përditshme, ndërhyrje urgjente, instalime elektrike,
               kontroll paneli, karikues EV dhe panele diellore. Qëllimi është
               që problemi të kuptohet shpejt, puna të bëhet në mënyrë të sigurt

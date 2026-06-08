@@ -18,7 +18,7 @@ export default async function Image({
     title: guide?.title ?? "Guide elektrik",
     subtitle:
       guide?.description ??
-      "Keshilla praktike për shërbime elektrike në Tiranë dhe Durrës.",
+      "Keshilla praktike për shërbime elektrike në Tiranë.",
     locale: guide?.locale === "en-US" ? "en" : "sq",
   });
 }

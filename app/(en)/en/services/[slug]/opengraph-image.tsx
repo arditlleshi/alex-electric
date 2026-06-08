@@ -18,7 +18,7 @@ export default async function Image({
     title: service?.title ?? "Electrical service in Tirana",
     subtitle:
       service?.metaDescription ??
-      "Fast electrical support for Tirana, Durres, and nearby properties.",
+      "Fast electrical support for Tirana and nearby properties.",
     locale: "en",
   });
 }

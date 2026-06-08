@@ -62,7 +62,7 @@ const primaryActions: {
 const supportPoints = [
   {
     title: "Zona e shërbimit",
-    description: "Tiranë, Durrës dhe vizita të planifikuara sipas projektit.",
+    description: "Tiranë dhe vizita të planifikuara sipas projektit.",
     Icon: MapPin,
     toneClass: "text-electric-700",
   },

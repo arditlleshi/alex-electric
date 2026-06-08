@@ -22,7 +22,6 @@ const quickLinks = [
 
 const featuredServiceSlugs = new Set([
   "elektricist-tirane",
-  "elektricist-durres",
   "elektricist-urgjent-tirane",
   "karikues-ev-tirane",
 ]);
@@ -31,7 +30,7 @@ const featuredEnglishSlugs = new Set([
   "electrician-tirana",
   "electrician-for-expats",
   "electrician-for-airbnb-hosts",
-  "electrician-durres",
+  "emergency-electrician-tirana",
 ]);
 
 export default async function Footer() {
@@ -63,13 +62,13 @@ export default async function Footer() {
             />
           </div>
           <p className="min-w-0 text-sm leading-6 text-slate-300 md:justify-self-center">
-            Shërbime elektrike ne Tiranë & Durrës me support në shqip dhe
+            Shërbime elektrike ne Tiranë me support në shqip dhe
             anglisht.
           </p>
           <div className="flex flex-wrap gap-2 md:justify-self-end">
             <span className="inline-flex min-h-8 items-center gap-1.5 rounded-md border border-white/12 px-2.5 text-xs font-semibold text-slate-200">
               <MapPin aria-hidden="true" className="h-3.5 w-3.5 text-electric-200" />
-              Tiranë & Durrës
+              Tiranë
             </span>
             <span className="inline-flex min-h-8 items-center gap-1.5 rounded-md border border-white/12 px-2.5 text-xs font-semibold text-slate-200">
               <Globe aria-hidden="true" className="h-3.5 w-3.5 text-teal-400" />
@@ -227,7 +226,7 @@ export default async function Footer() {
           <p>© 2026 Alex Elektrik. Te gjitha te drejtat e rezervuara.</p>
           <p className="inline-flex items-center gap-1.5">
             <span className="h-1.5 w-1.5 rounded-full bg-success-500" aria-hidden="true" />
-            Operim ne Tiranë dhe Durrës
+            Operim ne Tiranë
           </p>
         </div>
       </div>
