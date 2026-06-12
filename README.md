@@ -2,7 +2,7 @@
 
 Production website for an electrical services business in Albania, built as a bilingual, SEO-focused, conversion-oriented Next.js application.
 
-[Live website](https://alex-electric.com)
+[Live website](https://alexelektrik.al)
 
 ## Overview
 
@@ -135,7 +135,7 @@ bun run start
 The site can run without private tracking configured. For local development, create a `.env.local` file only when these values are needed:
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://alex-electric.com
+NEXT_PUBLIC_SITE_URL=https://alexelektrik.al
 BLOB_READ_WRITE_TOKEN=
 CONTACT_CLICK_VIEWER_SECRET=
 ```
@@ -164,3 +164,5 @@ This repository is built to show more than a finished UI. It highlights the abil
 ## Status
 
 The website is live and production-oriented. Future improvements can include richer visual case studies, deeper analytics dashboards, additional city pages, more guide content, and expanded service proof sections.
+
+For domain migration, the application now emits `https://alexelektrik.al` as the canonical domain. Keep `alex-electric.com` permanently redirecting to the matching path on `alexelektrik.al` at the hosting layer to preserve existing SEO signals.

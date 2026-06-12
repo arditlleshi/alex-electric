@@ -122,7 +122,7 @@ export function createSeoImage({
             color: "#cbd5e1",
           }}>
           <div style={{ display: "flex" }}>{footerText}</div>
-          <div style={{ display: "flex", color: "#93c5fd" }}>alex-electric.com</div>
+          <div style={{ display: "flex", color: "#93c5fd" }}>alexelektrik.al</div>
         </div>
       </div>
     ),

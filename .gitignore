@@ -43,3 +43,5 @@ next-env.d.ts
 # next-agents-md
 .next-docs/
 .env*.local
+
+.vercel

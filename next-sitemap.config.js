@@ -1,5 +1,9 @@
 // next-sitemap.config.js
 /** @type {import('next-sitemap').IConfig} */
+const rawSiteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://alexelektrik.al";
+const siteUrl = rawSiteUrl.endsWith("/") ? rawSiteUrl.slice(0, -1) : rawSiteUrl;
+
 function getPriority(path) {
   if (path === "/") {
     return 1.0;
@@ -34,7 +38,7 @@ function getChangeFrequency(path) {
 }
 
 module.exports = {
-  siteUrl: "https://alex-electric.com",
+  siteUrl,
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   sitemapSize: 5000,

@@ -1,6 +1,7 @@
-import type { Viewport } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -13,6 +14,10 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: "#f7f8f5",
+};
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
 };
 
 export default function RootLayout({

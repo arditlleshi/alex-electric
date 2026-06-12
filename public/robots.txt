@@ -5,7 +5,7 @@ Disallow: /contact-clicks
 Disallow: /contact-clicks/data
 
 # Host
-Host: https://alex-electric.com
+Host: https://alexelektrik.al
 
 # Sitemaps
-Sitemap: https://alex-electric.com/sitemap.xml
+Sitemap: https://alexelektrik.al/sitemap.xml
