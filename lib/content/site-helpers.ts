@@ -20,7 +20,7 @@ export type LinkCard = {
 };
 
 export function getServiceHref(service: SiteServicePage) {
-  if ("path" in service) {
+  if (service.path) {
     return service.path;
   }
 
@@ -36,8 +36,8 @@ export function getGuideHref(slugOrPath: string) {
 }
 
 export function resolveRelatedGuides(guideSlugs: readonly string[]): LinkCard[] {
-  return guideSlugs
-    .map((slugOrPath) => getGuidePage(normalizeGuideSlug(slugOrPath)))
+  return [...new Set(guideSlugs.map(normalizeGuideSlug))]
+    .map((slug) => getGuidePage(slug))
     .filter((guide): guide is NonNullable<typeof guide> => Boolean(guide))
     .map((guide) => ({
       title: guide.title,

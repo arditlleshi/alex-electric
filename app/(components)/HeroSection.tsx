@@ -55,7 +55,9 @@ export default function HeroSection() {
             <Image
               src={logo}
               alt="Alex Elektrik"
-              priority
+              loading="eager"
+              fetchPriority="low"
+              quality={60}
               fill
               sizes="(max-width: 640px) 208px, 256px"
               className="object-contain object-left"

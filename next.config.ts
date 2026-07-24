@@ -6,6 +6,23 @@ const projectRoot = dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
   cacheComponents: true,
+  images: {
+    qualities: [60, 75],
+  },
+  async redirects() {
+    return [
+      {
+        source: "/sherbime/elektricist-tirane",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/en/services/electrician-tirana",
+        destination: "/en",
+        permanent: true,
+      },
+    ];
+  },
   turbopack: {
     root: projectRoot,
   },

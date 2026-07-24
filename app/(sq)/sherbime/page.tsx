@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ServiceHubTemplate } from "@/app/(components)/ContentTemplates";
 import { albanianServicePages } from "@/lib/content/albanian-services";
+import { getServiceHref } from "@/lib/content/site-helpers";
 import { SITE_URL } from "@/lib/site";
 import {
   LOCAL_BUSINESS_ID,
@@ -91,7 +92,7 @@ export default function ServicesHubPage() {
   const cards = orderedServices.map((service) => ({
     title: service.title,
     description: service.metaDescription,
-    href: `/sherbime/${service.slug}`,
+    href: getServiceHref(service),
   }));
 
   const jsonLd = {
@@ -134,7 +135,7 @@ export default function ServicesHubPage() {
           item: {
             "@type": "Service",
             name: service.title,
-            url: `${SITE_URL}/sherbime/${service.slug}`,
+            url: `${SITE_URL}${getServiceHref(service)}`,
             description: service.metaDescription,
             serviceType: service.primaryKeyword,
             areaServed: [...service.serviceAreas],

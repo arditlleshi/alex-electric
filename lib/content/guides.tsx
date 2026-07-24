@@ -55,12 +55,12 @@ const normalizeGuideValue = (slug: string) => slug.replace(/^\/blog\//, "");
 const blogPath = (slug: string) => `/blog/${normalizeGuideValue(slug)}`;
 const sqService = (slug: string, label: string): GuideLink => ({
   slug,
-  path: `/sherbime/${slug}`,
+  path: slug === "elektricist-tirane" ? "/" : `/sherbime/${slug}`,
   label,
 });
 const enService = (slug: string, label: string): GuideLink => ({
   slug,
-  path: `/en/services/${slug}`,
+  path: slug === "electrician-tirana" ? "/en" : `/en/services/${slug}`,
   label,
 });
 const section = (
@@ -123,7 +123,7 @@ const rawGuidePages = [
     locale: "en-US",
     guideType: "existing",
     title: "English-speaking electrician in Tirana: what to prepare before the first visit",
-    metaTitle: "English-Speaking Electrician in Tirana: First Visit Checklist",
+    metaTitle: "English Electrician in Tirana: First Visit",
     description:
       "A practical English guide for expats and foreign residents who want to prepare the right details before the first electrician visit in Tirana.",
     metaDescription:
@@ -214,7 +214,7 @@ const rawGuidePages = [
     locale: "sq-AL",
     guideType: "existing",
     title: "Instalime elektrike moderne per shtepi, zyra dhe biznese",
-    metaTitle: "Instalime Elektrike në Tiranë për Shtëpi, Zyra dhe Biznese",
+    metaTitle: "Instalime Elektrike Tiranë: Shtëpi & Biznes",
     description:
       "Një përmbledhje profesionale e shërbimeve elektrike: instalime, riparime, panele diellore dhe stacione karikimi për automjete elektrike.",
     metaDescription:
@@ -370,7 +370,7 @@ const rawGuidePages = [
     locale: "sq-AL",
     guideType: "existing",
     title: "5 shenja kur duhet nje elektricist urgjent ne Tirane",
-    metaTitle: "Elektricist Urgjent në Tiranë: 5 Shenja Kryesore",
+    metaTitle: "5 Shenja për Elektricist Urgjent në Tiranë",
     description:
       "Shenjat kryesore qe tregojne kur duhet te telefononi menjehere nje elektricist urgjent dhe cfare duhet te kontrolloni pa humbur kohe.",
     metaDescription:
@@ -426,7 +426,7 @@ const rawGuidePages = [
     locale: "sq-AL",
     guideType: "existing",
     title: "Si funksionon instalimi i panelit diellor ne shtepi",
-    metaTitle: "Panele Diellore në Tiranë: Si Funksionon Instalimi në Shtëpi",
+    metaTitle: "Panele Diellore Tiranë: Udhëzues Instalimi",
     description:
       "Nje udhezues hap pas hapi per te kuptuar si zhvillohet procesi i instalimit solar nga kontrolli fillestar deri te testimi final.",
     metaDescription:
@@ -487,7 +487,7 @@ const rawGuidePages = [
     locale: "sq-AL",
     guideType: "planned",
     title: "Sa kushton instalimi elektrik ne apartament ne Tirane",
-    metaTitle: "Sa Kushton Instalimi Elektrik në Apartament në Tiranë?",
+    metaTitle: "Kosto Instalimi Elektrik në Apartament",
     description:
       "Nje udhezues praktik per te kuptuar cfare ndikon ne koston e instalimit elektrik ne apartament, nga qarqet dhe paneli te puna ne terren.",
     metaDescription:
@@ -544,7 +544,7 @@ const rawGuidePages = [
     locale: "sq-AL",
     guideType: "planned",
     title: "Si zgjidhet paneli elektrik per apartament ose vile",
-    metaTitle: "Panel Elektrik në Tiranë: Si Zgjidhet për Apartament ose Vilë",
+    metaTitle: "Si Zgjidhet Paneli Elektrik për Banesë",
     description:
       "Nje guide per te kuptuar si zgjidhet paneli elektrik sipas ngarkeses, sigurise, mbrojtjes dhe zgjerimit te ardhshem te prones.",
     metaDescription:
@@ -599,7 +599,7 @@ const rawGuidePages = [
     locale: "sq-AL",
     guideType: "planned",
     title: "Si zgjidhet karikuesi EV per shtepi dhe panel ne Shqiperi",
-    metaTitle: "Karikues EV në Tiranë: Si Zgjidhet për Shtëpi",
+    metaTitle: "Karikues EV në Tiranë për Shtëpi",
     description:
       "Nje guide per te kuptuar si zgjidhet karikuesi EV per shtepi sipas panelit, parkimit, sigurise dhe perdorimit te perditshem.",
     metaDescription:
@@ -655,7 +655,7 @@ const rawGuidePages = [
     locale: "sq-AL",
     guideType: "planned",
     title: "Sa panele diellore duhen per nje shtepi ne Shqiperi",
-    metaTitle: "Sa Panele Diellore Duhen për një Shtëpi? Udhëzues Praktik",
+    metaTitle: "Sa Panele Diellore Duhen për Shtëpi?",
     description:
       "Nje guide per te kuptuar si llogaritet numri i paneleve diellore sipas konsumit, orientimit te catise, hijezimit dhe hapesires se disponueshme.",
     metaDescription:
@@ -711,7 +711,7 @@ const rawGuidePages = [
     locale: "en-US",
     guideType: "planned",
     title: "How to hire an electrician in Tirana as a foreign resident",
-    metaTitle: "How to Hire an Electrician in Tirana as a Foreign Resident",
+    metaTitle: "Hiring an Electrician in Tirana: Expat Guide",
     description:
       "A practical English guide to comparing electricians, quotes, and scope in Tirana when you want clear communication and fewer surprises.",
     metaDescription:
@@ -776,7 +776,7 @@ const rawGuidePages = [
     locale: "en-US",
     guideType: "planned",
     title: "Electrical safety checklist for Airbnb hosts in Tirana",
-    metaTitle: "Electrical Safety Checklist for Airbnb Hosts in Tirana",
+    metaTitle: "Airbnb Electrical Safety Checklist in Tirana",
     description:
       "A practical checklist for short-term rental hosts who need a safe property between guest turnovers, repairs, and guest-ready inspections.",
     metaDescription:
@@ -832,7 +832,7 @@ const rawGuidePages = [
     locale: "en-US",
     guideType: "planned",
     title: "Electrical checks before buying an apartment in Tirana",
-    metaTitle: "Electrical Checks Before Buying an Apartment in Tirana",
+    metaTitle: "Electrical Checks Before Buying in Tirana",
     description:
       "An English checklist for buyers who want to avoid hidden electrical problems, unsafe panels, and surprise repair costs before closing on an apartment.",
     metaDescription:
@@ -884,7 +884,7 @@ const rawGuidePages = [
     locale: "en-US",
     guideType: "planned",
     title: "EV chargers in Albanian apartment buildings: what to check",
-    metaTitle: "EV Charger Installation in Albania: Apartment Building Checklist",
+    metaTitle: "EV Chargers for Apartments in Albania",
     description:
       "An English guide to the practical questions behind apartment EV charging in Albania, from panel capacity to parking layout.",
     metaDescription:
@@ -936,7 +936,7 @@ const rawGuidePages = [
     locale: "en-US",
     guideType: "planned",
     title: "Solar vs grid power for villas and small businesses in Albania",
-    metaTitle: "Solar Panel Installation in Tirana: Solar vs Grid Power",
+    metaTitle: "Solar vs Grid Power in Tirana",
     description:
       "A practical English comparison for villas and small businesses that want to decide whether solar is worth it now or whether a cleaner grid setup is the smarter first step.",
     metaDescription:

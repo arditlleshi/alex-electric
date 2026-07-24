@@ -40,9 +40,9 @@ const guidePriority = new Map<string, number>(
 );
 
 export const metadata: Metadata = {
-  title: "English Electrical Services for Tirana | Alex Elektrik",
+  title: "English-Speaking Electrician in Tirana | Alex Elektrik",
   description:
-    "English electrical services in Tirana for expats, rentals, emergencies, EV chargers, solar projects, and property support.",
+    "English-speaking electrician in Tirana for repairs, emergencies, rentals, electrical checks, EV chargers, solar projects, and business properties.",
   metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: EN_URL,
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     type: "website",
     url: EN_URL,
     locale: "en_US",
-    title: "English Electrical Services for Tirana | Alex Elektrik",
+    title: "English-Speaking Electrician in Tirana | Alex Elektrik",
     description:
       "Start from the English hub for expats, rentals, businesses, and emergency electrical work.",
     images: [
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "English Electrical Services for Tirana",
+    title: "English-Speaking Electrician in Tirana",
     description:
       "English-language electrical support for expats, landlords, rentals, and small businesses.",
     images: [getTwitterImageUrl("/en")],
@@ -88,7 +88,7 @@ const collectionSchema = {
       "@type": "CollectionPage",
       "@id": `${EN_URL}#collection`,
       url: EN_URL,
-      name: "English Electrical Services for Tirana",
+      name: "English-Speaking Electrician in Tirana",
       description:
         "English overview page with links to service pages, audience pages, and guides.",
       inLanguage: "en-US",
@@ -128,7 +128,7 @@ const collectionSchema = {
 };
 
 const corePages = [...englishServicePages]
-  .filter((page) => page.pageType === "service" || page.pageType === "location")
+  .filter((page) => page.pageType === "service")
   .sort((left, right) => {
     const leftPriority = servicePriority.get(left.slug) ?? Number.MAX_SAFE_INTEGER;
     const rightPriority = servicePriority.get(right.slug) ?? Number.MAX_SAFE_INTEGER;
@@ -182,7 +182,7 @@ export default function EnglishPage() {
             </div>
 
             <h1 className="mt-6 max-w-4xl text-balance text-4xl font-semibold leading-[1.06] text-foreground sm:text-5xl lg:text-6xl">
-              English Electrical Services for Tirana
+              English-Speaking Electrician in Tirana
             </h1>
             <p className="mt-6 max-w-3xl text-pretty text-lg leading-8 text-muted sm:text-xl">
               Start here if you need an English-speaking electrician in Tirana.
@@ -327,7 +327,7 @@ export default function EnglishPage() {
                 href={page.path}
                 className="group flex h-full flex-col rounded-lg border border-border bg-surface p-6 shadow-sm transition-[transform,background-color,border-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-border-strong hover:bg-surface-raised hover:shadow-soft">
                 <span className="inline-flex min-h-8 w-fit items-center rounded-lg border px-3 text-xs font-semibold text-muted-strong">
-                  {page.pageType === "location" ? "Location Page" : "Service Page"}
+                  Service Page
                 </span>
                 <h3 className="mt-4 text-xl font-semibold text-foreground transition-colors duration-200 group-hover:text-electric-700">
                   {page.title}

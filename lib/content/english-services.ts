@@ -1,3 +1,5 @@
+import type { ServiceDetailSection } from "./types";
+
 export type EnglishServiceLocale = "en-US";
 
 export type EnglishPageType = "service" | "audience" | "location";
@@ -30,6 +32,7 @@ export interface EnglishServicePageEntry {
   relatedServiceSlugs: readonly string[];
   relatedGuideSlugs: readonly string[];
   callToAction: string;
+  detailSections?: readonly ServiceDetailSection[];
 }
 
 export const englishGuideSlugs = {
@@ -58,12 +61,11 @@ const englishServiceSlugs = {
 export const englishServicePages = [
   {
     slug: englishServiceSlugs.tirana,
-    path: "/en/services/electrician-tirana",
+    path: "/en",
     locale: "en-US",
     pageType: "location",
     title: "English-Speaking Electrician in Tirana",
-    metaTitle:
-      "English-Speaking Electrician in Tirana | Repairs and Emergency",
+    metaTitle: "English-Speaking Electrician in Tirana | Repairs",
     metaDescription:
       "English-speaking electrician in Tirana for urgent repairs, diagnostics, EV chargers, solar work, and planned electrical jobs across the city.",
     h1: "English-Speaking Electrician in Tirana",
@@ -159,6 +161,21 @@ export const englishServicePages = [
       "Fast-response help for electrical problems in Tirana that cannot wait until tomorrow, especially when there is heat, smell, sparks, or part of the property has gone dark.",
     summary:
       "This page is built for urgent electrical faults in Tirana and nearby areas, especially when there is a burning smell, repeated breaker trips, sparks, partial loss of power, or visible overheating at a socket or panel. It should stay clearly separate from general repair pages because the real value here is safety triage, same-day response, and quick isolation of risk.",
+    detailSections: [
+      {
+        title: "Deciding whether the fault is urgent",
+        paragraphs: [
+          "Visible sparking, a burning smell, unusual heat at a socket or panel, repeated breaker trips, or a partial outage after water exposure needs prompt professional assessment. Stop using the affected point and describe exactly what changed before the fault appeared.",
+          "A planned outlet addition or a single failed lamp is different from a condition that may affect the panel, wiring, or several rooms. Separating those cases during the first call helps prioritize the visit correctly.",
+        ],
+        bullets: [
+          "Where the symptom appears and which rooms have lost power.",
+          "Whether heat, smell, noise, smoke, moisture, or sparking is present.",
+          "What appliance or renovation change happened before the fault.",
+          "Whether the main switch or one circuit breaker is affected.",
+        ],
+      },
+    ],
     primaryKeyword: "emergency electrician tirana",
     secondaryKeywords: [
       "electrician 24/7 tirana",
@@ -236,6 +253,21 @@ export const englishServicePages = [
       "English-friendly electrical support for foreign residents who want a quick answer, a fair scope, and no language barrier.",
     summary:
       "This page is for foreign residents who want clear English communication, realistic timing, and reliable electrical work without language friction. It covers both small repairs and bigger jobs for apartments, villas, rentals, and business spaces used by expats.",
+    detailSections: [
+      {
+        title: "Preparing an English-language service request",
+        paragraphs: [
+          "Send the neighborhood, property type, and a plain description of the issue. Photos of the panel or affected point can provide context, but they do not replace an on-site diagnosis.",
+          "For move-ins and handovers, identify what must work immediately and what can be planned as a later upgrade. This keeps urgent repairs separate from optional improvements and makes the scope easier to understand in English.",
+        ],
+        bullets: [
+          "Your Tirana neighborhood and access instructions.",
+          "Whether you own, rent, or manage the property.",
+          "The affected socket, light, appliance, circuit, or room.",
+          "Any deadline linked to moving in, travel, or a tenancy handover.",
+        ],
+      },
+    ],
     primaryKeyword: "electrician in tirana for expats",
     secondaryKeywords: [
       "english speaking electrician albania",
@@ -313,6 +345,21 @@ export const englishServicePages = [
       "Fast, practical electrical support for hosts and property managers who need the next guest to arrive to a working, safe apartment.",
     summary:
       "This page is for short-term rental operators who need fast electrical help between bookings, before check-in, or after a guest reports a problem. The focus is on guest readiness, safety, and fixing the small issues that can quickly turn into bad reviews.",
+    detailSections: [
+      {
+        title: "Electrical priorities between guest stays",
+        paragraphs: [
+          "Turnover work should focus first on faults that affect safe use and the next check-in: loose or hot sockets, failed lighting in essential areas, repeated breaker trips, and equipment that no longer powers on normally.",
+          "Keep planned upgrades separate from same-day repairs. A simple record of the room, symptom, action taken, and test result makes recurring issues easier to compare across future turnovers.",
+        ],
+        bullets: [
+          "Checkout and next check-in times.",
+          "The guest report and the exact room involved.",
+          "Whether the fault can be reproduced after reset.",
+          "Any repeat issue already reported in the same unit.",
+        ],
+      },
+    ],
     primaryKeyword: "airbnb electrician tirana",
     secondaryKeywords: [
       "electrical safety check airbnb tirana",
@@ -389,6 +436,21 @@ export const englishServicePages = [
       "Clear, practical electrical support for landlords and property managers who need safer handovers and fewer repeat calls from tenants.",
     summary:
       "This page is for landlords and property managers who want cleaner handovers, fewer repeat tenant issues, and one trusted electrical contact for rental properties. It focuses on inspections, repairs, and maintenance that reduce surprises between tenants.",
+    detailSections: [
+      {
+        title: "A clearer electrical handover",
+        paragraphs: [
+          "A handover check should start with the panel, visible damage, sockets and switches used every day, fixed lighting, and any fault reported by the previous tenant. The goal is to separate immediate safety work from maintenance that can be scheduled.",
+          "For several properties, use the same short record for each unit: reported issue, finding, repair, test result, and any follow-up. Consistent notes reduce ambiguity between owner, manager, and tenant.",
+        ],
+        bullets: [
+          "Move-out findings and unresolved tenant reports.",
+          "Rooms or circuits changed during renovation.",
+          "Appliances or loads included with the tenancy.",
+          "The date the next tenant receives the property.",
+        ],
+      },
+    ],
     primaryKeyword: "electrician for landlords tirana",
     secondaryKeywords: [
       "electrician for rental property tirana",
@@ -456,8 +518,7 @@ export const englishServicePages = [
     locale: "en-US",
     pageType: "audience",
     title: "Electrician for Offices and Shops in Tirana",
-    metaTitle:
-      "Electrician for Offices and Shops in Tirana | Commercial Help",
+    metaTitle: "Electrician for Offices & Shops in Tirana",
     metaDescription:
       "Electrician for offices and shops in Tirana for commercial repairs, lighting, panel work, extra circuits, and maintenance.",
     h1: "Electrician for Offices and Shops in Tirana",
@@ -465,6 +526,21 @@ export const englishServicePages = [
       "Commercial electrical help for offices, shops, and small business spaces that need stable power and less downtime.",
     summary:
       "This page is for business owners and managers who need practical electrical work with minimal disruption. It focuses on uptime, lighting, extra capacity, and repairs that keep offices, shops, and customer-facing spaces working smoothly.",
+    detailSections: [
+      {
+        title: "Planning work around business operations",
+        paragraphs: [
+          "Office and retail work needs a clear list of circuits and equipment that cannot be interrupted. Identify tills, network equipment, refrigeration, workstations, signs, and customer lighting before deciding when a circuit can be isolated.",
+          "Extra sockets or equipment should not be added without checking the existing circuit and panel capacity. Planning the load first reduces the risk of moving the problem from one outlet to another.",
+        ],
+        bullets: [
+          "Opening hours and the least disruptive work window.",
+          "Equipment that must remain powered.",
+          "New desks, displays, signs, or appliances being added.",
+          "Circuits or breakers linked to previous interruptions.",
+        ],
+      },
+    ],
     primaryKeyword: "commercial electrician tirana",
     secondaryKeywords: [
       "office electrician tirana",
@@ -541,6 +617,21 @@ export const englishServicePages = [
       "Safe, practical EV charger installation for homes and businesses in Tirana that need the charger, panel, cable route, and daily charging routine planned the right way.",
     summary:
       "This page is for EV owners and businesses that need a charger installed safely, with the right load check, protection, cable route, and parking setup. It should stand apart from generic EV pages because it answers the practical local questions first: can the panel carry the load, where should the charger sit, and how should the line be protected for everyday use.",
+    detailSections: [
+      {
+        title: "What determines a safe home charger installation",
+        paragraphs: [
+          "The charger rating is only one part of the decision. The existing panel, available supply, cable route, parking position, protection devices, and how the vehicle is used all affect the installation.",
+          "Apartment buildings may also require permission for shared areas and a practical route from the meter or panel to the parking space. Those constraints should be checked before choosing hardware.",
+        ],
+        bullets: [
+          "Vehicle model and expected charging schedule.",
+          "Single-phase or three-phase supply, if known.",
+          "Distance between the panel and parking position.",
+          "Ownership or permission constraints in shared buildings.",
+        ],
+      },
+    ],
     primaryKeyword: "ev charger installation tirana",
     secondaryKeywords: [
       "home ev charger tirana",
@@ -617,6 +708,21 @@ export const englishServicePages = [
       "Solar work that starts with the property, the roof, the panel, and the real daily load instead of a generic kit-and-go approach.",
     summary:
       "This page is for property owners who want solar planning grounded in roof fit, electrical capacity, shade exposure, and realistic daily use. It should stand apart from broader energy content because it focuses on the practical local decision: whether the property in Tirana or nearby areas is a good fit, how the panel should be prepared, and what size system actually makes sense.",
+    detailSections: [
+      {
+        title: "What should be checked before sizing solar",
+        paragraphs: [
+          "A useful solar assessment starts with consumption, roof orientation, shade, available mounting area, and the condition of the existing electrical panel. Panel count alone does not show whether the system matches the property.",
+          "The design should also account for when electricity is used, whether future EV charging is planned, and how the solar equipment will connect to the existing installation. These choices affect capacity and integration.",
+        ],
+        bullets: [
+          "Recent electricity consumption or bills.",
+          "Roof orientation, shade, and usable area.",
+          "Existing panel condition and available space.",
+          "Future loads such as EV charging, heating, or business equipment.",
+        ],
+      },
+    ],
     primaryKeyword: "solar panel installation tirana",
     secondaryKeywords: [
       "solar electrician albania",

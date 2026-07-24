@@ -5,6 +5,12 @@ export type FAQItem = {
   answer: string;
 };
 
+export type ServiceDetailSection = {
+  title: string;
+  paragraphs: readonly string[];
+  bullets?: readonly string[];
+};
+
 export type ServicePage = {
   slug: string;
   locale: PageLocale;
@@ -24,6 +30,7 @@ export type ServicePage = {
   relatedServiceSlugs: readonly string[];
   relatedGuideSlugs: readonly string[];
   callToAction: string;
+  detailSections?: readonly ServiceDetailSection[];
   alternateSlug?: string;
 };
 

@@ -4,12 +4,12 @@ import { guidePages } from "@/lib/content/guides";
 
 const MAX_GUIDES = 6;
 const PRIORITY_GUIDE_SLUGS = [
+  "shenja-per-elektricist-urgjent",
+  "si-te-zgjedhesh-elektricist",
   "sa-kushton-instalimi-elektrik-ne-apartament",
   "si-zgjidhet-paneli-elektrik",
   "si-zgjidhet-karikuesi-ev-per-shtepi",
-  "what-to-check-before-buying-an-apartment-in-tirana-electrical-system-edition",
-  "can-you-install-an-ev-charger-in-an-apartment-building-in-albania",
-  "how-to-hire-an-electrician-in-tirana-as-a-foreign-resident",
+  "sa-panele-diellore-duhen-per-shtepi",
 ] as const;
 
 const guidePriority = new Map<string, number>(

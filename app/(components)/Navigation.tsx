@@ -47,7 +47,9 @@ export default function Navigation({
                 src={logo}
                 alt="Alex Elektrik"
                 fill
-                priority
+                loading="eager"
+                fetchPriority="low"
+                quality={60}
                 sizes="128px"
                 className="object-contain object-left"
               />

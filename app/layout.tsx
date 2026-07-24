@@ -6,7 +6,8 @@ import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
-  display: "swap",
+  display: "optional",
+  preload: false,
   variable: "--font-inter",
 });
 
@@ -31,7 +32,7 @@ export default function RootLayout({
         className={`${inter.variable} bg-background font-sans text-foreground antialiased`}>
         <div className="min-h-screen bg-background">
           {children}
-          <Analytics />
+          {process.env.VERCEL === "1" ? <Analytics /> : null}
         </div>
       </body>
     </html>

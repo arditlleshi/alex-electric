@@ -165,4 +165,4 @@ This repository is built to show more than a finished UI. It highlights the abil
 
 The website is live and production-oriented. Future improvements can include richer visual case studies, deeper analytics dashboards, additional city pages, more guide content, and expanded service proof sections.
 
-The canonical domain is `https://alexelektrik.al`. The former `alex-electric.com` domain is no longer used or redirected; SEO work continues as a rebuild on the `.al` domain only.
+The canonical domain is `https://alexelektrik.al`.

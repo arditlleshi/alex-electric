@@ -12,6 +12,7 @@ import {
   getAlbanianServicePage,
   type AlbanianServiceSlug,
 } from "@/lib/content/albanian-services";
+import { getServiceHref } from "@/lib/content/site-helpers";
 import CommercialElectric from "@/public/icons/commercial-electric.png";
 import ElectricCar from "@/public/icons/ev-charger.png";
 import Maintenance from "@/public/icons/maintenance.png";
@@ -33,12 +34,12 @@ const primaryServiceCards: {
   summary: string;
 }[] = [
   {
-    slug: "elektricist-tirane",
-    title: "Elektricist në Tiranë",
+    slug: "riparime-elektrike-tirane",
+    title: "Riparime Elektrike në Tiranë",
     image: ResidentialElectric,
-    eyebrow: "Tiranë",
+    eyebrow: "Riparime",
     summary:
-      "Për apartamente, shtëpi dhe biznese në Tiranë që kanë nevojë për riparime elektrike, instalime, diagnostikim ose kontroll sigurie.",
+      "Për priza, çelësa, ndriçim, linja dhe defekte të përditshme që duhen diagnostikuar dhe riparuar në mënyrë të sigurt.",
   },
   {
     slug: "mirembajtje-elektrike-biznese",
@@ -231,7 +232,7 @@ export default function ServicesSection() {
                     Telefono tani
                   </TrackedContactLink>
                   <Link
-                    href={`/sherbime/${service.slug}`}
+                    href={getServiceHref(service)}
                     className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border border-border bg-surface px-4 text-sm font-semibold text-muted-strong transition-[background-color,border-color,color] duration-200 hover:border-electric-200 hover:bg-electric-50 hover:text-electric-700">
                     Më shumë detaje
                     <ArrowRight aria-hidden="true" className="h-4 w-4" />

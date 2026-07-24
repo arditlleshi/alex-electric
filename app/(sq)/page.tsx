@@ -59,21 +59,18 @@ export const metadata: Metadata = {
 const homepageJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
-      {
-        "@type": "LocalBusiness",
-        "@id": LOCAL_BUSINESS_ID,
-        name: ORGANIZATION_NAME,
-        url: SITE_URL,
-        image: ORGANIZATION_LOGO_URL,
-        logo: ORGANIZATION_LOGO_URL,
-        telephone: CONTACT_PHONE_NUMBER,
-        priceRange: "$$",
+    {
+      "@type": "LocalBusiness",
+      "@id": LOCAL_BUSINESS_ID,
+      name: ORGANIZATION_NAME,
+      url: SITE_URL,
+      image: ORGANIZATION_LOGO_URL,
+      logo: ORGANIZATION_LOGO_URL,
+      telephone: CONTACT_PHONE_NUMBER,
       areaServed: ["Tiranë"],
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Tiranë",
         addressLocality: "Tiranë",
-        postalCode: "1001",
         addressCountry: "AL",
       },
       geo: {

@@ -5,6 +5,7 @@ import TrackedContactLink from "./TrackedContactLink";
 import WhatsAppIcon from "./WhatsAppIcon";
 import { albanianServicePages } from "@/lib/content/albanian-services";
 import { englishServicePages } from "@/lib/content/english-services";
+import { getServiceHref } from "@/lib/content/site-helpers";
 import {
   CONTACT_PHONE_DISPLAY,
   CONTACT_PHONE_HREF,
@@ -21,7 +22,7 @@ const quickLinks = [
 ];
 
 const featuredServiceSlugs = new Set([
-  "elektricist-tirane",
+  "riparime-elektrike-tirane",
   "elektricist-urgjent-tirane",
   "karikues-ev-tirane",
 ]);
@@ -108,7 +109,7 @@ export default async function Footer() {
                 {featuredServices.map((service) => (
                   <li key={service.slug}>
                     <Link
-                      href={`/sherbime/${service.slug}`}
+                      href={getServiceHref(service)}
                       className="group inline-flex min-h-9 items-center gap-2 text-sm text-slate-300 transition-colors duration-200 hover:text-white">
                       <ArrowRight
                         aria-hidden="true"
@@ -140,7 +141,7 @@ export default async function Footer() {
                 {featuredEnglishPages.map((service) => (
                   <li key={service.slug}>
                     <Link
-                      href={service.path}
+                      href={getServiceHref(service)}
                       className="group inline-flex min-h-9 items-center gap-2 text-sm text-slate-300 transition-colors duration-200 hover:text-white">
                       <ArrowRight
                         aria-hidden="true"

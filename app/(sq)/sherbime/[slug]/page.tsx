@@ -7,6 +7,7 @@ import {
 } from "@/lib/content/albanian-services";
 import {
   buildServiceMetadata,
+  getServiceHref,
   getEnglishAlternateService,
   resolveRelatedGuides,
   resolveRelatedServices,
@@ -34,7 +35,7 @@ export async function generateMetadata({
     return {};
   }
 
-  const canonical = `${SITE_URL}/sherbime/${service.slug}`;
+  const canonical = `${SITE_URL}${getServiceHref(service)}`;
   const englishEquivalent = getEnglishAlternateService(service.slug);
 
   return buildServiceMetadata(service, {
@@ -42,7 +43,7 @@ export async function generateMetadata({
     alternates: englishEquivalent
       ? {
           "sq-AL": canonical,
-          "en-US": `${SITE_URL}${englishEquivalent.path}`,
+          "en-US": `${SITE_URL}${getServiceHref(englishEquivalent)}`,
         }
       : undefined,
   });
@@ -60,7 +61,7 @@ export default async function AlbanianServicePage({
     notFound();
   }
 
-  const canonical = `${SITE_URL}/sherbime/${service.slug}`;
+  const canonical = `${SITE_URL}${getServiceHref(service)}`;
   const relatedServices = resolveRelatedServices(service.relatedServiceSlugs);
   const relatedGuides = resolveRelatedGuides(service.relatedGuideSlugs);
 

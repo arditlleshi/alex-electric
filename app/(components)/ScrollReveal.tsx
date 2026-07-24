@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useInView, useAnimation, Variant } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { useEffect, useRef, type CSSProperties } from "react";
 
 interface ScrollRevealProps {
   children: React.ReactNode;
@@ -22,53 +21,60 @@ export default function ScrollReveal({
   duration = 0.45,
   once = true,
 }: ScrollRevealProps) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once });
-  const mainControls = useAnimation();
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (isInView) {
-      mainControls.start("visible");
-    } else if (!once) {
-      mainControls.start("hidden");
-    }
-  }, [isInView, mainControls, once]);
+    const node = ref.current;
 
-  const variants: Record<string, { hidden: Variant; visible: Variant }> = {
-    "fade-up": {
-      hidden: { opacity: 0, y: 36 },
-      visible: { opacity: 1, y: 0 },
-    },
-    "fade-in": {
-      hidden: { opacity: 0 },
-      visible: { opacity: 1 },
-    },
-    "slide-left": {
-      hidden: { opacity: 0, x: -36 },
-      visible: { opacity: 1, x: 0 },
-    },
-    "slide-right": {
-      hidden: { opacity: 0, x: 36 },
-      visible: { opacity: 1, x: 0 },
-    },
-    "scale-up": {
-      hidden: { opacity: 0, scale: 0.8 },
-      visible: { opacity: 1, scale: 1 },
-    },
-  };
+    if (!node) {
+      return;
+    }
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
+    node.dataset.revealState = "hidden";
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          node.dataset.revealState = "visible";
+
+          if (once) {
+            observer.disconnect();
+          }
+        } else if (!once) {
+          node.dataset.revealState = "hidden";
+        }
+      },
+      {
+        rootMargin: "0px 0px -8% 0px",
+        threshold: 0.08,
+      },
+    );
+
+    observer.observe(node);
+
+    return () => observer.disconnect();
+  }, [once]);
+
+  const style = {
+    position: "relative",
+    width,
+    overflow: "visible",
+    "--reveal-delay": `${delay}s`,
+    "--reveal-duration": `${duration}s`,
+  } as CSSProperties;
 
   return (
     <div
       ref={ref}
-      style={{ position: "relative", width, overflow: "visible" }}
-      className={className}>
-      <motion.div
-        variants={variants[animation]}
-        initial="hidden"
-        animate={mainControls}
-        transition={{ duration, delay, ease: "easeOut" }}>
-        {children}
-      </motion.div>
+      style={style}
+      className={`scroll-reveal ${className ?? ""}`}
+      data-reveal-animation={animation}
+      data-reveal-state="visible">
+      <div className="scroll-reveal__content">{children}</div>
     </div>
   );
 }

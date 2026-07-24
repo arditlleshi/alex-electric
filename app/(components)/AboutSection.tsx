@@ -41,10 +41,10 @@ function FeatureCard({
 }
 
 const operationalMetrics = [
-  { value: "15+", label: "vite përvojë si elektricist" },
-  { value: "24/7", label: "shërbim emergjence" },
-  { value: "<1h", label: "përgjigje e shpejtë në Tiranë" },
-  { value: "100%", label: "kontroll final para dorëzimit" },
+  { value: "Tiranë", label: "zona kryesore e shërbimit" },
+  { value: "SQ / EN", label: "komunikim në shqip dhe anglisht" },
+  { value: "Telefon", label: "kontakt i drejtpërdrejtë dhe WhatsApp" },
+  { value: "Testim", label: "kontroll i punës para dorëzimit" },
 ];
 
 const workProtocol = [

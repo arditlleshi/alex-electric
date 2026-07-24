@@ -7,6 +7,7 @@ export interface ServiceFAQ {
 
 export interface AlbanianServicePageEntry {
   slug: string;
+  path?: string;
   locale: ServiceLocale;
   title: string;
   metaTitle: string;
@@ -27,14 +28,15 @@ export interface AlbanianServicePageEntry {
 }
 
 export const albanianGuideSlugs = {
-  urgentElectrician: "/blog/kur-duhet-elektricist-urgjent",
-  breakersFrequent: "/blog/siguresat-bien-shpesh",
-  hotSocket: "/blog/priza-nxehet-ose-digjet",
-  flickeringLights: "/blog/dritat-pulsojne-ne-shtepi",
+  urgentElectrician: "/blog/shenja-per-elektricist-urgjent",
+  breakersFrequent: "/blog/si-zgjidhet-paneli-elektrik",
+  hotSocket: "/blog/shenja-per-elektricist-urgjent",
+  flickeringLights: "/blog/instalime-elektrike-shtepi-zyra-biznese",
   installCost: "/blog/sa-kushton-instalimi-elektrik-ne-apartament",
   panelGuide: "/blog/si-zgjidhet-paneli-elektrik",
   evChargerGuide: "/blog/si-zgjidhet-karikuesi-ev-per-shtepi",
   solarGuide: "/blog/sa-panele-diellore-duhen-per-shtepi",
+  solarInstallation: "/blog/instalimi-i-panelit-diellor",
 } as const;
 
 export type AlbanianGuideSlug =
@@ -43,6 +45,7 @@ export type AlbanianGuideSlug =
 export const albanianServicePages = [
   {
     slug: "elektricist-tirane",
+    path: "/",
     locale: "sq-AL",
     title: "Elektricist në Tiranë",
     metaTitle: "Elektricist në Tiranë | Instalime, Riparime & Emergjenca",
@@ -198,7 +201,7 @@ export const albanianServicePages = [
     slug: "riparime-elektrike-tirane",
     locale: "sq-AL",
     title: "Riparime Elektrike ne Tiranë",
-    metaTitle: "Riparime Elektrike ne Tiranë | Priza, Celesa, Linja & Defekte",
+    metaTitle: "Riparime Elektrike në Tiranë | Priza & Defekte",
     metaDescription:
       "Riparime elektrike ne Tiranë per priza, celesa, linja, ndriçim, qark te shkurter, siguresa dhe probleme te perditshme elektrike.",
     h1: "Riparime Elektrike ne Tiranë",
@@ -417,7 +420,7 @@ export const albanianServicePages = [
     slug: "panele-diellore-tirane",
     locale: "sq-AL",
     title: "Panele Diellore në Tiranë",
-    metaTitle: "Panele Diellore në Tiranë | Projektim, Instalim dhe Mirëmbajtje",
+    metaTitle: "Panele Diellore Tiranë | Instalim & Mirëmbajtje",
     metaDescription:
       "Panele diellore në Tiranë për shtëpi, vila dhe biznese. Projektim, instalim, lidhje të sigurt me panelin elektrik dhe mirëmbajtje të sistemit fotovoltaik.",
     h1: "Panele Diellore në Tiranë",
@@ -481,6 +484,7 @@ export const albanianServicePages = [
     ],
     relatedGuideSlugs: [
       albanianGuideSlugs.solarGuide,
+      albanianGuideSlugs.solarInstallation,
       albanianGuideSlugs.installCost,
       albanianGuideSlugs.panelGuide,
     ],
@@ -785,7 +789,7 @@ export const albanianServicePages = [
     title: "Mirëmbajtje Elektrike per Biznese",
     metaTitle: "Mirëmbajtje Elektrike per Biznese | Zyra, Dyqane & Lokale",
     metaDescription:
-      "Mirëmbajtje elektrike per biznese ne Tiranë per zyra, dyqane, restorante, lokale dhe objekte qe kerkojne stabilitet.",
+      "Mirëmbajtje elektrike për biznese në Tiranë: kontrolle periodike, riparime parandaluese dhe mbështetje për zyra, dyqane, restorante e lokale.",
     h1: "Mirëmbajtje Elektrike per Biznese",
     hero:
       "Mirëmbajtje elektrike per biznese qe duan vazhdimesi pune dhe parandalim te nderprerjeve qe kushtojne kohe e para.",
@@ -932,7 +936,7 @@ export const albanianServicePages = [
     title: "Elektricist per Apartamente",
     metaTitle: "Elektricist per Apartamente | Kontroll, Riparim & Instalime",
     metaDescription:
-      "Elektricist per apartamente ne Tiranë per kontroll, riparime, instalime, shtim pikash dhe permiresim te instalimit.",
+      "Elektricist për apartamente në Tiranë për kontrolle sigurie, riparime, instalime, shtim prizash dhe përmirësim të panelit elektrik.",
     h1: "Elektricist per Apartamente",
     hero:
       "Elektricist për apartamente në Tiranë për pronarë, blerës dhe qiramarrës që duan kontroll të qartë, riparime të sigurta dhe përmirësime praktike para hyrjes në pronë, para qiradhënies ose gjatë përdorimit të përditshëm.",
@@ -1077,7 +1081,7 @@ export const albanianServicePages = [
     title: "Elektricist per Restorante dhe Hotele",
     metaTitle: "Elektricist për Restorante & Hotele | Tiranë",
     metaDescription:
-      "Elektricist për restorante dhe hotele ne Tiranë për ndriçim, kuzhine, panele dhe mirëmbajtje.",
+      "Elektricist për restorante dhe hotele në Tiranë për kuzhina, ndriçim, panele, defekte urgjente dhe mirëmbajtje me sa më pak ndërprerje.",
     h1: "Elektricist për Restorante dhe Hotele",
     hero:
       "Elektricist per restorante dhe hotele ku një defekt i vogël mund të prishë shërbimin, rezervimet ose eksperiencën e klientit.",
@@ -1150,7 +1154,7 @@ export const albanianServicePages = [
     title: "Elektricist për Zyra dhe Dyqane",
     metaTitle: "Elektricist për Zyra dhe Dyqane | Tiranë",
     metaDescription:
-      "Elektricist për zyra dhe dyqane ne Tiranë per instalime, riparime, ndriçim, panel dhe mirëmbajtje te vazhdueshme.",
+      "Elektricist për zyra dhe dyqane në Tiranë për instalime, riparime, ndriçim, panele elektrike dhe mirëmbajtje pa penguar aktivitetin.",
     h1: "Elektricist për Zyra dhe Dyqane",
     hero:
       "Shërbim elektrik për zyra dhe dyqane në Tiranë që kanë nevojë për ndriçim të mirë, stabilitet në punë dhe riparime ose instalime që bëhen me sa më pak ndërprerje për aktivitetin e përditshëm.",
