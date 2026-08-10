@@ -6,13 +6,6 @@ export const metadata: Metadata = {
   description:
     "English electrical services in Tirana for emergencies, rentals, expat support, EV chargers, solar projects, and property maintenance.",
   metadataBase: new URL(SITE_URL),
-  keywords: [
-    "electrician in tirana",
-    "english speaking electrician tirana",
-    "emergency electrician tirana",
-    "ev charger installation tirana",
-    "solar panel installation tirana",
-  ],
   authors: [
     {
       name: "Alex Elektrik",

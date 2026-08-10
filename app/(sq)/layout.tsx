@@ -6,14 +6,6 @@ export const metadata: Metadata = {
   description:
     "Shërbime elektrike në Tiranë për urgjenca, riparime, instalime, EV, solar dhe suport në anglisht.",
   metadataBase: new URL(SITE_URL),
-  keywords: [
-    "sherbime elektrike tirane",
-    "instalime elektrike",
-    "riparime elektrike tirane",
-    "smart home tirane",
-    "karikues ev tirane",
-    "panele diellore tirane",
-  ],
   authors: [
     {
       name: "Alex Elektrik",

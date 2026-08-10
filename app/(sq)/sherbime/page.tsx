@@ -20,18 +20,6 @@ const PRIORITY_SERVICE_SLUGS = [
   "karikues-ev-tirane",
   "panele-diellore-tirane",
 ] as const;
-const SERVICE_HUB_KEYWORDS = [
-  "sherbime elektrike tirane",
-  "elektricist ne tirane",
-  "elektricist urgjent tirane",
-  "riparime elektrike tirane",
-  "instalime elektrike tirane",
-  "elektricist per apartamente",
-  "panel elektrik tirane",
-  "karikues ev tirane",
-  "panele diellore tirane",
-] as const;
-
 const servicePriority = new Map<string, number>(
   PRIORITY_SERVICE_SLUGS.map((slug, index) => [slug, index]),
 );
@@ -54,12 +42,11 @@ export const metadata: Metadata = {
   description:
     "Gjeni shërbimin e duhur elektrik në Tiranë për urgjenca, riparime, instalime, panele elektrike, apartamente, biznese, karikues EV dhe panele diellore.",
   metadataBase: new URL(SITE_URL),
-  keywords: [...SERVICE_HUB_KEYWORDS],
   alternates: {
     canonical: SERVICES_URL,
     languages: {
       "sq-AL": SERVICES_URL,
-      "en-US": `${SITE_URL}/en/services`,
+      en: `${SITE_URL}/en/services`,
     },
   },
   openGraph: {
@@ -106,7 +93,6 @@ export default function ServicesHubPage() {
         inLanguage: "sq-AL",
         description:
           "Faqe qëndrore me shërbimet elektrike të Alex Elektrik për shtëpi, apartamente, vila, prona me qira, biznese dhe projekte energjie në Tiranë.",
-        keywords: [...SERVICE_HUB_KEYWORDS].join(", "),
         isPartOf: {
           "@id": WEBSITE_ID,
         },

@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: EN_URL,
     languages: {
-      "en-US": EN_URL,
+      en: EN_URL,
       "sq-AL": SITE_URL,
       "x-default": SITE_URL,
     },
@@ -91,7 +91,7 @@ const collectionSchema = {
       name: "English-Speaking Electrician in Tirana",
       description:
         "English overview page with links to service pages, audience pages, and guides.",
-      inLanguage: "en-US",
+      inLanguage: "en",
       isPartOf: {
         "@id": WEBSITE_ID,
       },
@@ -229,12 +229,12 @@ export default function EnglishPage() {
                 How this page helps
               </p>
               <h2 className="mt-2 text-2xl font-semibold leading-tight text-foreground">
-                The clearest way to choose the right page first
+                Tell us what is happening at the property
               </h2>
               <p className="mt-4 text-sm leading-6 text-muted">
-                Use one main service page and one supporting guide before you
-                call. That usually makes the first conversation shorter and the
-                likely scope easier to understand.
+                Share the neighborhood, property type, affected room or
+                equipment, and any heat, smell, sparking, or breaker trips. A
+                few clear details help us prepare for the visit.
               </p>
             </div>
 
@@ -274,11 +274,11 @@ export default function EnglishPage() {
               larger upgrade.
             </p>
             <p className="mt-4 text-base leading-7 text-muted sm:text-lg">
-              In Tirana, wasted time usually comes from a mismatch
-              between the search term and the actual problem. Use the service
-              pages below to narrow that down, then open one guide and one
-              service page before you call so the first conversation starts with
-              the right context.
+              Electrical symptoms can have very different causes. A breaker
+              that trips may point to one faulty appliance, an overloaded
+              circuit, damaged wiring, or a panel issue. Describe what happens
+              and when it happens so the first assessment starts with useful
+              context.
             </p>
           </article>
           <aside className="rounded-lg border border-border bg-surface-raised p-8 shadow-sm">
@@ -315,8 +315,9 @@ export default function EnglishPage() {
               Primary service pages for English-speaking visitors
             </h2>
             <p className="mt-5 max-w-3xl text-pretty text-base leading-7 text-muted sm:text-lg">
-              These are the main entry points for urgent work, location-specific
-              demand, and higher-intent service searches.
+              Choose urgent help for active faults, or open the relevant page
+              for planned work such as EV charging, solar, rental maintenance,
+              or commercial electrical support.
             </p>
           </div>
 

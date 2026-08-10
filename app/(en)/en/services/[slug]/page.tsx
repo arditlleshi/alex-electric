@@ -20,7 +20,9 @@ import {
 } from "@/lib/seo";
 
 export function generateStaticParams() {
-  return englishServicePageSlugs.map((slug) => ({ slug }));
+  return englishServicePageSlugs
+    .filter((slug) => slug !== "electrician-tirana")
+    .map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -42,7 +44,7 @@ export async function generateMetadata({
     canonical,
     alternates: albanianEquivalent
       ? {
-          "en-US": canonical,
+          en: canonical,
           "sq-AL": `${SITE_URL}${getServiceHref(albanianEquivalent)}`,
         }
       : undefined,

@@ -38,6 +38,7 @@ function toTemplateGuide(guide: GuidePageEntry): GuidePage {
     excerpt: guide.excerpt,
     eyebrow: guide.eyebrow,
     date: guide.date,
+    updatedAt: guide.updatedAt,
     primaryKeyword: guide.primaryKeyword,
     secondaryKeywords: guide.secondaryKeywords,
     audience: guide.audience,
@@ -64,7 +65,6 @@ export function buildGuideMetadata(slug: string): Metadata {
     title: metadataTitle,
     description: guide.metaDescription,
     metadataBase: new URL(SITE_URL),
-    keywords: [guide.primaryKeyword, ...guide.secondaryKeywords],
     alternates: {
       canonical,
     },
@@ -132,8 +132,8 @@ export function renderGuidePage(
         description: guide.metaDescription,
         url: canonical,
         datePublished: new Date(guide.date).toISOString(),
-        dateModified: new Date(guide.date).toISOString(),
-        inLanguage: guide.locale,
+        dateModified: new Date(guide.updatedAt ?? guide.date).toISOString(),
+        inLanguage: guide.locale === "en-US" ? "en" : guide.locale,
         image: getOpenGraphImageUrl(`/blog/${guide.slug}`),
         author: {
           "@type": "Organization",

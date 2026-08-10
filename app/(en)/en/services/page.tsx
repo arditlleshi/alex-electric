@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: EN_SERVICES_URL,
     languages: {
-      "en-US": EN_SERVICES_URL,
+      en: EN_SERVICES_URL,
       "sq-AL": `${SITE_URL}/sherbime`,
     },
   },
@@ -127,13 +127,13 @@ export default function EnglishServicesHubPage() {
         title="English electrical services for Tirana"
         description="Find the right English-language page for emergency electrical work, repairs, rentals, expat support, EV chargers, solar projects, and business properties in Tirana."
         introParagraphs={[
-          "Start with the strongest core pages first: Tirana, emergency work, EV chargers, and solar projects. Those pages cover the clearest English search intent and are usually the best first stop before moving to a narrower audience page.",
-          "More specific pages for expats, landlords, Airbnb hosts, and offices are still available below. They help when the situation is more specific, but the core pages are the best starting point for most visitors.",
+          "Choose the service that matches the property and the work: urgent fault finding, planned electrical work, EV charging, solar, rental maintenance, or commercial support.",
+          "If you are unsure, send the property type, Tirana neighborhood, a short description of the problem, and clear photos of the panel or affected point. We can then advise which service is the right starting point.",
         ]}
         highlights={[
-          "Core English service pages are shown first for the strongest search demand.",
-          "Audience pages stay available as support for rentals, expats, and business use.",
-          "Built to help English-speaking visitors reach the right page before they call.",
+          "Clear English communication before and during the visit.",
+          "Support for homes, rentals, offices, shops, EV chargers, and solar projects.",
+          "A practical first assessment based on the fault, property, panel, and required work.",
         ]}
         cards={cards}
         breadcrumbs={[

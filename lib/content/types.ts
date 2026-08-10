@@ -49,6 +49,7 @@ export type GuidePage = {
   excerpt: string;
   eyebrow: string;
   date: string;
+  updatedAt?: string;
   primaryKeyword: string;
   secondaryKeywords: readonly string[];
   audience?: string;

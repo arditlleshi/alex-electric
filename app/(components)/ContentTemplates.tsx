@@ -211,22 +211,11 @@ export function ServicePageTemplate({
 
             <MutedCard className="border-electric-100 bg-electric-50/60 p-6">
               <h2 className="text-xl font-semibold text-foreground">
-                {isEnglish ? "Good fit for" : "E përshtatshme për"}
+                {isEnglish ? "Service overview" : "Përmbledhje e shërbimit"}
               </h2>
               <p className="mt-4 text-sm leading-6 text-muted sm:text-base">
                 {service.summary}
               </p>
-              <ul className="mt-5 space-y-3">
-                {service.whenToCall.slice(0, 4).map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm leading-6 text-muted">
-                    <CheckCircle2
-                      aria-hidden="true"
-                      className="mt-0.5 h-4 w-4 shrink-0 text-electric-700"
-                    />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
               <div className="mt-6 rounded-lg border border-electric-100 bg-surface px-4 py-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
                 {isEnglish ? "Best next step" : "Hapi më i mirë"}
@@ -321,60 +310,7 @@ export function ServicePageTemplate({
               ) : null}
             </section>
           ))
-        ) : (
-          <section className="mt-12 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-            <SurfaceCard>
-              <h2 className="text-2xl font-semibold text-foreground">
-                {isEnglish
-                  ? "What helps before the visit"
-                  : "Çfarë ndihmon para vizitës"}
-              </h2>
-              <p className="mt-5 text-base leading-7 text-muted sm:text-lg">
-                {isEnglish
-                  ? "The fastest visit starts with a clear description of the symptom: which room is affected, when the problem started, whether breakers trip, and whether there is heat, smell, or visible sparking. That helps separate a quick repair from a wider panel or load problem before the electrician arrives."
-                  : "Ndërhyrja më e shpejtë nis kur simptoma përshkruhet qartë: cili ambient preket, kur nisi problemi, nëse bien siguresat dhe nëse ka nxehje, erë djegieje ose shkëndija. Kjo ndihmon të ndahet një riparim i thjeshtë nga një problem më i gjerë në panel ose në ngarkesë para mbërritjes së elektricistit."}
-              </p>
-              <p className="mt-4 text-base leading-7 text-muted sm:text-lg">
-                {isEnglish
-                  ? "In Tirana many properties combine older wiring, renovation leftovers, and newer heavy appliances on the same installation. A few useful details in the first call usually lead to a shorter visit, a clearer quote, and a safer first intervention."
-                  : "Në Tiranë shumë prona bashkojnë instalime më të vjetra, punime rinovimi të pjesshme dhe pajisje të reja me ngarkesë të lartë në të njëjtin rrjet. Disa detaje të dobishme në telefonatën e parë zakonisht e bëjnë vizitën më të shkurtër, preventivin më të qartë dhe ndërhyrjen fillestare më të sigurt."}
-              </p>
-            </SurfaceCard>
-            <MutedCard>
-              <h2 className="text-2xl font-semibold text-foreground">
-                {isEnglish
-                  ? "Useful details to prepare"
-                  : "Detaje të dobishme për t'i përgatitur"}
-              </h2>
-              <ul className="mt-5 space-y-3">
-                {(isEnglish
-                  ? [
-                      "Property type and the age of the installation if you know it.",
-                      "Which rooms, sockets, lights, or appliances are affected.",
-                      "Whether the issue is constant, comes and goes, or appears under load.",
-                      "Any recent renovation, new appliance, EV plan, or solar work linked to the issue.",
-                    ]
-                  : [
-                      "Lloji i pronës dhe periudha e instalimit nëse e dini.",
-                      "Cilat ambiente, priza, drita ose pajisje preken nga problemi.",
-                      "Nëse defekti është i vazhdueshëm, vjen me ndërprerje ose shfaqet nën ngarkesë.",
-                      "Çdo rinovim, pajisje e re, plan EV ose punë solar që lidhet me situatën.",
-                    ]
-                ).map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-3 text-sm leading-6 text-muted sm:text-base">
-                    <CheckCircle2
-                      aria-hidden="true"
-                      className="mt-0.5 h-5 w-5 shrink-0 text-electric-700"
-                    />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </MutedCard>
-          </section>
-        )}
+        ) : null}
 
         <section className="mt-16" aria-labelledby="service-faq-heading">
           <div className="text-center">
@@ -449,6 +385,19 @@ export function GuidePageTemplate({
                 },
               )}
             </p>
+            {guide.updatedAt && guide.updatedAt !== guide.date ? (
+              <p>
+                {isEnglish ? "Updated" : "Përditësuar"}: {" "}
+                {new Date(guide.updatedAt).toLocaleDateString(
+                  isEnglish ? "en-US" : "sq-AL",
+                  {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  },
+                )}
+              </p>
+            ) : null}
             <p>
               {isEnglish ? "Published by" : "Publikuar nga"}{" "}
               <span className="font-semibold text-muted-strong">

@@ -20,6 +20,10 @@ export type LinkCard = {
 };
 
 export function getServiceHref(service: SiteServicePage) {
+  if (service.slug === "elektricist-tirane") {
+    return "/";
+  }
+
   if (service.path) {
     return service.path;
   }
@@ -97,7 +101,6 @@ export function buildServiceMetadata(
     title: service.metaTitle,
     description: service.metaDescription,
     metadataBase: new URL(SITE_URL),
-    keywords: [service.primaryKeyword, ...service.secondaryKeywords],
     alternates: {
       canonical: options?.canonical,
       languages: options?.alternates,

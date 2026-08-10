@@ -72,7 +72,7 @@ export const englishServicePages = [
     hero:
       "Clear, practical electrical help in Tirana for homeowners, tenants, landlords, and businesses that need one English-speaking electrician for faults, upgrades, handovers, and day-to-day property issues.",
     summary:
-      "This is the main English entry page for Tirana. It is designed for people who need a reliable local electrician for urgent faults, planned repairs, upgrades, apartment move-ins, rental handovers, and small business work without language friction. It should stand apart from the narrower audience pages because it covers the broadest real search intent in English.",
+      "Electrical support in clear English for urgent faults, planned repairs, upgrades, apartment move-ins, rental handovers, and small-business work across Tirana.",
     primaryKeyword: "electrician in tirana",
     secondaryKeywords: [
       "english speaking electrician tirana",
@@ -616,7 +616,7 @@ export const englishServicePages = [
     hero:
       "Safe, practical EV charger installation for homes and businesses in Tirana that need the charger, panel, cable route, and daily charging routine planned the right way.",
     summary:
-      "This page is for EV owners and businesses that need a charger installed safely, with the right load check, protection, cable route, and parking setup. It should stand apart from generic EV pages because it answers the practical local questions first: can the panel carry the load, where should the charger sit, and how should the line be protected for everyday use.",
+      "EV charger installation for homes and businesses, including the panel load check, dedicated protection, cable route, charger position, testing, and guidance for safe daily use.",
     detailSections: [
       {
         title: "What determines a safe home charger installation",
@@ -707,7 +707,7 @@ export const englishServicePages = [
     hero:
       "Solar work that starts with the property, the roof, the panel, and the real daily load instead of a generic kit-and-go approach.",
     summary:
-      "This page is for property owners who want solar planning grounded in roof fit, electrical capacity, shade exposure, and realistic daily use. It should stand apart from broader energy content because it focuses on the practical local decision: whether the property in Tirana or nearby areas is a good fit, how the panel should be prepared, and what size system actually makes sense.",
+      "Solar planning for Tirana properties based on roof fit, shade, daily consumption, electrical capacity, panel integration, and the system size that matches realistic use.",
     detailSections: [
       {
         title: "What should be checked before sizing solar",

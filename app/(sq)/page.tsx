@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
     languages: {
       "sq-AL": SITE_URL,
-      "en-US": `${SITE_URL}/en`,
+      en: `${SITE_URL}/en`,
       "x-default": SITE_URL,
     },
   },
@@ -94,7 +94,7 @@ const homepageJsonLd = {
           closes: "23:59",
         },
       ],
-      knowsLanguage: ["sq-AL", "en-US"],
+      knowsLanguage: ["sq", "en"],
       makesOffer: [
         "Instalime elektrike",
         "Riparime elektrike",
@@ -118,7 +118,7 @@ const homepageJsonLd = {
       "@id": WEBSITE_ID,
       url: SITE_URL,
       name: ORGANIZATION_NAME,
-      inLanguage: ["sq-AL", "en-US"],
+      inLanguage: ["sq", "en"],
     },
     {
       "@type": "FAQPage",

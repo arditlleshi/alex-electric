@@ -1,3 +1,5 @@
+import type { ServiceDetailSection } from "./types";
+
 export type ServiceLocale = "sq-AL";
 
 export interface ServiceFAQ {
@@ -25,6 +27,7 @@ export interface AlbanianServicePageEntry {
   relatedServiceSlugs: readonly string[];
   relatedGuideSlugs: readonly string[];
   callToAction: string;
+  detailSections?: readonly ServiceDetailSection[];
 }
 
 export const albanianGuideSlugs = {
@@ -136,6 +139,20 @@ export const albanianServicePages = [
       "Elektricist urgjent në Tiranë për raste me erë djegieje, panel që nxehet, prize me shkëndija, siguresa që bien dhe ndërprerje të papritura të energjisë. Reagojmë shpejt për ta bërë ambientin të sigurt dhe për të gjetur shkakun e problemit pa humbur kohë.",
     summary:
       "Shërbim urgjent për banesa dhe biznese kur problemi elektrik kërkon reagim të shpejtë, izolim të sigurt të defektit dhe rikthim të energjisë sa më shpejt.",
+    detailSections: [
+      {
+        title: "Si vlerësohet një defekt urgjent",
+        paragraphs: [
+          "Era e djegies, shkëndijat, paneli i nxehtë dhe siguresat që bien përsëri pas rivendosjes kërkojnë kujdes të menjëhershëm. Qëllimi i parë është të izolohet zona me rrezik; vetëm më pas kërkohet shkaku dhe vlerësohet riparimi.",
+          "Tregoni në telefon kur nisi problemi, cilat ambiente preken dhe çfarë pajisjesh ishin në punë. Nëse ka tym, zjarr ose rrezik të drejtpërdrejtë për njerëzit, largohuni nga zona dhe telefononi shërbimet e emergjencës.",
+        ],
+        bullets: [
+          "Foto të panelit dhe pikës së prekur, vetëm nëse mund të bëhen pa rrezik.",
+          "Koha kur nisi defekti dhe nëse përsëritet nën ngarkesë.",
+          "Pajisjet që ishin në përdorim para se të binte siguresa.",
+        ],
+      },
+    ],
     primaryKeyword: "elektricist urgjent tirane",
     secondaryKeywords: [
       "elektricist 24 ore tirane",
@@ -209,6 +226,20 @@ export const albanianServicePages = [
       "Riparime elektrike ne Tiranë per problemet e perditshme qe prishin rehatine dhe sigurinë ne apartamente, vila dhe biznese.",
     summary:
       "Shërbim per riparimet qe nisin me nje prize, celes, drite ose linje problematike, por mund te kthehen shpejt ne defekt me te madh. Qellimi është gjetja e shkakut dhe rikthimi i funksionimit normal me zgjidhje te qarta.",
+    detailSections: [
+      {
+        title: "Riparimi fillon me shkakun, jo vetëm me pjesën",
+        paragraphs: [
+          "Një prizë që nxehet ose një dritë që pulson nuk zgjidhet gjithmonë duke ndërruar vetëm mekanizmin. Kontrollohen lidhjet, gjendja e përçuesve, qarku përkatës dhe ngarkesa që lidhet me të.",
+          "Pas izolimit të qarkut, riparimi testohet në kushtet e përdorimit. Nëse defekti lidhet me panelin ose me një linjë më të gjerë, kjo ndahet qartë nga riparimi fillestar para se të vazhdojë puna.",
+        ],
+        bullets: [
+          "Cila prizë, dritë, pajisje ose zonë ka problem.",
+          "Nëse defekti është i vazhdueshëm apo shfaqet vetëm herë pas here.",
+          "Çdo punim ose pajisje e re e shtuar para se të niste problemi.",
+        ],
+      },
+    ],
     primaryKeyword: "riparime elektrike tirane",
     secondaryKeywords: [
       "riparim prize",
@@ -282,6 +313,20 @@ export const albanianServicePages = [
       "Instalime elektrike në Tiranë për apartamente në rinovim, vila, zyra dhe ndërtime të reja që kanë nevojë për qarqe të organizuara, panel të rregullt dhe kapacitet të mjaftueshëm për kuzhinë, kondicionerë, ndriçim dhe pajisjet e përditshme.",
     summary:
       "Shërbim për instalime të reja, rinovime dhe zgjerime elektrike në apartamente, vila, zyra dhe ambiente pune me plan të qartë, qarqe të organizuara dhe kapacitet për pajisjet moderne.",
+    detailSections: [
+      {
+        title: "Planifikimi para kabllimit ul ndryshimet gjatë punës",
+        paragraphs: [
+          "Para instalimit përcaktohen përdorimi i çdo ambienti, pajisjet me fuqi të lartë, pikat e punës dhe mundësitë për zgjerim. Kuzhina, kondicionerët, bojleri dhe karikuesi EV mund të kërkojnë qarqe të dedikuara dhe mbrojtje të përshtatura.",
+          "Preventivi duhet të tregojë pikat, qarqet, panelin, materialet dhe testimin që përfshihen. Në dorëzim, qarqet duhet të jenë të identifikueshme dhe ndryshimet ndaj planit fillestar të dokumentuara qartë.",
+        ],
+        bullets: [
+          "Planimetria dhe pozicionet e mobilieve e pajisjeve kryesore.",
+          "Lista e pajisjeve me ngarkesë të lartë.",
+          "Nevojat e ardhshme për EV, solar, kondicionim ose smart home.",
+        ],
+      },
+    ],
     primaryKeyword: "instalime elektrike tirane",
     secondaryKeywords: [
       "instalim elektrik apartament",
@@ -428,6 +473,20 @@ export const albanianServicePages = [
       "Instalim panelesh diellore në Tiranë për shtëpi, vila dhe biznese që kërkojnë kursim real, punë të pastër dhe lidhje të sigurt me instalimin elektrik. Vlerësojmë pronën, zgjedhim zgjidhjen e duhur dhe kujdesemi që sistemi të funksionojë mirë edhe pas montimit.",
     summary:
       "Shërbimi mbulon vlerësimin e pronës, projektimin, instalimin, lidhjen me panelin elektrik dhe kontrollin e sistemit fotovoltaik.",
+    detailSections: [
+      {
+        title: "Dimensionimi nis nga prona dhe konsumi real",
+        paragraphs: [
+          "Sipërfaqja e çatisë nuk mjafton për të zgjedhur sistemin. Vlerësohen orientimi, hijezimi, struktura, profili i konsumit dhe mënyra si energjia do të përdoret gjatë ditës.",
+          "Pjesa elektrike përfshin integrimin me panelin, mbrojtjet, inverterin dhe rrugën e kabllove. Një sistem më i madh nuk është automatikisht më i dobishëm nëse prodhimi dhe konsumi nuk përputhen.",
+        ],
+        bullets: [
+          "Faturat e fundit të energjisë dhe konsumi mujor.",
+          "Foto ose plan i çatisë dhe zonave me hije.",
+          "Planet e ardhshme për pompë nxehtësie, EV ose pajisje të tjera.",
+        ],
+      },
+    ],
     primaryKeyword: "panele diellore tirane",
     secondaryKeywords: [
       "instalim panele diellore tirane",
@@ -503,6 +562,20 @@ export const albanianServicePages = [
       "Karikues EV në Tiranë për shtëpi, garazhe, vila dhe biznese që duan karikim të sigurt, zgjedhje të qartë të fuqisë dhe instalim praktik sipas panelit elektrik, vendit të parkimit dhe përdorimit të përditshëm.",
     summary:
       "Shërbimi mbulon kontrollin e panelit, zgjedhjen e fuqisë, rrugën e kabllimit, montimin dhe testimin e karikuesit EV për shtëpi, vila dhe biznese.",
+    detailSections: [
+      {
+        title: "Fuqia e karikuesit duhet të përputhet me instalimin",
+        paragraphs: [
+          "Zgjedhja mes karikimit njëfazor dhe trefazor varet nga furnizimi i pronës, kapaciteti i panelit, makina dhe koha e dëshiruar e karikimit. Para montimit kontrollohen ngarkesat ekzistuese dhe mundësia për një linjë të dedikuar.",
+          "Pozicioni i parkimit, gjatësia e kabllit, mbrojtja sipas kërkesave të prodhuesit dhe menaxhimi i ngarkesës ndikojnë në zgjidhjen përfundimtare. Karikuesi testohet me instalimin real, jo vetëm si pajisje e veçuar.",
+        ],
+        bullets: [
+          "Modeli i makinës dhe fuqia maksimale AC që pranon.",
+          "Fuqia e kontraktuar dhe foto të panelit elektrik.",
+          "Distanca nga paneli te vendi i parkimit dhe mënyra e aksesit.",
+        ],
+      },
+    ],
     primaryKeyword: "karikues ev tirane",
     secondaryKeywords: [
       "instalim karikues ev",
@@ -576,6 +649,20 @@ export const albanianServicePages = [
       "Panel elektrik ne Tiranë per raste kur kuadri, siguresat dhe ndarja e qarqeve kerkojne me shume rregull, qartesi dhe mbrojtje.",
     summary:
       "Shërbim per instalime qe po mbingarkohen ose panele qe jane bere te veshtira per t'u kuptuar dhe mirembajtur. Fokusi është te qartesia, ndarja e qarqeve dhe modernizimi i siguresave sipas ngarkeses reale.",
+    detailSections: [
+      {
+        title: "Çfarë kontrollohet para përmirësimit të panelit",
+        paragraphs: [
+          "Numri i siguresave nuk tregon vetë nëse paneli është i përshtatshëm. Kontrollohen qarqet që furnizon, seksioni dhe gjendja e përçuesve, ngarkesat kryesore, hapësira e lirë dhe mbrojtjet ekzistuese.",
+          "Riorganizimi duhet ta bëjë panelin më të kuptueshëm dhe më të lehtë për testim e mirëmbajtje. Çdo qark etiketohet sipas ambientit ose pajisjes që furnizon dhe ndryshimet verifikohen para dorëzimit.",
+        ],
+        bullets: [
+          "Foto të qarta të panelit me derën hapur, vetëm pa prekur pjesët e brendshme.",
+          "Lista e pajisjeve të fuqishme dhe qarqeve që bien shpesh.",
+          "Planet për kondicionerë, kuzhinë elektrike, solar ose karikues EV.",
+        ],
+      },
+    ],
     primaryKeyword: "panel elektrik tirane",
     secondaryKeywords: [
       "kuader elektrik",
@@ -795,6 +882,20 @@ export const albanianServicePages = [
       "Mirëmbajtje elektrike per biznese qe duan vazhdimesi pune dhe parandalim te nderprerjeve qe kushtojne kohe e para.",
     summary:
       "Shërbim per pronare dhe menaxhere qe duan te shmangin ndaljet e papritura dhe te kene kontroll me te mire mbi instalimin. është i pershtatshem per kontrolle periodike, riparime parandaluese dhe planifikim te rregullt te mirembajtjes.",
+    detailSections: [
+      {
+        title: "Mirëmbajtja planifikohet rreth aktivitetit të biznesit",
+        paragraphs: [
+          "Fillimisht përcaktohen qarqet dhe pajisjet që janë kritike për punën, oraret me fluks dhe ndërhyrjet që mund të kryhen pa ndalur të gjithë aktivitetin. Kontrollet periodike fokusohen te shenjat e nxehjes, lidhjet, paneli, ndriçimi dhe ngarkesat që kanë ndryshuar.",
+          "Pas kontrollit, problemet ndahen sipas urgjencës: rrezik që kërkon ndërhyrje, riparim që mund të planifikohet dhe përmirësim afatgjatë. Kjo i jep menaxherit një listë të qartë pune në vend të ndërhyrjeve të rastësishme.",
+        ],
+        bullets: [
+          "Orari i aktivitetit dhe koha kur lejohet ndërprerja.",
+          "Pajisjet dhe zonat që nuk mund të mbeten pa energji.",
+          "Historiku i defekteve, ndërhyrjeve dhe zgjerimeve të fundit.",
+        ],
+      },
+    ],
     primaryKeyword: "mirëmbajtje elektrike biznesi",
     secondaryKeywords: [
       "mirëmbajtje elektrike",

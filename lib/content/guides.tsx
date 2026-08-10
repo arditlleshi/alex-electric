@@ -37,6 +37,7 @@ export interface GuidePageEntry {
   excerpt: string;
   eyebrow: string;
   date: string;
+  updatedAt?: string;
   primaryKeyword: string;
   secondaryKeywords: readonly string[];
   audience?: string;
@@ -486,46 +487,68 @@ const rawGuidePages = [
     path: blogPath(albanianGuideSlugs.installCost),
     locale: "sq-AL",
     guideType: "planned",
-    title: "Sa kushton instalimi elektrik ne apartament ne Tirane",
+    title: "Sa kushton instalimi elektrik në apartament? Si përgatitet preventivi",
     metaTitle: "Kosto Instalimi Elektrik në Apartament",
     description:
-      "Nje udhezues praktik per te kuptuar cfare ndikon ne koston e instalimit elektrik ne apartament, nga qarqet dhe paneli te puna ne terren.",
+      "Udhëzues praktik për të kuptuar si ndërtohet preventivi i instalimit elektrik, çfarë duhet të përfshijë dhe cilat vendime ndryshojnë koston.",
     metaDescription:
-      "Shihni çfarë ndikon në koston e instalimit elektrik në apartament në Tiranë: qarqet, paneli, pikat elektrike, gjendja ekzistuese dhe puna në terren.",
+      "Mësoni si llogaritet kostoja e instalimit elektrik në apartament në Tiranë, çfarë përfshin preventivi dhe çfarë duhet kontrolluar para ofertës.",
     excerpt:
-      "Një guidë që ndihmon pronarët dhe qiramarrësit të kuptojnë pse çmimi ndryshon nga një apartament te tjetri.",
+      "Një guidë transparente për të krahasuar preventivat dhe për të kuptuar pse çmimi ndryshon nga një apartament te tjetri.",
     eyebrow: "Kosto dhe planifikim",
     date: "2026-03-18",
+    updatedAt: "2026-08-10",
     primaryKeyword: "sa kushton instalimi elektrik ne apartament",
     secondaryKeywords: ["instalime elektrike tirane", "elektricist per apartamente"],
-    audience: "Pronare apartamentesh dhe qiramarres",
-    city: "Tirane",
+    audience: "Pronarë apartamentesh dhe qiramarrës",
+    city: "Tiranë",
     sections: [
       section(
-        "Çfarë ndikon në kosto",
+        "Pse nuk ka një çmim të vetëm për çdo apartament",
         [
-          "Kostoja ndryshon sipas madhësisë së apartamentit, gjendjes së instalimit dhe sa punë duhet bërë nga e para.",
+          "Dy apartamente me të njëjtën sipërfaqe mund të kërkojnë punë shumë të ndryshme. Njëri mund të ketë tuba dhe kuti të përdorshme, ndërsa tjetri mund të kërkojë linja të reja, panel të ri, hapje kanalesh dhe riparim të sipërfaqeve.",
+          "Prandaj një çmim serioz ndahet në punime, materiale dhe ndërhyrje shtesë. Oferta përfundimtare duhet të vijë pasi të kontrollohen paneli, tokëzimi, rruga e kabllove, numri i qarqeve dhe pajisjet me ngarkesë të lartë.",
         ],
-        ["Madhësia e apartamentit", "Gjendja e panelit", "Numri i pikave dhe qarqeve"],
+        [
+          "Sipërfaqja dhe planimetria e apartamentit.",
+          "Gjendja e instalimit, tubave, kutive dhe panelit ekzistues.",
+          "Numri i prizave, çelësave, pikave të ndriçimit dhe qarqeve të dedikuara.",
+          "Fuqia e pajisjeve si furra, pianura, kondicioneri, bojleri ose karikuesi EV.",
+        ],
       ),
       section(
-        "Pse projekti i qartë kursen para",
+        "Çfarë duhet të përmbajë preventivi",
         [
-          "Sa më i qartë të jetë projekti, aq më pak rrezik ka për ndryshime të papritura gjatë punës.",
-          "Një vlerësim i mirë para fillimit ndihmon të shmangen ripunimet.",
+          "Kërkoni që preventivi të ndajë qartë punën nga materialet dhe të tregojë sasinë e pikave, qarqeve, mbrojtjeve dhe pajisjeve që përfshihen. Duhet të jetë e qartë edhe nëse çmimi përfshin hapjen dhe mbylljen e kanaleve, transportin, testimin dhe heqjen e materialeve të vjetra.",
+          "Një preventiv i krahasueshëm nuk thotë vetëm “instalim komplet”. Ai tregon çfarë do të instalohet, çfarë do të testohet, cilat marka ose specifikime propozohen dhe çfarë mbetet jashtë ofertës.",
+        ],
+        [
+          "Punimet dhe materialet të paraqitura veçmas.",
+          "Numri i pikave dhe qarqeve të dedikuara.",
+          "Paneli, siguresat dhe mbrojtjet që do të montohen.",
+          "Testimi, etiketimi i qarqeve dhe kushtet e dorëzimit.",
         ],
       ),
       section(
-        "Kur duhet të kërkoni kontroll paraprak",
+        "Tre skenarë që nuk duhen krahasuar si e njëjta punë",
         [
-          "Në apartamente të vjetra, para qirasë ose para rinovimit, kontrolli i parë është zakonisht vendimi më i mirë.",
+          "Një riparim i pjesshëm mund të përfshijë vetëm pikat problematike dhe testimin e qarkut. Një rinovim kuzhine ose banjoje zakonisht kërkon qarqe të dedikuara dhe koordinim me punimet e tjera. Një riinstalim i plotë përfshin planifikimin e çdo qarku, panelin, kabllimin, pikat dhe testimin përfundimtar.",
+          "Kur krahasoni oferta, sigurohuni që të tre elektricistët po llogarisin të njëjtin skenar. Oferta më e ulët mund të ketë më pak punime ose materiale, jo domosdoshmërisht të njëjtën punë me çmim më të mirë.",
+        ],
+      ),
+      section(
+        "Çfarë të përgatisni para vlerësimit",
+        [
+          "Dërgoni planimetrinë nëse e keni, foto të panelit, listën e pajisjeve të fuqishme dhe një ide të qartë për prizat, ndriçimin dhe ndryshimet e planifikuara. Për rinovim, tregoni edhe afatin dhe cilat punime ndërtimore do të kryhen nga ekipe të tjera.",
+          "Nga fotot mund të jepet vetëm një orientim fillestar. Gjendja e tokëzimit, rruga reale e kabllove dhe siguria e instalimit konfirmohen në vend para çmimit përfundimtar.",
         ],
       ),
     ],
     faq: [
-      faq("A ndryshon shumë çmimi nga një apartament te tjetri?", "Po. Gjendja e instalimit dhe madhësia e hapësirës kanë shumë ndikim."),
-      faq("A duhet të kërkoj vlerësim paraprak?", "Po. Kjo e bën projektin më të qartë dhe më të lehtë për t'u kontrolluar."),
-      faq("A vlen kjo edhe për apartamente me qira?", "Po. Pronari dhe qiramarresi përfitojnë nga një instalim i qartë dhe i sigurt."),
+      faq("A mund të jepet çmimi përfundimtar vetëm nga fotot?", "Fotot ndihmojnë për një orientim fillestar, por çmimi përfundimtar kërkon kontroll të panelit, instalimit ekzistues dhe rrugës së kabllove në pronë."),
+      faq("A llogaritet instalimi vetëm sipas numrit të pikave?", "Jo gjithmonë. Numri i pikave është vetëm një pjesë; ndikojnë edhe qarqet e dedikuara, paneli, mbrojtjet, distancat, punimet në mur dhe gjendja ekzistuese."),
+      faq("A duhet të ndahen materialet nga puna?", "Po. Një preventiv i qartë tregon çfarë materialesh dhe punimesh përfshihen, në mënyrë që ofertat të krahasohen mbi të njëjtën bazë."),
+      faq("Kur duhet kontroll paraprak?", "Kontrolli paraprak është veçanërisht i rëndësishëm para rinovimit, blerjes, qiradhënies ose riinstalimit të plotë të një apartamenti të vjetër."),
     ],
     primaryService: sq.install,
     secondaryService: sq.apartment,
@@ -963,9 +986,9 @@ const rawGuidePages = [
         ],
       ),
       section(
-        "Why this is different from sizing or installation guides",
+        "Compare solar with improving the existing grid setup",
         [
-          "This page is about the choice between solar and a better grid-only setup. Separate guides should cover how many panels you need or how the installation process works.",
+          "Solar is not always the first investment a property needs. If the panel is undersized, circuits are poorly distributed, or consumption is not yet understood, correcting the existing installation may be the safer first step before a solar system is sized.",
         ],
       ),
     ],

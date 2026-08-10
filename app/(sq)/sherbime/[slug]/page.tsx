@@ -20,7 +20,9 @@ import {
 } from "@/lib/seo";
 
 export function generateStaticParams() {
-  return albanianServicePageSlugs.map((slug) => ({ slug }));
+  return albanianServicePageSlugs
+    .filter((slug) => slug !== "elektricist-tirane")
+    .map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -43,7 +45,7 @@ export async function generateMetadata({
     alternates: englishEquivalent
       ? {
           "sq-AL": canonical,
-          "en-US": `${SITE_URL}${getServiceHref(englishEquivalent)}`,
+          en: `${SITE_URL}${getServiceHref(englishEquivalent)}`,
         }
       : undefined,
   });
